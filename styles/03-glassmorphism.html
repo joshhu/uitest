@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glassmorphism - UI Style #03</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { font-family: 'Inter', sans-serif; }
+        .glass {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .glass-dark {
+            background: rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+        }
+        .gradient-bg-2 {
+            background: linear-gradient(135deg, #0080FF 0%, #8B00FF 50%, #FF1493 100%);
+        }
+    </style>
+</head>
+<body class="min-h-screen gradient-bg">
+    <!-- Floating shapes -->
+    <div class="fixed inset-0 overflow-hidden pointer-events-none">
+        <div class="absolute top-20 left-20 w-72 h-72 bg-pink-500 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-pulse"></div>
+        <div class="absolute top-40 right-20 w-72 h-72 bg-yellow-500 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-pulse" style="animation-delay: 1s;"></div>
+        <div class="absolute bottom-20 left-1/2 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-pulse" style="animation-delay: 2s;"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="fixed top-4 left-4 right-4 glass rounded-2xl z-50">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="../index.html" class="text-sm text-white/70 hover:text-white transition-colors">&larr; Back</a>
+            <span class="font-medium text-white">#03 Glassmorphism</span>
+            <span class="text-sm text-white/50">General</span>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative pt-32 pb-20 px-6">
+        <div class="max-w-5xl mx-auto text-center">
+            <div class="glass rounded-3xl p-12 mb-8 inline-block">
+                <h1 class="text-6xl font-bold text-white mb-4">Frosted Glass</h1>
+                <p class="text-white/70 text-xl">Translucent layers with depth and elegance</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cards Grid -->
+    <section class="relative py-12 px-6">
+        <div class="max-w-5xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="glass rounded-2xl p-6 hover:bg-white/20 transition-all cursor-pointer">
+                    <div class="w-12 h-12 glass rounded-xl flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-white mb-2">Modern Look</h3>
+                    <p class="text-white/60 text-sm">Contemporary aesthetics with layered transparency</p>
+                </div>
+
+                <div class="glass rounded-2xl p-6 hover:bg-white/20 transition-all cursor-pointer">
+                    <div class="w-12 h-12 glass rounded-xl flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-white mb-2">Vibrant Colors</h3>
+                    <p class="text-white/60 text-sm">Rich backgrounds that shine through glass</p>
+                </div>
+
+                <div class="glass rounded-2xl p-6 hover:bg-white/20 transition-all cursor-pointer">
+                    <div class="w-12 h-12 glass rounded-xl flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-white mb-2">Depth & Layers</h3>
+                    <p class="text-white/60 text-sm">Multi-layer design with z-depth hierarchy</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Cards -->
+    <section class="relative py-12 px-6">
+        <div class="max-w-4xl mx-auto">
+            <h3 class="text-white/50 text-sm uppercase tracking-widest text-center mb-8">Pricing Example</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="glass rounded-2xl p-6 text-center">
+                    <h4 class="text-white/60 text-sm uppercase mb-4">Basic</h4>
+                    <div class="text-4xl font-bold text-white mb-4">$9<span class="text-lg text-white/50">/mo</span></div>
+                    <ul class="text-white/70 text-sm space-y-3 mb-6">
+                        <li>5 Projects</li>
+                        <li>10GB Storage</li>
+                        <li>Basic Support</li>
+                    </ul>
+                    <button class="w-full glass py-3 rounded-xl text-white font-medium hover:bg-white/30 transition-all cursor-pointer">Choose</button>
+                </div>
+
+                <div class="glass rounded-2xl p-6 text-center border-2 border-white/30 transform scale-105">
+                    <div class="glass-dark inline-block px-3 py-1 rounded-full text-xs text-white mb-4">Popular</div>
+                    <h4 class="text-white/60 text-sm uppercase mb-4">Pro</h4>
+                    <div class="text-4xl font-bold text-white mb-4">$29<span class="text-lg text-white/50">/mo</span></div>
+                    <ul class="text-white/70 text-sm space-y-3 mb-6">
+                        <li>Unlimited Projects</li>
+                        <li>100GB Storage</li>
+                        <li>Priority Support</li>
+                    </ul>
+                    <button class="w-full bg-white/90 py-3 rounded-xl text-purple-700 font-medium hover:bg-white transition-all cursor-pointer">Choose</button>
+                </div>
+
+                <div class="glass rounded-2xl p-6 text-center">
+                    <h4 class="text-white/60 text-sm uppercase mb-4">Enterprise</h4>
+                    <div class="text-4xl font-bold text-white mb-4">$99<span class="text-lg text-white/50">/mo</span></div>
+                    <ul class="text-white/70 text-sm space-y-3 mb-6">
+                        <li>Custom Solutions</li>
+                        <li>Unlimited Storage</li>
+                        <li>24/7 Support</li>
+                    </ul>
+                    <button class="w-full glass py-3 rounded-xl text-white font-medium hover:bg-white/30 transition-all cursor-pointer">Contact</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Color Palette -->
+    <section class="relative py-12 px-6">
+        <div class="max-w-5xl mx-auto">
+            <h3 class="text-white/50 text-sm uppercase tracking-widest text-center mb-8">Color Palette</h3>
+            <div class="glass rounded-2xl p-8">
+                <div class="flex justify-center gap-6 flex-wrap">
+                    <div class="text-center">
+                        <div class="w-16 h-16 rounded-xl mb-2" style="background: #0080FF;"></div>
+                        <p class="text-white/70 text-xs">Electric Blue</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-16 h-16 rounded-xl mb-2" style="background: #8B00FF;"></div>
+                        <p class="text-white/70 text-xs">Neon Purple</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-16 h-16 rounded-xl mb-2" style="background: #FF1493;"></div>
+                        <p class="text-white/70 text-xs">Vivid Pink</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-16 h-16 rounded-xl mb-2" style="background: #20B2AA;"></div>
+                        <p class="text-white/70 text-xs">Teal</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-16 h-16 rounded-xl mb-2 glass"></div>
+                        <p class="text-white/70 text-xs">Glass White</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Form -->
+    <section class="relative py-12 px-6">
+        <div class="max-w-md mx-auto">
+            <div class="glass rounded-2xl p-8">
+                <h3 class="text-xl font-semibold text-white mb-6 text-center">Sign Up</h3>
+                <div class="space-y-4">
+                    <input type="email" placeholder="Email" class="w-full glass rounded-xl px-4 py-3 text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-white/30">
+                    <input type="password" placeholder="Password" class="w-full glass rounded-xl px-4 py-3 text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-white/30">
+                    <button class="w-full bg-white/90 py-3 rounded-xl text-purple-700 font-medium hover:bg-white transition-all cursor-pointer">Create Account</button>
+                </div>
+                <p class="text-white/50 text-sm text-center mt-4">Already have an account? <a href="#" class="text-white hover:underline">Sign in</a></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Info -->
+    <section class="relative py-12 px-6">
+        <div class="max-w-5xl mx-auto">
+            <div class="glass rounded-2xl p-8">
+                <div class="grid grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-white/50 text-sm uppercase tracking-widest mb-4">Best For</h3>
+                        <ul class="space-y-2 text-white/80 text-sm">
+                            <li>Modern SaaS</li>
+                            <li>Financial dashboards</li>
+                            <li>High-end corporate</li>
+                            <li>Modal overlays</li>
+                            <li>Navigation</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-white/50 text-sm uppercase tracking-widest mb-4">Characteristics</h3>
+                        <ul class="space-y-2 text-white/80 text-sm">
+                            <li>Light Mode: Full</li>
+                            <li>Dark Mode: Full</li>
+                            <li>Accessibility: Ensure 4.5:1 contrast</li>
+                            <li>Performance: Good</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="relative py-8 px-6">
+        <div class="max-w-5xl mx-auto glass rounded-2xl px-6 py-4 flex justify-between items-center">
+            <a href="02-neumorphism.html" class="text-sm text-white/70 hover:text-white">&larr; Neumorphism</a>
+            <a href="04-brutalism.html" class="text-sm text-white/70 hover:text-white">Brutalism &rarr;</a>
+        </div>
+    </footer>
+</body>
+</html>

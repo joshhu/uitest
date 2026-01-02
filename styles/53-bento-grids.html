@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bento Grids - UI Style #53</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>* { font-family: 'Inter', sans-serif; }</style>
+</head>
+<body class="bg-neutral-950 min-h-screen text-white">
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 px-6 py-4 bg-neutral-950/80 backdrop-blur-xl">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <a href="../index.html" class="text-neutral-400 hover:text-white text-sm">&larr; Back</a>
+            <span class="font-semibold">#53 Bento Grids</span>
+            <span class="text-neutral-400 text-sm">Modern</span>
+        </div>
+    </nav>
+
+    <div class="max-w-6xl mx-auto p-6 pt-24">
+        <!-- Hero Bento -->
+        <section class="grid grid-cols-4 grid-rows-2 gap-4 mb-8" style="height: 500px;">
+            <!-- Large Feature -->
+            <div class="col-span-2 row-span-2 bg-gradient-to-br from-violet-600 to-indigo-600 rounded-3xl p-8 flex flex-col justify-between">
+                <div>
+                    <span class="text-xs text-white/70 uppercase tracking-widest">Style #53</span>
+                    <h1 class="text-4xl font-bold mt-4">Bento Grid Layout</h1>
+                </div>
+                <p class="text-white/80">
+                    Inspired by Japanese bento boxes. Asymmetric grids with rounded corners create visual harmony.
+                </p>
+            </div>
+            <!-- Top Right -->
+            <div class="col-span-2 bg-neutral-900 rounded-3xl p-6 flex items-center justify-center border border-neutral-800">
+                <div class="text-center">
+                    <div class="text-5xl font-bold bg-gradient-to-r from-pink-500 to-violet-500 bg-clip-text text-transparent">57+</div>
+                    <p class="text-neutral-400 text-sm mt-2">UI Styles Available</p>
+                </div>
+            </div>
+            <!-- Bottom Right Pair -->
+            <div class="bg-neutral-900 rounded-3xl p-6 border border-neutral-800 flex flex-col justify-center">
+                <div class="w-12 h-12 bg-emerald-500/20 rounded-2xl flex items-center justify-center mb-3">
+                    <svg class="w-6 h-6 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                    </svg>
+                </div>
+                <span class="text-sm text-neutral-400">Responsive</span>
+            </div>
+            <div class="bg-neutral-900 rounded-3xl p-6 border border-neutral-800 flex flex-col justify-center">
+                <div class="w-12 h-12 bg-amber-500/20 rounded-2xl flex items-center justify-center mb-3">
+                    <svg class="w-6 h-6 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                    </svg>
+                </div>
+                <span class="text-sm text-neutral-400">Fast</span>
+            </div>
+        </section>
+
+        <!-- Features Bento -->
+        <section class="grid grid-cols-3 gap-4 mb-8">
+            <!-- Tall Card -->
+            <div class="row-span-2 bg-gradient-to-b from-cyan-500/20 to-blue-500/20 rounded-3xl p-6 border border-cyan-500/30">
+                <div class="h-full flex flex-col">
+                    <div class="w-14 h-14 bg-cyan-500/30 rounded-2xl flex items-center justify-center mb-4">
+                        <svg class="w-7 h-7 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Flexible Layouts</h3>
+                    <p class="text-neutral-400 text-sm flex-1">
+                        Grid areas can span multiple rows and columns, creating unique compositions for each section.
+                    </p>
+                    <div class="mt-4 pt-4 border-t border-cyan-500/20">
+                        <span class="text-cyan-400 text-sm">Learn more &rarr;</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Top Middle -->
+            <div class="bg-neutral-900 rounded-3xl p-6 border border-neutral-800">
+                <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 bg-rose-500/20 rounded-2xl flex items-center justify-center">
+                        <svg class="w-6 h-6 text-rose-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold">Beautiful</h3>
+                        <p class="text-neutral-400 text-sm">Aesthetic first</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Top Right -->
+            <div class="bg-neutral-900 rounded-3xl p-6 border border-neutral-800">
+                <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 bg-violet-500/20 rounded-2xl flex items-center justify-center">
+                        <svg class="w-6 h-6 text-violet-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold">Intuitive</h3>
+                        <p class="text-neutral-400 text-sm">Easy to scan</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Wide Bottom -->
+            <div class="col-span-2 bg-gradient-to-r from-orange-500/20 to-red-500/20 rounded-3xl p-6 border border-orange-500/30">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2">Apple-Inspired Design</h3>
+                        <p class="text-neutral-400 text-sm">
+                            Popularized by Apple's product pages, bento grids have become a modern standard.
+                        </p>
+                    </div>
+                    <div class="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center">
+                        <svg class="w-8 h-8 text-white" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Bento -->
+        <section class="grid grid-cols-4 gap-4 mb-8">
+            <div class="bg-neutral-900 rounded-3xl p-6 border border-neutral-800 text-center">
+                <div class="text-3xl font-bold text-white mb-1">12</div>
+                <p class="text-neutral-500 text-sm">Columns</p>
+            </div>
+            <div class="bg-neutral-900 rounded-3xl p-6 border border-neutral-800 text-center">
+                <div class="text-3xl font-bold text-emerald-400 mb-1">24px</div>
+                <p class="text-neutral-500 text-sm">Border Radius</p>
+            </div>
+            <div class="bg-neutral-900 rounded-3xl p-6 border border-neutral-800 text-center">
+                <div class="text-3xl font-bold text-violet-400 mb-1">16px</div>
+                <p class="text-neutral-500 text-sm">Gap Size</p>
+            </div>
+            <div class="bg-neutral-900 rounded-3xl p-6 border border-neutral-800 text-center">
+                <div class="text-3xl font-bold text-amber-400 mb-1">100%</div>
+                <p class="text-neutral-500 text-sm">Responsive</p>
+            </div>
+        </section>
+
+        <!-- Style Info -->
+        <section class="grid grid-cols-2 gap-4">
+            <div class="bg-neutral-900 rounded-3xl p-8 border border-neutral-800">
+                <h3 class="text-sm text-neutral-500 uppercase tracking-widest mb-4">Best For</h3>
+                <ul class="space-y-3 text-neutral-300">
+                    <li class="flex items-center gap-3">
+                        <div class="w-2 h-2 bg-violet-500 rounded-full"></div>
+                        Product showcases
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <div class="w-2 h-2 bg-violet-500 rounded-full"></div>
+                        Feature highlights
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <div class="w-2 h-2 bg-violet-500 rounded-full"></div>
+                        Portfolio layouts
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <div class="w-2 h-2 bg-violet-500 rounded-full"></div>
+                        Dashboard widgets
+                    </li>
+                </ul>
+            </div>
+            <div class="bg-neutral-900 rounded-3xl p-8 border border-neutral-800">
+                <h3 class="text-sm text-neutral-500 uppercase tracking-widest mb-4">Key Elements</h3>
+                <ul class="space-y-3 text-neutral-300">
+                    <li class="flex items-center gap-3">
+                        <div class="w-2 h-2 bg-cyan-500 rounded-full"></div>
+                        Asymmetric grids
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <div class="w-2 h-2 bg-cyan-500 rounded-full"></div>
+                        Large border radius
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <div class="w-2 h-2 bg-cyan-500 rounded-full"></div>
+                        Subtle gradients
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <div class="w-2 h-2 bg-cyan-500 rounded-full"></div>
+                        Consistent spacing
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="px-6 py-4 mt-8 border-t border-neutral-800">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <a href="52-pixel-art.html" class="text-neutral-400 hover:text-white text-sm">&larr; Pixel Art</a>
+            <a href="54-neubrutalism-v2.html" class="text-neutral-400 hover:text-white text-sm">Neubrutalism v2 &rarr;</a>
+        </div>
+    </footer>
+</body>
+</html>

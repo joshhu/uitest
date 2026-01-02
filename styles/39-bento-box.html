@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bento Box Grid - UI Style #39</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>* { font-family: 'Inter', sans-serif; }</style>
+</head>
+<body class="bg-neutral-100 min-h-screen">
+    <!-- Navigation -->
+    <nav class="bg-white border-b border-neutral-200 px-6 py-4">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <a href="../index.html" class="text-neutral-500 hover:text-neutral-900 text-sm">&larr; Back</a>
+            <span class="font-semibold">#39 Bento Box Grid</span>
+            <span class="text-neutral-400 text-sm">Modern</span>
+        </div>
+    </nav>
+
+    <div class="max-w-6xl mx-auto p-8">
+        <!-- Hero Bento Grid -->
+        <div class="grid grid-cols-4 grid-rows-3 gap-4 mb-8" style="height: 600px;">
+            <!-- Large Feature -->
+            <div class="col-span-2 row-span-2 bg-gradient-to-br from-violet-500 to-purple-600 rounded-3xl p-8 flex flex-col justify-between text-white">
+                <div>
+                    <span class="text-sm opacity-80">Featured</span>
+                    <h1 class="text-4xl font-bold mt-2">Beautiful Grid Layouts</h1>
+                </div>
+                <p class="text-lg opacity-90">Organize content in visually appealing asymmetric grids inspired by Japanese bento boxes.</p>
+            </div>
+
+            <!-- Stats -->
+            <div class="bg-white rounded-3xl p-6 flex flex-col justify-center">
+                <div class="text-4xl font-bold text-neutral-900">98%</div>
+                <div class="text-neutral-500 text-sm mt-1">Customer Satisfaction</div>
+            </div>
+
+            <!-- Icon Card -->
+            <div class="bg-amber-400 rounded-3xl p-6 flex items-center justify-center">
+                <svg class="w-16 h-16 text-amber-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                </svg>
+            </div>
+
+            <!-- Wide Card -->
+            <div class="col-span-2 bg-neutral-900 rounded-3xl p-6 flex items-center justify-between text-white">
+                <div>
+                    <h3 class="text-xl font-semibold">Start Building Today</h3>
+                    <p class="text-neutral-400 text-sm mt-1">Get started in minutes</p>
+                </div>
+                <button class="bg-white text-neutral-900 px-6 py-3 rounded-xl font-semibold hover:bg-neutral-100 cursor-pointer">
+                    Get Started
+                </button>
+            </div>
+
+            <!-- Small Cards -->
+            <div class="bg-emerald-500 rounded-3xl p-6 flex flex-col justify-center text-white">
+                <div class="text-3xl font-bold">24/7</div>
+                <div class="text-sm opacity-90 mt-1">Support</div>
+            </div>
+
+            <div class="bg-white rounded-3xl p-6 flex flex-col justify-center">
+                <div class="text-3xl font-bold text-neutral-900">150+</div>
+                <div class="text-neutral-500 text-sm mt-1">Components</div>
+            </div>
+
+            <div class="bg-rose-500 rounded-3xl p-6 flex flex-col justify-center text-white">
+                <div class="text-3xl font-bold">Free</div>
+                <div class="text-sm opacity-90 mt-1">To Start</div>
+            </div>
+        </div>
+
+        <!-- Feature Bento Grid -->
+        <div class="grid grid-cols-3 gap-4 mb-8">
+            <div class="col-span-2 bg-white rounded-3xl p-8">
+                <h2 class="text-2xl font-bold text-neutral-900 mb-4">Why Bento Grids?</h2>
+                <p class="text-neutral-600 leading-relaxed">
+                    Bento box layouts create visual hierarchy through asymmetric grid arrangements. Each "box" contains distinct content, making information easy to scan while maintaining aesthetic appeal. This layout style has become popular in modern design for its flexibility and visual interest.
+                </p>
+            </div>
+            <div class="bg-gradient-to-br from-cyan-400 to-blue-500 rounded-3xl p-6 flex flex-col justify-center text-white text-center">
+                <div class="text-5xl font-bold">∞</div>
+                <div class="text-lg mt-2">Possibilities</div>
+            </div>
+        </div>
+
+        <!-- Another Bento Section -->
+        <div class="grid grid-cols-4 gap-4 mb-8">
+            <div class="bg-white rounded-3xl p-6">
+                <div class="w-12 h-12 bg-violet-100 rounded-2xl flex items-center justify-center mb-4">
+                    <svg class="w-6 h-6 text-violet-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5z"/>
+                    </svg>
+                </div>
+                <h3 class="font-semibold text-neutral-900 mb-2">Flexible</h3>
+                <p class="text-neutral-500 text-sm">Adapts to any content type</p>
+            </div>
+            <div class="bg-white rounded-3xl p-6">
+                <div class="w-12 h-12 bg-emerald-100 rounded-2xl flex items-center justify-center mb-4">
+                    <svg class="w-6 h-6 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                </div>
+                <h3 class="font-semibold text-neutral-900 mb-2">Organized</h3>
+                <p class="text-neutral-500 text-sm">Clear visual hierarchy</p>
+            </div>
+            <div class="bg-white rounded-3xl p-6">
+                <div class="w-12 h-12 bg-amber-100 rounded-2xl flex items-center justify-center mb-4">
+                    <svg class="w-6 h-6 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                    </svg>
+                </div>
+                <h3 class="font-semibold text-neutral-900 mb-2">Beautiful</h3>
+                <p class="text-neutral-500 text-sm">Modern aesthetic appeal</p>
+            </div>
+            <div class="bg-white rounded-3xl p-6">
+                <div class="w-12 h-12 bg-rose-100 rounded-2xl flex items-center justify-center mb-4">
+                    <svg class="w-6 h-6 text-rose-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/>
+                    </svg>
+                </div>
+                <h3 class="font-semibold text-neutral-900 mb-2">Responsive</h3>
+                <p class="text-neutral-500 text-sm">Works on all devices</p>
+            </div>
+        </div>
+
+        <!-- Style Info -->
+        <div class="bg-white rounded-3xl p-8">
+            <div class="grid grid-cols-2 gap-8">
+                <div>
+                    <h3 class="text-neutral-400 text-sm uppercase tracking-widest mb-4">Best For</h3>
+                    <ul class="space-y-2 text-neutral-600">
+                        <li>Portfolio websites</li>
+                        <li>Product showcases</li>
+                        <li>Dashboard designs</li>
+                        <li>Marketing pages</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-neutral-400 text-sm uppercase tracking-widest mb-4">Key Elements</h3>
+                    <ul class="space-y-2 text-neutral-600">
+                        <li>Asymmetric grid layouts</li>
+                        <li>Large border-radius</li>
+                        <li>Mixed content sizes</li>
+                        <li>Consistent spacing</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-neutral-200 px-6 py-4 mt-8">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <a href="38-neubrutalism.html" class="text-neutral-500 hover:text-neutral-900 text-sm">&larr; Neubrutalism</a>
+            <a href="40-y2k-revival.html" class="text-neutral-500 hover:text-neutral-900 text-sm">Y2K Revival &rarr;</a>
+        </div>
+    </footer>
+</body>
+</html>

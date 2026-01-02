@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-Time Monitoring - UI Style #31</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .font-mono { font-family: 'JetBrains Mono', monospace; }
+        .font-sans { font-family: 'Inter', sans-serif; }
+        @keyframes pulse-green {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+        .animate-pulse-green { animation: pulse-green 2s ease-in-out infinite; }
+    </style>
+</head>
+<body class="bg-gray-950 min-h-screen font-sans text-white">
+    <!-- Status Bar -->
+    <div class="bg-green-600 text-white text-center py-1 text-sm font-medium">
+        <span class="inline-flex items-center gap-2">
+            <span class="w-2 h-2 bg-white rounded-full animate-pulse"></span>
+            All Systems Operational
+        </span>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="bg-gray-900 border-b border-gray-800 px-4 py-3">
+        <div class="flex justify-between items-center">
+            <div class="flex items-center gap-4">
+                <a href="../index.html" class="text-gray-400 hover:text-white text-sm">&larr; Back</a>
+                <span class="text-white font-semibold">#31 Real-Time Monitoring</span>
+            </div>
+            <div class="flex items-center gap-4">
+                <span class="font-mono text-sm text-gray-400">Last sync: <span class="text-green-400">0.3s ago</span></span>
+                <button class="px-3 py-1 bg-gray-800 text-gray-300 rounded text-sm hover:bg-gray-700 cursor-pointer">Pause</button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="p-4">
+        <!-- Live Metrics -->
+        <div class="grid grid-cols-5 gap-3 mb-4">
+            <div class="bg-gray-900 rounded-lg p-4 border border-gray-800">
+                <div class="flex justify-between items-start mb-2">
+                    <span class="text-xs text-gray-500">CPU Usage</span>
+                    <span class="w-2 h-2 bg-green-500 rounded-full animate-pulse-green"></span>
+                </div>
+                <p class="text-3xl font-mono font-bold text-green-400">42%</p>
+                <div class="h-1 bg-gray-800 rounded mt-2">
+                    <div class="h-1 bg-green-500 rounded" style="width: 42%"></div>
+                </div>
+            </div>
+            <div class="bg-gray-900 rounded-lg p-4 border border-gray-800">
+                <div class="flex justify-between items-start mb-2">
+                    <span class="text-xs text-gray-500">Memory</span>
+                    <span class="w-2 h-2 bg-yellow-500 rounded-full animate-pulse-green"></span>
+                </div>
+                <p class="text-3xl font-mono font-bold text-yellow-400">78%</p>
+                <div class="h-1 bg-gray-800 rounded mt-2">
+                    <div class="h-1 bg-yellow-500 rounded" style="width: 78%"></div>
+                </div>
+            </div>
+            <div class="bg-gray-900 rounded-lg p-4 border border-gray-800">
+                <div class="flex justify-between items-start mb-2">
+                    <span class="text-xs text-gray-500">Network I/O</span>
+                    <span class="w-2 h-2 bg-green-500 rounded-full animate-pulse-green"></span>
+                </div>
+                <p class="text-3xl font-mono font-bold text-green-400">2.4<span class="text-lg">GB/s</span></p>
+                <p class="text-xs text-gray-500 mt-2">↑ 1.2GB ↓ 1.2GB</p>
+            </div>
+            <div class="bg-gray-900 rounded-lg p-4 border border-gray-800">
+                <div class="flex justify-between items-start mb-2">
+                    <span class="text-xs text-gray-500">Requests/sec</span>
+                    <span class="w-2 h-2 bg-green-500 rounded-full animate-pulse-green"></span>
+                </div>
+                <p class="text-3xl font-mono font-bold text-blue-400">12.4K</p>
+                <p class="text-xs text-green-400 mt-2">+8% from avg</p>
+            </div>
+            <div class="bg-gray-900 rounded-lg p-4 border border-gray-800">
+                <div class="flex justify-between items-start mb-2">
+                    <span class="text-xs text-gray-500">Error Rate</span>
+                    <span class="w-2 h-2 bg-green-500 rounded-full animate-pulse-green"></span>
+                </div>
+                <p class="text-3xl font-mono font-bold text-green-400">0.02%</p>
+                <p class="text-xs text-gray-500 mt-2">24 errors/hr</p>
+            </div>
+        </div>
+
+        <!-- Live Chart & Services -->
+        <div class="grid grid-cols-3 gap-4 mb-4">
+            <!-- Live Stream Chart -->
+            <div class="col-span-2 bg-gray-900 rounded-lg p-4 border border-gray-800">
+                <div class="flex justify-between items-center mb-4">
+                    <h3 class="text-sm font-semibold">Request Latency (Live)</h3>
+                    <div class="flex items-center gap-2">
+                        <span class="text-xs text-gray-500">Avg: <span class="text-white font-mono">45ms</span></span>
+                        <span class="text-xs text-gray-500">P99: <span class="text-yellow-400 font-mono">142ms</span></span>
+                    </div>
+                </div>
+                <div class="h-48 flex items-end gap-0.5">
+                    <!-- Simulated live bars -->
+                    <div class="flex-1 bg-green-500 rounded-t transition-all" style="height: 30%"></div>
+                    <div class="flex-1 bg-green-500 rounded-t transition-all" style="height: 45%"></div>
+                    <div class="flex-1 bg-green-500 rounded-t transition-all" style="height: 35%"></div>
+                    <div class="flex-1 bg-green-500 rounded-t transition-all" style="height: 50%"></div>
+                    <div class="flex-1 bg-green-500 rounded-t transition-all" style="height: 40%"></div>
+                    <div class="flex-1 bg-yellow-500 rounded-t transition-all" style="height: 75%"></div>
+                    <div class="flex-1 bg-green-500 rounded-t transition-all" style="height: 38%"></div>
+                    <div class="flex-1 bg-green-500 rounded-t transition-all" style="height: 42%"></div>
+                    <div class="flex-1 bg-green-500 rounded-t transition-all" style="height: 48%"></div>
+                    <div class="flex-1 bg-green-500 rounded-t transition-all" style="height: 35%"></div>
+                    <div class="flex-1 bg-green-500 rounded-t transition-all" style="height: 55%"></div>
+                    <div class="flex-1 bg-green-500 rounded-t transition-all" style="height: 45%"></div>
+                    <div class="flex-1 bg-green-500 rounded-t transition-all" style="height: 50%"></div>
+                    <div class="flex-1 bg-yellow-500 rounded-t transition-all" style="height: 85%"></div>
+                    <div class="flex-1 bg-green-500 rounded-t transition-all" style="height: 40%"></div>
+                    <div class="flex-1 bg-green-500 rounded-t transition-all" style="height: 38%"></div>
+                    <div class="flex-1 bg-green-500 rounded-t transition-all" style="height: 52%"></div>
+                    <div class="flex-1 bg-green-500 rounded-t transition-all" style="height: 44%"></div>
+                    <div class="flex-1 bg-green-500 rounded-t transition-all" style="height: 48%"></div>
+                    <div class="flex-1 bg-green-500 rounded-t transition-all animate-pulse" style="height: 42%"></div>
+                </div>
+                <div class="flex justify-between text-xs text-gray-600 mt-2">
+                    <span>-60s</span>
+                    <span>-45s</span>
+                    <span>-30s</span>
+                    <span>-15s</span>
+                    <span>Now</span>
+                </div>
+            </div>
+
+            <!-- Service Status -->
+            <div class="bg-gray-900 rounded-lg p-4 border border-gray-800">
+                <h3 class="text-sm font-semibold mb-4">Service Health</h3>
+                <div class="space-y-3">
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center gap-2">
+                            <span class="w-2 h-2 bg-green-500 rounded-full"></span>
+                            <span class="text-sm">API Gateway</span>
+                        </div>
+                        <span class="font-mono text-xs text-green-400">99.99%</span>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center gap-2">
+                            <span class="w-2 h-2 bg-green-500 rounded-full"></span>
+                            <span class="text-sm">Auth Service</span>
+                        </div>
+                        <span class="font-mono text-xs text-green-400">99.98%</span>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center gap-2">
+                            <span class="w-2 h-2 bg-green-500 rounded-full"></span>
+                            <span class="text-sm">Database</span>
+                        </div>
+                        <span class="font-mono text-xs text-green-400">99.99%</span>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center gap-2">
+                            <span class="w-2 h-2 bg-yellow-500 rounded-full animate-pulse"></span>
+                            <span class="text-sm">Cache Layer</span>
+                        </div>
+                        <span class="font-mono text-xs text-yellow-400">99.85%</span>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center gap-2">
+                            <span class="w-2 h-2 bg-green-500 rounded-full"></span>
+                            <span class="text-sm">CDN</span>
+                        </div>
+                        <span class="font-mono text-xs text-green-400">100%</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Live Log Stream -->
+        <div class="bg-gray-900 rounded-lg border border-gray-800">
+            <div class="px-4 py-3 border-b border-gray-800 flex justify-between items-center">
+                <h3 class="text-sm font-semibold">Live Log Stream</h3>
+                <div class="flex gap-2">
+                    <button class="px-2 py-1 bg-green-600 text-xs rounded cursor-pointer">INFO</button>
+                    <button class="px-2 py-1 bg-gray-700 text-xs rounded cursor-pointer">WARN</button>
+                    <button class="px-2 py-1 bg-gray-700 text-xs rounded cursor-pointer">ERROR</button>
+                </div>
+            </div>
+            <div class="p-4 font-mono text-xs space-y-1 h-40 overflow-y-auto bg-gray-950">
+                <p><span class="text-gray-500">14:32:05.234</span> <span class="text-green-400">[INFO]</span> Request completed: GET /api/users <span class="text-gray-500">45ms</span></p>
+                <p><span class="text-gray-500">14:32:05.189</span> <span class="text-green-400">[INFO]</span> Request completed: POST /api/orders <span class="text-gray-500">82ms</span></p>
+                <p><span class="text-gray-500">14:32:05.142</span> <span class="text-yellow-400">[WARN]</span> High memory usage detected on node-3 <span class="text-gray-500">78%</span></p>
+                <p><span class="text-gray-500">14:32:05.098</span> <span class="text-green-400">[INFO]</span> Cache hit: user_session_abc123 <span class="text-gray-500">2ms</span></p>
+                <p><span class="text-gray-500">14:32:05.056</span> <span class="text-green-400">[INFO]</span> Request completed: GET /api/products <span class="text-gray-500">38ms</span></p>
+                <p><span class="text-gray-500">14:32:05.012</span> <span class="text-green-400">[INFO]</span> Database query: SELECT * FROM orders <span class="text-gray-500">15ms</span></p>
+                <p class="animate-pulse"><span class="text-gray-500">14:32:04.987</span> <span class="text-green-400">[INFO]</span> Request completed: GET /api/health <span class="text-gray-500">1ms</span></p>
+            </div>
+        </div>
+
+        <!-- Style Info -->
+        <div class="mt-4 bg-gray-900 rounded-lg p-4 border border-gray-800">
+            <div class="grid grid-cols-2 gap-8">
+                <div>
+                    <h3 class="text-gray-400 text-sm uppercase tracking-widest mb-4">Best For</h3>
+                    <ul class="space-y-2 text-gray-300 text-sm">
+                        <li>DevOps monitoring</li>
+                        <li>Server infrastructure</li>
+                        <li>API performance</li>
+                        <li>System health checks</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-gray-400 text-sm uppercase tracking-widest mb-4">Key Elements</h3>
+                    <ul class="space-y-2 text-gray-300 text-sm">
+                        <li>Live updating data</li>
+                        <li>Status indicators</li>
+                        <li>Log streams</li>
+                        <li>Alert thresholds</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 border-t border-gray-800 px-4 py-3 flex justify-between items-center">
+        <a href="30-executive-summary.html" class="text-gray-400 hover:text-white text-sm">&larr; Executive Summary</a>
+        <a href="32-drill-down-analytics.html" class="text-gray-400 hover:text-white text-sm">Drill-Down Analytics &rarr;</a>
+    </footer>
+</body>
+</html>

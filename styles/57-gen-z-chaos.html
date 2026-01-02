@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gen Z Chaos - UI Style #57</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Clash+Display:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        .font-display { font-family: 'Clash Display', sans-serif; }
+        .font-mono { font-family: 'Space Mono', monospace; }
+        @keyframes wobble {
+            0%, 100% { transform: rotate(-2deg); }
+            50% { transform: rotate(2deg); }
+        }
+        @keyframes float-chaos {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            25% { transform: translateY(-10px) rotate(3deg); }
+            75% { transform: translateY(5px) rotate(-3deg); }
+        }
+        @keyframes color-shift {
+            0% { filter: hue-rotate(0deg); }
+            100% { filter: hue-rotate(360deg); }
+        }
+        @keyframes glitch {
+            0%, 90%, 100% { transform: translate(0); }
+            92% { transform: translate(-5px, 2px); }
+            94% { transform: translate(5px, -2px); }
+            96% { transform: translate(-3px, 1px); }
+            98% { transform: translate(3px, -1px); }
+        }
+        .wobble { animation: wobble 2s ease-in-out infinite; }
+        .float-chaos { animation: float-chaos 4s ease-in-out infinite; }
+        .color-shift { animation: color-shift 10s linear infinite; }
+        .glitch:hover { animation: glitch 0.3s ease infinite; }
+        .sticker {
+            filter: drop-shadow(3px 3px 0 rgba(0,0,0,0.3));
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #FF6B6B, #4ECDC4, #FFE66D, #95E1D3);
+            background-size: 300% 300%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: gradient 5s ease infinite;
+        }
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+    </style>
+</head>
+<body class="bg-[#1a1a2e] min-h-screen text-white overflow-x-hidden">
+    <!-- Chaotic Background Elements -->
+    <div class="fixed inset-0 overflow-hidden pointer-events-none">
+        <div class="absolute top-10 left-10 text-8xl opacity-20 wobble">✦</div>
+        <div class="absolute top-1/4 right-20 text-6xl opacity-30 float-chaos" style="animation-delay: 0.5s;">☆</div>
+        <div class="absolute bottom-1/4 left-1/4 text-7xl opacity-20 wobble" style="animation-delay: 1s;">✿</div>
+        <div class="absolute bottom-20 right-1/3 text-5xl opacity-25 float-chaos">♡</div>
+        <div class="absolute top-1/2 left-10 text-4xl opacity-20 color-shift">◐</div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="relative z-50 px-6 py-4">
+        <div class="max-w-5xl mx-auto flex justify-between items-center">
+            <a href="../index.html" class="font-mono text-sm hover:text-[#FF6B6B] glitch">&larr; back lol</a>
+            <span class="font-display text-xl">
+                <span class="text-[#FF6B6B]">#57</span> gen z chaos
+            </span>
+            <span class="font-mono text-xs px-3 py-1 bg-[#4ECDC4] text-black rounded-full">✨ slay</span>
+        </div>
+    </nav>
+
+    <div class="relative max-w-5xl mx-auto px-6 py-8">
+        <!-- Hero -->
+        <section class="mb-16 text-center">
+            <div class="inline-block mb-8">
+                <span class="font-mono text-sm px-4 py-2 bg-[#FFE66D] text-black rounded-full sticker wobble inline-block">
+                    no cap this is style #57 fr fr
+                </span>
+            </div>
+            <h1 class="font-display text-7xl mb-6 leading-none">
+                <span class="gradient-text">CHAOTIC</span>
+                <br/>
+                <span class="text-[#FF6B6B] glitch inline-block">ENERGY</span>
+                <span class="text-[#4ECDC4]">™</span>
+            </h1>
+            <p class="font-mono text-lg text-white/70 max-w-xl mx-auto mb-8">
+                when minimalism said "less is more" we said "more is more actually" 💅
+            </p>
+            <div class="flex gap-4 justify-center flex-wrap">
+                <button class="font-display px-8 py-4 bg-[#FF6B6B] text-white rounded-full text-lg hover:scale-105 transition-transform cursor-pointer sticker">
+                    enter the chaos ↗
+                </button>
+                <button class="font-display px-8 py-4 bg-transparent border-2 border-[#4ECDC4] text-[#4ECDC4] rounded-full text-lg hover:bg-[#4ECDC4] hover:text-black transition-colors cursor-pointer">
+                    idk maybe later
+                </button>
+            </div>
+        </section>
+
+        <!-- Chaotic Grid -->
+        <section class="mb-16">
+            <div class="grid grid-cols-3 gap-4">
+                <!-- Card 1 - Rotated -->
+                <div class="bg-[#FF6B6B] p-6 rounded-3xl transform rotate-2 hover:rotate-0 transition-transform cursor-pointer sticker">
+                    <span class="text-4xl mb-4 block">🔥</span>
+                    <h3 class="font-display text-2xl mb-2">it's giving</h3>
+                    <p class="font-mono text-sm opacity-80">main character energy tbh</p>
+                </div>
+                <!-- Card 2 - Big -->
+                <div class="bg-gradient-to-br from-[#4ECDC4] to-[#95E1D3] p-6 rounded-3xl row-span-2 flex flex-col justify-between transform -rotate-1 hover:rotate-0 transition-transform cursor-pointer">
+                    <span class="text-6xl">✨</span>
+                    <div>
+                        <h3 class="font-display text-3xl mb-2 text-black">aesthetic overload</h3>
+                        <p class="font-mono text-sm text-black/70">we don't do subtle here bestie</p>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="bg-[#FFE66D] p-6 rounded-3xl transform -rotate-3 hover:rotate-0 transition-transform cursor-pointer text-black sticker">
+                    <span class="text-4xl mb-4 block">💀</span>
+                    <h3 class="font-display text-2xl mb-2">i'm dead</h3>
+                    <p class="font-mono text-sm opacity-80">this is literally so good</p>
+                </div>
+                <!-- Card 4 -->
+                <div class="bg-[#A388EE] p-6 rounded-3xl transform rotate-1 hover:rotate-0 transition-transform cursor-pointer sticker">
+                    <span class="text-4xl mb-4 block">🫠</span>
+                    <h3 class="font-display text-2xl mb-2">rent free</h3>
+                    <p class="font-mono text-sm opacity-80">living in my head</p>
+                </div>
+                <!-- Card 5 -->
+                <div class="bg-white/10 backdrop-blur p-6 rounded-3xl border-2 border-dashed border-white/30 transform rotate-2 hover:rotate-0 transition-transform cursor-pointer">
+                    <span class="text-4xl mb-4 block">👁️</span>
+                    <h3 class="font-display text-2xl mb-2">understood the assignment</h3>
+                    <p class="font-mono text-sm opacity-80">ate and left no crumbs</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Marquee -->
+        <section class="mb-16 overflow-hidden">
+            <div class="bg-[#FF6B6B] py-4 -rotate-1 transform scale-105">
+                <div class="whitespace-nowrap animate-[slide_20s_linear_infinite] font-display text-2xl">
+                    slay ✦ period ✦ no cap ✦ vibes ✦ iconic ✦ its giving ✦ rent free ✦ main character ✦ understood the assignment ✦ ate ✦
+                </div>
+            </div>
+        </section>
+
+        <!-- Components Showcase -->
+        <section class="mb-16">
+            <h2 class="font-display text-4xl mb-8 text-center">
+                <span class="text-[#FFE66D]">✦</span> component check <span class="text-[#4ECDC4]">✦</span>
+            </h2>
+
+            <div class="grid grid-cols-2 gap-8">
+                <!-- Buttons -->
+                <div class="bg-white/5 backdrop-blur rounded-3xl p-8">
+                    <h3 class="font-mono text-sm text-white/50 mb-6">BUTTONS (they hit different)</h3>
+                    <div class="flex flex-wrap gap-3">
+                        <button class="px-6 py-3 bg-[#FF6B6B] rounded-full font-display cursor-pointer hover:scale-105 transition-transform">
+                            slay 💅
+                        </button>
+                        <button class="px-6 py-3 bg-[#4ECDC4] text-black rounded-full font-display cursor-pointer hover:scale-105 transition-transform">
+                            periodt
+                        </button>
+                        <button class="px-6 py-3 bg-[#FFE66D] text-black rounded-2xl font-display cursor-pointer hover:scale-105 transition-transform">
+                            ✨ iconic
+                        </button>
+                        <button class="px-6 py-3 border-2 border-dashed border-white/50 rounded-full font-display cursor-pointer hover:bg-white/10 transition-colors">
+                            meh
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Input -->
+                <div class="bg-white/5 backdrop-blur rounded-3xl p-8">
+                    <h3 class="font-mono text-sm text-white/50 mb-6">INPUT (drop your @)</h3>
+                    <div class="space-y-4">
+                        <input
+                            type="text"
+                            placeholder="@username fr fr"
+                            class="w-full px-6 py-4 bg-white/10 rounded-2xl border-2 border-transparent focus:border-[#4ECDC4] focus:outline-none font-mono"
+                        >
+                        <div class="flex gap-2">
+                            <span class="px-3 py-1 bg-[#FF6B6B]/20 text-[#FF6B6B] rounded-full text-sm font-mono">#aesthetic</span>
+                            <span class="px-3 py-1 bg-[#4ECDC4]/20 text-[#4ECDC4] rounded-full text-sm font-mono">#vibes</span>
+                            <span class="px-3 py-1 bg-[#FFE66D]/20 text-[#FFE66D] rounded-full text-sm font-mono">#chaos</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats but make it chaotic -->
+        <section class="mb-16">
+            <div class="flex justify-center gap-8 flex-wrap">
+                <div class="text-center transform rotate-3 hover:rotate-0 transition-transform">
+                    <div class="font-display text-6xl text-[#FF6B6B] mb-2">99%</div>
+                    <div class="font-mono text-sm text-white/50">vibes only</div>
+                </div>
+                <div class="text-center transform -rotate-2 hover:rotate-0 transition-transform">
+                    <div class="font-display text-6xl text-[#4ECDC4] mb-2">24/7</div>
+                    <div class="font-mono text-sm text-white/50">unhinged mode</div>
+                </div>
+                <div class="text-center transform rotate-1 hover:rotate-0 transition-transform">
+                    <div class="font-display text-6xl text-[#FFE66D] mb-2">100</div>
+                    <div class="font-mono text-sm text-white/50">emoji limit? never</div>
+                </div>
+                <div class="text-center transform -rotate-3 hover:rotate-0 transition-transform">
+                    <div class="font-display text-6xl text-[#A388EE] mb-2">∞</div>
+                    <div class="font-mono text-sm text-white/50">layers of irony</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Style Info -->
+        <section class="grid grid-cols-2 gap-8">
+            <div class="bg-white/5 backdrop-blur rounded-3xl p-8 transform rotate-1 hover:rotate-0 transition-transform">
+                <h3 class="font-mono text-sm text-white/50 mb-6">BEST FOR (no gatekeeping)</h3>
+                <ul class="space-y-3 font-display text-lg">
+                    <li class="flex items-center gap-3">
+                        <span class="text-[#FF6B6B]">✦</span> Gen Z brands
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <span class="text-[#4ECDC4]">✦</span> Social apps
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <span class="text-[#FFE66D]">✦</span> Meme pages
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <span class="text-[#A388EE]">✦</span> Unhinged marketing
+                    </li>
+                </ul>
+            </div>
+            <div class="bg-white/5 backdrop-blur rounded-3xl p-8 transform -rotate-1 hover:rotate-0 transition-transform">
+                <h3 class="font-mono text-sm text-white/50 mb-6">KEY ELEMENTS (the formula)</h3>
+                <ul class="space-y-3 font-display text-lg">
+                    <li class="flex items-center gap-3">
+                        <span class="text-[#FF6B6B]">→</span> Chaotic layouts
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <span class="text-[#4ECDC4]">→</span> Tilted cards
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <span class="text-[#FFE66D]">→</span> Playful copy
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <span class="text-[#A388EE]">→</span> Emoji overload
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="px-6 py-8 mt-16 border-t border-white/10">
+        <div class="max-w-5xl mx-auto flex justify-between items-center">
+            <a href="56-e-ink-paper.html" class="font-mono text-white/50 hover:text-[#4ECDC4] text-sm">&larr; E-Ink/Paper</a>
+            <span class="font-mono text-sm text-white/30">that's all the styles bestie 💅</span>
+            <a href="../index.html" class="font-mono text-white/50 hover:text-[#FF6B6B] text-sm">back to index &rarr;</a>
+        </div>
+    </footer>
+</body>
+</html>

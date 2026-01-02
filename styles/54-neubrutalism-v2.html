@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neubrutalism v2 - UI Style #54</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { font-family: 'Space Grotesk', sans-serif; }
+        .brutal-shadow { box-shadow: 6px 6px 0 #000; }
+        .brutal-shadow-lg { box-shadow: 10px 10px 0 #000; }
+        .brutal-shadow-hover:hover { box-shadow: 3px 3px 0 #000; transform: translate(3px, 3px); }
+    </style>
+</head>
+<body class="bg-[#FFFBF0] min-h-screen">
+    <!-- Navigation -->
+    <nav class="border-b-4 border-black px-6 py-4 bg-[#FF6B6B]">
+        <div class="max-w-5xl mx-auto flex justify-between items-center">
+            <a href="../index.html" class="font-bold hover:underline">&larr; Back</a>
+            <span class="font-bold text-lg">#54 NEUBRUTALISM v2</span>
+            <span class="font-medium">Modern</span>
+        </div>
+    </nav>
+
+    <div class="max-w-5xl mx-auto p-8">
+        <!-- Hero -->
+        <section class="border-4 border-black bg-[#A388EE] brutal-shadow-lg p-12 mb-12">
+            <div class="max-w-2xl">
+                <span class="inline-block px-4 py-2 bg-[#FFE156] border-2 border-black font-bold text-sm mb-6">
+                    DESIGN STYLE #54
+                </span>
+                <h1 class="text-6xl font-bold mb-6 leading-tight">
+                    NEUBRUTALISM<br/>VERSION 2.0
+                </h1>
+                <p class="text-xl mb-8">
+                    Bold borders, raw aesthetics, and unapologetic design. The evolution of brutalist web design for modern interfaces.
+                </p>
+                <div class="flex gap-4">
+                    <button class="px-8 py-4 bg-black text-white font-bold border-4 border-black brutal-shadow brutal-shadow-hover cursor-pointer transition-all">
+                        GET STARTED
+                    </button>
+                    <button class="px-8 py-4 bg-white font-bold border-4 border-black brutal-shadow brutal-shadow-hover cursor-pointer transition-all">
+                        LEARN MORE
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Feature Cards -->
+        <section class="grid grid-cols-3 gap-6 mb-12">
+            <div class="border-4 border-black bg-[#4ECDC4] brutal-shadow p-6">
+                <div class="w-16 h-16 bg-black text-white flex items-center justify-center text-3xl font-bold mb-4">
+                    01
+                </div>
+                <h3 class="text-xl font-bold mb-2">THICK BORDERS</h3>
+                <p class="text-sm">
+                    4px minimum. No subtle lines here. Borders are bold and unapologetic.
+                </p>
+            </div>
+            <div class="border-4 border-black bg-[#FFE156] brutal-shadow p-6">
+                <div class="w-16 h-16 bg-black text-white flex items-center justify-center text-3xl font-bold mb-4">
+                    02
+                </div>
+                <h3 class="text-xl font-bold mb-2">HARD SHADOWS</h3>
+                <p class="text-sm">
+                    Solid offset shadows. No blur, no gradient. Pure geometric shadows.
+                </p>
+            </div>
+            <div class="border-4 border-black bg-[#FF6B6B] brutal-shadow p-6">
+                <div class="w-16 h-16 bg-black text-white flex items-center justify-center text-3xl font-bold mb-4">
+                    03
+                </div>
+                <h3 class="text-xl font-bold mb-2">BRIGHT COLORS</h3>
+                <p class="text-sm">
+                    Saturated, clashing, attention-grabbing. Colors that demand to be seen.
+                </p>
+            </div>
+        </section>
+
+        <!-- Split Section -->
+        <section class="grid grid-cols-2 gap-6 mb-12">
+            <div class="border-4 border-black bg-white brutal-shadow p-8">
+                <h2 class="text-3xl font-bold mb-6">FORM EXAMPLE</h2>
+                <div class="space-y-4">
+                    <div>
+                        <label class="font-bold text-sm block mb-2">EMAIL</label>
+                        <input type="email" class="w-full px-4 py-3 border-4 border-black font-medium focus:outline-none focus:ring-4 focus:ring-[#FFE156]" placeholder="you@example.com">
+                    </div>
+                    <div>
+                        <label class="font-bold text-sm block mb-2">PASSWORD</label>
+                        <input type="password" class="w-full px-4 py-3 border-4 border-black font-medium focus:outline-none focus:ring-4 focus:ring-[#FFE156]" placeholder="********">
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <input type="checkbox" class="w-6 h-6 border-4 border-black accent-black cursor-pointer">
+                        <label class="font-medium">Remember me</label>
+                    </div>
+                    <button class="w-full px-6 py-4 bg-black text-white font-bold border-4 border-black brutal-shadow brutal-shadow-hover cursor-pointer transition-all">
+                        SIGN IN
+                    </button>
+                </div>
+            </div>
+            <div class="border-4 border-black bg-[#BAFFC9] brutal-shadow p-8">
+                <h2 class="text-3xl font-bold mb-6">PRICING</h2>
+                <div class="space-y-4">
+                    <div class="border-4 border-black bg-white p-4 cursor-pointer hover:translate-x-1 hover:translate-y-1 transition-transform">
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold">Basic</span>
+                            <span class="font-bold text-2xl">$9</span>
+                        </div>
+                    </div>
+                    <div class="border-4 border-black bg-[#FFE156] p-4 cursor-pointer hover:translate-x-1 hover:translate-y-1 transition-transform">
+                        <div class="flex justify-between items-center">
+                            <div>
+                                <span class="font-bold">Pro</span>
+                                <span class="text-xs ml-2 px-2 py-1 bg-black text-white">POPULAR</span>
+                            </div>
+                            <span class="font-bold text-2xl">$29</span>
+                        </div>
+                    </div>
+                    <div class="border-4 border-black bg-white p-4 cursor-pointer hover:translate-x-1 hover:translate-y-1 transition-transform">
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold">Enterprise</span>
+                            <span class="font-bold text-2xl">$99</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonial -->
+        <section class="border-4 border-black bg-[#C4A1FF] brutal-shadow-lg p-8 mb-12">
+            <div class="flex gap-8 items-center">
+                <div class="w-24 h-24 bg-black border-4 border-black flex items-center justify-center flex-shrink-0">
+                    <span class="text-white text-4xl">:)</span>
+                </div>
+                <div>
+                    <p class="text-2xl font-bold mb-4">
+                        "Neubrutalism is not about making things ugly. It's about being honest and direct with design."
+                    </p>
+                    <p class="font-medium">— Some Designer, Probably</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Button Gallery -->
+        <section class="border-4 border-black bg-white brutal-shadow p-8 mb-12">
+            <h2 class="text-3xl font-bold mb-6">BUTTON STYLES</h2>
+            <div class="flex flex-wrap gap-4">
+                <button class="px-6 py-3 bg-black text-white font-bold border-4 border-black cursor-pointer">
+                    DEFAULT
+                </button>
+                <button class="px-6 py-3 bg-[#FF6B6B] font-bold border-4 border-black brutal-shadow brutal-shadow-hover cursor-pointer transition-all">
+                    DANGER
+                </button>
+                <button class="px-6 py-3 bg-[#4ECDC4] font-bold border-4 border-black brutal-shadow brutal-shadow-hover cursor-pointer transition-all">
+                    SUCCESS
+                </button>
+                <button class="px-6 py-3 bg-[#FFE156] font-bold border-4 border-black brutal-shadow brutal-shadow-hover cursor-pointer transition-all">
+                    WARNING
+                </button>
+                <button class="px-6 py-3 bg-[#A388EE] font-bold border-4 border-black brutal-shadow brutal-shadow-hover cursor-pointer transition-all">
+                    PRIMARY
+                </button>
+            </div>
+        </section>
+
+        <!-- Style Info -->
+        <section class="grid grid-cols-2 gap-6">
+            <div class="border-4 border-black bg-[#FFE156] brutal-shadow p-6">
+                <h3 class="font-bold text-lg mb-4">BEST FOR</h3>
+                <ul class="space-y-2 font-medium">
+                    <li>→ Creative agencies</li>
+                    <li>→ Portfolio sites</li>
+                    <li>→ SaaS products</li>
+                    <li>→ Startup landing pages</li>
+                </ul>
+            </div>
+            <div class="border-4 border-black bg-[#4ECDC4] brutal-shadow p-6">
+                <h3 class="font-bold text-lg mb-4">KEY ELEMENTS</h3>
+                <ul class="space-y-2 font-medium">
+                    <li>→ 4px+ borders</li>
+                    <li>→ Solid box shadows</li>
+                    <li>→ High saturation colors</li>
+                    <li>→ Geometric shapes</li>
+                </ul>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="border-t-4 border-black px-6 py-4 mt-12 bg-[#FF6B6B]">
+        <div class="max-w-5xl mx-auto flex justify-between items-center">
+            <a href="53-bento-grids.html" class="font-bold hover:underline">&larr; Bento Grids</a>
+            <a href="55-spatial-ui.html" class="font-bold hover:underline">Spatial UI &rarr;</a>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark Mode (OLED) - UI Style #07</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { font-family: 'Inter', sans-serif; }
+        body { background: #000000; }
+        .glow-green { text-shadow: 0 0 20px rgba(57, 255, 20, 0.5); }
+        .glow-blue { text-shadow: 0 0 20px rgba(0, 128, 255, 0.5); }
+        .glow-gold { text-shadow: 0 0 20px rgba(255, 215, 0, 0.5); }
+        .glow-purple { text-shadow: 0 0 20px rgba(191, 0, 255, 0.5); }
+    </style>
+</head>
+<body class="min-h-screen text-white">
+    <!-- Navigation -->
+    <nav class="fixed top-4 left-4 right-4 bg-[#121212] rounded-xl z-50 border border-white/5">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="../index.html" class="text-sm text-gray-500 hover:text-white transition-colors">&larr; Back</a>
+            <span class="font-medium">#07 Dark Mode (OLED)</span>
+            <span class="text-sm text-gray-600">General</span>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="pt-32 pb-20 px-6">
+        <div class="max-w-5xl mx-auto text-center">
+            <h1 class="text-7xl font-bold mb-6">
+                <span class="glow-green text-[#39FF14]">Pure</span>
+                <span class="text-white">Black</span>
+            </h1>
+            <p class="text-xl text-gray-500 max-w-2xl mx-auto">OLED-optimized dark theme. Deep blacks, vibrant accents, and maximum power efficiency.</p>
+        </div>
+    </section>
+
+    <!-- Features Grid -->
+    <section class="py-12 px-6">
+        <div class="max-w-5xl mx-auto">
+            <div class="grid grid-cols-3 gap-6">
+                <div class="bg-[#121212] rounded-2xl p-6 border border-white/5">
+                    <div class="w-12 h-12 bg-[#39FF14] rounded-xl flex items-center justify-center mb-4" style="box-shadow: 0 0 30px rgba(57, 255, 20, 0.3);">
+                        <svg class="w-6 h-6 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2 glow-green text-[#39FF14]">Power Efficient</h3>
+                    <p class="text-gray-500 text-sm">True blacks on OLED = zero power consumption</p>
+                </div>
+
+                <div class="bg-[#121212] rounded-2xl p-6 border border-white/5">
+                    <div class="w-12 h-12 bg-[#0080FF] rounded-xl flex items-center justify-center mb-4" style="box-shadow: 0 0 30px rgba(0, 128, 255, 0.3);">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2 glow-blue text-[#0080FF]">Eye Friendly</h3>
+                    <p class="text-gray-500 text-sm">Reduced blue light emission for night use</p>
+                </div>
+
+                <div class="bg-[#121212] rounded-2xl p-6 border border-white/5">
+                    <div class="w-12 h-12 bg-[#FFD700] rounded-xl flex items-center justify-center mb-4" style="box-shadow: 0 0 30px rgba(255, 215, 0, 0.3);">
+                        <svg class="w-6 h-6 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2 glow-gold text-[#FFD700]">High Contrast</h3>
+                    <p class="text-gray-500 text-sm">WCAG AAA compliant text visibility</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Color Palette -->
+    <section class="py-12 px-6">
+        <div class="max-w-5xl mx-auto">
+            <h3 class="text-gray-600 text-sm uppercase tracking-widest mb-8">Color Palette</h3>
+            <div class="bg-[#121212] rounded-2xl p-8 border border-white/5">
+                <div class="grid grid-cols-5 gap-6">
+                    <div class="text-center">
+                        <div class="h-20 rounded-xl mb-3 border border-white/10" style="background: #000000;"></div>
+                        <p class="text-xs text-gray-500">Deep Black</p>
+                        <p class="text-xs text-gray-600">#000000</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="h-20 rounded-xl mb-3" style="background: #121212;"></div>
+                        <p class="text-xs text-gray-500">Dark Grey</p>
+                        <p class="text-xs text-gray-600">#121212</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="h-20 rounded-xl mb-3" style="background: #39FF14;"></div>
+                        <p class="text-xs text-gray-500">Neon Green</p>
+                        <p class="text-xs text-gray-600">#39FF14</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="h-20 rounded-xl mb-3" style="background: #0080FF;"></div>
+                        <p class="text-xs text-gray-500">Electric Blue</p>
+                        <p class="text-xs text-gray-600">#0080FF</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="h-20 rounded-xl mb-3" style="background: #FFD700;"></div>
+                        <p class="text-xs text-gray-500">Gold</p>
+                        <p class="text-xs text-gray-600">#FFD700</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Buttons -->
+    <section class="py-12 px-6">
+        <div class="max-w-5xl mx-auto">
+            <h3 class="text-gray-600 text-sm uppercase tracking-widest mb-8">Buttons</h3>
+            <div class="flex flex-wrap gap-4">
+                <button class="bg-[#39FF14] text-black px-6 py-3 rounded-lg font-medium hover:opacity-80 transition-opacity cursor-pointer" style="box-shadow: 0 0 20px rgba(57, 255, 20, 0.3);">Primary</button>
+                <button class="bg-[#0080FF] px-6 py-3 rounded-lg font-medium hover:opacity-80 transition-opacity cursor-pointer" style="box-shadow: 0 0 20px rgba(0, 128, 255, 0.3);">Secondary</button>
+                <button class="bg-[#121212] border border-white/20 px-6 py-3 rounded-lg font-medium hover:border-white/40 transition-colors cursor-pointer">Outline</button>
+                <button class="bg-transparent text-[#BF00FF] px-6 py-3 rounded-lg font-medium glow-purple hover:opacity-80 cursor-pointer">Text Link</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cards -->
+    <section class="py-12 px-6">
+        <div class="max-w-5xl mx-auto">
+            <h3 class="text-gray-600 text-sm uppercase tracking-widest mb-8">Cards</h3>
+            <div class="grid grid-cols-2 gap-6">
+                <div class="bg-[#0A0E27] rounded-2xl p-6 border border-[#0080FF]/20">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-10 h-10 bg-[#0080FF]/20 rounded-lg flex items-center justify-center">
+                            <span class="glow-blue text-[#0080FF]">01</span>
+                        </div>
+                        <h4 class="font-semibold">Midnight Blue Theme</h4>
+                    </div>
+                    <p class="text-gray-500 text-sm">Perfect for coding platforms and developer tools</p>
+                </div>
+                <div class="bg-[#121212] rounded-2xl p-6 border border-[#39FF14]/20">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-10 h-10 bg-[#39FF14]/20 rounded-lg flex items-center justify-center">
+                            <span class="glow-green text-[#39FF14]">02</span>
+                        </div>
+                        <h4 class="font-semibold">Matrix Green Theme</h4>
+                    </div>
+                    <p class="text-gray-500 text-sm">Entertainment and gaming applications</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Form -->
+    <section class="py-12 px-6">
+        <div class="max-w-md mx-auto">
+            <div class="bg-[#121212] rounded-2xl p-8 border border-white/5">
+                <h3 class="text-xl font-semibold mb-6 text-center">Sign In</h3>
+                <div class="space-y-4">
+                    <input type="email" placeholder="Email" class="w-full bg-black border border-white/10 rounded-lg px-4 py-3 text-white placeholder-gray-600 focus:outline-none focus:border-[#0080FF] transition-colors">
+                    <input type="password" placeholder="Password" class="w-full bg-black border border-white/10 rounded-lg px-4 py-3 text-white placeholder-gray-600 focus:outline-none focus:border-[#0080FF] transition-colors">
+                    <button class="w-full bg-[#39FF14] text-black py-3 rounded-lg font-medium cursor-pointer" style="box-shadow: 0 0 20px rgba(57, 255, 20, 0.3);">Continue</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Info -->
+    <section class="py-12 px-6">
+        <div class="max-w-5xl mx-auto">
+            <div class="bg-[#121212] rounded-2xl p-8 border border-white/5">
+                <div class="grid grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-gray-600 text-sm uppercase tracking-widest mb-4">Best For</h3>
+                        <ul class="space-y-2 text-gray-400 text-sm">
+                            <li>Night-mode apps</li>
+                            <li>Coding platforms</li>
+                            <li>Entertainment</li>
+                            <li>OLED devices</li>
+                            <li>Low-light environments</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-gray-600 text-sm uppercase tracking-widest mb-4">Characteristics</h3>
+                        <ul class="space-y-2 text-gray-400 text-sm">
+                            <li>Light Mode: No</li>
+                            <li>Dark Mode: Only</li>
+                            <li>Performance: Excellent</li>
+                            <li>Accessibility: WCAG AAA</li>
+                            <li>Mobile: High</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 px-6">
+        <div class="max-w-5xl mx-auto bg-[#121212] rounded-xl px-6 py-4 flex justify-between items-center border border-white/5">
+            <a href="06-vibrant-block.html" class="text-sm text-gray-500 hover:text-white">&larr; Vibrant Block</a>
+            <a href="08-accessible.html" class="text-sm text-gray-500 hover:text-white">Accessible &rarr;</a>
+        </div>
+    </footer>
+</body>
+</html>

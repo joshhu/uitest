@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D & Hyperrealism - UI Style #05</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * { font-family: 'Inter', sans-serif; }
+        .perspective { perspective: 1000px; }
+        .card-3d {
+            transform-style: preserve-3d;
+            transition: transform 0.5s;
+        }
+        .card-3d:hover { transform: rotateY(10deg) rotateX(5deg); }
+        .gold-gradient {
+            background: linear-gradient(135deg, #FFD700 0%, #FFA500 50%, #FFD700 100%);
+        }
+        .metallic {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #667eea 100%);
+        }
+        .realistic-shadow {
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5),
+                        0 10px 20px -5px rgba(0, 0, 0, 0.3),
+                        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+        }
+        .depth-shadow {
+            box-shadow: 0 50px 100px -20px rgba(0, 0, 0, 0.5),
+                        0 30px 60px -30px rgba(0, 0, 0, 0.5);
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900 min-h-screen text-white">
+    <!-- Navigation -->
+    <nav class="fixed top-4 left-4 right-4 bg-slate-800/80 backdrop-blur-md rounded-xl z-50 border border-slate-700">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="../index.html" class="text-sm text-slate-400 hover:text-white transition-colors">&larr; Back</a>
+            <span class="font-semibold">#05 3D & Hyperrealism</span>
+            <span class="text-sm text-slate-500">General</span>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="pt-32 pb-20 px-6">
+        <div class="max-w-5xl mx-auto text-center perspective">
+            <div class="card-3d inline-block">
+                <div class="gold-gradient p-1 rounded-3xl realistic-shadow">
+                    <div class="bg-slate-900 rounded-3xl p-12">
+                        <h1 class="text-6xl font-extrabold mb-4 bg-gradient-to-r from-amber-200 via-yellow-300 to-amber-200 bg-clip-text text-transparent">Immersive Depth</h1>
+                        <p class="text-slate-400 text-xl">Realistic textures, 3D models, and spatial navigation</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3D Cards -->
+    <section class="py-16 px-6">
+        <div class="max-w-6xl mx-auto perspective">
+            <h3 class="text-slate-500 text-sm uppercase tracking-widest mb-8 text-center">3D Interactive Cards</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="card-3d cursor-pointer">
+                    <div class="bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-6 realistic-shadow border border-slate-700">
+                        <div class="w-20 h-20 gold-gradient rounded-2xl flex items-center justify-center mb-6 mx-auto" style="box-shadow: 0 15px 35px rgba(255, 215, 0, 0.3);">
+                            <svg class="w-10 h-10 text-slate-900" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-center mb-2">WebGL Powered</h3>
+                        <p class="text-slate-400 text-sm text-center">Real-time 3D rendering with Three.js</p>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="card-3d cursor-pointer">
+                    <div class="bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-6 realistic-shadow border border-slate-700">
+                        <div class="w-20 h-20 metallic rounded-2xl flex items-center justify-center mb-6 mx-auto" style="box-shadow: 0 15px 35px rgba(118, 75, 162, 0.3);">
+                            <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10l-2 1m0 0l-2-1m2 1v2.5M20 7l-2 1m2-1l-2-1m2 1v2.5M14 4l-2-1-2 1M4 7l2-1M4 7l2 1M4 7v2.5M12 21l-2-1m2 1l2-1m-2 1v-2.5M6 18l-2-1v-2.5M18 18l2-1v-2.5"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-center mb-2">Physics Lighting</h3>
+                        <p class="text-slate-400 text-sm text-center">Realistic light sources and shadows</p>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="card-3d cursor-pointer">
+                    <div class="bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-6 realistic-shadow border border-slate-700">
+                        <div class="w-20 h-20 bg-gradient-to-br from-emerald-400 to-cyan-500 rounded-2xl flex items-center justify-center mb-6 mx-auto" style="box-shadow: 0 15px 35px rgba(16, 185, 129, 0.3);">
+                            <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-center mb-2">Rich Textures</h3>
+                        <p class="text-slate-400 text-sm text-center">High-fidelity material rendering</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Floating Element Demo -->
+    <section class="py-16 px-6">
+        <div class="max-w-4xl mx-auto">
+            <h3 class="text-slate-500 text-sm uppercase tracking-widest mb-8 text-center">Depth & Parallax</h3>
+            <div class="relative h-96">
+                <!-- Background layer -->
+                <div class="absolute inset-0 bg-gradient-to-br from-indigo-900/30 to-purple-900/30 rounded-3xl"></div>
+
+                <!-- Middle layer -->
+                <div class="absolute top-8 left-8 right-8 bottom-8 bg-slate-800/50 rounded-2xl backdrop-blur-sm border border-slate-700"></div>
+
+                <!-- Foreground layer -->
+                <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                    <div class="depth-shadow rounded-2xl">
+                        <div class="gold-gradient p-1 rounded-2xl">
+                            <div class="bg-slate-900 rounded-2xl p-8 text-center">
+                                <div class="w-16 h-16 mx-auto mb-4 rounded-full gold-gradient flex items-center justify-center" style="box-shadow: 0 0 40px rgba(255, 215, 0, 0.5);">
+                                    <span class="text-3xl">3D</span>
+                                </div>
+                                <h4 class="text-xl font-bold mb-2">Multi-Layer Design</h4>
+                                <p class="text-slate-400 text-sm">3-5 parallax layers</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Color Palette -->
+    <section class="py-16 px-6">
+        <div class="max-w-5xl mx-auto">
+            <h3 class="text-slate-500 text-sm uppercase tracking-widest mb-8 text-center">Color Palette</h3>
+            <div class="grid grid-cols-5 gap-4">
+                <div class="text-center">
+                    <div class="h-20 rounded-xl mb-2 realistic-shadow" style="background: #001F3F;"></div>
+                    <p class="text-xs text-slate-400">Deep Navy</p>
+                </div>
+                <div class="text-center">
+                    <div class="h-20 rounded-xl mb-2 realistic-shadow" style="background: #228B22;"></div>
+                    <p class="text-xs text-slate-400">Forest Green</p>
+                </div>
+                <div class="text-center">
+                    <div class="h-20 rounded-xl mb-2 realistic-shadow" style="background: #800020;"></div>
+                    <p class="text-xs text-slate-400">Burgundy</p>
+                </div>
+                <div class="text-center">
+                    <div class="h-20 rounded-xl mb-2 realistic-shadow gold-gradient"></div>
+                    <p class="text-xs text-slate-400">Gold</p>
+                </div>
+                <div class="text-center">
+                    <div class="h-20 rounded-xl mb-2 realistic-shadow" style="background: linear-gradient(135deg, #C0C0C0, #E8E8E8, #C0C0C0);"></div>
+                    <p class="text-xs text-slate-400">Silver</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Button Showcase -->
+    <section class="py-16 px-6">
+        <div class="max-w-3xl mx-auto">
+            <h3 class="text-slate-500 text-sm uppercase tracking-widest mb-8 text-center">Buttons</h3>
+            <div class="flex flex-wrap justify-center gap-6">
+                <button class="gold-gradient px-8 py-4 rounded-xl font-semibold text-slate-900 realistic-shadow hover:scale-105 transition-transform cursor-pointer">
+                    Premium Action
+                </button>
+                <button class="bg-gradient-to-r from-slate-700 to-slate-800 px-8 py-4 rounded-xl font-semibold realistic-shadow border border-slate-600 hover:scale-105 transition-transform cursor-pointer">
+                    Secondary
+                </button>
+                <button class="bg-transparent border-2 border-amber-400 px-8 py-4 rounded-xl font-semibold text-amber-400 hover:bg-amber-400 hover:text-slate-900 transition-all cursor-pointer">
+                    Outline
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Info -->
+    <section class="py-16 px-6">
+        <div class="max-w-5xl mx-auto">
+            <div class="bg-slate-800/50 backdrop-blur rounded-2xl p-8 border border-slate-700">
+                <div class="grid grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-slate-400 text-sm uppercase tracking-widest mb-4">Best For</h3>
+                        <ul class="space-y-2 text-slate-300 text-sm">
+                            <li>Gaming platforms</li>
+                            <li>Product showcases</li>
+                            <li>Immersive experiences</li>
+                            <li>High-end e-commerce</li>
+                            <li>VR/AR applications</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-slate-400 text-sm uppercase tracking-widest mb-4">Characteristics</h3>
+                        <ul class="space-y-2 text-slate-300 text-sm">
+                            <li>Performance: Poor (heavy)</li>
+                            <li>Accessibility: Limited</li>
+                            <li>Mobile: Low support</li>
+                            <li>Complexity: High</li>
+                            <li>Framework: Three.js, R3F</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 px-6">
+        <div class="max-w-5xl mx-auto bg-slate-800/50 rounded-xl px-6 py-4 flex justify-between items-center border border-slate-700">
+            <a href="04-brutalism.html" class="text-sm text-slate-400 hover:text-white">&larr; Brutalism</a>
+            <a href="06-vibrant-block.html" class="text-sm text-slate-400 hover:text-white">Vibrant Block &rarr;</a>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI-Native Interface - UI Style #43</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { font-family: 'Inter', sans-serif; }
+        .thinking-dots span {
+            animation: blink 1.4s infinite both;
+        }
+        .thinking-dots span:nth-child(2) { animation-delay: 0.2s; }
+        .thinking-dots span:nth-child(3) { animation-delay: 0.4s; }
+        @keyframes blink {
+            0%, 80%, 100% { opacity: 0; }
+            40% { opacity: 1; }
+        }
+        .gradient-border {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 2px;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 min-h-screen">
+    <!-- Navigation -->
+    <nav class="bg-white border-b border-slate-200 px-6 py-4">
+        <div class="max-w-4xl mx-auto flex justify-between items-center">
+            <a href="../index.html" class="text-slate-500 hover:text-slate-900 text-sm">&larr; Back</a>
+            <span class="font-semibold text-slate-900">#43 AI-Native Interface</span>
+            <span class="text-slate-400 text-sm">Modern</span>
+        </div>
+    </nav>
+
+    <div class="max-w-4xl mx-auto p-6">
+        <!-- Chat Header -->
+        <div class="text-center py-8">
+            <div class="inline-flex items-center gap-2 px-4 py-2 bg-violet-100 text-violet-700 rounded-full text-sm mb-4">
+                <span class="w-2 h-2 bg-green-500 rounded-full"></span>
+                AI Assistant Online
+            </div>
+            <h1 class="text-3xl font-bold text-slate-900 mb-2">How can I help you today?</h1>
+            <p class="text-slate-500">Ask me anything. I'm here to assist.</p>
+        </div>
+
+        <!-- Chat Interface -->
+        <div class="bg-white rounded-2xl shadow-sm border border-slate-200 mb-6">
+            <!-- Messages -->
+            <div class="p-6 space-y-6">
+                <!-- User Message -->
+                <div class="flex justify-end">
+                    <div class="max-w-md">
+                        <div class="bg-violet-600 text-white rounded-2xl rounded-tr-md px-4 py-3">
+                            <p>Can you help me analyze my sales data and create a summary report?</p>
+                        </div>
+                        <p class="text-xs text-slate-400 text-right mt-1">2:34 PM</p>
+                    </div>
+                </div>
+
+                <!-- AI Response -->
+                <div class="flex gap-3">
+                    <div class="w-8 h-8 bg-gradient-to-br from-violet-500 to-purple-600 rounded-full flex items-center justify-center flex-shrink-0">
+                        <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+                        </svg>
+                    </div>
+                    <div class="max-w-lg">
+                        <div class="bg-slate-100 rounded-2xl rounded-tl-md px-4 py-3">
+                            <p class="text-slate-900 mb-3">I'd be happy to help analyze your sales data! Here's what I can do:</p>
+                            <div class="space-y-2">
+                                <div class="flex items-center gap-2 p-3 bg-white rounded-lg border border-slate-200">
+                                    <span class="w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center">
+                                        <svg class="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6"/>
+                                        </svg>
+                                    </span>
+                                    <span class="text-sm text-slate-700">Trend analysis & visualization</span>
+                                </div>
+                                <div class="flex items-center gap-2 p-3 bg-white rounded-lg border border-slate-200">
+                                    <span class="w-8 h-8 bg-green-100 rounded-lg flex items-center justify-center">
+                                        <svg class="w-4 h-4 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                        </svg>
+                                    </span>
+                                    <span class="text-sm text-slate-700">Key insights & recommendations</span>
+                                </div>
+                                <div class="flex items-center gap-2 p-3 bg-white rounded-lg border border-slate-200">
+                                    <span class="w-8 h-8 bg-purple-100 rounded-lg flex items-center justify-center">
+                                        <svg class="w-4 h-4 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586"/>
+                                        </svg>
+                                    </span>
+                                    <span class="text-sm text-slate-700">Export-ready report</span>
+                                </div>
+                            </div>
+                            <p class="text-slate-700 mt-3">Would you like to upload your data file?</p>
+                        </div>
+                        <p class="text-xs text-slate-400 mt-1">2:34 PM</p>
+                    </div>
+                </div>
+
+                <!-- AI Thinking -->
+                <div class="flex gap-3">
+                    <div class="w-8 h-8 bg-gradient-to-br from-violet-500 to-purple-600 rounded-full flex items-center justify-center flex-shrink-0">
+                        <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+                        </svg>
+                    </div>
+                    <div class="bg-slate-100 rounded-2xl rounded-tl-md px-4 py-3">
+                        <div class="thinking-dots flex gap-1">
+                            <span class="w-2 h-2 bg-slate-400 rounded-full"></span>
+                            <span class="w-2 h-2 bg-slate-400 rounded-full"></span>
+                            <span class="w-2 h-2 bg-slate-400 rounded-full"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Input Area -->
+            <div class="p-4 border-t border-slate-200">
+                <div class="flex gap-3">
+                    <button class="p-3 text-slate-400 hover:text-slate-600 cursor-pointer">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.172 7l-6.586 6.586a2 2 0 102.828 2.828l6.414-6.586a4 4 0 00-5.656-5.656l-6.415 6.585a6 6 0 108.486 8.486L20.5 13"/>
+                        </svg>
+                    </button>
+                    <input type="text" placeholder="Type your message..." class="flex-1 px-4 py-3 bg-slate-100 rounded-xl focus:outline-none focus:ring-2 focus:ring-violet-500">
+                    <button class="p-3 bg-violet-600 text-white rounded-xl hover:bg-violet-700 cursor-pointer">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quick Actions -->
+        <div class="grid grid-cols-4 gap-3 mb-8">
+            <button class="p-4 bg-white rounded-xl border border-slate-200 hover:border-violet-300 hover:shadow-sm cursor-pointer transition-all text-left">
+                <div class="text-lg mb-1">📊</div>
+                <div class="text-sm font-medium text-slate-900">Analyze Data</div>
+            </button>
+            <button class="p-4 bg-white rounded-xl border border-slate-200 hover:border-violet-300 hover:shadow-sm cursor-pointer transition-all text-left">
+                <div class="text-lg mb-1">✍️</div>
+                <div class="text-sm font-medium text-slate-900">Write Content</div>
+            </button>
+            <button class="p-4 bg-white rounded-xl border border-slate-200 hover:border-violet-300 hover:shadow-sm cursor-pointer transition-all text-left">
+                <div class="text-lg mb-1">💡</div>
+                <div class="text-sm font-medium text-slate-900">Brainstorm</div>
+            </button>
+            <button class="p-4 bg-white rounded-xl border border-slate-200 hover:border-violet-300 hover:shadow-sm cursor-pointer transition-all text-left">
+                <div class="text-lg mb-1">🔍</div>
+                <div class="text-sm font-medium text-slate-900">Research</div>
+            </button>
+        </div>
+
+        <!-- Style Info -->
+        <div class="bg-white rounded-2xl p-6 border border-slate-200">
+            <div class="grid grid-cols-2 gap-8">
+                <div>
+                    <h3 class="text-slate-400 text-sm uppercase tracking-widest mb-4">Best For</h3>
+                    <ul class="space-y-2 text-slate-600">
+                        <li>AI chatbots & assistants</li>
+                        <li>Conversational interfaces</li>
+                        <li>Customer support</li>
+                        <li>Productivity tools</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-slate-400 text-sm uppercase tracking-widest mb-4">Key Elements</h3>
+                    <ul class="space-y-2 text-slate-600">
+                        <li>Chat bubble layouts</li>
+                        <li>Typing indicators</li>
+                        <li>Action cards</li>
+                        <li>Gradient avatars</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-slate-200 px-6 py-4 mt-8">
+        <div class="max-w-4xl mx-auto flex justify-between items-center">
+            <a href="42-organic-biophilic.html" class="text-slate-500 hover:text-slate-900 text-sm">&larr; Organic Biophilic</a>
+            <a href="44-memphis-revival.html" class="text-slate-500 hover:text-slate-900 text-sm">Memphis Revival &rarr;</a>
+        </div>
+    </footer>
+</body>
+</html>

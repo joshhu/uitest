@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zero Interface - UI Style #18</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * { font-family: 'Inter', sans-serif; }
+        body { background: #FAFAFA; }
+        @keyframes pulse-slow {
+            0%, 100% { transform: scale(1); opacity: 0.8; }
+            50% { transform: scale(1.1); opacity: 1; }
+        }
+        .pulse-slow { animation: pulse-slow 3s ease-in-out infinite; }
+        @keyframes typing {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 1; }
+        }
+        .typing-dot { animation: typing 1s ease-in-out infinite; }
+    </style>
+</head>
+<body class="min-h-screen">
+    <!-- Minimal Navigation -->
+    <nav class="fixed top-0 left-0 right-0 bg-white/80 backdrop-blur-sm z-50">
+        <div class="max-w-4xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="../index.html" class="text-gray-400 hover:text-gray-600 transition-colors text-sm">&larr; Back</a>
+            <span class="text-gray-600 font-medium">#18 Zero Interface</span>
+            <span class="text-gray-300 text-sm">General</span>
+        </div>
+    </nav>
+
+    <!-- Hero - Invisible UI -->
+    <section class="pt-32 pb-20 px-6">
+        <div class="max-w-2xl mx-auto text-center">
+            <div class="w-32 h-32 mx-auto mb-8 rounded-full bg-gradient-to-br from-blue-400 to-purple-500 flex items-center justify-center pulse-slow">
+                <div class="w-8 h-8 bg-white rounded-full"></div>
+            </div>
+            <h1 class="text-4xl font-light text-gray-800 mb-4">The Best UI is No UI</h1>
+            <p class="text-lg text-gray-500">Voice-first, gesture-based, AI-driven. Invisible controls that anticipate your needs.</p>
+        </div>
+    </section>
+
+    <!-- Voice Assistant Demo -->
+    <section class="py-16 px-6">
+        <div class="max-w-md mx-auto">
+            <div class="bg-white rounded-3xl p-8 shadow-sm">
+                <div class="text-center mb-8">
+                    <div class="w-20 h-20 mx-auto rounded-full bg-gradient-to-br from-blue-400 to-purple-500 flex items-center justify-center pulse-slow">
+                        <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"/>
+                        </svg>
+                    </div>
+                    <p class="text-gray-400 mt-4 text-sm">Listening...</p>
+                </div>
+
+                <!-- Conversation -->
+                <div class="space-y-4">
+                    <div class="text-right">
+                        <span class="inline-block bg-blue-500 text-white px-4 py-2 rounded-2xl rounded-br-none text-sm">
+                            What's the weather today?
+                        </span>
+                    </div>
+                    <div class="text-left">
+                        <span class="inline-block bg-gray-100 text-gray-700 px-4 py-2 rounded-2xl rounded-bl-none text-sm">
+                            It's 22°C and sunny. Perfect for a walk.
+                        </span>
+                    </div>
+                    <div class="text-right">
+                        <span class="inline-block bg-blue-500 text-white px-4 py-2 rounded-2xl rounded-br-none text-sm">
+                            Set a reminder for my meeting
+                        </span>
+                    </div>
+                    <div class="text-left flex items-center gap-2">
+                        <span class="inline-block bg-gray-100 text-gray-700 px-4 py-2 rounded-2xl rounded-bl-none text-sm flex items-center gap-2">
+                            <span class="typing-dot w-2 h-2 bg-gray-400 rounded-full"></span>
+                            <span class="typing-dot w-2 h-2 bg-gray-400 rounded-full" style="animation-delay: 0.2s;"></span>
+                            <span class="typing-dot w-2 h-2 bg-gray-400 rounded-full" style="animation-delay: 0.4s;"></span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contextual Cards -->
+    <section class="py-16 px-6">
+        <div class="max-w-4xl mx-auto">
+            <h3 class="text-gray-400 text-sm uppercase tracking-widest mb-8 text-center">Context-Aware Suggestions</h3>
+            <div class="grid grid-cols-3 gap-4">
+                <div class="bg-white rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow cursor-pointer">
+                    <div class="text-3xl mb-3">🌤️</div>
+                    <h4 class="font-medium text-gray-800 mb-1">Weather Update</h4>
+                    <p class="text-sm text-gray-500">Sunny, 22°C</p>
+                </div>
+                <div class="bg-white rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow cursor-pointer">
+                    <div class="text-3xl mb-3">📅</div>
+                    <h4 class="font-medium text-gray-800 mb-1">Next Meeting</h4>
+                    <p class="text-sm text-gray-500">In 30 minutes</p>
+                </div>
+                <div class="bg-white rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow cursor-pointer">
+                    <div class="text-3xl mb-3">🚗</div>
+                    <h4 class="font-medium text-gray-800 mb-1">Commute</h4>
+                    <p class="text-sm text-gray-500">15 min by car</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gesture Controls -->
+    <section class="py-16 px-6 bg-white">
+        <div class="max-w-4xl mx-auto">
+            <h3 class="text-gray-400 text-sm uppercase tracking-widest mb-8 text-center">Gesture & Voice Controls</h3>
+            <div class="grid grid-cols-4 gap-8 text-center">
+                <div>
+                    <div class="w-16 h-16 mx-auto mb-3 bg-gray-100 rounded-full flex items-center justify-center">
+                        <svg class="w-8 h-8 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 11l5-5m0 0l5 5m-5-5v12"/>
+                        </svg>
+                    </div>
+                    <p class="text-sm text-gray-600">Swipe Up</p>
+                    <p class="text-xs text-gray-400">Open Menu</p>
+                </div>
+                <div>
+                    <div class="w-16 h-16 mx-auto mb-3 bg-gray-100 rounded-full flex items-center justify-center">
+                        <svg class="w-8 h-8 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h8"/>
+                        </svg>
+                    </div>
+                    <p class="text-sm text-gray-600">Swipe Left</p>
+                    <p class="text-xs text-gray-400">Dismiss</p>
+                </div>
+                <div>
+                    <div class="w-16 h-16 mx-auto mb-3 bg-gray-100 rounded-full flex items-center justify-center">
+                        <svg class="w-8 h-8 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"/>
+                        </svg>
+                    </div>
+                    <p class="text-sm text-gray-600">Voice</p>
+                    <p class="text-xs text-gray-400">"Hey, Assistant"</p>
+                </div>
+                <div>
+                    <div class="w-16 h-16 mx-auto mb-3 bg-gray-100 rounded-full flex items-center justify-center">
+                        <svg class="w-8 h-8 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+                        </svg>
+                    </div>
+                    <p class="text-sm text-gray-600">Look</p>
+                    <p class="text-xs text-gray-400">Eye Tracking</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Colors -->
+    <section class="py-16 px-6">
+        <div class="max-w-4xl mx-auto">
+            <h3 class="text-gray-400 text-sm uppercase tracking-widest mb-8 text-center">Subtle Color Palette</h3>
+            <div class="grid grid-cols-4 gap-4">
+                <div class="text-center">
+                    <div class="h-20 rounded-xl mb-2" style="background: #FAFAFA; border: 1px solid #e5e5e5;"></div>
+                    <p class="text-sm text-gray-600">Background</p>
+                </div>
+                <div class="text-center">
+                    <div class="h-20 rounded-xl mb-2" style="background: #F5F1E8;"></div>
+                    <p class="text-sm text-gray-600">Warm White</p>
+                </div>
+                <div class="text-center">
+                    <div class="h-20 rounded-xl mb-2 bg-gradient-to-br from-blue-400 to-purple-500"></div>
+                    <p class="text-sm text-gray-600">Accent</p>
+                </div>
+                <div class="text-center">
+                    <div class="h-20 rounded-xl mb-2" style="background: #E5E5E5;"></div>
+                    <p class="text-sm text-gray-600">Muted</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Info -->
+    <section class="py-16 px-6 bg-white">
+        <div class="max-w-4xl mx-auto">
+            <div class="grid grid-cols-2 gap-8">
+                <div>
+                    <h3 class="text-gray-400 text-sm uppercase tracking-widest mb-4">Best For</h3>
+                    <ul class="space-y-2 text-gray-600">
+                        <li>Voice assistants</li>
+                        <li>AI platforms</li>
+                        <li>Smart home interfaces</li>
+                        <li>Contextual computing</li>
+                        <li>Ambient experiences</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-gray-400 text-sm uppercase tracking-widest mb-4">Characteristics</h3>
+                    <ul class="space-y-2 text-gray-600">
+                        <li>Performance: Excellent</li>
+                        <li>Accessibility: Excellent</li>
+                        <li>Mobile: High</li>
+                        <li>Complexity: Low (visual)</li>
+                        <li>Era: 2020s AI Era</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 px-6">
+        <div class="max-w-4xl mx-auto bg-white rounded-xl shadow-sm px-6 py-4 flex justify-between items-center">
+            <a href="17-inclusive-design.html" class="text-gray-400 hover:text-gray-600 transition-colors">&larr; Inclusive Design</a>
+            <a href="19-soft-ui-evolution.html" class="text-gray-400 hover:text-gray-600 transition-colors">Soft UI Evolution &rarr;</a>
+        </div>
+    </footer>
+</body>
+</html>

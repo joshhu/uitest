@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organic Biophilic - UI Style #42</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Nunito:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        .font-serif { font-family: 'Cormorant Garamond', serif; }
+        .font-sans { font-family: 'Nunito', sans-serif; }
+        .organic-shape { border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; }
+        .leaf-shape { border-radius: 5% 95% 10% 90% / 85% 15% 85% 15%; }
+    </style>
+</head>
+<body class="bg-[#F5F1E8] min-h-screen font-sans">
+    <!-- Navigation -->
+    <nav class="bg-[#F5F1E8] border-b border-[#E0D8C8] px-6 py-4">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <a href="../index.html" class="text-[#5D6B4D] hover:text-[#3E4A32] text-sm">&larr; Back</a>
+            <span class="font-serif text-xl text-[#3E4A32]">#42 Organic Biophilic</span>
+            <span class="text-[#8A9A7B] text-sm">Modern</span>
+        </div>
+    </nav>
+
+    <div class="max-w-6xl mx-auto p-8">
+        <!-- Hero -->
+        <section class="py-16 text-center">
+            <div class="inline-block px-6 py-2 bg-[#D4E4C1] rounded-full text-[#3E4A32] text-sm mb-6">
+                Nature-inspired design
+            </div>
+            <h1 class="font-serif text-7xl text-[#3E4A32] mb-6">Embrace Nature</h1>
+            <p class="text-xl text-[#5D6B4D] max-w-2xl mx-auto mb-10">
+                Design that brings the calming essence of nature into digital spaces. Organic forms, earthy colors, and sustainable aesthetics.
+            </p>
+            <div class="flex justify-center gap-4">
+                <button class="px-8 py-4 bg-[#5D6B4D] text-white rounded-full hover:bg-[#3E4A32] cursor-pointer transition-colors">
+                    Explore Nature
+                </button>
+                <button class="px-8 py-4 bg-transparent border-2 border-[#5D6B4D] text-[#5D6B4D] rounded-full hover:bg-[#5D6B4D]/10 cursor-pointer transition-colors">
+                    Learn More
+                </button>
+            </div>
+        </section>
+
+        <!-- Organic Cards -->
+        <section class="grid grid-cols-3 gap-8 mb-16">
+            <div class="bg-[#E8E0D0] rounded-[2rem] p-8 relative overflow-hidden">
+                <div class="absolute -top-10 -right-10 w-32 h-32 bg-[#D4E4C1] organic-shape opacity-50"></div>
+                <div class="relative">
+                    <div class="w-16 h-16 bg-[#8FBC8F] leaf-shape flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-serif text-2xl text-[#3E4A32] mb-2">Natural Materials</h3>
+                    <p class="text-[#5D6B4D]">Textures inspired by wood, stone, and organic fibers</p>
+                </div>
+            </div>
+            <div class="bg-[#D4E4C1] rounded-[2rem] p-8 relative overflow-hidden">
+                <div class="absolute -bottom-10 -left-10 w-32 h-32 bg-[#8FBC8F] organic-shape opacity-30"></div>
+                <div class="relative">
+                    <div class="w-16 h-16 bg-[#5D6B4D] leaf-shape flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-serif text-2xl text-[#3E4A32] mb-2">Soft Curves</h3>
+                    <p class="text-[#5D6B4D]">Organic shapes that mimic natural forms</p>
+                </div>
+            </div>
+            <div class="bg-[#C8B89E] rounded-[2rem] p-8 relative overflow-hidden">
+                <div class="absolute -top-10 -left-10 w-32 h-32 bg-[#E8E0D0] organic-shape opacity-40"></div>
+                <div class="relative">
+                    <div class="w-16 h-16 bg-[#3E4A32] leaf-shape flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-serif text-2xl text-[#3E4A32] mb-2">Earth Tones</h3>
+                    <p class="text-[#5D6B4D]">Colors drawn from soil, foliage, and sky</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Feature Section -->
+        <section class="bg-[#3E4A32] rounded-[3rem] p-12 mb-16 text-white">
+            <div class="grid grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="font-serif text-5xl mb-6">Bring the Outdoors In</h2>
+                    <p class="text-[#C8D4B8] text-lg mb-8">
+                        Biophilic design connects people with nature through organic shapes, natural materials, and earthy color palettes. It promotes wellbeing, reduces stress, and creates spaces that feel alive.
+                    </p>
+                    <ul class="space-y-4">
+                        <li class="flex items-center gap-3">
+                            <span class="w-8 h-8 bg-[#8FBC8F] rounded-full flex items-center justify-center text-[#3E4A32]">✓</span>
+                            <span>Reduces stress and anxiety</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span class="w-8 h-8 bg-[#8FBC8F] rounded-full flex items-center justify-center text-[#3E4A32]">✓</span>
+                            <span>Improves focus and creativity</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span class="w-8 h-8 bg-[#8FBC8F] rounded-full flex items-center justify-center text-[#3E4A32]">✓</span>
+                            <span>Creates emotional connection</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bg-[#5D6B4D] rounded-[2rem] p-8 text-center">
+                    <div class="text-8xl mb-4">🌿</div>
+                    <p class="font-serif text-3xl">Sustainable by Design</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Color Palette -->
+        <section class="bg-white rounded-[2rem] p-8 mb-16">
+            <h2 class="font-serif text-3xl text-[#3E4A32] mb-6 text-center">Nature's Palette</h2>
+            <div class="flex gap-4">
+                <div class="flex-1 h-32 bg-[#3E4A32] rounded-2xl flex items-end p-4">
+                    <span class="text-white text-sm">Forest</span>
+                </div>
+                <div class="flex-1 h-32 bg-[#5D6B4D] rounded-2xl flex items-end p-4">
+                    <span class="text-white text-sm">Sage</span>
+                </div>
+                <div class="flex-1 h-32 bg-[#8FBC8F] rounded-2xl flex items-end p-4">
+                    <span class="text-[#3E4A32] text-sm">Moss</span>
+                </div>
+                <div class="flex-1 h-32 bg-[#D4E4C1] rounded-2xl flex items-end p-4">
+                    <span class="text-[#3E4A32] text-sm">Leaf</span>
+                </div>
+                <div class="flex-1 h-32 bg-[#C8B89E] rounded-2xl flex items-end p-4">
+                    <span class="text-[#3E4A32] text-sm">Sand</span>
+                </div>
+                <div class="flex-1 h-32 bg-[#F5F1E8] rounded-2xl flex items-end p-4 border border-[#E0D8C8]">
+                    <span class="text-[#3E4A32] text-sm">Cream</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Style Info -->
+        <section class="bg-white rounded-[2rem] p-8">
+            <div class="grid grid-cols-2 gap-8">
+                <div>
+                    <h3 class="text-[#8A9A7B] text-sm uppercase tracking-widest mb-4">Best For</h3>
+                    <ul class="space-y-2 text-[#5D6B4D]">
+                        <li>Wellness brands</li>
+                        <li>Eco-friendly products</li>
+                        <li>Spa & hospitality</li>
+                        <li>Sustainable businesses</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-[#8A9A7B] text-sm uppercase tracking-widest mb-4">Key Elements</h3>
+                    <ul class="space-y-2 text-[#5D6B4D]">
+                        <li>Organic, flowing shapes</li>
+                        <li>Earth-tone color palette</li>
+                        <li>Natural textures</li>
+                        <li>Serif typography</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-[#F5F1E8] border-t border-[#E0D8C8] px-6 py-4 mt-8">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <a href="41-cyberpunk.html" class="text-[#5D6B4D] hover:text-[#3E4A32] text-sm">&larr; Cyberpunk</a>
+            <a href="43-ai-native.html" class="text-[#5D6B4D] hover:text-[#3E4A32] text-sm">AI-Native &rarr;</a>
+        </div>
+    </footer>
+</body>
+</html>

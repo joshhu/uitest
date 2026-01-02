@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HUD/Sci-Fi Interface - UI Style #51</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <style>
+        .font-hud { font-family: 'Orbitron', sans-serif; }
+        .font-mono { font-family: 'Share Tech Mono', monospace; }
+        .hud-border {
+            border: 1px solid rgba(0, 255, 255, 0.3);
+            background: linear-gradient(135deg, rgba(0, 255, 255, 0.05) 0%, transparent 50%);
+        }
+        .scan-line {
+            background: repeating-linear-gradient(
+                0deg,
+                transparent,
+                transparent 2px,
+                rgba(0, 255, 255, 0.03) 2px,
+                rgba(0, 255, 255, 0.03) 4px
+            );
+        }
+        @keyframes pulse-glow {
+            0%, 100% { box-shadow: 0 0 5px rgba(0, 255, 255, 0.5), inset 0 0 5px rgba(0, 255, 255, 0.1); }
+            50% { box-shadow: 0 0 20px rgba(0, 255, 255, 0.8), inset 0 0 10px rgba(0, 255, 255, 0.2); }
+        }
+        .glow-pulse { animation: pulse-glow 2s ease-in-out infinite; }
+    </style>
+</head>
+<body class="bg-slate-950 min-h-screen text-cyan-400">
+    <!-- Scan Line Overlay -->
+    <div class="fixed inset-0 scan-line pointer-events-none z-50"></div>
+
+    <!-- HUD Frame -->
+    <div class="fixed top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-cyan-500 to-transparent opacity-50"></div>
+    <div class="fixed bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-cyan-500 to-transparent opacity-50"></div>
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-40 px-6 py-4">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <a href="../index.html" class="font-mono text-cyan-400 hover:text-cyan-300 text-sm">[BACK]</a>
+            <span class="font-hud text-sm tracking-widest">#51 HUD/SCI-FI INTERFACE</span>
+            <span class="font-mono text-cyan-600 text-sm">[ONLINE]</span>
+        </div>
+    </nav>
+
+    <div class="max-w-6xl mx-auto p-8 pt-20">
+        <!-- Main Display -->
+        <section class="mb-8">
+            <div class="hud-border rounded-lg p-8 relative">
+                <!-- Corner Decorations -->
+                <div class="absolute top-0 left-0 w-8 h-8 border-t-2 border-l-2 border-cyan-500"></div>
+                <div class="absolute top-0 right-0 w-8 h-8 border-t-2 border-r-2 border-cyan-500"></div>
+                <div class="absolute bottom-0 left-0 w-8 h-8 border-b-2 border-l-2 border-cyan-500"></div>
+                <div class="absolute bottom-0 right-0 w-8 h-8 border-b-2 border-r-2 border-cyan-500"></div>
+
+                <div class="text-center">
+                    <div class="font-mono text-xs text-cyan-600 mb-2">// SYSTEM STATUS: OPERATIONAL //</div>
+                    <h1 class="font-hud text-6xl tracking-wider text-cyan-300 mb-4">TACTICAL HUD</h1>
+                    <p class="font-mono text-cyan-500 max-w-2xl mx-auto">
+                        Advanced heads-up display interface inspired by military and sci-fi systems.
+                        Designed for high-density information visualization.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Status Grid -->
+        <div class="grid grid-cols-4 gap-4 mb-8">
+            <div class="hud-border rounded p-4 glow-pulse">
+                <div class="font-mono text-xs text-cyan-600 mb-1">CORE TEMP</div>
+                <div class="font-hud text-2xl text-cyan-300">42.7°C</div>
+                <div class="h-1 bg-cyan-900 mt-2 rounded">
+                    <div class="h-1 bg-cyan-400 rounded" style="width: 42%"></div>
+                </div>
+            </div>
+            <div class="hud-border rounded p-4">
+                <div class="font-mono text-xs text-cyan-600 mb-1">POWER LEVEL</div>
+                <div class="font-hud text-2xl text-cyan-300">87.3%</div>
+                <div class="h-1 bg-cyan-900 mt-2 rounded">
+                    <div class="h-1 bg-cyan-400 rounded" style="width: 87%"></div>
+                </div>
+            </div>
+            <div class="hud-border rounded p-4">
+                <div class="font-mono text-xs text-cyan-600 mb-1">NETWORK</div>
+                <div class="font-hud text-2xl text-green-400">ACTIVE</div>
+                <div class="flex gap-1 mt-2">
+                    <div class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+                    <div class="w-2 h-2 bg-green-400 rounded-full animate-pulse" style="animation-delay: 0.2s"></div>
+                    <div class="w-2 h-2 bg-green-400 rounded-full animate-pulse" style="animation-delay: 0.4s"></div>
+                </div>
+            </div>
+            <div class="hud-border rounded p-4">
+                <div class="font-mono text-xs text-cyan-600 mb-1">THREATS</div>
+                <div class="font-hud text-2xl text-yellow-400">3</div>
+                <div class="font-mono text-xs text-yellow-600 mt-2">MONITORING</div>
+            </div>
+        </div>
+
+        <!-- Radar Display -->
+        <div class="grid grid-cols-3 gap-4 mb-8">
+            <div class="col-span-2 hud-border rounded-lg p-6">
+                <div class="font-mono text-xs text-cyan-600 mb-4">// TACTICAL MAP //</div>
+                <div class="relative h-64 border border-cyan-900 rounded bg-slate-900/50">
+                    <!-- Grid Lines -->
+                    <div class="absolute inset-0 grid grid-cols-6 grid-rows-4">
+                        <div class="border-r border-b border-cyan-900/30"></div>
+                        <div class="border-r border-b border-cyan-900/30"></div>
+                        <div class="border-r border-b border-cyan-900/30"></div>
+                        <div class="border-r border-b border-cyan-900/30"></div>
+                        <div class="border-r border-b border-cyan-900/30"></div>
+                        <div class="border-b border-cyan-900/30"></div>
+                    </div>
+                    <!-- Points of Interest -->
+                    <div class="absolute top-1/4 left-1/4 w-4 h-4">
+                        <div class="absolute inset-0 bg-cyan-400 rounded-full animate-ping opacity-50"></div>
+                        <div class="absolute inset-0 bg-cyan-400 rounded-full"></div>
+                    </div>
+                    <div class="absolute top-1/2 left-2/3 w-4 h-4">
+                        <div class="absolute inset-0 bg-green-400 rounded-full animate-ping opacity-50"></div>
+                        <div class="absolute inset-0 bg-green-400 rounded-full"></div>
+                    </div>
+                    <div class="absolute top-3/4 left-1/2 w-4 h-4">
+                        <div class="absolute inset-0 bg-yellow-400 rounded-full animate-ping opacity-50"></div>
+                        <div class="absolute inset-0 bg-yellow-400 rounded-full"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- System Log -->
+            <div class="hud-border rounded-lg p-6">
+                <div class="font-mono text-xs text-cyan-600 mb-4">// SYSTEM LOG //</div>
+                <div class="font-mono text-xs space-y-2 text-cyan-500/80 h-56 overflow-y-auto">
+                    <p>> System initialized</p>
+                    <p>> Sensors online</p>
+                    <p>> Network connected</p>
+                    <p>> Scanning sector 7G...</p>
+                    <p>> 3 objects detected</p>
+                    <p>> Analyzing signatures...</p>
+                    <p>> Status: NOMINAL</p>
+                    <p class="text-green-400">> All systems GO</p>
+                    <p class="animate-pulse">_</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="flex gap-4 justify-center mb-8">
+            <button class="font-hud text-sm px-8 py-3 border border-cyan-500 text-cyan-400 hover:bg-cyan-500/20 cursor-pointer transition-colors tracking-widest">
+                [SCAN]
+            </button>
+            <button class="font-hud text-sm px-8 py-3 bg-cyan-500/20 border border-cyan-500 text-cyan-400 hover:bg-cyan-500/40 cursor-pointer transition-colors tracking-widest glow-pulse">
+                [ENGAGE]
+            </button>
+            <button class="font-hud text-sm px-8 py-3 border border-cyan-500 text-cyan-400 hover:bg-cyan-500/20 cursor-pointer transition-colors tracking-widest">
+                [ANALYZE]
+            </button>
+        </div>
+
+        <!-- Style Info -->
+        <section class="hud-border rounded-lg p-6">
+            <div class="grid grid-cols-2 gap-8">
+                <div>
+                    <h3 class="font-mono text-xs text-cyan-600 mb-4">// BEST FOR //</h3>
+                    <ul class="font-mono text-sm space-y-2 text-cyan-400">
+                        <li>> Gaming interfaces</li>
+                        <li>> Military/defense</li>
+                        <li>> Tech dashboards</li>
+                        <li>> Sci-fi projects</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-mono text-xs text-cyan-600 mb-4">// KEY ELEMENTS //</h3>
+                    <ul class="font-mono text-sm space-y-2 text-cyan-400">
+                        <li>> Monospace typography</li>
+                        <li>> Corner brackets</li>
+                        <li>> Scan lines</li>
+                        <li>> Glow effects</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="px-6 py-4 mt-8">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <a href="50-swiss-modernism.html" class="font-mono text-cyan-600 hover:text-cyan-400 text-sm">[PREV: SWISS]</a>
+            <a href="52-pixel-art.html" class="font-mono text-cyan-600 hover:text-cyan-400 text-sm">[NEXT: PIXEL]</a>
+        </div>
+    </footer>
+</body>
+</html>

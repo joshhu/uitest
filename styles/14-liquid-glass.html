@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liquid Glass - UI Style #14</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { font-family: 'Inter', sans-serif; }
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            min-height: 100vh;
+        }
+        .liquid-glass {
+            background: rgba(255,255,255,0.15);
+            backdrop-filter: blur(30px);
+            -webkit-backdrop-filter: blur(30px);
+            border: 1px solid rgba(255,255,255,0.3);
+            border-radius: 30px;
+        }
+        .iridescent {
+            background: linear-gradient(135deg,
+                rgba(255,0,0,0.1) 0%,
+                rgba(255,255,0,0.1) 20%,
+                rgba(0,255,0,0.1) 40%,
+                rgba(0,255,255,0.1) 60%,
+                rgba(0,0,255,0.1) 80%,
+                rgba(255,0,255,0.1) 100%);
+        }
+        @keyframes morph {
+            0%, 100% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
+            50% { border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%; }
+        }
+        .morphing { animation: morph 8s ease-in-out infinite; }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+        .floating { animation: float 6s ease-in-out infinite; }
+    </style>
+</head>
+<body class="relative overflow-x-hidden">
+    <!-- Floating blobs -->
+    <div class="fixed inset-0 pointer-events-none overflow-hidden">
+        <div class="absolute top-20 left-10 w-64 h-64 bg-pink-400/30 rounded-full filter blur-3xl morphing floating"></div>
+        <div class="absolute top-40 right-20 w-80 h-80 bg-cyan-400/30 rounded-full filter blur-3xl morphing floating" style="animation-delay: 2s;"></div>
+        <div class="absolute bottom-20 left-1/3 w-72 h-72 bg-purple-400/30 rounded-full filter blur-3xl morphing floating" style="animation-delay: 4s;"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="fixed top-4 left-4 right-4 liquid-glass z-50">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="../index.html" class="text-white/70 hover:text-white">&larr; Back</a>
+            <span class="font-medium text-white">#14 Liquid Glass</span>
+            <span class="text-white/50">General</span>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="relative pt-32 pb-20 px-6">
+        <div class="max-w-4xl mx-auto text-center">
+            <div class="liquid-glass iridescent p-12 mb-8">
+                <h1 class="text-6xl font-bold text-white mb-4">Fluid & Morphing</h1>
+                <p class="text-xl text-white/80">Flowing shapes, chromatic aberration, and iridescent effects</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="relative py-12 px-6">
+        <div class="max-w-5xl mx-auto">
+            <div class="grid grid-cols-3 gap-6">
+                <div class="liquid-glass p-6 hover:bg-white/25 transition-all cursor-pointer">
+                    <div class="w-16 h-16 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-full mb-4 morphing"></div>
+                    <h3 class="text-xl font-semibold text-white mb-2">Morphing</h3>
+                    <p class="text-white/60 text-sm">Organic shapes that flow and transform</p>
+                </div>
+                <div class="liquid-glass p-6 hover:bg-white/25 transition-all cursor-pointer">
+                    <div class="w-16 h-16 iridescent rounded-2xl mb-4" style="border: 2px solid rgba(255,255,255,0.3);"></div>
+                    <h3 class="text-xl font-semibold text-white mb-2">Iridescent</h3>
+                    <p class="text-white/60 text-sm">Rainbow-like chromatic effects</p>
+                </div>
+                <div class="liquid-glass p-6 hover:bg-white/25 transition-all cursor-pointer">
+                    <div class="w-16 h-16 bg-white/20 backdrop-blur-xl rounded-2xl mb-4 border border-white/40"></div>
+                    <h3 class="text-xl font-semibold text-white mb-2">Translucent</h3>
+                    <p class="text-white/60 text-sm">Deep blur with light refraction</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Colors -->
+    <section class="relative py-12 px-6">
+        <div class="max-w-5xl mx-auto">
+            <h3 class="text-white/50 text-sm uppercase tracking-widest mb-8 text-center">Color Effects</h3>
+            <div class="liquid-glass p-8">
+                <div class="h-32 rounded-2xl mb-4 iridescent" style="background-size: 200% 200%; animation: aurora 5s ease infinite;"></div>
+                <p class="text-white/60 text-sm text-center">Chromatic aberration and holographic gradients</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Buttons -->
+    <section class="relative py-12 px-6">
+        <div class="max-w-5xl mx-auto">
+            <h3 class="text-white/50 text-sm uppercase tracking-widest mb-8 text-center">Buttons</h3>
+            <div class="liquid-glass p-8">
+                <div class="flex flex-wrap justify-center gap-4">
+                    <button class="px-8 py-3 bg-white/20 backdrop-blur-xl rounded-full border border-white/30 text-white font-medium hover:bg-white/30 transition-all cursor-pointer">Primary</button>
+                    <button class="px-8 py-3 bg-gradient-to-r from-pink-500/50 to-purple-500/50 backdrop-blur-xl rounded-full border border-white/30 text-white font-medium hover:opacity-80 transition-all cursor-pointer">Gradient</button>
+                    <button class="px-8 py-3 backdrop-blur-xl rounded-full border-2 border-white/50 text-white font-medium hover:bg-white/10 transition-all cursor-pointer">Outline</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cards -->
+    <section class="relative py-12 px-6">
+        <div class="max-w-4xl mx-auto">
+            <div class="grid grid-cols-2 gap-6">
+                <div class="liquid-glass p-8 floating">
+                    <div class="w-12 h-12 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-xl mb-4"></div>
+                    <h4 class="text-xl font-semibold text-white mb-2">Fluid Animations</h4>
+                    <p class="text-white/60 text-sm">400-600ms curved transitions</p>
+                </div>
+                <div class="liquid-glass p-8 floating" style="animation-delay: 1s;">
+                    <div class="w-12 h-12 bg-gradient-to-br from-pink-400 to-purple-500 rounded-xl mb-4"></div>
+                    <h4 class="text-xl font-semibold text-white mb-2">Dynamic Blur</h4>
+                    <p class="text-white/60 text-sm">Backdrop-filter for depth</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Form -->
+    <section class="relative py-12 px-6">
+        <div class="max-w-md mx-auto">
+            <div class="liquid-glass p-8">
+                <h3 class="text-xl font-semibold text-white mb-6 text-center">Get Started</h3>
+                <div class="space-y-4">
+                    <input type="email" placeholder="Email" class="w-full bg-white/10 backdrop-blur border border-white/30 rounded-2xl px-6 py-4 text-white placeholder-white/50 focus:outline-none focus:border-white/50">
+                    <button class="w-full py-4 bg-white/90 text-purple-700 rounded-2xl font-semibold hover:bg-white transition-colors cursor-pointer">Continue</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Info -->
+    <section class="relative py-12 px-6">
+        <div class="max-w-5xl mx-auto">
+            <div class="liquid-glass p-8">
+                <div class="grid grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-white/50 text-sm uppercase tracking-widest mb-4">Best For</h3>
+                        <ul class="space-y-2 text-white/80 text-sm">
+                            <li>Premium SaaS</li>
+                            <li>High-end e-commerce</li>
+                            <li>Creative platforms</li>
+                            <li>Branding experiences</li>
+                            <li>Luxury portfolios</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-white/50 text-sm uppercase tracking-widest mb-4">Characteristics</h3>
+                        <ul class="space-y-2 text-white/80 text-sm">
+                            <li>Performance: Moderate-Poor</li>
+                            <li>Accessibility: Check contrast</li>
+                            <li>Mobile: Medium</li>
+                            <li>Complexity: High</li>
+                            <li>Framework: Framer, GSAP</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="relative py-8 px-6">
+        <div class="max-w-5xl mx-auto liquid-glass px-6 py-4 flex justify-between items-center">
+            <a href="13-skeuomorphism.html" class="text-white/70 hover:text-white">&larr; Skeuomorphism</a>
+            <a href="15-motion-driven.html" class="text-white/70 hover:text-white">Motion-Driven &rarr;</a>
+        </div>
+    </footer>
+
+    <style>
+        @keyframes aurora {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+    </style>
+</body>
+</html>

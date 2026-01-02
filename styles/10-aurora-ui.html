@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aurora UI - UI Style #10</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { font-family: 'Inter', sans-serif; }
+        .aurora-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 25%, #f093fb 50%, #f5576c 75%, #4facfe 100%);
+            background-size: 400% 400%;
+            animation: aurora 15s ease infinite;
+        }
+        @keyframes aurora {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        .mesh-gradient {
+            background:
+                radial-gradient(at 40% 20%, hsla(28,100%,74%,1) 0px, transparent 50%),
+                radial-gradient(at 80% 0%, hsla(189,100%,56%,1) 0px, transparent 50%),
+                radial-gradient(at 0% 50%, hsla(355,100%,93%,1) 0px, transparent 50%),
+                radial-gradient(at 80% 50%, hsla(340,100%,76%,1) 0px, transparent 50%),
+                radial-gradient(at 0% 100%, hsla(22,100%,77%,1) 0px, transparent 50%),
+                radial-gradient(at 80% 100%, hsla(242,100%,70%,1) 0px, transparent 50%),
+                radial-gradient(at 0% 0%, hsla(343,100%,76%,1) 0px, transparent 50%);
+        }
+        .glass-card {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+    </style>
+</head>
+<body class="aurora-bg min-h-screen text-white">
+    <!-- Navigation -->
+    <nav class="fixed top-4 left-4 right-4 glass-card rounded-2xl z-50">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="../index.html" class="text-white/70 hover:text-white transition-colors">&larr; Back</a>
+            <span class="font-semibold">#10 Aurora UI</span>
+            <span class="text-white/50">General</span>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="pt-32 pb-20 px-6">
+        <div class="max-w-4xl mx-auto text-center">
+            <h1 class="text-7xl font-bold mb-6">Northern Lights</h1>
+            <p class="text-xl text-white/80 max-w-2xl mx-auto">Vibrant flowing gradients inspired by the aurora borealis. Smooth color transitions and atmospheric depth.</p>
+        </div>
+    </section>
+
+    <!-- Cards -->
+    <section class="py-12 px-6">
+        <div class="max-w-5xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="glass-card rounded-2xl p-6 hover:bg-white/20 transition-all cursor-pointer">
+                    <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-400 to-purple-500 flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Mesh Gradients</h3>
+                    <p class="text-white/60 text-sm">Complex multi-point color blending</p>
+                </div>
+
+                <div class="glass-card rounded-2xl p-6 hover:bg-white/20 transition-all cursor-pointer">
+                    <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-pink-400 to-orange-500 flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Smooth Animation</h3>
+                    <p class="text-white/60 text-sm">8-12 second gentle transitions</p>
+                </div>
+
+                <div class="glass-card rounded-2xl p-6 hover:bg-white/20 transition-all cursor-pointer">
+                    <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-cyan-400 to-teal-500 flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Color Layering</h3>
+                    <p class="text-white/60 text-sm">Depth through color transitions</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Color Palette -->
+    <section class="py-12 px-6">
+        <div class="max-w-5xl mx-auto">
+            <h3 class="text-white/50 text-sm uppercase tracking-widest mb-8 text-center">Color Transitions</h3>
+            <div class="glass-card rounded-2xl p-8">
+                <div class="h-24 rounded-xl mb-6" style="background: linear-gradient(90deg, #0080FF, #8B00FF, #FF1493, #00FFFF);"></div>
+                <div class="grid grid-cols-4 gap-4 text-center">
+                    <div>
+                        <p class="text-sm text-white/80">Electric Blue</p>
+                        <p class="text-xs text-white/50">#0080FF</p>
+                    </div>
+                    <div>
+                        <p class="text-sm text-white/80">Magenta</p>
+                        <p class="text-xs text-white/50">#8B00FF</p>
+                    </div>
+                    <div>
+                        <p class="text-sm text-white/80">Pink</p>
+                        <p class="text-xs text-white/50">#FF1493</p>
+                    </div>
+                    <div>
+                        <p class="text-sm text-white/80">Cyan</p>
+                        <p class="text-xs text-white/50">#00FFFF</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Buttons -->
+    <section class="py-12 px-6">
+        <div class="max-w-5xl mx-auto">
+            <h3 class="text-white/50 text-sm uppercase tracking-widest mb-8 text-center">Buttons</h3>
+            <div class="glass-card rounded-2xl p-8">
+                <div class="flex flex-wrap justify-center gap-4">
+                    <button class="px-8 py-3 rounded-xl font-medium bg-gradient-to-r from-blue-500 to-purple-500 hover:opacity-80 transition-opacity cursor-pointer">Primary</button>
+                    <button class="px-8 py-3 rounded-xl font-medium bg-gradient-to-r from-pink-500 to-orange-500 hover:opacity-80 transition-opacity cursor-pointer">Secondary</button>
+                    <button class="px-8 py-3 rounded-xl font-medium glass-card hover:bg-white/20 transition-all cursor-pointer">Outline</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing -->
+    <section class="py-12 px-6">
+        <div class="max-w-4xl mx-auto">
+            <h3 class="text-white/50 text-sm uppercase tracking-widest mb-8 text-center">Pricing Cards</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="glass-card rounded-2xl p-6 text-center">
+                    <h4 class="text-white/60 text-sm uppercase mb-4">Starter</h4>
+                    <div class="text-4xl font-bold mb-4">$19</div>
+                    <ul class="text-white/60 text-sm space-y-2 mb-6">
+                        <li>5 Projects</li>
+                        <li>Basic Analytics</li>
+                        <li>Email Support</li>
+                    </ul>
+                    <button class="w-full glass-card py-3 rounded-xl font-medium hover:bg-white/20 cursor-pointer">Choose Plan</button>
+                </div>
+
+                <div class="glass-card rounded-2xl p-6 text-center border border-white/30 transform scale-105">
+                    <div class="bg-gradient-to-r from-pink-500 to-purple-500 text-xs font-bold px-3 py-1 rounded-full inline-block mb-4">Popular</div>
+                    <h4 class="text-white/60 text-sm uppercase mb-4">Pro</h4>
+                    <div class="text-4xl font-bold mb-4">$49</div>
+                    <ul class="text-white/60 text-sm space-y-2 mb-6">
+                        <li>Unlimited Projects</li>
+                        <li>Advanced Analytics</li>
+                        <li>Priority Support</li>
+                    </ul>
+                    <button class="w-full bg-gradient-to-r from-blue-500 to-purple-500 py-3 rounded-xl font-medium hover:opacity-80 cursor-pointer">Choose Plan</button>
+                </div>
+
+                <div class="glass-card rounded-2xl p-6 text-center">
+                    <h4 class="text-white/60 text-sm uppercase mb-4">Enterprise</h4>
+                    <div class="text-4xl font-bold mb-4">$99</div>
+                    <ul class="text-white/60 text-sm space-y-2 mb-6">
+                        <li>Custom Solutions</li>
+                        <li>Dedicated Manager</li>
+                        <li>24/7 Support</li>
+                    </ul>
+                    <button class="w-full glass-card py-3 rounded-xl font-medium hover:bg-white/20 cursor-pointer">Contact Us</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Info -->
+    <section class="py-12 px-6">
+        <div class="max-w-5xl mx-auto">
+            <div class="glass-card rounded-2xl p-8">
+                <div class="grid grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-white/50 text-sm uppercase tracking-widest mb-4">Best For</h3>
+                        <ul class="space-y-2 text-white/80 text-sm">
+                            <li>Modern SaaS</li>
+                            <li>Creative agencies</li>
+                            <li>Branding websites</li>
+                            <li>Music platforms</li>
+                            <li>Premium products</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-white/50 text-sm uppercase tracking-widest mb-4">Characteristics</h3>
+                        <ul class="space-y-2 text-white/80 text-sm">
+                            <li>Light Mode: Full</li>
+                            <li>Dark Mode: Full</li>
+                            <li>Performance: Good</li>
+                            <li>Accessibility: Check contrast</li>
+                            <li>Complexity: Medium</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 px-6">
+        <div class="max-w-5xl mx-auto glass-card rounded-2xl px-6 py-4 flex justify-between items-center">
+            <a href="09-claymorphism.html" class="text-white/70 hover:text-white">&larr; Claymorphism</a>
+            <a href="11-retro-futurism.html" class="text-white/70 hover:text-white">Retro-Futurism &rarr;</a>
+        </div>
+    </footer>
+</body>
+</html>

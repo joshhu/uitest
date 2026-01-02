@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyberpunk - UI Style #41</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <style>
+        .font-cyber { font-family: 'Orbitron', sans-serif; }
+        .font-mono { font-family: 'Share Tech Mono', monospace; }
+        .neon-pink { text-shadow: 0 0 5px #FF00FF, 0 0 10px #FF00FF, 0 0 20px #FF00FF; }
+        .neon-cyan { text-shadow: 0 0 5px #00FFFF, 0 0 10px #00FFFF, 0 0 20px #00FFFF; }
+        .neon-yellow { text-shadow: 0 0 5px #FFFF00, 0 0 10px #FFFF00, 0 0 20px #FFFF00; }
+        .glitch { animation: glitch 0.3s infinite; }
+        @keyframes glitch {
+            0%, 100% { transform: translate(0); }
+            20% { transform: translate(-2px, 2px); }
+            40% { transform: translate(-2px, -2px); }
+            60% { transform: translate(2px, 2px); }
+            80% { transform: translate(2px, -2px); }
+        }
+        .scanline {
+            background: repeating-linear-gradient(0deg, rgba(0,0,0,0.1), rgba(0,0,0,0.1) 1px, transparent 1px, transparent 2px);
+        }
+    </style>
+</head>
+<body class="bg-black min-h-screen text-white">
+    <!-- Scanline Overlay -->
+    <div class="fixed inset-0 pointer-events-none scanline opacity-20 z-50"></div>
+
+    <!-- Navigation -->
+    <nav class="bg-black/80 border-b border-cyan-500/30 px-6 py-4 relative z-40">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <a href="../index.html" class="font-mono text-cyan-400 hover:text-cyan-300 text-sm">&lt;-- BACK</a>
+            <span class="font-cyber font-bold text-fuchsia-500 neon-pink">#41 CYBERPUNK</span>
+            <span class="font-mono text-yellow-400 text-sm">[MODERN]</span>
+        </div>
+    </nav>
+
+    <div class="max-w-6xl mx-auto p-8 relative z-10">
+        <!-- Hero -->
+        <section class="py-16 text-center relative">
+            <div class="absolute inset-0 bg-gradient-to-b from-fuchsia-500/10 to-transparent"></div>
+            <div class="relative">
+                <p class="font-mono text-cyan-400 mb-4">&gt;&gt; SYSTEM ONLINE_</p>
+                <h1 class="font-cyber text-8xl font-black text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-500 via-cyan-400 to-yellow-400 mb-6">
+                    NIGHT CITY
+                </h1>
+                <p class="font-mono text-xl text-gray-400 max-w-2xl mx-auto mb-8">
+                    Welcome to the edge of tomorrow. High tech. Low life. Where neon dreams meet digital reality.
+                </p>
+                <div class="flex justify-center gap-4">
+                    <button class="font-cyber px-8 py-4 bg-gradient-to-r from-fuchsia-600 to-fuchsia-500 border border-fuchsia-400 text-white hover:from-fuchsia-500 hover:to-fuchsia-400 cursor-pointer transition-all shadow-lg shadow-fuchsia-500/50">
+                        JACK IN
+                    </button>
+                    <button class="font-cyber px-8 py-4 bg-transparent border border-cyan-400 text-cyan-400 hover:bg-cyan-400/10 cursor-pointer transition-all">
+                        DECRYPT
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Grid -->
+        <section class="grid grid-cols-4 gap-4 mb-12">
+            <div class="bg-gray-900/80 border border-cyan-500/30 p-6 relative overflow-hidden">
+                <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-cyan-500 to-transparent"></div>
+                <p class="font-mono text-xs text-cyan-400 mb-2">// USERS</p>
+                <p class="font-cyber text-3xl text-white">847.2K</p>
+                <p class="font-mono text-xs text-green-400 mt-2">+12.5% ↑</p>
+            </div>
+            <div class="bg-gray-900/80 border border-fuchsia-500/30 p-6 relative overflow-hidden">
+                <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-fuchsia-500 to-transparent"></div>
+                <p class="font-mono text-xs text-fuchsia-400 mb-2">// CREDITS</p>
+                <p class="font-cyber text-3xl text-white">$2.4M</p>
+                <p class="font-mono text-xs text-green-400 mt-2">+8.3% ↑</p>
+            </div>
+            <div class="bg-gray-900/80 border border-yellow-500/30 p-6 relative overflow-hidden">
+                <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-yellow-500 to-transparent"></div>
+                <p class="font-mono text-xs text-yellow-400 mb-2">// UPTIME</p>
+                <p class="font-cyber text-3xl text-white">99.9%</p>
+                <p class="font-mono text-xs text-gray-400 mt-2">STABLE</p>
+            </div>
+            <div class="bg-gray-900/80 border border-green-500/30 p-6 relative overflow-hidden">
+                <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-green-500 to-transparent"></div>
+                <p class="font-mono text-xs text-green-400 mb-2">// NODES</p>
+                <p class="font-cyber text-3xl text-white">1,247</p>
+                <p class="font-mono text-xs text-green-400 mt-2">ACTIVE</p>
+            </div>
+        </section>
+
+        <!-- Feature Cards -->
+        <section class="grid grid-cols-3 gap-6 mb-12">
+            <div class="bg-gradient-to-b from-gray-900 to-gray-950 border border-fuchsia-500/50 p-8 relative group hover:border-fuchsia-400 cursor-pointer transition-all">
+                <div class="absolute inset-0 bg-fuchsia-500/5 group-hover:bg-fuchsia-500/10 transition-all"></div>
+                <div class="relative">
+                    <div class="font-mono text-fuchsia-400 text-6xl mb-4">01</div>
+                    <h3 class="font-cyber text-xl text-white mb-2">NEURAL LINK</h3>
+                    <p class="font-mono text-gray-400 text-sm">Direct brain-computer interface for seamless data transfer</p>
+                </div>
+            </div>
+            <div class="bg-gradient-to-b from-gray-900 to-gray-950 border border-cyan-500/50 p-8 relative group hover:border-cyan-400 cursor-pointer transition-all">
+                <div class="absolute inset-0 bg-cyan-500/5 group-hover:bg-cyan-500/10 transition-all"></div>
+                <div class="relative">
+                    <div class="font-mono text-cyan-400 text-6xl mb-4">02</div>
+                    <h3 class="font-cyber text-xl text-white mb-2">CHROME BODY</h3>
+                    <p class="font-mono text-gray-400 text-sm">Military-grade cybernetic enhancements</p>
+                </div>
+            </div>
+            <div class="bg-gradient-to-b from-gray-900 to-gray-950 border border-yellow-500/50 p-8 relative group hover:border-yellow-400 cursor-pointer transition-all">
+                <div class="absolute inset-0 bg-yellow-500/5 group-hover:bg-yellow-500/10 transition-all"></div>
+                <div class="relative">
+                    <div class="font-mono text-yellow-400 text-6xl mb-4">03</div>
+                    <h3 class="font-cyber text-xl text-white mb-2">NET RUNNER</h3>
+                    <p class="font-mono text-gray-400 text-sm">Access the deep net with zero trace</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Terminal Card -->
+        <section class="bg-gray-950 border border-green-500/30 p-6 mb-12 font-mono">
+            <div class="flex items-center gap-2 mb-4 pb-4 border-b border-gray-800">
+                <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                <span class="text-green-400 text-sm ml-4">terminal@night-city:~$</span>
+            </div>
+            <div class="text-green-400 space-y-1 text-sm">
+                <p>&gt; Initializing system...</p>
+                <p>&gt; Loading cyberpunk_theme.css</p>
+                <p>&gt; Connecting to NET...</p>
+                <p class="text-cyan-400">&gt; Connection established [OK]</p>
+                <p>&gt; Welcome to the future, choom._</p>
+            </div>
+        </section>
+
+        <!-- Style Info -->
+        <section class="bg-gray-900/80 border border-gray-700 p-8">
+            <div class="grid grid-cols-2 gap-8">
+                <div>
+                    <h3 class="font-mono text-gray-500 text-sm uppercase tracking-widest mb-4">// BEST FOR</h3>
+                    <ul class="font-mono space-y-2 text-gray-300 text-sm">
+                        <li>&gt; Gaming platforms</li>
+                        <li>&gt; Tech startups</li>
+                        <li>&gt; NFT/Crypto projects</li>
+                        <li>&gt; Sci-fi entertainment</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-mono text-gray-500 text-sm uppercase tracking-widest mb-4">// KEY ELEMENTS</h3>
+                    <ul class="font-mono space-y-2 text-gray-300 text-sm">
+                        <li>&gt; Neon color accents</li>
+                        <li>&gt; Dark backgrounds</li>
+                        <li>&gt; Glitch effects</li>
+                        <li>&gt; Monospace typography</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-black border-t border-gray-800 px-6 py-4 relative z-40">
+        <div class="max-w-6xl mx-auto flex justify-between items-center font-mono text-sm">
+            <a href="40-y2k-revival.html" class="text-gray-500 hover:text-cyan-400">&lt;-- Y2K Revival</a>
+            <a href="42-organic-biophilic.html" class="text-gray-500 hover:text-cyan-400">Organic Biophilic --&gt;</a>
+        </div>
+    </footer>
+</body>
+</html>

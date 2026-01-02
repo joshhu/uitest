@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inclusive Design - UI Style #17</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * { font-family: 'Atkinson Hyperlegible', sans-serif; }
+        :focus { outline: 4px solid #0066CC; outline-offset: 4px; }
+        .skip-link {
+            position: absolute;
+            top: -100px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 100;
+            background: #000;
+            color: #fff;
+            padding: 16px 24px;
+            font-size: 18px;
+        }
+        .skip-link:focus { top: 16px; }
+        @media (prefers-reduced-motion: reduce) {
+            * { animation: none !important; transition: none !important; }
+        }
+    </style>
+</head>
+<body class="bg-white min-h-screen text-gray-900">
+    <a href="#main" class="skip-link">Skip to main content</a>
+
+    <!-- Navigation -->
+    <nav class="bg-[#003366] text-white" role="navigation" aria-label="Main navigation">
+        <div class="max-w-5xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="../index.html" class="text-lg hover:underline focus:underline">&larr; Back to Gallery</a>
+            <span class="font-bold text-xl">#17 Inclusive Design</span>
+            <span class="opacity-80">General</span>
+        </div>
+    </nav>
+
+    <main id="main" role="main">
+        <!-- Hero -->
+        <section class="py-16 px-6 bg-[#003366] text-white" aria-labelledby="hero-title">
+            <div class="max-w-4xl mx-auto">
+                <h1 id="hero-title" class="text-5xl font-bold mb-6">Design for All</h1>
+                <p class="text-xl opacity-90 max-w-2xl">
+                    Universal accessibility, color-blind friendly, high contrast, haptic feedback, voice interaction, and screen reader optimized.
+                </p>
+            </div>
+        </section>
+
+        <!-- Accessibility Features -->
+        <section class="py-16 px-6" aria-labelledby="features-title">
+            <div class="max-w-4xl mx-auto">
+                <h2 id="features-title" class="text-3xl font-bold mb-8">Key Features</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- High Contrast -->
+                    <article class="border-4 border-black p-6 rounded-lg">
+                        <div class="flex items-center gap-4 mb-4">
+                            <div class="w-16 h-16 bg-black text-white flex items-center justify-center rounded text-2xl font-bold" aria-hidden="true">7:1+</div>
+                            <h3 class="text-xl font-bold">WCAG AAA Contrast</h3>
+                        </div>
+                        <p class="text-lg">Minimum 7:1 contrast ratio ensures text is readable for users with low vision.</p>
+                    </article>
+
+                    <!-- Color-blind Safe -->
+                    <article class="border-4 border-black p-6 rounded-lg">
+                        <div class="flex items-center gap-4 mb-4">
+                            <div class="w-16 h-16 flex items-center justify-center" aria-hidden="true">
+                                <div class="grid grid-cols-2 gap-1">
+                                    <div class="w-6 h-6 bg-blue-600 rounded"></div>
+                                    <div class="w-6 h-6 bg-orange-500 rounded"></div>
+                                    <div class="w-6 h-6 bg-blue-600 rounded" style="background: repeating-linear-gradient(45deg, #2563EB, #2563EB 2px, #fff 2px, #fff 4px);"></div>
+                                    <div class="w-6 h-6 bg-orange-500 rounded" style="background: repeating-linear-gradient(-45deg, #F97316, #F97316 2px, #fff 2px, #fff 4px);"></div>
+                                </div>
+                            </div>
+                            <h3 class="text-xl font-bold">Color-blind Friendly</h3>
+                        </div>
+                        <p class="text-lg">Never rely on color alone. Use patterns, icons, and text labels as additional indicators.</p>
+                    </article>
+
+                    <!-- Keyboard Navigation -->
+                    <article class="border-4 border-black p-6 rounded-lg">
+                        <div class="flex items-center gap-4 mb-4">
+                            <div class="w-16 h-16 bg-gray-100 border-2 border-black flex items-center justify-center rounded text-2xl" aria-hidden="true">⌨️</div>
+                            <h3 class="text-xl font-bold">Full Keyboard Support</h3>
+                        </div>
+                        <p class="text-lg">All interactive elements accessible via Tab, Enter, Space, and Arrow keys with visible focus states.</p>
+                    </article>
+
+                    <!-- Screen Reader -->
+                    <article class="border-4 border-black p-6 rounded-lg">
+                        <div class="flex items-center gap-4 mb-4">
+                            <div class="w-16 h-16 bg-gray-100 border-2 border-black flex items-center justify-center rounded text-2xl" aria-hidden="true">🔊</div>
+                            <h3 class="text-xl font-bold">Screen Reader Ready</h3>
+                        </div>
+                        <p class="text-lg">Semantic HTML, ARIA labels, live regions, and meaningful alt text for complete screen reader support.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Touch Targets -->
+        <section class="py-16 px-6 bg-gray-100" aria-labelledby="touch-title">
+            <div class="max-w-4xl mx-auto">
+                <h2 id="touch-title" class="text-3xl font-bold mb-8">Touch Targets (44x44px minimum)</h2>
+                <div class="flex flex-wrap gap-4">
+                    <button class="min-w-[44px] min-h-[44px] px-6 py-3 bg-[#003366] text-white text-lg font-bold rounded focus:ring-4 focus:ring-blue-300 cursor-pointer">
+                        Primary Action
+                    </button>
+                    <button class="min-w-[44px] min-h-[44px] px-6 py-3 bg-white text-[#003366] text-lg font-bold border-4 border-[#003366] rounded focus:ring-4 focus:ring-blue-300 cursor-pointer">
+                        Secondary
+                    </button>
+                    <button class="min-w-[44px] min-h-[44px] px-6 py-3 bg-[#B91C1C] text-white text-lg font-bold rounded focus:ring-4 focus:ring-red-300 cursor-pointer">
+                        Destructive
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Color Palette -->
+        <section class="py-16 px-6" aria-labelledby="colors-title">
+            <div class="max-w-4xl mx-auto">
+                <h2 id="colors-title" class="text-3xl font-bold mb-8">Safe Color Palette</h2>
+                <p class="text-lg mb-6">Colors chosen for sufficient contrast and color-blind accessibility</p>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <div>
+                        <div class="h-24 bg-[#003366] rounded-lg" role="img" aria-label="Primary blue color"></div>
+                        <p class="font-bold mt-2">Primary</p>
+                        <p class="text-gray-600">#003366</p>
+                    </div>
+                    <div>
+                        <div class="h-24 bg-[#0066CC] rounded-lg" role="img" aria-label="Link blue color"></div>
+                        <p class="font-bold mt-2">Links</p>
+                        <p class="text-gray-600">#0066CC</p>
+                    </div>
+                    <div>
+                        <div class="h-24 bg-[#006644] rounded-lg" role="img" aria-label="Success green color"></div>
+                        <p class="font-bold mt-2">Success</p>
+                        <p class="text-gray-600">#006644</p>
+                    </div>
+                    <div>
+                        <div class="h-24 bg-[#B91C1C] rounded-lg" role="img" aria-label="Error red color"></div>
+                        <p class="font-bold mt-2">Error</p>
+                        <p class="text-gray-600">#B91C1C</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Form Example -->
+        <section class="py-16 px-6 bg-gray-100" aria-labelledby="form-title">
+            <div class="max-w-md mx-auto">
+                <h2 id="form-title" class="text-3xl font-bold mb-8 text-center">Accessible Form</h2>
+                <form class="bg-white p-8 rounded-lg border-4 border-black" aria-describedby="form-desc">
+                    <p id="form-desc" class="text-lg mb-6">Fields marked with <span class="text-[#B91C1C]" aria-hidden="true">*</span><span class="sr-only">(required)</span> are required.</p>
+
+                    <div class="mb-6">
+                        <label for="name" class="block text-lg font-bold mb-2">
+                            Full Name <span class="text-[#B91C1C]" aria-hidden="true">*</span>
+                            <span class="sr-only">(required)</span>
+                        </label>
+                        <input
+                            type="text"
+                            id="name"
+                            required
+                            aria-required="true"
+                            class="w-full px-4 py-3 text-lg border-4 border-gray-300 rounded focus:border-[#0066CC]"
+                            placeholder="Enter your full name"
+                        >
+                    </div>
+
+                    <div class="mb-6">
+                        <label for="email" class="block text-lg font-bold mb-2">
+                            Email <span class="text-[#B91C1C]" aria-hidden="true">*</span>
+                            <span class="sr-only">(required)</span>
+                        </label>
+                        <input
+                            type="email"
+                            id="email"
+                            required
+                            aria-required="true"
+                            aria-describedby="email-hint"
+                            class="w-full px-4 py-3 text-lg border-4 border-gray-300 rounded focus:border-[#0066CC]"
+                            placeholder="your@email.com"
+                        >
+                        <p id="email-hint" class="text-gray-600 mt-2">We will never share your email.</p>
+                    </div>
+
+                    <button type="submit" class="w-full py-4 bg-[#003366] text-white text-xl font-bold rounded min-h-[56px] cursor-pointer">
+                        Submit Form
+                    </button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Info -->
+        <section class="py-16 px-6 bg-[#003366] text-white" aria-labelledby="info-title">
+            <div class="max-w-4xl mx-auto">
+                <h2 id="info-title" class="text-3xl font-bold mb-8">Universal by Design</h2>
+                <div class="grid grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-xl font-bold mb-4">Best For</h3>
+                        <ul class="space-y-2 text-lg">
+                            <li>Public services</li>
+                            <li>Government websites</li>
+                            <li>Education platforms</li>
+                            <li>Healthcare applications</li>
+                            <li>Financial services</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-4">Characteristics</h3>
+                        <ul class="space-y-2 text-lg">
+                            <li>Accessibility: WCAG AAA</li>
+                            <li>Performance: Excellent</li>
+                            <li>Mobile: Full support</li>
+                            <li>Voice: Supported</li>
+                            <li>Complexity: Low</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-6 px-6 border-t-4 border-black" role="contentinfo">
+        <div class="max-w-4xl mx-auto flex justify-between items-center">
+            <a href="16-micro-interactions.html" class="text-[#0066CC] text-lg font-bold hover:underline">&larr; Micro-interactions</a>
+            <a href="18-zero-interface.html" class="text-[#0066CC] text-lg font-bold hover:underline">Zero Interface &rarr;</a>
+        </div>
+    </footer>
+</body>
+</html>

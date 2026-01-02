@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drill-Down Analytics - UI Style #32</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>* { font-family: 'Inter', sans-serif; }</style>
+</head>
+<body class="bg-slate-100 min-h-screen">
+    <!-- Navigation -->
+    <nav class="bg-white border-b border-slate-200 px-6 py-4">
+        <div class="flex justify-between items-center">
+            <div class="flex items-center gap-4">
+                <a href="../index.html" class="text-slate-500 hover:text-slate-900 text-sm">&larr; Back</a>
+                <span class="font-semibold text-slate-900">#32 Drill-Down Analytics</span>
+            </div>
+            <span class="text-slate-400 text-sm">BI/Analytics</span>
+        </div>
+    </nav>
+
+    <div class="p-6">
+        <!-- Breadcrumb -->
+        <div class="flex items-center gap-2 text-sm mb-6">
+            <a href="#" class="text-blue-600 hover:underline cursor-pointer">All Regions</a>
+            <span class="text-slate-400">→</span>
+            <a href="#" class="text-blue-600 hover:underline cursor-pointer">North America</a>
+            <span class="text-slate-400">→</span>
+            <a href="#" class="text-blue-600 hover:underline cursor-pointer">United States</a>
+            <span class="text-slate-400">→</span>
+            <span class="text-slate-600 font-medium">California</span>
+        </div>
+
+        <!-- Current Level Summary -->
+        <div class="bg-white rounded-xl p-6 shadow-sm border border-slate-200 mb-6">
+            <div class="flex justify-between items-start mb-4">
+                <div>
+                    <h1 class="text-2xl font-bold text-slate-900">California</h1>
+                    <p class="text-slate-500">Regional Performance Analysis</p>
+                </div>
+                <div class="flex gap-2">
+                    <button class="px-3 py-2 bg-slate-100 text-slate-700 rounded-lg text-sm hover:bg-slate-200 cursor-pointer">Export</button>
+                    <button class="px-3 py-2 bg-blue-600 text-white rounded-lg text-sm hover:bg-blue-700 cursor-pointer">+ Add Filter</button>
+                </div>
+            </div>
+            <div class="grid grid-cols-4 gap-4">
+                <div class="p-4 bg-slate-50 rounded-lg">
+                    <p class="text-sm text-slate-500">Total Revenue</p>
+                    <p class="text-2xl font-bold text-slate-900">$2.4M</p>
+                    <p class="text-sm text-green-600">+12.5%</p>
+                </div>
+                <div class="p-4 bg-slate-50 rounded-lg">
+                    <p class="text-sm text-slate-500">Orders</p>
+                    <p class="text-2xl font-bold text-slate-900">8,421</p>
+                    <p class="text-sm text-green-600">+8.3%</p>
+                </div>
+                <div class="p-4 bg-slate-50 rounded-lg">
+                    <p class="text-sm text-slate-500">Avg Order Value</p>
+                    <p class="text-2xl font-bold text-slate-900">$285</p>
+                    <p class="text-sm text-green-600">+3.8%</p>
+                </div>
+                <div class="p-4 bg-slate-50 rounded-lg">
+                    <p class="text-sm text-slate-500">Conversion Rate</p>
+                    <p class="text-2xl font-bold text-slate-900">4.2%</p>
+                    <p class="text-sm text-red-600">-0.5%</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Drill-Down Table -->
+        <div class="bg-white rounded-xl shadow-sm border border-slate-200 mb-6">
+            <div class="px-6 py-4 border-b border-slate-200">
+                <h2 class="font-semibold text-slate-900">Cities in California</h2>
+                <p class="text-sm text-slate-500">Click on a row to drill down further</p>
+            </div>
+            <table class="w-full">
+                <thead class="bg-slate-50">
+                    <tr>
+                        <th class="px-6 py-3 text-left text-xs font-medium text-slate-500 uppercase tracking-wider">City</th>
+                        <th class="px-6 py-3 text-left text-xs font-medium text-slate-500 uppercase tracking-wider">Revenue</th>
+                        <th class="px-6 py-3 text-left text-xs font-medium text-slate-500 uppercase tracking-wider">Orders</th>
+                        <th class="px-6 py-3 text-left text-xs font-medium text-slate-500 uppercase tracking-wider">Avg Order</th>
+                        <th class="px-6 py-3 text-left text-xs font-medium text-slate-500 uppercase tracking-wider">Growth</th>
+                        <th class="px-6 py-3 text-left text-xs font-medium text-slate-500 uppercase tracking-wider">Share</th>
+                    </tr>
+                </thead>
+                <tbody class="divide-y divide-slate-200">
+                    <tr class="hover:bg-blue-50 cursor-pointer group">
+                        <td class="px-6 py-4">
+                            <div class="flex items-center gap-2">
+                                <span class="font-medium text-slate-900 group-hover:text-blue-600">Los Angeles</span>
+                                <svg class="w-4 h-4 text-slate-400 group-hover:text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                                </svg>
+                            </div>
+                        </td>
+                        <td class="px-6 py-4 font-medium">$892,450</td>
+                        <td class="px-6 py-4">3,142</td>
+                        <td class="px-6 py-4">$284</td>
+                        <td class="px-6 py-4"><span class="text-green-600">+15.2%</span></td>
+                        <td class="px-6 py-4">
+                            <div class="flex items-center gap-2">
+                                <div class="w-24 h-2 bg-slate-200 rounded-full">
+                                    <div class="h-2 bg-blue-600 rounded-full" style="width: 37%"></div>
+                                </div>
+                                <span class="text-sm text-slate-600">37%</span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="hover:bg-blue-50 cursor-pointer group">
+                        <td class="px-6 py-4">
+                            <div class="flex items-center gap-2">
+                                <span class="font-medium text-slate-900 group-hover:text-blue-600">San Francisco</span>
+                                <svg class="w-4 h-4 text-slate-400 group-hover:text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                                </svg>
+                            </div>
+                        </td>
+                        <td class="px-6 py-4 font-medium">$628,320</td>
+                        <td class="px-6 py-4">1,985</td>
+                        <td class="px-6 py-4">$316</td>
+                        <td class="px-6 py-4"><span class="text-green-600">+22.8%</span></td>
+                        <td class="px-6 py-4">
+                            <div class="flex items-center gap-2">
+                                <div class="w-24 h-2 bg-slate-200 rounded-full">
+                                    <div class="h-2 bg-blue-600 rounded-full" style="width: 26%"></div>
+                                </div>
+                                <span class="text-sm text-slate-600">26%</span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="hover:bg-blue-50 cursor-pointer group">
+                        <td class="px-6 py-4">
+                            <div class="flex items-center gap-2">
+                                <span class="font-medium text-slate-900 group-hover:text-blue-600">San Diego</span>
+                                <svg class="w-4 h-4 text-slate-400 group-hover:text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                                </svg>
+                            </div>
+                        </td>
+                        <td class="px-6 py-4 font-medium">$412,890</td>
+                        <td class="px-6 py-4">1,524</td>
+                        <td class="px-6 py-4">$271</td>
+                        <td class="px-6 py-4"><span class="text-green-600">+8.4%</span></td>
+                        <td class="px-6 py-4">
+                            <div class="flex items-center gap-2">
+                                <div class="w-24 h-2 bg-slate-200 rounded-full">
+                                    <div class="h-2 bg-blue-600 rounded-full" style="width: 17%"></div>
+                                </div>
+                                <span class="text-sm text-slate-600">17%</span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="hover:bg-blue-50 cursor-pointer group">
+                        <td class="px-6 py-4">
+                            <div class="flex items-center gap-2">
+                                <span class="font-medium text-slate-900 group-hover:text-blue-600">San Jose</span>
+                                <svg class="w-4 h-4 text-slate-400 group-hover:text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                                </svg>
+                            </div>
+                        </td>
+                        <td class="px-6 py-4 font-medium">$298,540</td>
+                        <td class="px-6 py-4">982</td>
+                        <td class="px-6 py-4">$304</td>
+                        <td class="px-6 py-4"><span class="text-red-600">-2.1%</span></td>
+                        <td class="px-6 py-4">
+                            <div class="flex items-center gap-2">
+                                <div class="w-24 h-2 bg-slate-200 rounded-full">
+                                    <div class="h-2 bg-blue-600 rounded-full" style="width: 12%"></div>
+                                </div>
+                                <span class="text-sm text-slate-600">12%</span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="hover:bg-blue-50 cursor-pointer group">
+                        <td class="px-6 py-4">
+                            <div class="flex items-center gap-2">
+                                <span class="font-medium text-slate-900 group-hover:text-blue-600">Other Cities</span>
+                                <svg class="w-4 h-4 text-slate-400 group-hover:text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                                </svg>
+                            </div>
+                        </td>
+                        <td class="px-6 py-4 font-medium">$167,800</td>
+                        <td class="px-6 py-4">788</td>
+                        <td class="px-6 py-4">$213</td>
+                        <td class="px-6 py-4"><span class="text-green-600">+5.6%</span></td>
+                        <td class="px-6 py-4">
+                            <div class="flex items-center gap-2">
+                                <div class="w-24 h-2 bg-slate-200 rounded-full">
+                                    <div class="h-2 bg-blue-600 rounded-full" style="width: 8%"></div>
+                                </div>
+                                <span class="text-sm text-slate-600">8%</span>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Style Info -->
+        <div class="bg-white rounded-xl p-6 shadow-sm border border-slate-200">
+            <div class="grid grid-cols-2 gap-8">
+                <div>
+                    <h3 class="text-slate-400 text-sm uppercase tracking-widest mb-4">Best For</h3>
+                    <ul class="space-y-2 text-slate-600 text-sm">
+                        <li>Hierarchical data exploration</li>
+                        <li>Geographic analysis</li>
+                        <li>Product category breakdowns</li>
+                        <li>Organizational reporting</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-slate-400 text-sm uppercase tracking-widest mb-4">Key Elements</h3>
+                    <ul class="space-y-2 text-slate-600 text-sm">
+                        <li>Breadcrumb navigation</li>
+                        <li>Clickable rows for drill-down</li>
+                        <li>Context-aware summaries</li>
+                        <li>Visual progress indicators</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-slate-200 px-6 py-4 flex justify-between items-center">
+        <a href="31-real-time-monitoring.html" class="text-slate-500 hover:text-slate-900 text-sm">&larr; Real-Time Monitoring</a>
+        <a href="33-comparative-analytics.html" class="text-slate-500 hover:text-slate-900 text-sm">Comparative Analytics &rarr;</a>
+    </footer>
+</body>
+</html>

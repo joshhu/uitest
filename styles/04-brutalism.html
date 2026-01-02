@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brutalism - UI Style #04</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .mono { font-family: 'Space Mono', monospace; }
+    </style>
+</head>
+<body class="bg-yellow-400 min-h-screen">
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 bg-white border-b-4 border-black z-50">
+        <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="../index.html" class="text-black font-bold hover:bg-black hover:text-white px-2 transition-none">[BACK]</a>
+            <span class="font-black text-xl">#04 BRUTALISM</span>
+            <span class="mono text-sm">GENERAL</span>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="pt-24 pb-12 px-4">
+        <div class="max-w-5xl mx-auto">
+            <div class="bg-white border-4 border-black p-8">
+                <h1 class="text-8xl font-black leading-none mb-4">RAW.<br/>BOLD.<br/>HONEST.</h1>
+                <p class="text-xl mono">No polish. No pretense. Just pure, unfiltered design.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Grid -->
+    <section class="py-12 px-4">
+        <div class="max-w-5xl mx-auto grid grid-cols-3 gap-4">
+            <div class="bg-blue-600 border-4 border-black p-6 text-white">
+                <span class="mono text-sm">001</span>
+                <h3 class="text-2xl font-black mt-2">HIGH CONTRAST</h3>
+                <p class="mono text-sm mt-2">Primary colors. Black borders. No gradients.</p>
+            </div>
+            <div class="bg-red-500 border-4 border-black p-6 text-white">
+                <span class="mono text-sm">002</span>
+                <h3 class="text-2xl font-black mt-2">BOLD TYPE</h3>
+                <p class="mono text-sm mt-2">Default fonts. Heavy weights. All caps.</p>
+            </div>
+            <div class="bg-white border-4 border-black p-6">
+                <span class="mono text-sm">003</span>
+                <h3 class="text-2xl font-black mt-2">VISIBLE GRID</h3>
+                <p class="mono text-sm mt-2">Show the structure. Embrace the layout.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Buttons -->
+    <section class="py-12 px-4 bg-black">
+        <div class="max-w-5xl mx-auto">
+            <h2 class="text-white font-black text-4xl mb-8">BUTTONS</h2>
+            <div class="flex flex-wrap gap-4">
+                <button class="bg-yellow-400 text-black border-4 border-white px-8 py-4 font-black text-xl hover:bg-white transition-none cursor-pointer">PRIMARY</button>
+                <button class="bg-blue-600 text-white border-4 border-white px-8 py-4 font-black text-xl hover:bg-blue-800 transition-none cursor-pointer">SECONDARY</button>
+                <button class="bg-red-500 text-white border-4 border-white px-8 py-4 font-black text-xl hover:bg-red-700 transition-none cursor-pointer">DANGER</button>
+                <button class="bg-black text-white border-4 border-white px-8 py-4 font-black text-xl hover:bg-white hover:text-black transition-none cursor-pointer">OUTLINE</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Colors -->
+    <section class="py-12 px-4">
+        <div class="max-w-5xl mx-auto">
+            <h2 class="font-black text-4xl mb-8 border-b-4 border-black pb-2">COLOR PALETTE</h2>
+            <div class="grid grid-cols-5 gap-4">
+                <div>
+                    <div class="h-24 bg-red-500 border-4 border-black"></div>
+                    <p class="mono text-sm mt-2">#FF0000<br/>RED</p>
+                </div>
+                <div>
+                    <div class="h-24 bg-blue-600 border-4 border-black"></div>
+                    <p class="mono text-sm mt-2">#0000FF<br/>BLUE</p>
+                </div>
+                <div>
+                    <div class="h-24 bg-yellow-400 border-4 border-black"></div>
+                    <p class="mono text-sm mt-2">#FFFF00<br/>YELLOW</p>
+                </div>
+                <div>
+                    <div class="h-24 bg-black border-4 border-black"></div>
+                    <p class="mono text-sm mt-2">#000000<br/>BLACK</p>
+                </div>
+                <div>
+                    <div class="h-24 bg-white border-4 border-black"></div>
+                    <p class="mono text-sm mt-2">#FFFFFF<br/>WHITE</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cards -->
+    <section class="py-12 px-4 bg-blue-600">
+        <div class="max-w-5xl mx-auto">
+            <h2 class="text-white font-black text-4xl mb-8">CARDS</h2>
+            <div class="grid grid-cols-2 gap-4">
+                <div class="bg-white border-4 border-black">
+                    <div class="border-b-4 border-black p-4">
+                        <span class="mono text-xs">ARTICLE</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-black text-2xl mb-2">THIS IS A HEADLINE</h3>
+                        <p class="mono text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Brutalist design strips away the unnecessary.</p>
+                        <a href="#" class="inline-block mt-4 bg-black text-white px-4 py-2 font-bold hover:bg-yellow-400 hover:text-black">[READ MORE]</a>
+                    </div>
+                </div>
+                <div class="bg-yellow-400 border-4 border-black">
+                    <div class="border-b-4 border-black p-4 bg-black text-white">
+                        <span class="mono text-xs">FEATURED</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-black text-2xl mb-2">ANTI-DESIGN</h3>
+                        <p class="mono text-sm">Reject the norm. Question everything. Make it ugly on purpose - or beautiful by accident.</p>
+                        <a href="#" class="inline-block mt-4 bg-black text-white px-4 py-2 font-bold hover:bg-white">[EXPLORE]</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Form -->
+    <section class="py-12 px-4 bg-white">
+        <div class="max-w-md mx-auto">
+            <h2 class="font-black text-4xl mb-8 text-center">CONTACT</h2>
+            <div class="border-4 border-black">
+                <div class="border-b-4 border-black p-4 bg-black text-white">
+                    <span class="mono">SEND MESSAGE</span>
+                </div>
+                <div class="p-6">
+                    <div class="mb-4">
+                        <label class="block font-bold mb-2">NAME:</label>
+                        <input type="text" class="w-full border-4 border-black p-3 font-mono focus:outline-none focus:bg-yellow-400" placeholder="YOUR NAME">
+                    </div>
+                    <div class="mb-4">
+                        <label class="block font-bold mb-2">EMAIL:</label>
+                        <input type="email" class="w-full border-4 border-black p-3 font-mono focus:outline-none focus:bg-yellow-400" placeholder="YOUR@EMAIL.COM">
+                    </div>
+                    <div class="mb-4">
+                        <label class="block font-bold mb-2">MESSAGE:</label>
+                        <textarea class="w-full border-4 border-black p-3 font-mono h-32 focus:outline-none focus:bg-yellow-400" placeholder="YOUR MESSAGE..."></textarea>
+                    </div>
+                    <button class="w-full bg-black text-white border-4 border-black p-4 font-black text-xl hover:bg-yellow-400 hover:text-black cursor-pointer">SUBMIT</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Info -->
+    <section class="py-12 px-4 bg-black text-white">
+        <div class="max-w-5xl mx-auto">
+            <div class="grid grid-cols-2 gap-8">
+                <div class="border-4 border-white p-6">
+                    <h3 class="font-black text-xl mb-4 border-b-2 border-white pb-2">BEST FOR</h3>
+                    <ul class="mono text-sm space-y-2">
+                        <li>+ Design portfolios</li>
+                        <li>+ Artistic projects</li>
+                        <li>+ Counter-culture brands</li>
+                        <li>+ Editorial/media sites</li>
+                        <li>+ Tech blogs</li>
+                    </ul>
+                </div>
+                <div class="border-4 border-white p-6">
+                    <h3 class="font-black text-xl mb-4 border-b-2 border-white pb-2">DO NOT USE FOR</h3>
+                    <ul class="mono text-sm space-y-2">
+                        <li>- Corporate environments</li>
+                        <li>- Conservative industries</li>
+                        <li>- Critical accessibility</li>
+                        <li>- Customer-facing professional</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-4 px-4 bg-white border-t-4 border-black">
+        <div class="max-w-5xl mx-auto flex justify-between items-center">
+            <a href="03-glassmorphism.html" class="font-bold hover:bg-black hover:text-white px-2">[GLASSMORPHISM]</a>
+            <a href="05-3d-hyperrealism.html" class="font-bold hover:bg-black hover:text-white px-2">[3D HYPERREALISM]</a>
+        </div>
+    </footer>
+</body>
+</html>

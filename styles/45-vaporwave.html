@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vaporwave - UI Style #45</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
+    <style>
+        .font-retro { font-family: 'Press Start 2P', cursive; }
+        .font-vt { font-family: 'VT323', monospace; }
+        .grid-bg {
+            background-image: linear-gradient(#FF71CE 1px, transparent 1px),
+                              linear-gradient(90deg, #FF71CE 1px, transparent 1px);
+            background-size: 40px 40px;
+            animation: scroll 20s linear infinite;
+        }
+        @keyframes scroll {
+            0% { background-position: 0 0; }
+            100% { background-position: 0 40px; }
+        }
+        .chrome-text {
+            background: linear-gradient(180deg, #fff 0%, #c0c0c0 50%, #fff 51%, #c0c0c0 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-b from-purple-900 via-pink-600 to-cyan-400 min-h-screen">
+    <!-- Grid Overlay -->
+    <div class="fixed inset-0 grid-bg opacity-20 pointer-events-none"></div>
+
+    <!-- Navigation -->
+    <nav class="relative z-50 bg-black/50 backdrop-blur border-b border-pink-500/50 px-6 py-4">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <a href="../index.html" class="font-vt text-2xl text-cyan-400 hover:text-pink-400">&lt;- BACK</a>
+            <span class="font-retro text-pink-400 text-sm">#45 VAPORWAVE</span>
+            <span class="font-vt text-2xl text-cyan-400">[MODERN]</span>
+        </div>
+    </nav>
+
+    <div class="relative z-10 max-w-6xl mx-auto p-8">
+        <!-- Hero -->
+        <section class="text-center py-16">
+            <div class="mb-8">
+                <span class="font-vt text-6xl text-cyan-300">アエステティック</span>
+            </div>
+            <h1 class="font-retro text-5xl text-white mb-6 leading-relaxed chrome-text">
+                A E S T H E T I C
+            </h1>
+            <p class="font-vt text-3xl text-pink-300 max-w-2xl mx-auto mb-8">
+                Welcome to the nostalgic future that never was. 80s/90s retrofuturism meets digital dreams.
+            </p>
+            <div class="flex justify-center gap-6">
+                <button class="font-retro text-sm bg-gradient-to-r from-pink-500 to-purple-500 text-white px-8 py-4 border-2 border-cyan-400 hover:from-cyan-400 hover:to-blue-500 cursor-pointer transition-all shadow-lg shadow-pink-500/50">
+                    ENTER REALM
+                </button>
+                <button class="font-retro text-sm bg-transparent text-cyan-400 px-8 py-4 border-2 border-cyan-400 hover:bg-cyan-400/20 cursor-pointer transition-all">
+                    EXPLORE
+                </button>
+            </div>
+        </section>
+
+        <!-- Aesthetic Cards -->
+        <section class="grid grid-cols-3 gap-6 mb-16">
+            <div class="bg-gradient-to-b from-purple-800/80 to-pink-600/80 backdrop-blur border-2 border-pink-400 p-8">
+                <div class="font-vt text-6xl text-cyan-300 mb-4">永遠</div>
+                <h3 class="font-retro text-lg text-white mb-3">ETERNAL</h3>
+                <p class="font-vt text-xl text-pink-200">Timeless aesthetics from a future past</p>
+            </div>
+            <div class="bg-gradient-to-b from-cyan-800/80 to-blue-600/80 backdrop-blur border-2 border-cyan-400 p-8">
+                <div class="font-vt text-6xl text-pink-300 mb-4">夢幻</div>
+                <h3 class="font-retro text-lg text-white mb-3">DREAMY</h3>
+                <p class="font-vt text-xl text-cyan-200">Hazy, nostalgic digital landscapes</p>
+            </div>
+            <div class="bg-gradient-to-b from-pink-800/80 to-purple-600/80 backdrop-blur border-2 border-pink-400 p-8">
+                <div class="font-vt text-6xl text-cyan-300 mb-4">幻想</div>
+                <h3 class="font-retro text-lg text-white mb-3">FANTASY</h3>
+                <p class="font-vt text-xl text-pink-200">Surreal visions of digital paradise</p>
+            </div>
+        </section>
+
+        <!-- Feature Section -->
+        <section class="bg-black/50 backdrop-blur border-2 border-cyan-400 p-12 mb-16">
+            <div class="grid grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="font-retro text-2xl text-pink-400 mb-6">DIGITAL NOSTALGIA</h2>
+                    <p class="font-vt text-2xl text-cyan-300 mb-6">
+                        Vaporwave emerged from the internet, combining 80s corporate aesthetics, Japanese culture, early web design, and smooth jazz into a surreal critique of consumer capitalism.
+                    </p>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="font-vt text-xl px-4 py-2 bg-pink-500/30 border border-pink-400 text-pink-300">RETRO</span>
+                        <span class="font-vt text-xl px-4 py-2 bg-cyan-500/30 border border-cyan-400 text-cyan-300">SURREAL</span>
+                        <span class="font-vt text-xl px-4 py-2 bg-purple-500/30 border border-purple-400 text-purple-300">DIGITAL</span>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <div class="inline-block p-8 bg-gradient-to-br from-pink-500 to-cyan-500 border-4 border-white">
+                        <span class="font-vt text-8xl text-white">リラックス</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Color Palette -->
+        <section class="bg-black/50 backdrop-blur border-2 border-pink-400 p-8 mb-16">
+            <h2 class="font-retro text-xl text-cyan-400 mb-6 text-center">V A P O R   P A L E T T E</h2>
+            <div class="grid grid-cols-5 gap-4">
+                <div class="h-24 bg-gradient-to-b from-pink-400 to-pink-600 flex items-end p-2">
+                    <span class="font-vt text-white text-lg">PINK</span>
+                </div>
+                <div class="h-24 bg-gradient-to-b from-cyan-400 to-cyan-600 flex items-end p-2">
+                    <span class="font-vt text-white text-lg">CYAN</span>
+                </div>
+                <div class="h-24 bg-gradient-to-b from-purple-400 to-purple-600 flex items-end p-2">
+                    <span class="font-vt text-white text-lg">PURPLE</span>
+                </div>
+                <div class="h-24 bg-gradient-to-b from-blue-400 to-blue-600 flex items-end p-2">
+                    <span class="font-vt text-white text-lg">BLUE</span>
+                </div>
+                <div class="h-24 bg-gradient-to-b from-pink-300 to-orange-400 flex items-end p-2">
+                    <span class="font-vt text-white text-lg">SUNSET</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Style Info -->
+        <section class="bg-black/50 backdrop-blur border-2 border-cyan-400 p-8">
+            <div class="grid grid-cols-2 gap-8">
+                <div>
+                    <h3 class="font-retro text-sm text-pink-400 mb-4">BEST FOR</h3>
+                    <ul class="font-vt text-xl space-y-2 text-cyan-300">
+                        <li>&gt; Music & entertainment</li>
+                        <li>&gt; Fashion brands</li>
+                        <li>&gt; Art portfolios</li>
+                        <li>&gt; Retro gaming</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-retro text-sm text-pink-400 mb-4">KEY ELEMENTS</h3>
+                    <ul class="font-vt text-xl space-y-2 text-cyan-300">
+                        <li>&gt; Pink/cyan gradients</li>
+                        <li>&gt; Japanese text</li>
+                        <li>&gt; Grid patterns</li>
+                        <li>&gt; Retro fonts</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="relative z-50 bg-black/50 backdrop-blur border-t border-pink-500/50 px-6 py-4 mt-8">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <a href="44-memphis-revival.html" class="font-vt text-2xl text-cyan-400 hover:text-pink-400">&lt;- Memphis Revival</a>
+            <a href="46-dimensional-layering.html" class="font-vt text-2xl text-cyan-400 hover:text-pink-400">Dimensional -&gt;</a>
+        </div>
+    </footer>
+</body>
+</html>

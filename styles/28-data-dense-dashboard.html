@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data-Dense Dashboard - UI Style #28</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .font-mono { font-family: 'JetBrains Mono', monospace; }
+        .font-sans { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-slate-900 min-h-screen font-sans text-white">
+    <!-- Top Bar -->
+    <nav class="bg-slate-800 border-b border-slate-700 px-4 py-2">
+        <div class="flex justify-between items-center">
+            <div class="flex items-center gap-4">
+                <a href="../index.html" class="text-slate-400 hover:text-white text-sm">&larr; Back</a>
+                <span class="text-white font-semibold">#28 Data-Dense Dashboard</span>
+            </div>
+            <div class="flex items-center gap-4">
+                <span class="text-xs text-slate-400">Last updated: 2 sec ago</span>
+                <span class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
+            </div>
+        </div>
+    </nav>
+
+    <div class="flex">
+        <!-- Sidebar -->
+        <aside class="w-48 bg-slate-800 min-h-screen p-4 border-r border-slate-700">
+            <nav class="space-y-1">
+                <a href="#" class="flex items-center gap-2 px-3 py-2 bg-blue-600 text-white rounded text-sm">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6z"/>
+                    </svg>
+                    Overview
+                </a>
+                <a href="#" class="flex items-center gap-2 px-3 py-2 text-slate-400 hover:text-white hover:bg-slate-700 rounded text-sm cursor-pointer">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6"/>
+                    </svg>
+                    Analytics
+                </a>
+                <a href="#" class="flex items-center gap-2 px-3 py-2 text-slate-400 hover:text-white hover:bg-slate-700 rounded text-sm cursor-pointer">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857"/>
+                    </svg>
+                    Users
+                </a>
+                <a href="#" class="flex items-center gap-2 px-3 py-2 text-slate-400 hover:text-white hover:bg-slate-700 rounded text-sm cursor-pointer">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/>
+                    </svg>
+                    Settings
+                </a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="flex-1 p-4">
+            <!-- KPI Row -->
+            <div class="grid grid-cols-6 gap-3 mb-4">
+                <div class="bg-slate-800 rounded p-3 border border-slate-700">
+                    <p class="text-xs text-slate-400 mb-1">Revenue</p>
+                    <p class="text-xl font-bold font-mono">$847.2K</p>
+                    <p class="text-xs text-green-400">+12.5%</p>
+                </div>
+                <div class="bg-slate-800 rounded p-3 border border-slate-700">
+                    <p class="text-xs text-slate-400 mb-1">Orders</p>
+                    <p class="text-xl font-bold font-mono">12,847</p>
+                    <p class="text-xs text-green-400">+8.3%</p>
+                </div>
+                <div class="bg-slate-800 rounded p-3 border border-slate-700">
+                    <p class="text-xs text-slate-400 mb-1">Users</p>
+                    <p class="text-xl font-bold font-mono">45,291</p>
+                    <p class="text-xs text-green-400">+15.2%</p>
+                </div>
+                <div class="bg-slate-800 rounded p-3 border border-slate-700">
+                    <p class="text-xs text-slate-400 mb-1">Conversion</p>
+                    <p class="text-xl font-bold font-mono">3.42%</p>
+                    <p class="text-xs text-red-400">-0.3%</p>
+                </div>
+                <div class="bg-slate-800 rounded p-3 border border-slate-700">
+                    <p class="text-xs text-slate-400 mb-1">Avg. Order</p>
+                    <p class="text-xl font-bold font-mono">$65.94</p>
+                    <p class="text-xs text-green-400">+4.1%</p>
+                </div>
+                <div class="bg-slate-800 rounded p-3 border border-slate-700">
+                    <p class="text-xs text-slate-400 mb-1">Bounce Rate</p>
+                    <p class="text-xl font-bold font-mono">32.8%</p>
+                    <p class="text-xs text-green-400">-2.1%</p>
+                </div>
+            </div>
+
+            <!-- Charts Row -->
+            <div class="grid grid-cols-3 gap-3 mb-4">
+                <!-- Main Chart -->
+                <div class="col-span-2 bg-slate-800 rounded p-4 border border-slate-700">
+                    <div class="flex justify-between items-center mb-4">
+                        <h3 class="text-sm font-semibold">Revenue Over Time</h3>
+                        <div class="flex gap-2">
+                            <button class="px-2 py-1 text-xs bg-slate-700 rounded cursor-pointer">1D</button>
+                            <button class="px-2 py-1 text-xs bg-blue-600 rounded cursor-pointer">1W</button>
+                            <button class="px-2 py-1 text-xs bg-slate-700 rounded cursor-pointer">1M</button>
+                            <button class="px-2 py-1 text-xs bg-slate-700 rounded cursor-pointer">1Y</button>
+                        </div>
+                    </div>
+                    <div class="h-48 flex items-end gap-1">
+                        <div class="flex-1 bg-blue-600 rounded-t" style="height: 60%"></div>
+                        <div class="flex-1 bg-blue-600 rounded-t" style="height: 75%"></div>
+                        <div class="flex-1 bg-blue-600 rounded-t" style="height: 45%"></div>
+                        <div class="flex-1 bg-blue-600 rounded-t" style="height: 90%"></div>
+                        <div class="flex-1 bg-blue-600 rounded-t" style="height: 80%"></div>
+                        <div class="flex-1 bg-blue-600 rounded-t" style="height: 65%"></div>
+                        <div class="flex-1 bg-blue-500 rounded-t" style="height: 100%"></div>
+                    </div>
+                    <div class="flex justify-between text-xs text-slate-500 mt-2">
+                        <span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span>
+                    </div>
+                </div>
+
+                <!-- Donut Chart -->
+                <div class="bg-slate-800 rounded p-4 border border-slate-700">
+                    <h3 class="text-sm font-semibold mb-4">Traffic Sources</h3>
+                    <div class="w-32 h-32 mx-auto relative">
+                        <div class="w-full h-full rounded-full border-8 border-blue-600"></div>
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <span class="text-2xl font-bold font-mono">68%</span>
+                        </div>
+                    </div>
+                    <div class="mt-4 space-y-2 text-xs">
+                        <div class="flex justify-between"><span class="flex items-center gap-2"><span class="w-2 h-2 bg-blue-600 rounded"></span>Organic</span><span class="font-mono">68%</span></div>
+                        <div class="flex justify-between"><span class="flex items-center gap-2"><span class="w-2 h-2 bg-green-500 rounded"></span>Direct</span><span class="font-mono">18%</span></div>
+                        <div class="flex justify-between"><span class="flex items-center gap-2"><span class="w-2 h-2 bg-yellow-500 rounded"></span>Social</span><span class="font-mono">14%</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Data Table -->
+            <div class="bg-slate-800 rounded border border-slate-700">
+                <div class="px-4 py-3 border-b border-slate-700 flex justify-between items-center">
+                    <h3 class="text-sm font-semibold">Recent Transactions</h3>
+                    <input type="text" placeholder="Search..." class="px-3 py-1 bg-slate-700 rounded text-xs border-0 focus:outline-none focus:ring-1 focus:ring-blue-500">
+                </div>
+                <table class="w-full text-xs">
+                    <thead class="bg-slate-700/50">
+                        <tr>
+                            <th class="px-4 py-2 text-left text-slate-400 font-medium">ID</th>
+                            <th class="px-4 py-2 text-left text-slate-400 font-medium">Customer</th>
+                            <th class="px-4 py-2 text-left text-slate-400 font-medium">Product</th>
+                            <th class="px-4 py-2 text-left text-slate-400 font-medium">Amount</th>
+                            <th class="px-4 py-2 text-left text-slate-400 font-medium">Status</th>
+                            <th class="px-4 py-2 text-left text-slate-400 font-medium">Time</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-700">
+                        <tr class="hover:bg-slate-700/30 cursor-pointer">
+                            <td class="px-4 py-2 font-mono">#TXN-001</td>
+                            <td class="px-4 py-2">John Doe</td>
+                            <td class="px-4 py-2">Pro Plan</td>
+                            <td class="px-4 py-2 font-mono">$299.00</td>
+                            <td class="px-4 py-2"><span class="px-2 py-0.5 bg-green-500/20 text-green-400 rounded">Completed</span></td>
+                            <td class="px-4 py-2 text-slate-400">2 min ago</td>
+                        </tr>
+                        <tr class="hover:bg-slate-700/30 cursor-pointer">
+                            <td class="px-4 py-2 font-mono">#TXN-002</td>
+                            <td class="px-4 py-2">Jane Smith</td>
+                            <td class="px-4 py-2">Enterprise</td>
+                            <td class="px-4 py-2 font-mono">$999.00</td>
+                            <td class="px-4 py-2"><span class="px-2 py-0.5 bg-yellow-500/20 text-yellow-400 rounded">Pending</span></td>
+                            <td class="px-4 py-2 text-slate-400">5 min ago</td>
+                        </tr>
+                        <tr class="hover:bg-slate-700/30 cursor-pointer">
+                            <td class="px-4 py-2 font-mono">#TXN-003</td>
+                            <td class="px-4 py-2">Bob Wilson</td>
+                            <td class="px-4 py-2">Basic Plan</td>
+                            <td class="px-4 py-2 font-mono">$49.00</td>
+                            <td class="px-4 py-2"><span class="px-2 py-0.5 bg-green-500/20 text-green-400 rounded">Completed</span></td>
+                            <td class="px-4 py-2 text-slate-400">12 min ago</td>
+                        </tr>
+                        <tr class="hover:bg-slate-700/30 cursor-pointer">
+                            <td class="px-4 py-2 font-mono">#TXN-004</td>
+                            <td class="px-4 py-2">Alice Brown</td>
+                            <td class="px-4 py-2">Pro Plan</td>
+                            <td class="px-4 py-2 font-mono">$299.00</td>
+                            <td class="px-4 py-2"><span class="px-2 py-0.5 bg-red-500/20 text-red-400 rounded">Failed</span></td>
+                            <td class="px-4 py-2 text-slate-400">18 min ago</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+
+    <!-- Style Info Overlay -->
+    <div class="fixed bottom-4 right-4 bg-slate-800 rounded-lg p-4 border border-slate-700 max-w-xs">
+        <h3 class="text-sm font-semibold mb-2">Style #28: Data-Dense Dashboard</h3>
+        <p class="text-xs text-slate-400 mb-2">Best for: Trading platforms, analytics tools, monitoring systems</p>
+        <p class="text-xs text-slate-400">Key: Maximum information density, dark theme, monospace numbers</p>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-slate-800 border-t border-slate-700 px-4 py-3 flex justify-between items-center">
+        <a href="27-storytelling.html" class="text-slate-400 hover:text-white text-sm">&larr; Storytelling</a>
+        <a href="29-heatmap-density.html" class="text-slate-400 hover:text-white text-sm">Heatmap/Density &rarr;</a>
+    </footer>
+</body>
+</html>

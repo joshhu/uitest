@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trust & Authority - UI Style #26</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        .font-serif { font-family: 'Playfair Display', serif; }
+        .font-sans { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-white min-h-screen font-sans">
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-sm z-50 border-b border-gray-100">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="../index.html" class="text-gray-500 hover:text-gray-900">&larr; Back</a>
+            <span class="font-semibold">#26 Trust & Authority</span>
+            <span class="text-gray-400">Landing Page</span>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="pt-32 pb-20 px-6">
+        <div class="max-w-5xl mx-auto text-center">
+            <!-- Trust Badge -->
+            <div class="flex items-center justify-center gap-4 mb-8">
+                <div class="flex items-center gap-2 px-4 py-2 bg-gray-50 rounded-full">
+                    <svg class="w-5 h-5 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                    </svg>
+                    <span class="text-sm text-gray-600">Verified by 10,000+ enterprises</span>
+                </div>
+            </div>
+
+            <h1 class="font-serif text-6xl font-bold text-gray-900 mb-6 leading-tight">
+                The Industry Standard for Enterprise Security
+            </h1>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto mb-10">
+                Trusted by Fortune 500 companies, government agencies, and leading financial institutions worldwide.
+            </p>
+            <button class="px-8 py-4 bg-gray-900 text-white rounded font-semibold hover:bg-gray-800 transition-colors cursor-pointer">
+                Request Demo
+            </button>
+        </div>
+    </section>
+
+    <!-- Certifications -->
+    <section class="py-12 px-6 bg-gray-50 border-y border-gray-200">
+        <div class="max-w-6xl mx-auto">
+            <p class="text-center text-gray-500 text-sm uppercase tracking-wider mb-8">Certifications & Compliance</p>
+            <div class="flex justify-center items-center gap-12">
+                <div class="text-center">
+                    <div class="w-16 h-16 mx-auto bg-white rounded-full flex items-center justify-center border border-gray-200 mb-2">
+                        <span class="font-bold text-gray-700">SOC 2</span>
+                    </div>
+                    <span class="text-xs text-gray-500">Type II</span>
+                </div>
+                <div class="text-center">
+                    <div class="w-16 h-16 mx-auto bg-white rounded-full flex items-center justify-center border border-gray-200 mb-2">
+                        <span class="font-bold text-gray-700">ISO</span>
+                    </div>
+                    <span class="text-xs text-gray-500">27001</span>
+                </div>
+                <div class="text-center">
+                    <div class="w-16 h-16 mx-auto bg-white rounded-full flex items-center justify-center border border-gray-200 mb-2">
+                        <span class="font-bold text-gray-700">GDPR</span>
+                    </div>
+                    <span class="text-xs text-gray-500">Compliant</span>
+                </div>
+                <div class="text-center">
+                    <div class="w-16 h-16 mx-auto bg-white rounded-full flex items-center justify-center border border-gray-200 mb-2">
+                        <span class="font-bold text-gray-700">HIPAA</span>
+                    </div>
+                    <span class="text-xs text-gray-500">Certified</span>
+                </div>
+                <div class="text-center">
+                    <div class="w-16 h-16 mx-auto bg-white rounded-full flex items-center justify-center border border-gray-200 mb-2">
+                        <span class="font-bold text-gray-700">FedRAMP</span>
+                    </div>
+                    <span class="text-xs text-gray-500">Authorized</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Client Logos -->
+    <section class="py-16 px-6">
+        <div class="max-w-6xl mx-auto">
+            <p class="text-center text-gray-500 mb-12">Trusted by industry leaders</p>
+            <div class="grid grid-cols-5 gap-8 items-center opacity-60">
+                <div class="text-center font-bold text-2xl text-gray-400">Microsoft</div>
+                <div class="text-center font-bold text-2xl text-gray-400">Google</div>
+                <div class="text-center font-bold text-2xl text-gray-400">Amazon</div>
+                <div class="text-center font-bold text-2xl text-gray-400">IBM</div>
+                <div class="text-center font-bold text-2xl text-gray-400">Oracle</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Expert Endorsements -->
+    <section class="py-20 px-6 bg-gray-900 text-white">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="font-serif text-3xl font-bold text-center mb-12">Expert Endorsements</h2>
+            <div class="grid grid-cols-2 gap-8">
+                <div class="bg-gray-800 rounded-xl p-8">
+                    <p class="text-lg text-gray-300 mb-6 italic">
+                        "This platform sets the gold standard for enterprise security. We've evaluated dozens of solutions, and nothing comes close."
+                    </p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-14 h-14 bg-gray-600 rounded-full"></div>
+                        <div>
+                            <p class="font-semibold">Dr. James Wilson</p>
+                            <p class="text-sm text-gray-400">Chief Security Officer, Fortune 100 Bank</p>
+                            <p class="text-xs text-gray-500">20+ years in cybersecurity</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-gray-800 rounded-xl p-8">
+                    <p class="text-lg text-gray-300 mb-6 italic">
+                        "The most comprehensive and reliable solution we've deployed across our global infrastructure."
+                    </p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-14 h-14 bg-gray-600 rounded-full"></div>
+                        <div>
+                            <p class="font-semibold">Sarah Chen, Ph.D.</p>
+                            <p class="text-sm text-gray-400">VP of Engineering, Tech Giant</p>
+                            <p class="text-xs text-gray-500">Former MIT Professor</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Awards & Recognition -->
+    <section class="py-20 px-6">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="font-serif text-3xl font-bold text-center text-gray-900 mb-12">Awards & Recognition</h2>
+            <div class="grid grid-cols-4 gap-6">
+                <div class="text-center p-6 border border-gray-200 rounded-xl">
+                    <div class="w-20 h-20 mx-auto bg-yellow-100 rounded-full flex items-center justify-center mb-4">
+                        <svg class="w-10 h-10 text-yellow-600" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-semibold text-gray-900">Gartner Leader</h3>
+                    <p class="text-sm text-gray-500">2023, 2024</p>
+                </div>
+                <div class="text-center p-6 border border-gray-200 rounded-xl">
+                    <div class="w-20 h-20 mx-auto bg-blue-100 rounded-full flex items-center justify-center mb-4">
+                        <svg class="w-10 h-10 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-semibold text-gray-900">Forrester Wave</h3>
+                    <p class="text-sm text-gray-500">Top Performer</p>
+                </div>
+                <div class="text-center p-6 border border-gray-200 rounded-xl">
+                    <div class="w-20 h-20 mx-auto bg-green-100 rounded-full flex items-center justify-center mb-4">
+                        <svg class="w-10 h-10 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-semibold text-gray-900">G2 Leader</h3>
+                    <p class="text-sm text-gray-500">Enterprise Security</p>
+                </div>
+                <div class="text-center p-6 border border-gray-200 rounded-xl">
+                    <div class="w-20 h-20 mx-auto bg-purple-100 rounded-full flex items-center justify-center mb-4">
+                        <svg class="w-10 h-10 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-semibold text-gray-900">Best of 2024</h3>
+                    <p class="text-sm text-gray-500">Security Solutions</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats -->
+    <section class="py-16 px-6 bg-gray-50">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid grid-cols-4 gap-8 text-center">
+                <div>
+                    <div class="text-5xl font-bold text-gray-900 mb-2">15+</div>
+                    <p class="text-gray-600">Years in Business</p>
+                </div>
+                <div>
+                    <div class="text-5xl font-bold text-gray-900 mb-2">500+</div>
+                    <p class="text-gray-600">Enterprise Clients</p>
+                </div>
+                <div>
+                    <div class="text-5xl font-bold text-gray-900 mb-2">99.99%</div>
+                    <p class="text-gray-600">Uptime SLA</p>
+                </div>
+                <div>
+                    <div class="text-5xl font-bold text-gray-900 mb-2">$0</div>
+                    <p class="text-gray-600">Security Breaches</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-20 px-6">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="font-serif text-4xl font-bold text-gray-900 mb-4">Ready to secure your enterprise?</h2>
+            <p class="text-xl text-gray-600 mb-8">Join 500+ Fortune companies who trust us with their security</p>
+            <div class="flex justify-center gap-4">
+                <button class="px-8 py-4 bg-gray-900 text-white rounded font-semibold hover:bg-gray-800 transition-colors cursor-pointer">
+                    Schedule Demo
+                </button>
+                <button class="px-8 py-4 border border-gray-300 text-gray-700 rounded font-semibold hover:bg-gray-50 transition-colors cursor-pointer">
+                    Download Whitepaper
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Style Info -->
+    <section class="py-12 px-6 border-t border-gray-200">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid grid-cols-2 gap-8">
+                <div>
+                    <h3 class="text-gray-400 text-sm uppercase tracking-widest mb-4">Best For</h3>
+                    <ul class="space-y-2 text-gray-600">
+                        <li>Enterprise software</li>
+                        <li>Financial services</li>
+                        <li>Healthcare/Medical</li>
+                        <li>Government/Defense</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-gray-400 text-sm uppercase tracking-widest mb-4">Key Elements</h3>
+                    <ul class="space-y-2 text-gray-600">
+                        <li>Certifications & compliance badges</li>
+                        <li>Expert endorsements</li>
+                        <li>Awards & recognition</li>
+                        <li>Enterprise client logos</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-6 px-6 bg-gray-50">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <a href="25-interactive-demo.html" class="text-gray-500 hover:text-gray-900">&larr; Interactive Demo</a>
+            <a href="27-storytelling.html" class="text-gray-500 hover:text-gray-900">Storytelling &rarr;</a>
+        </div>
+    </footer>
+</body>
+</html>

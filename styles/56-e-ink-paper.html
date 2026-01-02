@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Ink / Paper - UI Style #56</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        .font-serif { font-family: 'Newsreader', Georgia, serif; }
+        .font-mono { font-family: 'JetBrains Mono', monospace; }
+        body { font-family: 'Newsreader', Georgia, serif; }
+        .paper-texture {
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+            background-blend-mode: multiply;
+        }
+        .ink-border {
+            border: 1px solid #1a1a1a;
+        }
+        @media (prefers-color-scheme: dark) {
+            .e-ink-adaptive {
+                filter: invert(1);
+            }
+        }
+    </style>
+</head>
+<body class="bg-[#f5f1eb] min-h-screen text-[#1a1a1a]">
+    <!-- Paper Texture Overlay -->
+    <div class="fixed inset-0 paper-texture opacity-5 pointer-events-none"></div>
+
+    <!-- Navigation -->
+    <nav class="border-b border-[#1a1a1a] px-6 py-4">
+        <div class="max-w-3xl mx-auto flex justify-between items-center">
+            <a href="../index.html" class="hover:underline text-sm">&larr; Back</a>
+            <span class="font-mono text-xs tracking-widest">#56 E-INK / PAPER</span>
+            <span class="text-sm text-[#666]">Modern</span>
+        </div>
+    </nav>
+
+    <div class="max-w-3xl mx-auto px-6 py-12">
+        <!-- Header -->
+        <header class="mb-16 text-center">
+            <p class="font-mono text-xs tracking-widest text-[#666] mb-4">STYLE FIFTY-SIX</p>
+            <h1 class="text-5xl font-medium mb-6 leading-tight">
+                The Beauty of<br/>Digital Paper
+            </h1>
+            <p class="text-lg text-[#444] max-w-xl mx-auto leading-relaxed">
+                Inspired by e-readers and newsprint. High contrast, minimal colors, and typography-first design for distraction-free reading.
+            </p>
+        </header>
+
+        <!-- Article -->
+        <article class="mb-16">
+            <div class="border-t border-b border-[#1a1a1a] py-8 mb-8">
+                <div class="flex justify-between items-center text-sm text-[#666]">
+                    <span class="font-mono">JANUARY 2, 2026</span>
+                    <span>5 MIN READ</span>
+                </div>
+            </div>
+
+            <h2 class="text-3xl font-medium mb-6">Why E-Ink Design Matters</h2>
+
+            <p class="text-lg leading-relaxed mb-6 text-[#333]">
+                In a world of saturated colors and overwhelming visual noise, there's profound beauty in simplicity. E-ink design strips away everything unnecessary, leaving only the essential: black ink on white paper.
+            </p>
+
+            <blockquote class="border-l-2 border-[#1a1a1a] pl-6 my-8 italic text-xl">
+                "The absence of color is not a limitation—it's a liberation."
+            </blockquote>
+
+            <p class="text-lg leading-relaxed mb-6 text-[#333]">
+                This aesthetic draws from centuries of print design wisdom. The Kindle, Remarkable tablet, and newspaper layouts all embrace these principles: generous whitespace, readable typography, and restrained visual hierarchy.
+            </p>
+
+            <div class="my-12 p-8 border border-[#1a1a1a]">
+                <h3 class="font-mono text-xs tracking-widest mb-4">CORE PRINCIPLES</h3>
+                <ol class="space-y-4 text-[#333]">
+                    <li class="flex gap-4">
+                        <span class="font-mono text-sm">01.</span>
+                        <span>Black and white only. Gray sparingly.</span>
+                    </li>
+                    <li class="flex gap-4">
+                        <span class="font-mono text-sm">02.</span>
+                        <span>Typography carries the design.</span>
+                    </li>
+                    <li class="flex gap-4">
+                        <span class="font-mono text-sm">03.</span>
+                        <span>Whitespace is not empty space.</span>
+                    </li>
+                    <li class="flex gap-4">
+                        <span class="font-mono text-sm">04.</span>
+                        <span>Every element must earn its place.</span>
+                    </li>
+                </ol>
+            </div>
+        </article>
+
+        <!-- Components -->
+        <section class="mb-16">
+            <h2 class="font-mono text-xs tracking-widest mb-8">COMPONENT EXAMPLES</h2>
+
+            <!-- Card -->
+            <div class="border border-[#1a1a1a] mb-6">
+                <div class="p-6">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-medium">Simple Card</h3>
+                        <span class="font-mono text-xs border border-[#1a1a1a] px-2 py-1">NEW</span>
+                    </div>
+                    <p class="text-[#444] mb-4">
+                        Cards use thin borders and generous padding. No shadows, no gradients, no unnecessary decoration.
+                    </p>
+                    <a href="#" class="inline-block border-b border-[#1a1a1a] hover:bg-[#1a1a1a] hover:text-[#f5f1eb] transition-colors">
+                        Read more &rarr;
+                    </a>
+                </div>
+            </div>
+
+            <!-- Button Row -->
+            <div class="flex gap-4 mb-6">
+                <button class="px-6 py-3 bg-[#1a1a1a] text-[#f5f1eb] hover:bg-[#333] cursor-pointer transition-colors">
+                    Primary Action
+                </button>
+                <button class="px-6 py-3 border border-[#1a1a1a] hover:bg-[#1a1a1a] hover:text-[#f5f1eb] cursor-pointer transition-colors">
+                    Secondary
+                </button>
+                <button class="px-6 py-3 underline hover:no-underline cursor-pointer">
+                    Text Link
+                </button>
+            </div>
+
+            <!-- Form -->
+            <div class="border border-[#1a1a1a] p-6 mb-6">
+                <h3 class="font-mono text-xs tracking-widest mb-6">NEWSLETTER</h3>
+                <div class="flex gap-4">
+                    <input
+                        type="email"
+                        placeholder="your@email.com"
+                        class="flex-1 px-4 py-3 border border-[#1a1a1a] bg-transparent focus:outline-none focus:ring-2 focus:ring-[#1a1a1a]"
+                    >
+                    <button class="px-6 py-3 bg-[#1a1a1a] text-[#f5f1eb] cursor-pointer hover:bg-[#333] transition-colors">
+                        Subscribe
+                    </button>
+                </div>
+            </div>
+
+            <!-- Table -->
+            <div class="border border-[#1a1a1a] overflow-hidden">
+                <table class="w-full">
+                    <thead>
+                        <tr class="border-b border-[#1a1a1a]">
+                            <th class="px-6 py-4 text-left font-mono text-xs tracking-widest">FEATURE</th>
+                            <th class="px-6 py-4 text-left font-mono text-xs tracking-widest">STATUS</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="border-b border-[#ddd]">
+                            <td class="px-6 py-4">Dark mode support</td>
+                            <td class="px-6 py-4 font-mono text-sm">YES</td>
+                        </tr>
+                        <tr class="border-b border-[#ddd]">
+                            <td class="px-6 py-4">Reduced eye strain</td>
+                            <td class="px-6 py-4 font-mono text-sm">YES</td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-4">Print-friendly</td>
+                            <td class="px-6 py-4 font-mono text-sm">YES</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Typography Scale -->
+        <section class="mb-16 border-t border-b border-[#1a1a1a] py-12">
+            <h2 class="font-mono text-xs tracking-widest mb-8">TYPOGRAPHY SCALE</h2>
+            <div class="space-y-6">
+                <div>
+                    <p class="text-5xl font-medium">Headline Large</p>
+                    <span class="font-mono text-xs text-[#666]">48px / Newsreader Medium</span>
+                </div>
+                <div>
+                    <p class="text-3xl font-medium">Headline Medium</p>
+                    <span class="font-mono text-xs text-[#666]">30px / Newsreader Medium</span>
+                </div>
+                <div>
+                    <p class="text-xl">Body Large</p>
+                    <span class="font-mono text-xs text-[#666]">20px / Newsreader Regular</span>
+                </div>
+                <div>
+                    <p class="text-base">Body Regular</p>
+                    <span class="font-mono text-xs text-[#666]">16px / Newsreader Regular</span>
+                </div>
+                <div>
+                    <p class="font-mono text-xs tracking-widest">LABEL / CAPTION</p>
+                    <span class="font-mono text-xs text-[#666]">12px / JetBrains Mono</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Style Info -->
+        <section class="grid grid-cols-2 gap-12">
+            <div>
+                <h3 class="font-mono text-xs tracking-widest mb-4">BEST FOR</h3>
+                <ul class="space-y-2 text-[#444]">
+                    <li>— Reading applications</li>
+                    <li>— Documentation</li>
+                    <li>— Blogs & articles</li>
+                    <li>— Print-to-web designs</li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="font-mono text-xs tracking-widest mb-4">KEY ELEMENTS</h3>
+                <ul class="space-y-2 text-[#444]">
+                    <li>— Monochrome palette</li>
+                    <li>— Serif typography</li>
+                    <li>— Generous whitespace</li>
+                    <li>— Minimal UI chrome</li>
+                </ul>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="border-t border-[#1a1a1a] px-6 py-4 mt-12">
+        <div class="max-w-3xl mx-auto flex justify-between items-center">
+            <a href="55-spatial-ui.html" class="hover:underline text-sm">&larr; Spatial UI</a>
+            <a href="57-gen-z-chaos.html" class="hover:underline text-sm">Gen Z Chaos &rarr;</a>
+        </div>
+    </footer>
+</body>
+</html>

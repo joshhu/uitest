@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Executive Summary Dashboard - UI Style #30</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>* { font-family: 'Inter', sans-serif; }</style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <!-- Navigation -->
+    <nav class="bg-white border-b border-gray-200 px-8 py-4">
+        <div class="flex justify-between items-center">
+            <div class="flex items-center gap-4">
+                <a href="../index.html" class="text-gray-500 hover:text-gray-900 text-sm">&larr; Back</a>
+                <span class="font-semibold text-gray-900">#30 Executive Summary</span>
+            </div>
+            <div class="flex items-center gap-4">
+                <span class="text-sm text-gray-500">Q4 2024 Report</span>
+                <button class="px-4 py-2 bg-gray-900 text-white rounded-lg text-sm font-medium hover:bg-gray-800 cursor-pointer">Export PDF</button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="max-w-6xl mx-auto p-8">
+        <!-- Header -->
+        <div class="mb-8">
+            <h1 class="text-3xl font-light text-gray-900 mb-2">Executive Dashboard</h1>
+            <p class="text-gray-500">Key business metrics at a glance</p>
+        </div>
+
+        <!-- Primary KPIs -->
+        <div class="grid grid-cols-4 gap-6 mb-8">
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                <p class="text-sm text-gray-500 mb-2">Total Revenue</p>
+                <p class="text-4xl font-light text-gray-900">$4.2M</p>
+                <div class="flex items-center gap-2 mt-2">
+                    <span class="text-green-600 text-sm font-medium">+18.2%</span>
+                    <span class="text-gray-400 text-sm">vs last quarter</span>
+                </div>
+            </div>
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                <p class="text-sm text-gray-500 mb-2">Net Profit</p>
+                <p class="text-4xl font-light text-gray-900">$892K</p>
+                <div class="flex items-center gap-2 mt-2">
+                    <span class="text-green-600 text-sm font-medium">+12.5%</span>
+                    <span class="text-gray-400 text-sm">vs last quarter</span>
+                </div>
+            </div>
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                <p class="text-sm text-gray-500 mb-2">Customer Count</p>
+                <p class="text-4xl font-light text-gray-900">2,847</p>
+                <div class="flex items-center gap-2 mt-2">
+                    <span class="text-green-600 text-sm font-medium">+324</span>
+                    <span class="text-gray-400 text-sm">new this quarter</span>
+                </div>
+            </div>
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                <p class="text-sm text-gray-500 mb-2">Employee NPS</p>
+                <p class="text-4xl font-light text-gray-900">72</p>
+                <div class="flex items-center gap-2 mt-2">
+                    <span class="text-green-600 text-sm font-medium">+8</span>
+                    <span class="text-gray-400 text-sm">vs last quarter</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Charts Row -->
+        <div class="grid grid-cols-3 gap-6 mb-8">
+            <!-- Revenue Trend -->
+            <div class="col-span-2 bg-white rounded-2xl p-6 shadow-sm">
+                <h3 class="font-medium text-gray-900 mb-6">Revenue Trend</h3>
+                <div class="h-64 flex items-end gap-4">
+                    <div class="flex-1 text-center">
+                        <div class="bg-gray-200 rounded-t mx-auto w-12" style="height: 120px"></div>
+                        <p class="text-sm text-gray-500 mt-2">Q1</p>
+                    </div>
+                    <div class="flex-1 text-center">
+                        <div class="bg-gray-200 rounded-t mx-auto w-12" style="height: 150px"></div>
+                        <p class="text-sm text-gray-500 mt-2">Q2</p>
+                    </div>
+                    <div class="flex-1 text-center">
+                        <div class="bg-gray-200 rounded-t mx-auto w-12" style="height: 180px"></div>
+                        <p class="text-sm text-gray-500 mt-2">Q3</p>
+                    </div>
+                    <div class="flex-1 text-center">
+                        <div class="bg-gray-900 rounded-t mx-auto w-12" style="height: 220px"></div>
+                        <p class="text-sm text-gray-900 font-medium mt-2">Q4</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Revenue by Segment -->
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                <h3 class="font-medium text-gray-900 mb-6">Revenue by Segment</h3>
+                <div class="space-y-4">
+                    <div>
+                        <div class="flex justify-between text-sm mb-1">
+                            <span class="text-gray-600">Enterprise</span>
+                            <span class="font-medium">$2.1M</span>
+                        </div>
+                        <div class="h-2 bg-gray-100 rounded-full">
+                            <div class="h-2 bg-gray-900 rounded-full" style="width: 50%"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between text-sm mb-1">
+                            <span class="text-gray-600">Mid-Market</span>
+                            <span class="font-medium">$1.4M</span>
+                        </div>
+                        <div class="h-2 bg-gray-100 rounded-full">
+                            <div class="h-2 bg-gray-600 rounded-full" style="width: 33%"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between text-sm mb-1">
+                            <span class="text-gray-600">SMB</span>
+                            <span class="font-medium">$700K</span>
+                        </div>
+                        <div class="h-2 bg-gray-100 rounded-full">
+                            <div class="h-2 bg-gray-400 rounded-full" style="width: 17%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Key Insights -->
+        <div class="grid grid-cols-2 gap-6 mb-8">
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                <h3 class="font-medium text-gray-900 mb-4">Key Wins</h3>
+                <ul class="space-y-3">
+                    <li class="flex items-start gap-3">
+                        <div class="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                            <svg class="w-3 h-3 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                        </div>
+                        <p class="text-gray-600 text-sm">Closed $1.2M enterprise deal with Fortune 500 company</p>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <div class="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                            <svg class="w-3 h-3 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                        </div>
+                        <p class="text-gray-600 text-sm">Launched new product line with 15% market adoption</p>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <div class="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                            <svg class="w-3 h-3 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                        </div>
+                        <p class="text-gray-600 text-sm">Reduced customer churn rate by 23%</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+                <h3 class="font-medium text-gray-900 mb-4">Areas of Focus</h3>
+                <ul class="space-y-3">
+                    <li class="flex items-start gap-3">
+                        <div class="w-6 h-6 bg-yellow-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                            <span class="text-yellow-600 text-xs font-bold">!</span>
+                        </div>
+                        <p class="text-gray-600 text-sm">APAC expansion behind schedule by 2 months</p>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <div class="w-6 h-6 bg-yellow-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                            <span class="text-yellow-600 text-xs font-bold">!</span>
+                        </div>
+                        <p class="text-gray-600 text-sm">Engineering hiring targets at 75% completion</p>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <div class="w-6 h-6 bg-yellow-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                            <span class="text-yellow-600 text-xs font-bold">!</span>
+                        </div>
+                        <p class="text-gray-600 text-sm">Marketing CAC increased 12% - needs optimization</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Style Info -->
+        <div class="bg-white rounded-2xl p-6 shadow-sm">
+            <div class="grid grid-cols-2 gap-8">
+                <div>
+                    <h3 class="text-gray-400 text-sm uppercase tracking-widest mb-4">Best For</h3>
+                    <ul class="space-y-2 text-gray-600 text-sm">
+                        <li>C-suite reporting</li>
+                        <li>Board presentations</li>
+                        <li>Investor updates</li>
+                        <li>Strategic planning</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-gray-400 text-sm uppercase tracking-widest mb-4">Key Elements</h3>
+                    <ul class="space-y-2 text-gray-600 text-sm">
+                        <li>Clean, minimal design</li>
+                        <li>Focus on key metrics</li>
+                        <li>Clear visual hierarchy</li>
+                        <li>Actionable insights</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-gray-200 px-8 py-4 flex justify-between items-center">
+        <a href="29-heatmap-density.html" class="text-gray-500 hover:text-gray-900 text-sm">&larr; Heatmap/Density</a>
+        <a href="31-real-time-monitoring.html" class="text-gray-500 hover:text-gray-900 text-sm">Real-Time Monitoring &rarr;</a>
+    </footer>
+</body>
+</html>

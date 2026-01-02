@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sales Intelligence - UI Style #37</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>* { font-family: 'Inter', sans-serif; }</style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <!-- Navigation -->
+    <nav class="bg-white border-b border-gray-200 px-6 py-4">
+        <div class="flex justify-between items-center">
+            <div class="flex items-center gap-4">
+                <a href="../index.html" class="text-gray-500 hover:text-gray-900 text-sm">&larr; Back</a>
+                <span class="font-semibold text-gray-900">#37 Sales Intelligence</span>
+            </div>
+            <span class="text-gray-400 text-sm">BI/Analytics</span>
+        </div>
+    </nav>
+
+    <div class="p-6">
+        <div class="max-w-7xl mx-auto">
+            <!-- Header -->
+            <div class="flex justify-between items-center mb-6">
+                <div>
+                    <h1 class="text-2xl font-bold text-gray-900">Sales Dashboard</h1>
+                    <p class="text-gray-500">Q4 2024 Performance</p>
+                </div>
+                <div class="flex gap-2">
+                    <button class="px-4 py-2 bg-indigo-600 text-white rounded-lg text-sm font-medium hover:bg-indigo-700 cursor-pointer">+ New Deal</button>
+                </div>
+            </div>
+
+            <!-- Pipeline Summary -->
+            <div class="grid grid-cols-5 gap-4 mb-6">
+                <div class="bg-white rounded-xl p-5 shadow-sm border border-gray-200">
+                    <p class="text-sm text-gray-500 mb-1">Pipeline Value</p>
+                    <p class="text-2xl font-bold text-gray-900">$4.2M</p>
+                    <p class="text-sm text-green-600">+18% vs last quarter</p>
+                </div>
+                <div class="bg-white rounded-xl p-5 shadow-sm border border-gray-200">
+                    <p class="text-sm text-gray-500 mb-1">Closed Won</p>
+                    <p class="text-2xl font-bold text-green-600">$1.8M</p>
+                    <p class="text-sm text-gray-500">92% of target</p>
+                </div>
+                <div class="bg-white rounded-xl p-5 shadow-sm border border-gray-200">
+                    <p class="text-sm text-gray-500 mb-1">Win Rate</p>
+                    <p class="text-2xl font-bold text-gray-900">34%</p>
+                    <p class="text-sm text-green-600">+5% vs avg</p>
+                </div>
+                <div class="bg-white rounded-xl p-5 shadow-sm border border-gray-200">
+                    <p class="text-sm text-gray-500 mb-1">Avg Deal Size</p>
+                    <p class="text-2xl font-bold text-gray-900">$42K</p>
+                    <p class="text-sm text-green-600">+12% vs avg</p>
+                </div>
+                <div class="bg-white rounded-xl p-5 shadow-sm border border-gray-200">
+                    <p class="text-sm text-gray-500 mb-1">Sales Cycle</p>
+                    <p class="text-2xl font-bold text-gray-900">28 days</p>
+                    <p class="text-sm text-green-600">-5 days vs avg</p>
+                </div>
+            </div>
+
+            <!-- Pipeline Stages -->
+            <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-200 mb-6">
+                <h2 class="font-semibold text-gray-900 mb-4">Pipeline by Stage</h2>
+                <div class="flex items-center gap-2">
+                    <div class="flex-1">
+                        <div class="flex items-center gap-2 mb-2">
+                            <span class="text-sm font-medium text-gray-700">Prospecting</span>
+                            <span class="text-sm text-gray-500">$842K (32 deals)</span>
+                        </div>
+                        <div class="h-8 bg-blue-100 rounded-l-lg flex items-center px-3" style="width: 100%">
+                            <span class="text-xs font-medium text-blue-700">20%</span>
+                        </div>
+                    </div>
+                    <div class="flex-1">
+                        <div class="flex items-center gap-2 mb-2">
+                            <span class="text-sm font-medium text-gray-700">Qualification</span>
+                            <span class="text-sm text-gray-500">$1.2M (24 deals)</span>
+                        </div>
+                        <div class="h-8 bg-blue-200 flex items-center px-3" style="width: 100%">
+                            <span class="text-xs font-medium text-blue-800">29%</span>
+                        </div>
+                    </div>
+                    <div class="flex-1">
+                        <div class="flex items-center gap-2 mb-2">
+                            <span class="text-sm font-medium text-gray-700">Proposal</span>
+                            <span class="text-sm text-gray-500">$1.4M (18 deals)</span>
+                        </div>
+                        <div class="h-8 bg-blue-400 flex items-center px-3" style="width: 100%">
+                            <span class="text-xs font-medium text-white">33%</span>
+                        </div>
+                    </div>
+                    <div class="flex-1">
+                        <div class="flex items-center gap-2 mb-2">
+                            <span class="text-sm font-medium text-gray-700">Negotiation</span>
+                            <span class="text-sm text-gray-500">$760K (8 deals)</span>
+                        </div>
+                        <div class="h-8 bg-blue-600 rounded-r-lg flex items-center px-3" style="width: 100%">
+                            <span class="text-xs font-medium text-white">18%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Top Deals & Rep Performance -->
+            <div class="grid grid-cols-2 gap-6 mb-6">
+                <!-- Top Deals -->
+                <div class="bg-white rounded-xl shadow-sm border border-gray-200">
+                    <div class="px-6 py-4 border-b border-gray-200">
+                        <h2 class="font-semibold text-gray-900">Top Deals</h2>
+                    </div>
+                    <div class="divide-y divide-gray-200">
+                        <div class="px-6 py-4 flex items-center justify-between hover:bg-gray-50 cursor-pointer">
+                            <div>
+                                <p class="font-medium text-gray-900">Enterprise Deal - TechCorp</p>
+                                <p class="text-sm text-gray-500">Negotiation • 85% probability</p>
+                            </div>
+                            <div class="text-right">
+                                <p class="font-bold text-gray-900">$420K</p>
+                                <p class="text-xs text-gray-500">Close: Jan 15</p>
+                            </div>
+                        </div>
+                        <div class="px-6 py-4 flex items-center justify-between hover:bg-gray-50 cursor-pointer">
+                            <div>
+                                <p class="font-medium text-gray-900">Platform Upgrade - DataFlow</p>
+                                <p class="text-sm text-gray-500">Proposal • 70% probability</p>
+                            </div>
+                            <div class="text-right">
+                                <p class="font-bold text-gray-900">$280K</p>
+                                <p class="text-xs text-gray-500">Close: Jan 28</p>
+                            </div>
+                        </div>
+                        <div class="px-6 py-4 flex items-center justify-between hover:bg-gray-50 cursor-pointer">
+                            <div>
+                                <p class="font-medium text-gray-900">Annual Contract - CloudNine</p>
+                                <p class="text-sm text-gray-500">Negotiation • 90% probability</p>
+                            </div>
+                            <div class="text-right">
+                                <p class="font-bold text-gray-900">$185K</p>
+                                <p class="text-xs text-gray-500">Close: Jan 10</p>
+                            </div>
+                        </div>
+                        <div class="px-6 py-4 flex items-center justify-between hover:bg-gray-50 cursor-pointer">
+                            <div>
+                                <p class="font-medium text-gray-900">New Business - StartupXYZ</p>
+                                <p class="text-sm text-gray-500">Qualification • 40% probability</p>
+                            </div>
+                            <div class="text-right">
+                                <p class="font-bold text-gray-900">$125K</p>
+                                <p class="text-xs text-gray-500">Close: Feb 15</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Rep Leaderboard -->
+                <div class="bg-white rounded-xl shadow-sm border border-gray-200">
+                    <div class="px-6 py-4 border-b border-gray-200">
+                        <h2 class="font-semibold text-gray-900">Rep Leaderboard</h2>
+                    </div>
+                    <div class="divide-y divide-gray-200">
+                        <div class="px-6 py-4 flex items-center gap-4">
+                            <span class="w-8 h-8 bg-yellow-100 rounded-full flex items-center justify-center text-yellow-600 font-bold">1</span>
+                            <div class="w-10 h-10 bg-indigo-500 rounded-full"></div>
+                            <div class="flex-1">
+                                <p class="font-medium text-gray-900">Sarah Chen</p>
+                                <p class="text-sm text-gray-500">Enterprise Sales</p>
+                            </div>
+                            <div class="text-right">
+                                <p class="font-bold text-gray-900">$892K</p>
+                                <p class="text-xs text-green-600">124% of quota</p>
+                            </div>
+                        </div>
+                        <div class="px-6 py-4 flex items-center gap-4">
+                            <span class="w-8 h-8 bg-gray-100 rounded-full flex items-center justify-center text-gray-600 font-bold">2</span>
+                            <div class="w-10 h-10 bg-green-500 rounded-full"></div>
+                            <div class="flex-1">
+                                <p class="font-medium text-gray-900">Mike Johnson</p>
+                                <p class="text-sm text-gray-500">Mid-Market</p>
+                            </div>
+                            <div class="text-right">
+                                <p class="font-bold text-gray-900">$654K</p>
+                                <p class="text-xs text-green-600">108% of quota</p>
+                            </div>
+                        </div>
+                        <div class="px-6 py-4 flex items-center gap-4">
+                            <span class="w-8 h-8 bg-orange-100 rounded-full flex items-center justify-center text-orange-600 font-bold">3</span>
+                            <div class="w-10 h-10 bg-purple-500 rounded-full"></div>
+                            <div class="flex-1">
+                                <p class="font-medium text-gray-900">Emily Davis</p>
+                                <p class="text-sm text-gray-500">Enterprise Sales</p>
+                            </div>
+                            <div class="text-right">
+                                <p class="font-bold text-gray-900">$548K</p>
+                                <p class="text-xs text-yellow-600">92% of quota</p>
+                            </div>
+                        </div>
+                        <div class="px-6 py-4 flex items-center gap-4">
+                            <span class="w-8 h-8 bg-gray-50 rounded-full flex items-center justify-center text-gray-400 font-bold">4</span>
+                            <div class="w-10 h-10 bg-blue-500 rounded-full"></div>
+                            <div class="flex-1">
+                                <p class="font-medium text-gray-900">Alex Kim</p>
+                                <p class="text-sm text-gray-500">SMB</p>
+                            </div>
+                            <div class="text-right">
+                                <p class="font-bold text-gray-900">$421K</p>
+                                <p class="text-xs text-yellow-600">84% of quota</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Style Info -->
+            <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-200">
+                <div class="grid grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-gray-400 text-sm uppercase tracking-widest mb-4">Best For</h3>
+                        <ul class="space-y-2 text-gray-600 text-sm">
+                            <li>CRM dashboards</li>
+                            <li>Sales performance tracking</li>
+                            <li>Pipeline management</li>
+                            <li>Revenue forecasting</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-gray-400 text-sm uppercase tracking-widest mb-4">Key Elements</h3>
+                        <ul class="space-y-2 text-gray-600 text-sm">
+                            <li>Pipeline visualization</li>
+                            <li>Deal cards with probability</li>
+                            <li>Leaderboards</li>
+                            <li>Quota tracking</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-gray-200 px-6 py-4 flex justify-between items-center">
+        <a href="36-financial-analytics.html" class="text-gray-500 hover:text-gray-900 text-sm">&larr; Financial Analytics</a>
+        <a href="38-neubrutalism.html" class="text-gray-500 hover:text-gray-900 text-sm">Neubrutalism &rarr;</a>
+    </footer>
+</body>
+</html>

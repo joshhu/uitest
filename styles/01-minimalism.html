@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minimalism & Swiss Style - UI Style #01</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Helvetica+Neue:wght@300;400;500;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { font-family: 'Inter', 'Helvetica Neue', sans-serif; }
+    </style>
+</head>
+<body class="bg-white text-black min-h-screen">
+    <!-- Navigation -->
+    <nav class="fixed top-4 left-4 right-4 bg-white border border-gray-200 rounded-lg z-50">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="../index.html" class="text-sm text-gray-500 hover:text-black transition-colors">&larr; Back to Gallery</a>
+            <span class="font-medium">#01 Minimalism & Swiss Style</span>
+            <span class="text-sm text-gray-400">General</span>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 px-6">
+        <div class="max-w-5xl mx-auto">
+            <h1 class="text-7xl font-bold tracking-tight leading-none mb-8">
+                Less is<br/>More.
+            </h1>
+            <p class="text-xl text-gray-600 max-w-xl leading-relaxed">
+                Swiss design principles combined with modern minimalism.
+                Clean lines, functional layouts, and purposeful white space.
+            </p>
+        </div>
+    </section>
+
+    <!-- Grid Section -->
+    <section class="py-20 px-6 border-t border-gray-100">
+        <div class="max-w-5xl mx-auto">
+            <div class="grid grid-cols-12 gap-8">
+                <div class="col-span-4">
+                    <span class="text-sm text-gray-400 uppercase tracking-widest">01</span>
+                    <h2 class="text-2xl font-semibold mt-2 mb-4">Typography</h2>
+                    <p class="text-gray-600">Helvetica, Inter, or any clean sans-serif. High contrast between headings and body text.</p>
+                </div>
+                <div class="col-span-4">
+                    <span class="text-sm text-gray-400 uppercase tracking-widest">02</span>
+                    <h2 class="text-2xl font-semibold mt-2 mb-4">Grid System</h2>
+                    <p class="text-gray-600">Mathematical precision. 12-column grids with consistent gutters and margins.</p>
+                </div>
+                <div class="col-span-4">
+                    <span class="text-sm text-gray-400 uppercase tracking-widest">03</span>
+                    <h2 class="text-2xl font-semibold mt-2 mb-4">White Space</h2>
+                    <p class="text-gray-600">Space is a design element. Let content breathe with generous margins.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Color Palette -->
+    <section class="py-20 px-6 bg-gray-50">
+        <div class="max-w-5xl mx-auto">
+            <h3 class="text-sm text-gray-400 uppercase tracking-widest mb-8">Color Palette</h3>
+            <div class="flex gap-4">
+                <div class="flex-1">
+                    <div class="h-32 bg-black rounded-lg mb-3"></div>
+                    <p class="text-sm font-medium">Black</p>
+                    <p class="text-xs text-gray-500">#000000</p>
+                </div>
+                <div class="flex-1">
+                    <div class="h-32 bg-white border border-gray-200 rounded-lg mb-3"></div>
+                    <p class="text-sm font-medium">White</p>
+                    <p class="text-xs text-gray-500">#FFFFFF</p>
+                </div>
+                <div class="flex-1">
+                    <div class="h-32 bg-gray-500 rounded-lg mb-3"></div>
+                    <p class="text-sm font-medium">Grey</p>
+                    <p class="text-xs text-gray-500">#808080</p>
+                </div>
+                <div class="flex-1">
+                    <div class="h-32 bg-[#F5F1E8] rounded-lg mb-3"></div>
+                    <p class="text-sm font-medium">Beige</p>
+                    <p class="text-xs text-gray-500">#F5F1E8</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Components -->
+    <section class="py-20 px-6">
+        <div class="max-w-5xl mx-auto">
+            <h3 class="text-sm text-gray-400 uppercase tracking-widest mb-12">Components</h3>
+
+            <!-- Buttons -->
+            <div class="mb-16">
+                <h4 class="text-lg font-medium mb-6">Buttons</h4>
+                <div class="flex gap-4 items-center">
+                    <button class="px-8 py-3 bg-black text-white font-medium hover:bg-gray-800 transition-colors">Primary Action</button>
+                    <button class="px-8 py-3 border-2 border-black text-black font-medium hover:bg-black hover:text-white transition-colors">Secondary</button>
+                    <button class="px-8 py-3 text-black font-medium hover:text-gray-600 transition-colors">Text Link &rarr;</button>
+                </div>
+            </div>
+
+            <!-- Cards -->
+            <div class="mb-16">
+                <h4 class="text-lg font-medium mb-6">Cards</h4>
+                <div class="grid grid-cols-3 gap-6">
+                    <div class="border border-gray-200 p-6">
+                        <span class="text-xs text-gray-400 uppercase tracking-widest">Feature</span>
+                        <h5 class="text-xl font-semibold mt-2 mb-3">Clean Design</h5>
+                        <p class="text-gray-600 text-sm">Focused on content clarity and functional aesthetics.</p>
+                    </div>
+                    <div class="border border-gray-200 p-6">
+                        <span class="text-xs text-gray-400 uppercase tracking-widest">Feature</span>
+                        <h5 class="text-xl font-semibold mt-2 mb-3">Fast Loading</h5>
+                        <p class="text-gray-600 text-sm">Minimal assets mean lightning-fast performance.</p>
+                    </div>
+                    <div class="border border-gray-200 p-6">
+                        <span class="text-xs text-gray-400 uppercase tracking-widest">Feature</span>
+                        <h5 class="text-xl font-semibold mt-2 mb-3">Accessible</h5>
+                        <p class="text-gray-600 text-sm">High contrast ratios ensure WCAG AAA compliance.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Form -->
+            <div class="mb-16">
+                <h4 class="text-lg font-medium mb-6">Form Elements</h4>
+                <div class="max-w-md">
+                    <div class="mb-4">
+                        <label class="block text-sm font-medium mb-2">Email</label>
+                        <input type="email" class="w-full px-4 py-3 border border-gray-300 focus:border-black focus:outline-none transition-colors" placeholder="your@email.com">
+                    </div>
+                    <div class="mb-4">
+                        <label class="block text-sm font-medium mb-2">Message</label>
+                        <textarea class="w-full px-4 py-3 border border-gray-300 focus:border-black focus:outline-none transition-colors h-32" placeholder="Your message..."></textarea>
+                    </div>
+                    <button class="px-8 py-3 bg-black text-white font-medium hover:bg-gray-800 transition-colors">Submit</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Style Info -->
+    <section class="py-20 px-6 bg-black text-white">
+        <div class="max-w-5xl mx-auto">
+            <div class="grid grid-cols-2 gap-16">
+                <div>
+                    <h3 class="text-sm text-gray-400 uppercase tracking-widest mb-6">Best For</h3>
+                    <ul class="space-y-2 text-gray-300">
+                        <li>Enterprise applications</li>
+                        <li>Dashboards</li>
+                        <li>Documentation sites</li>
+                        <li>SaaS platforms</li>
+                        <li>Professional tools</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-sm text-gray-400 uppercase tracking-widest mb-6">Characteristics</h3>
+                    <ul class="space-y-2 text-gray-300">
+                        <li>Light Mode: Full support</li>
+                        <li>Dark Mode: Full support</li>
+                        <li>Performance: Excellent</li>
+                        <li>Accessibility: WCAG AAA</li>
+                        <li>Complexity: Low</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 px-6 border-t border-gray-100">
+        <div class="max-w-5xl mx-auto flex justify-between items-center">
+            <a href="../index.html" class="text-sm text-gray-500 hover:text-black">&larr; Back to Gallery</a>
+            <a href="02-neumorphism.html" class="text-sm text-gray-500 hover:text-black">Next: Neumorphism &rarr;</a>
+        </div>
+    </footer>
+</body>
+</html>

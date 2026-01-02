@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memphis Revival - UI Style #44</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .font-display { font-family: 'Archivo Black', sans-serif; }
+        .font-sans { font-family: 'Poppins', sans-serif; }
+        .squiggle {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 20'%3E%3Cpath d='M0 10 Q 25 0 50 10 T 100 10' fill='none' stroke='%23FF6B6B' stroke-width='3'/%3E%3C/svg%3E");
+            background-repeat: repeat-x;
+        }
+    </style>
+</head>
+<body class="bg-[#FFF5E6] min-h-screen font-sans">
+    <!-- Navigation -->
+    <nav class="bg-[#FFE66D] border-b-4 border-black px-6 py-4">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <a href="../index.html" class="font-display text-black hover:text-[#FF6B6B]">&larr; BACK</a>
+            <span class="font-display text-xl">#44 MEMPHIS REVIVAL</span>
+            <span class="bg-[#4ECDC4] text-black px-3 py-1 font-display">MODERN</span>
+        </div>
+    </nav>
+
+    <div class="max-w-6xl mx-auto p-8">
+        <!-- Hero -->
+        <section class="relative py-16">
+            <!-- Decorative shapes -->
+            <div class="absolute top-10 left-10 w-20 h-20 bg-[#FF6B6B] rounded-full"></div>
+            <div class="absolute top-20 right-20 w-16 h-16 bg-[#4ECDC4] transform rotate-45"></div>
+            <div class="absolute bottom-10 left-1/4 w-24 h-24 bg-[#FFE66D] border-4 border-black"></div>
+            <div class="absolute bottom-20 right-1/3 w-12 h-12 bg-[#A8E6CF]" style="clip-path: polygon(50% 0%, 0% 100%, 100% 100%);"></div>
+
+            <div class="relative text-center z-10">
+                <h1 class="font-display text-8xl text-black mb-6 leading-tight">
+                    BOLD<br/>
+                    <span class="text-[#FF6B6B]">PLAYFUL</span><br/>
+                    DESIGN
+                </h1>
+                <p class="text-xl text-gray-700 max-w-xl mx-auto mb-8">
+                    Inspired by the 1980s Memphis Group. Geometric shapes, bold patterns, and vibrant colors.
+                </p>
+                <button class="bg-[#FF6B6B] text-white px-8 py-4 font-display text-xl border-4 border-black shadow-[4px_4px_0_0_#000] hover:shadow-none hover:translate-x-1 hover:translate-y-1 transition-all cursor-pointer">
+                    GET STARTED
+                </button>
+            </div>
+        </section>
+
+        <!-- Feature Cards -->
+        <section class="grid grid-cols-3 gap-6 mb-16">
+            <div class="bg-white border-4 border-black p-6 relative">
+                <div class="absolute -top-6 -left-6 w-12 h-12 bg-[#FF6B6B] rounded-full border-4 border-black"></div>
+                <h3 class="font-display text-2xl mb-3">SHAPES</h3>
+                <p class="text-gray-600">Geometric forms like circles, triangles, and squiggles define the style.</p>
+            </div>
+            <div class="bg-[#4ECDC4] border-4 border-black p-6 relative">
+                <div class="absolute -top-6 -right-6 w-12 h-12 bg-[#FFE66D] border-4 border-black transform rotate-45"></div>
+                <h3 class="font-display text-2xl mb-3">COLORS</h3>
+                <p class="text-gray-800">Bold, contrasting colors that pop and demand attention.</p>
+            </div>
+            <div class="bg-[#FFE66D] border-4 border-black p-6 relative">
+                <div class="absolute -bottom-6 -left-6 w-12 h-12 bg-[#A8E6CF] border-4 border-black" style="clip-path: polygon(50% 0%, 0% 100%, 100% 100%);"></div>
+                <h3 class="font-display text-2xl mb-3">PATTERNS</h3>
+                <p class="text-gray-800">Dots, stripes, and squiggles add energy and movement.</p>
+            </div>
+        </section>
+
+        <!-- Pattern Section -->
+        <section class="bg-white border-4 border-black p-12 mb-16 relative overflow-hidden">
+            <div class="absolute top-0 left-0 w-full h-8 squiggle"></div>
+            <div class="absolute bottom-0 left-0 w-full h-8 squiggle transform rotate-180"></div>
+
+            <div class="grid grid-cols-2 gap-12 items-center relative z-10">
+                <div>
+                    <h2 class="font-display text-5xl mb-6">EMBRACE THE CHAOS</h2>
+                    <p class="text-lg text-gray-600 mb-6">
+                        Memphis design breaks all the rules. It's anti-minimalist, anti-serious, and unapologetically fun. Perfect for brands that want to stand out.
+                    </p>
+                    <div class="flex gap-4">
+                        <button class="bg-black text-white px-6 py-3 font-display border-4 border-black cursor-pointer">
+                            LEARN MORE
+                        </button>
+                        <button class="bg-[#FF6B6B] text-white px-6 py-3 font-display border-4 border-black cursor-pointer">
+                            EXPLORE
+                        </button>
+                    </div>
+                </div>
+                <div class="relative h-64">
+                    <div class="absolute top-0 left-0 w-32 h-32 bg-[#FF6B6B] rounded-full"></div>
+                    <div class="absolute top-10 left-20 w-32 h-32 bg-[#4ECDC4] border-4 border-black"></div>
+                    <div class="absolute bottom-0 right-0 w-32 h-32 bg-[#FFE66D]" style="clip-path: polygon(50% 0%, 0% 100%, 100% 100%);"></div>
+                    <div class="absolute bottom-10 left-10 w-24 h-24 bg-[#A8E6CF] rounded-full border-4 border-black"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Color Palette -->
+        <section class="bg-black text-white p-8 mb-16 border-4 border-black">
+            <h2 class="font-display text-3xl mb-6 text-center">MEMPHIS PALETTE</h2>
+            <div class="grid grid-cols-5 gap-4">
+                <div class="text-center">
+                    <div class="h-24 bg-[#FF6B6B] border-4 border-white mb-2"></div>
+                    <span class="font-display text-sm">CORAL</span>
+                </div>
+                <div class="text-center">
+                    <div class="h-24 bg-[#4ECDC4] border-4 border-white mb-2"></div>
+                    <span class="font-display text-sm">TEAL</span>
+                </div>
+                <div class="text-center">
+                    <div class="h-24 bg-[#FFE66D] border-4 border-white mb-2"></div>
+                    <span class="font-display text-sm">YELLOW</span>
+                </div>
+                <div class="text-center">
+                    <div class="h-24 bg-[#A8E6CF] border-4 border-white mb-2"></div>
+                    <span class="font-display text-sm">MINT</span>
+                </div>
+                <div class="text-center">
+                    <div class="h-24 bg-[#DDA0DD] border-4 border-white mb-2"></div>
+                    <span class="font-display text-sm">PLUM</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Style Info -->
+        <section class="bg-white border-4 border-black p-8">
+            <div class="grid grid-cols-2 gap-8">
+                <div>
+                    <h3 class="font-display text-lg mb-4">BEST FOR</h3>
+                    <ul class="space-y-2 text-gray-600">
+                        <li>• Creative agencies</li>
+                        <li>• Kids & youth brands</li>
+                        <li>• Entertainment</li>
+                        <li>• Art & design studios</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-display text-lg mb-4">KEY ELEMENTS</h3>
+                    <ul class="space-y-2 text-gray-600">
+                        <li>• Geometric shapes</li>
+                        <li>• Bold color blocking</li>
+                        <li>• Squiggle patterns</li>
+                        <li>• Heavy black outlines</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-[#FFE66D] border-t-4 border-black px-6 py-4 mt-8">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <a href="43-ai-native.html" class="font-display text-black hover:text-[#FF6B6B]">&larr; AI-Native</a>
+            <a href="45-vaporwave.html" class="font-display text-black hover:text-[#FF6B6B]">Vaporwave &rarr;</a>
+        </div>
+    </footer>
+</body>
+</html>

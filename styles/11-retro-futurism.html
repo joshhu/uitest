@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retro-Futurism - UI Style #11</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <style>
+        body { background: #1A1A2E; font-family: 'Orbitron', sans-serif; }
+        .pixel-font { font-family: 'Press Start 2P', cursive; }
+        .neon-blue { color: #0080FF; text-shadow: 0 0 10px #0080FF, 0 0 20px #0080FF, 0 0 40px #0080FF; }
+        .neon-pink { color: #FF006E; text-shadow: 0 0 10px #FF006E, 0 0 20px #FF006E, 0 0 40px #FF006E; }
+        .neon-cyan { color: #00FFFF; text-shadow: 0 0 10px #00FFFF, 0 0 20px #00FFFF, 0 0 40px #00FFFF; }
+        .neon-box {
+            box-shadow: 0 0 10px #0080FF, 0 0 20px #0080FF, inset 0 0 10px rgba(0,128,255,0.1);
+            border: 2px solid #0080FF;
+        }
+        .scanlines {
+            background: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,0,0,0.3) 2px, rgba(0,0,0,0.3) 4px);
+            pointer-events: none;
+        }
+        .grid-bg {
+            background-image:
+                linear-gradient(rgba(0,128,255,0.1) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0,128,255,0.1) 1px, transparent 1px);
+            background-size: 50px 50px;
+        }
+        @keyframes flicker {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.8; }
+        }
+        .flicker { animation: flicker 0.1s infinite; }
+    </style>
+</head>
+<body class="min-h-screen text-white grid-bg relative">
+    <!-- Scanlines overlay -->
+    <div class="fixed inset-0 scanlines z-50 pointer-events-none"></div>
+
+    <!-- Navigation -->
+    <nav class="fixed top-4 left-4 right-4 neon-box rounded-lg z-40 bg-[#1A1A2E]/90 backdrop-blur">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="../index.html" class="neon-cyan text-sm hover:opacity-80">&larr; BACK</a>
+            <span class="neon-pink font-bold">#11 RETRO-FUTURISM</span>
+            <span class="text-gray-500 text-sm">GENERAL</span>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="pt-32 pb-20 px-6">
+        <div class="max-w-5xl mx-auto text-center">
+            <h1 class="text-6xl font-black mb-6">
+                <span class="neon-cyan">CYBER</span><span class="neon-pink">WAVE</span>
+            </h1>
+            <p class="text-xl text-gray-400 max-w-2xl mx-auto">80s aesthetics meet futuristic vision. Neon glows, CRT scanlines, and synthwave vibes.</p>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="py-12 px-6">
+        <div class="max-w-5xl mx-auto">
+            <div class="grid grid-cols-3 gap-6">
+                <div class="neon-box rounded-lg p-6 bg-[#1A1A2E]/80">
+                    <div class="neon-blue text-4xl mb-4">01</div>
+                    <h3 class="text-xl font-bold mb-2 neon-cyan">NEON GLOW</h3>
+                    <p class="text-gray-400 text-sm">Text shadows and box shadows create the signature glow effect</p>
+                </div>
+                <div class="neon-box rounded-lg p-6 bg-[#1A1A2E]/80" style="border-color: #FF006E; box-shadow: 0 0 10px #FF006E, 0 0 20px #FF006E;">
+                    <div class="neon-pink text-4xl mb-4">02</div>
+                    <h3 class="text-xl font-bold mb-2 neon-pink">SYNTHWAVE</h3>
+                    <p class="text-gray-400 text-sm">Inspired by 80s electronic music and movie aesthetics</p>
+                </div>
+                <div class="neon-box rounded-lg p-6 bg-[#1A1A2E]/80" style="border-color: #00FFFF; box-shadow: 0 0 10px #00FFFF, 0 0 20px #00FFFF;">
+                    <div class="neon-cyan text-4xl mb-4">03</div>
+                    <h3 class="text-xl font-bold mb-2 neon-cyan">CRT STYLE</h3>
+                    <p class="text-gray-400 text-sm">Scanlines and flicker effects for authentic retro feel</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Colors -->
+    <section class="py-12 px-6">
+        <div class="max-w-5xl mx-auto">
+            <h3 class="text-gray-500 text-sm uppercase tracking-widest mb-8">COLOR PALETTE</h3>
+            <div class="neon-box rounded-lg p-8 bg-[#1A1A2E]/80">
+                <div class="grid grid-cols-5 gap-4">
+                    <div class="text-center">
+                        <div class="h-20 rounded mb-2" style="background: #0080FF; box-shadow: 0 0 20px #0080FF;"></div>
+                        <p class="text-xs text-gray-400">Neon Blue</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="h-20 rounded mb-2" style="background: #FF006E; box-shadow: 0 0 20px #FF006E;"></div>
+                        <p class="text-xs text-gray-400">Hot Pink</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="h-20 rounded mb-2" style="background: #00FFFF; box-shadow: 0 0 20px #00FFFF;"></div>
+                        <p class="text-xs text-gray-400">Cyan</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="h-20 rounded mb-2" style="background: #5D34D0; box-shadow: 0 0 20px #5D34D0;"></div>
+                        <p class="text-xs text-gray-400">Purple</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="h-20 rounded mb-2 border border-gray-700" style="background: #1A1A2E;"></div>
+                        <p class="text-xs text-gray-400">Deep Black</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Buttons -->
+    <section class="py-12 px-6">
+        <div class="max-w-5xl mx-auto">
+            <h3 class="text-gray-500 text-sm uppercase tracking-widest mb-8">BUTTONS</h3>
+            <div class="flex flex-wrap gap-4">
+                <button class="px-8 py-3 rounded font-bold neon-box hover:bg-[#0080FF]/20 transition-colors cursor-pointer" style="text-shadow: 0 0 10px #0080FF;">PRIMARY</button>
+                <button class="px-8 py-3 rounded font-bold cursor-pointer" style="border: 2px solid #FF006E; box-shadow: 0 0 10px #FF006E; text-shadow: 0 0 10px #FF006E; color: #FF006E;">SECONDARY</button>
+                <button class="px-8 py-3 rounded font-bold cursor-pointer" style="border: 2px solid #00FFFF; box-shadow: 0 0 10px #00FFFF; text-shadow: 0 0 10px #00FFFF; color: #00FFFF;">TERTIARY</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Form -->
+    <section class="py-12 px-6">
+        <div class="max-w-md mx-auto">
+            <div class="neon-box rounded-lg p-8 bg-[#1A1A2E]/80">
+                <h3 class="text-xl font-bold mb-6 neon-cyan text-center">// ACCESS TERMINAL</h3>
+                <div class="space-y-4">
+                    <div>
+                        <label class="block text-sm text-gray-400 mb-2">USERNAME</label>
+                        <input type="text" class="w-full bg-transparent neon-box rounded px-4 py-3 text-[#00FFFF] focus:outline-none" placeholder="Enter username...">
+                    </div>
+                    <div>
+                        <label class="block text-sm text-gray-400 mb-2">PASSWORD</label>
+                        <input type="password" class="w-full bg-transparent neon-box rounded px-4 py-3 text-[#00FFFF] focus:outline-none" placeholder="Enter password...">
+                    </div>
+                    <button class="w-full py-3 rounded font-bold cursor-pointer flicker" style="background: linear-gradient(90deg, #0080FF, #FF006E); box-shadow: 0 0 20px rgba(0,128,255,0.5);">
+                        INITIALIZE
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Info -->
+    <section class="py-12 px-6">
+        <div class="max-w-5xl mx-auto">
+            <div class="neon-box rounded-lg p-8 bg-[#1A1A2E]/80">
+                <div class="grid grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-gray-500 text-sm uppercase tracking-widest mb-4">BEST FOR</h3>
+                        <ul class="space-y-2 text-gray-400 text-sm">
+                            <li>> Gaming platforms</li>
+                            <li>> Entertainment sites</li>
+                            <li>> Music platforms</li>
+                            <li>> Tech brands</li>
+                            <li>> Artistic projects</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-gray-500 text-sm uppercase tracking-widest mb-4">STATS</h3>
+                        <ul class="space-y-2 text-gray-400 text-sm">
+                            <li>> Light Mode: Full</li>
+                            <li>> Dark Mode: Primary</li>
+                            <li>> Accessibility: Limited</li>
+                            <li>> Complexity: Medium</li>
+                            <li>> Era: 1980s Retro</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 px-6">
+        <div class="max-w-5xl mx-auto neon-box rounded-lg px-6 py-4 flex justify-between items-center bg-[#1A1A2E]/80">
+            <a href="10-aurora-ui.html" class="neon-cyan text-sm hover:opacity-80">&larr; AURORA UI</a>
+            <a href="12-flat-design.html" class="neon-pink text-sm hover:opacity-80">FLAT DESIGN &rarr;</a>
+        </div>
+    </footer>
+</body>
+</html>

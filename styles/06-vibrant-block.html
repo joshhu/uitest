@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vibrant & Block-based - UI Style #06</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { font-family: 'Space Grotesk', sans-serif; }
+    </style>
+</head>
+<body class="bg-black min-h-screen text-white">
+    <!-- Navigation -->
+    <nav class="fixed top-4 left-4 right-4 bg-black/80 backdrop-blur-md rounded-2xl z-50 border border-white/10">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="../index.html" class="text-sm text-white/60 hover:text-white">&larr; Back</a>
+            <span class="font-semibold">#06 Vibrant & Block</span>
+            <span class="text-sm text-white/40">General</span>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="pt-32 pb-12 px-6">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid grid-cols-2 gap-6">
+                <div class="bg-[#39FF14] rounded-3xl p-12 text-black">
+                    <h1 class="text-6xl font-bold leading-tight">BOLD.<br/>ENERGETIC.<br/>PLAYFUL.</h1>
+                </div>
+                <div class="grid grid-cols-2 gap-6">
+                    <div class="bg-[#BF00FF] rounded-3xl p-6 flex items-end">
+                        <span class="text-2xl font-bold">Electric</span>
+                    </div>
+                    <div class="bg-[#FF1493] rounded-3xl p-6 flex items-end">
+                        <span class="text-2xl font-bold">Vivid</span>
+                    </div>
+                    <div class="bg-[#00FFFF] rounded-3xl p-6 flex items-end col-span-2 text-black">
+                        <span class="text-2xl font-bold">High Energy Design</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="py-12 px-6">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid grid-cols-4 gap-6">
+                <div class="bg-[#FFAA00] rounded-2xl p-6 text-black col-span-2">
+                    <span class="text-sm opacity-60">01</span>
+                    <h3 class="text-3xl font-bold mt-2 mb-4">Large Sections</h3>
+                    <p>48px+ gaps between blocks. Bold, unapologetic layouts.</p>
+                </div>
+                <div class="bg-[#FF006E] rounded-2xl p-6">
+                    <span class="text-sm opacity-60">02</span>
+                    <h3 class="text-2xl font-bold mt-2 mb-4">Animated Patterns</h3>
+                    <p class="text-sm opacity-80">Dynamic backgrounds and interactive elements</p>
+                </div>
+                <div class="bg-[#CCFF00] rounded-2xl p-6 text-black">
+                    <span class="text-sm opacity-60">03</span>
+                    <h3 class="text-2xl font-bold mt-2 mb-4">Bold Hover</h3>
+                    <p class="text-sm opacity-80">Color shifts and instant feedback</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Colors -->
+    <section class="py-12 px-6">
+        <div class="max-w-6xl mx-auto">
+            <h3 class="text-white/40 text-sm uppercase tracking-widest mb-8">Color Palette</h3>
+            <div class="grid grid-cols-6 gap-4">
+                <div>
+                    <div class="h-24 rounded-2xl mb-3" style="background: #39FF14;"></div>
+                    <p class="text-xs text-white/60">Neon Green</p>
+                </div>
+                <div>
+                    <div class="h-24 rounded-2xl mb-3" style="background: #BF00FF;"></div>
+                    <p class="text-xs text-white/60">Electric Purple</p>
+                </div>
+                <div>
+                    <div class="h-24 rounded-2xl mb-3" style="background: #FF1493;"></div>
+                    <p class="text-xs text-white/60">Vivid Pink</p>
+                </div>
+                <div>
+                    <div class="h-24 rounded-2xl mb-3" style="background: #00FFFF;"></div>
+                    <p class="text-xs text-white/60">Bright Cyan</p>
+                </div>
+                <div>
+                    <div class="h-24 rounded-2xl mb-3" style="background: #FFAA00;"></div>
+                    <p class="text-xs text-white/60">Sunburst</p>
+                </div>
+                <div>
+                    <div class="h-24 rounded-2xl mb-3" style="background: #FF7F00;"></div>
+                    <p class="text-xs text-white/60">Orange</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Buttons -->
+    <section class="py-12 px-6">
+        <div class="max-w-6xl mx-auto">
+            <h3 class="text-white/40 text-sm uppercase tracking-widest mb-8">Buttons</h3>
+            <div class="flex flex-wrap gap-4">
+                <button class="bg-[#39FF14] text-black px-8 py-4 rounded-xl font-bold text-lg hover:bg-[#CCFF00] transition-colors cursor-pointer">Primary Action</button>
+                <button class="bg-[#BF00FF] px-8 py-4 rounded-xl font-bold text-lg hover:bg-[#FF006E] transition-colors cursor-pointer">Secondary</button>
+                <button class="bg-transparent border-2 border-[#00FFFF] text-[#00FFFF] px-8 py-4 rounded-xl font-bold text-lg hover:bg-[#00FFFF] hover:text-black transition-colors cursor-pointer">Outline</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cards -->
+    <section class="py-12 px-6">
+        <div class="max-w-6xl mx-auto">
+            <h3 class="text-white/40 text-sm uppercase tracking-widest mb-8">Cards</h3>
+            <div class="grid grid-cols-3 gap-6">
+                <div class="bg-gradient-to-br from-[#39FF14] to-[#00FFFF] rounded-2xl p-6 text-black hover:scale-105 transition-transform cursor-pointer">
+                    <h4 class="text-xl font-bold mb-2">Startups</h4>
+                    <p class="text-sm opacity-80">Perfect for bold, innovative brands</p>
+                </div>
+                <div class="bg-gradient-to-br from-[#BF00FF] to-[#FF1493] rounded-2xl p-6 hover:scale-105 transition-transform cursor-pointer">
+                    <h4 class="text-xl font-bold mb-2">Gaming</h4>
+                    <p class="text-sm opacity-80">High energy entertainment platforms</p>
+                </div>
+                <div class="bg-gradient-to-br from-[#FFAA00] to-[#FF7F00] rounded-2xl p-6 text-black hover:scale-105 transition-transform cursor-pointer">
+                    <h4 class="text-xl font-bold mb-2">Social Media</h4>
+                    <p class="text-sm opacity-80">Youth-focused applications</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Typography -->
+    <section class="py-12 px-6 bg-gradient-to-r from-[#BF00FF] via-[#FF1493] to-[#FFAA00]">
+        <div class="max-w-6xl mx-auto py-12">
+            <p class="text-8xl font-bold text-center">32px+ TYPE</p>
+            <p class="text-center mt-4 text-xl">Large typography for maximum impact</p>
+        </div>
+    </section>
+
+    <!-- Info -->
+    <section class="py-12 px-6">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid grid-cols-2 gap-8">
+                <div class="bg-white/5 rounded-2xl p-6 border border-white/10">
+                    <h3 class="text-white/40 text-sm uppercase tracking-widest mb-4">Best For</h3>
+                    <ul class="space-y-2 text-white/80">
+                        <li>Startups</li>
+                        <li>Creative agencies</li>
+                        <li>Gaming platforms</li>
+                        <li>Social media apps</li>
+                        <li>Youth-focused brands</li>
+                    </ul>
+                </div>
+                <div class="bg-white/5 rounded-2xl p-6 border border-white/10">
+                    <h3 class="text-white/40 text-sm uppercase tracking-widest mb-4">Do Not Use For</h3>
+                    <ul class="space-y-2 text-white/80">
+                        <li>Financial institutions</li>
+                        <li>Healthcare</li>
+                        <li>Formal business</li>
+                        <li>Government</li>
+                        <li>Elderly audiences</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 px-6">
+        <div class="max-w-6xl mx-auto bg-white/5 rounded-2xl px-6 py-4 flex justify-between items-center border border-white/10">
+            <a href="05-3d-hyperrealism.html" class="text-sm text-white/60 hover:text-white">&larr; 3D Hyperrealism</a>
+            <a href="07-dark-mode-oled.html" class="text-sm text-white/60 hover:text-white">Dark Mode OLED &rarr;</a>
+        </div>
+    </footer>
+</body>
+</html>

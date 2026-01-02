@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neubrutalism - UI Style #38</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { font-family: 'Space Grotesk', sans-serif; }
+        .brutal-shadow { box-shadow: 4px 4px 0 0 #000; }
+        .brutal-shadow-lg { box-shadow: 8px 8px 0 0 #000; }
+    </style>
+</head>
+<body class="bg-[#FFF8E7] min-h-screen">
+    <!-- Navigation -->
+    <nav class="bg-white border-b-4 border-black px-6 py-4">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <a href="../index.html" class="text-black font-bold hover:underline">&larr; BACK</a>
+            <span class="font-bold text-xl">#38 NEUBRUTALISM</span>
+            <span class="bg-black text-white px-3 py-1">MODERN</span>
+        </div>
+    </nav>
+
+    <div class="max-w-6xl mx-auto p-8">
+        <!-- Hero -->
+        <section class="mb-12">
+            <div class="bg-[#FF6B6B] border-4 border-black brutal-shadow-lg p-12 text-center">
+                <h1 class="text-6xl font-bold text-black mb-4">BOLD. RAW. HONEST.</h1>
+                <p class="text-xl text-black mb-8">Design that doesn't hide behind subtlety</p>
+                <button class="bg-black text-white px-8 py-4 text-xl font-bold border-4 border-black brutal-shadow hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all cursor-pointer">
+                    GET STARTED →
+                </button>
+            </div>
+        </section>
+
+        <!-- Feature Cards -->
+        <section class="grid grid-cols-3 gap-6 mb-12">
+            <div class="bg-[#4ECDC4] border-4 border-black brutal-shadow p-6">
+                <div class="text-5xl mb-4">01</div>
+                <h3 class="text-2xl font-bold mb-2">NO GRADIENTS</h3>
+                <p>Flat colors only. No shadows hiding the truth.</p>
+            </div>
+            <div class="bg-[#FFE66D] border-4 border-black brutal-shadow p-6">
+                <div class="text-5xl mb-4">02</div>
+                <h3 class="text-2xl font-bold mb-2">BOLD BORDERS</h3>
+                <p>Thick black lines define every element.</p>
+            </div>
+            <div class="bg-[#A8E6CF] border-4 border-black brutal-shadow p-6">
+                <div class="text-5xl mb-4">03</div>
+                <h3 class="text-2xl font-bold mb-2">RAW AESTHETIC</h3>
+                <p>Unapologetically unpolished and proud.</p>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="bg-white border-4 border-black brutal-shadow-lg p-8 mb-12">
+            <div class="grid grid-cols-2 gap-8 items-center">
+                <div>
+                    <h2 class="text-4xl font-bold mb-4">READY TO STAND OUT?</h2>
+                    <p class="text-lg mb-6">Join thousands who chose bold over boring.</p>
+                    <div class="flex gap-4">
+                        <button class="bg-[#FF6B6B] text-black px-6 py-3 font-bold border-4 border-black brutal-shadow hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all cursor-pointer">
+                            SIGN UP FREE
+                        </button>
+                        <button class="bg-white text-black px-6 py-3 font-bold border-4 border-black brutal-shadow hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all cursor-pointer">
+                            LEARN MORE
+                        </button>
+                    </div>
+                </div>
+                <div class="bg-[#FFE66D] border-4 border-black p-6">
+                    <div class="text-6xl font-bold">50K+</div>
+                    <div class="text-xl">USERS WORLDWIDE</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Form -->
+        <section class="bg-[#E8E8E8] border-4 border-black brutal-shadow p-8 mb-12">
+            <h2 class="text-3xl font-bold mb-6">CONTACT US</h2>
+            <div class="grid grid-cols-2 gap-4">
+                <input type="text" placeholder="YOUR NAME" class="bg-white border-4 border-black p-4 font-bold focus:outline-none focus:ring-0">
+                <input type="email" placeholder="YOUR EMAIL" class="bg-white border-4 border-black p-4 font-bold focus:outline-none focus:ring-0">
+            </div>
+            <textarea placeholder="YOUR MESSAGE" class="w-full mt-4 bg-white border-4 border-black p-4 font-bold focus:outline-none focus:ring-0 h-32"></textarea>
+            <button class="mt-4 bg-black text-white px-8 py-4 font-bold border-4 border-black brutal-shadow hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all cursor-pointer">
+                SEND MESSAGE →
+            </button>
+        </section>
+
+        <!-- Color Palette -->
+        <section class="bg-white border-4 border-black brutal-shadow p-6 mb-12">
+            <h2 class="text-2xl font-bold mb-4">COLOR PALETTE</h2>
+            <div class="flex gap-4">
+                <div class="flex-1 h-24 bg-[#FF6B6B] border-4 border-black flex items-center justify-center font-bold">#FF6B6B</div>
+                <div class="flex-1 h-24 bg-[#4ECDC4] border-4 border-black flex items-center justify-center font-bold">#4ECDC4</div>
+                <div class="flex-1 h-24 bg-[#FFE66D] border-4 border-black flex items-center justify-center font-bold">#FFE66D</div>
+                <div class="flex-1 h-24 bg-[#A8E6CF] border-4 border-black flex items-center justify-center font-bold">#A8E6CF</div>
+                <div class="flex-1 h-24 bg-black border-4 border-black flex items-center justify-center font-bold text-white">#000000</div>
+            </div>
+        </section>
+
+        <!-- Style Info -->
+        <section class="bg-white border-4 border-black brutal-shadow p-6">
+            <div class="grid grid-cols-2 gap-8">
+                <div>
+                    <h3 class="font-bold text-lg mb-4">BEST FOR</h3>
+                    <ul class="space-y-2">
+                        <li>• Creative agencies</li>
+                        <li>• Portfolio sites</li>
+                        <li>• Startups</li>
+                        <li>• Bold brands</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-bold text-lg mb-4">KEY ELEMENTS</h3>
+                    <ul class="space-y-2">
+                        <li>• Thick black borders</li>
+                        <li>• Hard drop shadows</li>
+                        <li>• Bright flat colors</li>
+                        <li>• Bold typography</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white px-6 py-4 mt-8">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <a href="37-sales-intelligence.html" class="hover:underline">&larr; Sales Intelligence</a>
+            <a href="39-bento-box.html" class="hover:underline">Bento Box Grid &rarr;</a>
+        </div>
+    </footer>
+</body>
+</html>

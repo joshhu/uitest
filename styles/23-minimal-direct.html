@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minimal & Direct - UI Style #23</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>* { font-family: 'Inter', sans-serif; }</style>
+</head>
+<body class="bg-white min-h-screen">
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 bg-white z-50">
+        <div class="max-w-3xl mx-auto px-6 py-6 flex justify-between items-center">
+            <a href="../index.html" class="text-gray-400 hover:text-gray-900 text-sm">&larr; Back</a>
+            <span class="text-gray-400 text-sm">#23</span>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="min-h-screen flex items-center justify-center px-6">
+        <div class="max-w-2xl text-center">
+            <h1 class="text-6xl font-light text-gray-900 mb-8 leading-tight">
+                Simple.
+            </h1>
+            <p class="text-xl text-gray-500 mb-12 leading-relaxed">
+                A minimal approach to design.<br/>
+                Less noise. More impact.
+            </p>
+            <a href="#" class="inline-block text-gray-900 border-b-2 border-gray-900 pb-1 hover:text-gray-600 hover:border-gray-600 transition-colors">
+                Get started
+            </a>
+        </div>
+    </section>
+
+    <!-- Single Column Content -->
+    <section class="py-32 px-6">
+        <div class="max-w-xl mx-auto">
+            <p class="text-2xl font-light text-gray-700 leading-relaxed mb-12">
+                We believe in the power of simplicity. Every element serves a purpose. Nothing more, nothing less.
+            </p>
+            <p class="text-lg text-gray-500 leading-relaxed">
+                Our platform helps you focus on what matters. No clutter, no distractions—just the tools you need to succeed.
+            </p>
+        </div>
+    </section>
+
+    <!-- Features - Minimal List -->
+    <section class="py-32 px-6 border-t border-gray-100">
+        <div class="max-w-xl mx-auto">
+            <div class="space-y-12">
+                <div>
+                    <span class="text-gray-300 text-sm">01</span>
+                    <h3 class="text-xl text-gray-900 mt-2">Focus</h3>
+                    <p class="text-gray-500 mt-2">Eliminate distractions and concentrate on your work.</p>
+                </div>
+                <div>
+                    <span class="text-gray-300 text-sm">02</span>
+                    <h3 class="text-xl text-gray-900 mt-2">Clarity</h3>
+                    <p class="text-gray-500 mt-2">Clear information architecture for better decisions.</p>
+                </div>
+                <div>
+                    <span class="text-gray-300 text-sm">03</span>
+                    <h3 class="text-xl text-gray-900 mt-2">Speed</h3>
+                    <p class="text-gray-500 mt-2">Fast performance, instant results.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing - Simple -->
+    <section class="py-32 px-6 bg-gray-50">
+        <div class="max-w-xl mx-auto text-center">
+            <h2 class="text-3xl font-light text-gray-900 mb-4">One plan. Everything included.</h2>
+            <p class="text-gray-500 mb-12">No tiers, no confusion.</p>
+            <div class="bg-white p-12 border border-gray-200">
+                <div class="text-5xl font-light text-gray-900 mb-4">$29<span class="text-lg text-gray-400">/month</span></div>
+                <ul class="text-gray-600 space-y-3 mb-8">
+                    <li>Unlimited projects</li>
+                    <li>Unlimited users</li>
+                    <li>Priority support</li>
+                </ul>
+                <button class="w-full py-4 bg-gray-900 text-white font-medium hover:bg-gray-800 transition-colors cursor-pointer">
+                    Start free trial
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-32 px-6">
+        <div class="max-w-xl mx-auto text-center">
+            <h2 class="text-4xl font-light text-gray-900 mb-8">Ready to simplify?</h2>
+            <a href="#" class="inline-block px-8 py-4 bg-gray-900 text-white font-medium hover:bg-gray-800 transition-colors cursor-pointer">
+                Get started
+            </a>
+        </div>
+    </section>
+
+    <!-- Style Info -->
+    <section class="py-16 px-6 border-t border-gray-100">
+        <div class="max-w-xl mx-auto">
+            <div class="grid grid-cols-2 gap-8">
+                <div>
+                    <h3 class="text-gray-400 text-xs uppercase tracking-widest mb-4">Best For</h3>
+                    <ul class="space-y-2 text-gray-600 text-sm">
+                        <li>Simple services</li>
+                        <li>Indie products</li>
+                        <li>Consulting</li>
+                        <li>Micro SaaS</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-gray-400 text-xs uppercase tracking-widest mb-4">Key Elements</h3>
+                    <ul class="space-y-2 text-gray-600 text-sm">
+                        <li>Heavy white space</li>
+                        <li>Single column</li>
+                        <li>Direct messaging</li>
+                        <li>Minimal colors</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-6 px-6 border-t border-gray-100">
+        <div class="max-w-xl mx-auto flex justify-between items-center">
+            <a href="22-feature-rich.html" class="text-gray-400 hover:text-gray-900 text-sm">&larr; Feature-Rich</a>
+            <a href="24-social-proof.html" class="text-gray-400 hover:text-gray-900 text-sm">Social Proof &rarr;</a>
+        </div>
+    </footer>
+</body>
+</html>

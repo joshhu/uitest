@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spatial UI - UI Style #55</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(40px);
+            -webkit-backdrop-filter: blur(40px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .glass-panel-dark {
+            background: rgba(30, 30, 30, 0.6);
+            backdrop-filter: blur(40px);
+            -webkit-backdrop-filter: blur(40px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .spatial-shadow {
+            box-shadow:
+                0 8px 32px rgba(0, 0, 0, 0.12),
+                0 2px 8px rgba(0, 0, 0, 0.08);
+        }
+        .depth-layer {
+            transform: perspective(1000px) translateZ(0);
+            transition: transform 0.3s ease;
+        }
+        .depth-layer:hover {
+            transform: perspective(1000px) translateZ(20px);
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <!-- Ambient Background -->
+    <div class="fixed inset-0 overflow-hidden pointer-events-none">
+        <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-purple-500/30 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-blue-500/30 rounded-full blur-3xl"></div>
+        <div class="absolute top-1/2 left-1/2 w-64 h-64 bg-pink-500/20 rounded-full blur-3xl"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="fixed top-6 left-6 right-6 z-50">
+        <div class="glass-panel rounded-2xl px-6 py-4 spatial-shadow">
+            <div class="max-w-5xl mx-auto flex justify-between items-center">
+                <a href="../index.html" class="text-white/70 hover:text-white text-sm">&larr; Back</a>
+                <span class="text-white font-medium">#55 Spatial UI</span>
+                <span class="text-white/50 text-sm">Modern</span>
+            </div>
+        </div>
+    </nav>
+
+    <div class="relative max-w-5xl mx-auto p-8 pt-32">
+        <!-- Hero -->
+        <section class="text-center mb-16">
+            <div class="inline-block glass-panel rounded-full px-6 py-2 mb-8">
+                <span class="text-white/70 text-sm">Inspired by Apple Vision Pro</span>
+            </div>
+            <h1 class="text-6xl font-semibold text-white mb-6 tracking-tight">
+                Spatial Computing<br/>Design Language
+            </h1>
+            <p class="text-xl text-white/60 max-w-2xl mx-auto">
+                Immersive interfaces that exist in three-dimensional space. Glass, depth, and ambient lighting create a new paradigm.
+            </p>
+        </section>
+
+        <!-- Main Panel -->
+        <section class="glass-panel-dark rounded-3xl p-8 mb-8 spatial-shadow">
+            <div class="grid grid-cols-3 gap-6">
+                <!-- App Card -->
+                <div class="glass-panel rounded-2xl p-6 depth-layer cursor-pointer">
+                    <div class="w-16 h-16 bg-gradient-to-br from-blue-400 to-blue-600 rounded-2xl mb-4 flex items-center justify-center">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"/>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-white font-semibold mb-1">Photos</h3>
+                    <p class="text-white/50 text-sm">View memories in space</p>
+                </div>
+                <!-- App Card -->
+                <div class="glass-panel rounded-2xl p-6 depth-layer cursor-pointer">
+                    <div class="w-16 h-16 bg-gradient-to-br from-green-400 to-emerald-600 rounded-2xl mb-4 flex items-center justify-center">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-white font-semibold mb-1">Music</h3>
+                    <p class="text-white/50 text-sm">Immersive audio</p>
+                </div>
+                <!-- App Card -->
+                <div class="glass-panel rounded-2xl p-6 depth-layer cursor-pointer">
+                    <div class="w-16 h-16 bg-gradient-to-br from-purple-400 to-violet-600 rounded-2xl mb-4 flex items-center justify-center">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-white font-semibold mb-1">TV</h3>
+                    <p class="text-white/50 text-sm">Cinematic experience</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Window Example -->
+        <section class="grid grid-cols-2 gap-8 mb-8">
+            <div class="glass-panel-dark rounded-3xl overflow-hidden spatial-shadow">
+                <div class="px-6 py-4 border-b border-white/10 flex items-center gap-3">
+                    <div class="flex gap-2">
+                        <div class="w-3 h-3 rounded-full bg-red-500/80"></div>
+                        <div class="w-3 h-3 rounded-full bg-yellow-500/80"></div>
+                        <div class="w-3 h-3 rounded-full bg-green-500/80"></div>
+                    </div>
+                    <span class="text-white/50 text-sm ml-2">Window Controls</span>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-white font-semibold mb-4">Floating Windows</h3>
+                    <p class="text-white/60 text-sm leading-relaxed">
+                        In spatial UI, windows float in 3D space. They can be positioned, resized, and arranged around the user for optimal workflow.
+                    </p>
+                    <div class="mt-6 flex gap-3">
+                        <button class="glass-panel px-4 py-2 rounded-xl text-white text-sm cursor-pointer hover:bg-white/20 transition-colors">
+                            Close
+                        </button>
+                        <button class="glass-panel px-4 py-2 rounded-xl text-white text-sm cursor-pointer hover:bg-white/20 transition-colors">
+                            Minimize
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="glass-panel-dark rounded-3xl p-6 spatial-shadow">
+                <h3 class="text-white font-semibold mb-4">Eye & Hand Tracking</h3>
+                <div class="space-y-4">
+                    <div class="glass-panel rounded-xl p-4">
+                        <div class="flex items-center gap-4">
+                            <div class="w-10 h-10 rounded-full bg-blue-500/30 flex items-center justify-center">
+                                <svg class="w-5 h-5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <p class="text-white text-sm font-medium">Look to Select</p>
+                                <p class="text-white/50 text-xs">Eyes as cursor</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="glass-panel rounded-xl p-4">
+                        <div class="flex items-center gap-4">
+                            <div class="w-10 h-10 rounded-full bg-purple-500/30 flex items-center justify-center">
+                                <svg class="w-5 h-5 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 11.5V14m0-2.5v-6a1.5 1.5 0 113 0m-3 6a1.5 1.5 0 00-3 0v2a7.5 7.5 0 0015 0v-5a1.5 1.5 0 00-3 0m-6-3V11m0-5.5v-1a1.5 1.5 0 013 0v1m0 0V11m0-5.5a1.5 1.5 0 013 0v3m0 0V11"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <p class="text-white text-sm font-medium">Pinch to Interact</p>
+                                <p class="text-white/50 text-xs">Natural gestures</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Design Principles -->
+        <section class="glass-panel-dark rounded-3xl p-8 mb-8 spatial-shadow">
+            <h2 class="text-2xl font-semibold text-white mb-6">Spatial Design Principles</h2>
+            <div class="grid grid-cols-4 gap-6">
+                <div class="text-center">
+                    <div class="w-16 h-16 mx-auto mb-4 rounded-2xl bg-gradient-to-br from-cyan-400/30 to-blue-400/30 flex items-center justify-center">
+                        <span class="text-2xl">◇</span>
+                    </div>
+                    <h4 class="text-white font-medium mb-1">Depth</h4>
+                    <p class="text-white/50 text-xs">Layered interfaces</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-16 h-16 mx-auto mb-4 rounded-2xl bg-gradient-to-br from-pink-400/30 to-rose-400/30 flex items-center justify-center">
+                        <span class="text-2xl">○</span>
+                    </div>
+                    <h4 class="text-white font-medium mb-1">Glass</h4>
+                    <p class="text-white/50 text-xs">Translucent materials</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-16 h-16 mx-auto mb-4 rounded-2xl bg-gradient-to-br from-amber-400/30 to-orange-400/30 flex items-center justify-center">
+                        <span class="text-2xl">☀</span>
+                    </div>
+                    <h4 class="text-white font-medium mb-1">Light</h4>
+                    <p class="text-white/50 text-xs">Ambient illumination</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-16 h-16 mx-auto mb-4 rounded-2xl bg-gradient-to-br from-green-400/30 to-emerald-400/30 flex items-center justify-center">
+                        <span class="text-2xl">◎</span>
+                    </div>
+                    <h4 class="text-white font-medium mb-1">Focus</h4>
+                    <p class="text-white/50 text-xs">Attention-based UI</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Style Info -->
+        <section class="grid grid-cols-2 gap-8">
+            <div class="glass-panel rounded-2xl p-6">
+                <h3 class="text-white/50 text-sm uppercase tracking-widest mb-4">Best For</h3>
+                <ul class="space-y-3 text-white">
+                    <li class="flex items-center gap-3">
+                        <span class="w-1.5 h-1.5 rounded-full bg-blue-400"></span>
+                        VR/AR applications
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <span class="w-1.5 h-1.5 rounded-full bg-blue-400"></span>
+                        Vision Pro apps
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <span class="w-1.5 h-1.5 rounded-full bg-blue-400"></span>
+                        Futuristic interfaces
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <span class="w-1.5 h-1.5 rounded-full bg-blue-400"></span>
+                        Premium products
+                    </li>
+                </ul>
+            </div>
+            <div class="glass-panel rounded-2xl p-6">
+                <h3 class="text-white/50 text-sm uppercase tracking-widest mb-4">Key Elements</h3>
+                <ul class="space-y-3 text-white">
+                    <li class="flex items-center gap-3">
+                        <span class="w-1.5 h-1.5 rounded-full bg-purple-400"></span>
+                        Glass morphism 2.0
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <span class="w-1.5 h-1.5 rounded-full bg-purple-400"></span>
+                        Depth and layering
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <span class="w-1.5 h-1.5 rounded-full bg-purple-400"></span>
+                        Ambient backgrounds
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <span class="w-1.5 h-1.5 rounded-full bg-purple-400"></span>
+                        Subtle shadows
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="relative px-6 py-4 mt-12">
+        <div class="glass-panel rounded-2xl px-6 py-4 max-w-5xl mx-auto">
+            <div class="flex justify-between items-center">
+                <a href="54-neubrutalism-v2.html" class="text-white/50 hover:text-white text-sm">&larr; Neubrutalism v2</a>
+                <a href="56-e-ink-paper.html" class="text-white/50 hover:text-white text-sm">E-Ink/Paper &rarr;</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Claymorphism - UI Style #09</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * { font-family: 'Nunito', sans-serif; }
+        body { background: linear-gradient(135deg, #fef3f2 0%, #f0f9ff 100%); }
+        .clay {
+            background: linear-gradient(145deg, #ffffff, #e6e6e6);
+            border-radius: 20px;
+            border: 3px solid rgba(255,255,255,0.8);
+            box-shadow:
+                8px 8px 0 rgba(0,0,0,0.08),
+                inset -2px -2px 4px rgba(0,0,0,0.05),
+                inset 2px 2px 4px rgba(255,255,255,0.8);
+        }
+        .clay-pink {
+            background: linear-gradient(145deg, #FDBCB4, #f5a69c);
+            border: 3px solid rgba(255,255,255,0.5);
+            box-shadow:
+                8px 8px 0 rgba(253,188,180,0.5),
+                inset -2px -2px 4px rgba(0,0,0,0.1),
+                inset 2px 2px 4px rgba(255,255,255,0.6);
+        }
+        .clay-blue {
+            background: linear-gradient(145deg, #ADD8E6, #9bc5d9);
+            border: 3px solid rgba(255,255,255,0.5);
+            box-shadow:
+                8px 8px 0 rgba(173,216,230,0.5),
+                inset -2px -2px 4px rgba(0,0,0,0.1),
+                inset 2px 2px 4px rgba(255,255,255,0.6);
+        }
+        .clay-mint {
+            background: linear-gradient(145deg, #98FF98, #88ef88);
+            border: 3px solid rgba(255,255,255,0.5);
+            box-shadow:
+                8px 8px 0 rgba(152,255,152,0.5),
+                inset -2px -2px 4px rgba(0,0,0,0.1),
+                inset 2px 2px 4px rgba(255,255,255,0.6);
+        }
+        .clay-lilac {
+            background: linear-gradient(145deg, #E6E6FA, #d6d6ea);
+            border: 3px solid rgba(255,255,255,0.5);
+            box-shadow:
+                8px 8px 0 rgba(230,230,250,0.5),
+                inset -2px -2px 4px rgba(0,0,0,0.1),
+                inset 2px 2px 4px rgba(255,255,255,0.6);
+        }
+        .clay-btn {
+            transition: all 0.2s ease-out;
+        }
+        .clay-btn:hover {
+            transform: translateY(-2px);
+            box-shadow:
+                10px 10px 0 rgba(0,0,0,0.08),
+                inset -2px -2px 4px rgba(0,0,0,0.05),
+                inset 2px 2px 4px rgba(255,255,255,0.8);
+        }
+        .clay-btn:active {
+            transform: translateY(2px);
+            box-shadow:
+                4px 4px 0 rgba(0,0,0,0.08),
+                inset -2px -2px 4px rgba(0,0,0,0.05),
+                inset 2px 2px 4px rgba(255,255,255,0.8);
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <!-- Navigation -->
+    <nav class="fixed top-4 left-4 right-4 clay z-50">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="../index.html" class="text-gray-600 hover:text-gray-900 font-semibold">&larr; Back</a>
+            <span class="font-bold text-gray-800">#09 Claymorphism</span>
+            <span class="text-gray-500">General</span>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="pt-32 pb-16 px-6">
+        <div class="max-w-4xl mx-auto text-center">
+            <div class="clay-pink rounded-3xl p-12 inline-block">
+                <h1 class="text-5xl font-extrabold text-gray-800 mb-4">Soft & Playful</h1>
+                <p class="text-gray-700 text-lg">3D clay-like elements with chunky, toy-like aesthetics</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cards Grid -->
+    <section class="py-12 px-6">
+        <div class="max-w-5xl mx-auto">
+            <h3 class="text-gray-500 text-sm uppercase tracking-widest mb-8 text-center font-bold">Feature Cards</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="clay-blue rounded-3xl p-6 cursor-pointer hover:translate-y-[-4px] transition-transform">
+                    <div class="w-16 h-16 clay rounded-2xl flex items-center justify-center mb-4 mx-auto">
+                        <span class="text-3xl">🎨</span>
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-800 text-center mb-2">Creative</h4>
+                    <p class="text-gray-600 text-center text-sm">Perfect for playful, fun interfaces</p>
+                </div>
+
+                <div class="clay-mint rounded-3xl p-6 cursor-pointer hover:translate-y-[-4px] transition-transform">
+                    <div class="w-16 h-16 clay rounded-2xl flex items-center justify-center mb-4 mx-auto">
+                        <span class="text-3xl">✨</span>
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-800 text-center mb-2">Modern</h4>
+                    <p class="text-gray-600 text-center text-sm">2020s design trend at its finest</p>
+                </div>
+
+                <div class="clay-lilac rounded-3xl p-6 cursor-pointer hover:translate-y-[-4px] transition-transform">
+                    <div class="w-16 h-16 clay rounded-2xl flex items-center justify-center mb-4 mx-auto">
+                        <span class="text-3xl">🧸</span>
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-800 text-center mb-2">Friendly</h4>
+                    <p class="text-gray-600 text-center text-sm">Approachable and welcoming UI</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Buttons -->
+    <section class="py-12 px-6">
+        <div class="max-w-5xl mx-auto">
+            <h3 class="text-gray-500 text-sm uppercase tracking-widest mb-8 text-center font-bold">Buttons</h3>
+            <div class="clay rounded-3xl p-8">
+                <div class="flex flex-wrap justify-center gap-6">
+                    <button class="clay-pink clay-btn rounded-2xl px-8 py-4 font-bold text-gray-800 cursor-pointer">Primary</button>
+                    <button class="clay-blue clay-btn rounded-2xl px-8 py-4 font-bold text-gray-800 cursor-pointer">Secondary</button>
+                    <button class="clay-mint clay-btn rounded-2xl px-8 py-4 font-bold text-gray-800 cursor-pointer">Success</button>
+                    <button class="clay-lilac clay-btn rounded-2xl px-8 py-4 font-bold text-gray-800 cursor-pointer">Info</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Color Palette -->
+    <section class="py-12 px-6">
+        <div class="max-w-5xl mx-auto">
+            <h3 class="text-gray-500 text-sm uppercase tracking-widest mb-8 text-center font-bold">Color Palette</h3>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div class="text-center">
+                    <div class="clay-pink h-24 rounded-3xl mb-3"></div>
+                    <p class="font-bold text-gray-700">Soft Peach</p>
+                    <p class="text-sm text-gray-500">#FDBCB4</p>
+                </div>
+                <div class="text-center">
+                    <div class="clay-blue h-24 rounded-3xl mb-3"></div>
+                    <p class="font-bold text-gray-700">Baby Blue</p>
+                    <p class="text-sm text-gray-500">#ADD8E6</p>
+                </div>
+                <div class="text-center">
+                    <div class="clay-mint h-24 rounded-3xl mb-3"></div>
+                    <p class="font-bold text-gray-700">Mint</p>
+                    <p class="text-sm text-gray-500">#98FF98</p>
+                </div>
+                <div class="text-center">
+                    <div class="clay-lilac h-24 rounded-3xl mb-3"></div>
+                    <p class="font-bold text-gray-700">Lilac</p>
+                    <p class="text-sm text-gray-500">#E6E6FA</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Form -->
+    <section class="py-12 px-6">
+        <div class="max-w-md mx-auto">
+            <div class="clay rounded-3xl p-8">
+                <h3 class="text-2xl font-bold text-gray-800 text-center mb-6">Join Us!</h3>
+                <div class="space-y-4">
+                    <input type="text" placeholder="Your Name" class="w-full clay-lilac rounded-2xl px-6 py-4 font-semibold text-gray-700 placeholder-gray-500 border-none focus:outline-none">
+                    <input type="email" placeholder="Email Address" class="w-full clay-blue rounded-2xl px-6 py-4 font-semibold text-gray-700 placeholder-gray-500 border-none focus:outline-none">
+                    <button class="w-full clay-mint clay-btn rounded-2xl px-8 py-4 font-bold text-gray-800 cursor-pointer">
+                        Sign Up
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Toggle & Progress -->
+    <section class="py-12 px-6">
+        <div class="max-w-5xl mx-auto">
+            <h3 class="text-gray-500 text-sm uppercase tracking-widest mb-8 text-center font-bold">Controls</h3>
+            <div class="clay rounded-3xl p-8">
+                <div class="flex flex-wrap justify-center items-center gap-12">
+                    <!-- Toggle -->
+                    <div class="clay-pink rounded-full w-20 h-10 p-1 cursor-pointer">
+                        <div class="clay w-8 h-8 rounded-full"></div>
+                    </div>
+
+                    <!-- Progress Bar -->
+                    <div class="w-48">
+                        <div class="clay rounded-full h-6 p-1">
+                            <div class="clay-mint h-4 rounded-full w-3/4"></div>
+                        </div>
+                    </div>
+
+                    <!-- Rating -->
+                    <div class="flex gap-2">
+                        <div class="clay-pink w-10 h-10 rounded-xl flex items-center justify-center cursor-pointer">⭐</div>
+                        <div class="clay-pink w-10 h-10 rounded-xl flex items-center justify-center cursor-pointer">⭐</div>
+                        <div class="clay-pink w-10 h-10 rounded-xl flex items-center justify-center cursor-pointer">⭐</div>
+                        <div class="clay w-10 h-10 rounded-xl flex items-center justify-center cursor-pointer">⭐</div>
+                        <div class="clay w-10 h-10 rounded-xl flex items-center justify-center cursor-pointer">⭐</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Info -->
+    <section class="py-12 px-6">
+        <div class="max-w-5xl mx-auto">
+            <div class="clay rounded-3xl p-8">
+                <div class="grid grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-gray-500 text-sm uppercase tracking-widest mb-4 font-bold">Best For</h3>
+                        <ul class="space-y-2 text-gray-700">
+                            <li>Educational apps</li>
+                            <li>Children's apps</li>
+                            <li>SaaS platforms</li>
+                            <li>Creative tools</li>
+                            <li>Onboarding flows</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-gray-500 text-sm uppercase tracking-widest mb-4 font-bold">Characteristics</h3>
+                        <ul class="space-y-2 text-gray-700">
+                            <li>Light Mode: Full</li>
+                            <li>Dark Mode: Partial</li>
+                            <li>Accessibility: Ensure 4.5:1</li>
+                            <li>Conversion: High</li>
+                            <li>Complexity: Medium</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 px-6">
+        <div class="max-w-5xl mx-auto clay rounded-2xl px-6 py-4 flex justify-between items-center">
+            <a href="08-accessible.html" class="text-gray-600 hover:text-gray-900 font-semibold">&larr; Accessible</a>
+            <a href="10-aurora-ui.html" class="text-gray-600 hover:text-gray-900 font-semibold">Aurora UI &rarr;</a>
+        </div>
+    </footer>
+</body>
+</html>

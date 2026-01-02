@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heatmap & Density - UI Style #29</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { font-family: 'Inter', sans-serif; }
+        .heat-0 { background-color: #1e293b; }
+        .heat-1 { background-color: #1e3a5f; }
+        .heat-2 { background-color: #0369a1; }
+        .heat-3 { background-color: #0284c7; }
+        .heat-4 { background-color: #38bdf8; }
+        .heat-5 { background-color: #7dd3fc; }
+    </style>
+</head>
+<body class="bg-slate-950 min-h-screen text-white">
+    <!-- Navigation -->
+    <nav class="bg-slate-900 border-b border-slate-800 px-6 py-4">
+        <div class="flex justify-between items-center">
+            <div class="flex items-center gap-4">
+                <a href="../index.html" class="text-slate-400 hover:text-white text-sm">&larr; Back</a>
+                <span class="text-white font-semibold">#29 Heatmap & Density</span>
+            </div>
+            <span class="text-slate-400 text-sm">BI/Analytics</span>
+        </div>
+    </nav>
+
+    <div class="p-6">
+        <!-- Header -->
+        <div class="mb-8">
+            <h1 class="text-2xl font-bold mb-2">User Activity Heatmap</h1>
+            <p class="text-slate-400">Visualize patterns and density across time and dimensions</p>
+        </div>
+
+        <!-- Contribution-style Heatmap -->
+        <div class="bg-slate-900 rounded-xl p-6 border border-slate-800 mb-6">
+            <div class="flex justify-between items-center mb-4">
+                <h2 class="font-semibold">Activity Over Time (GitHub-style)</h2>
+                <div class="flex items-center gap-2 text-xs text-slate-400">
+                    <span>Less</span>
+                    <div class="flex gap-1">
+                        <div class="w-3 h-3 rounded heat-0"></div>
+                        <div class="w-3 h-3 rounded heat-1"></div>
+                        <div class="w-3 h-3 rounded heat-2"></div>
+                        <div class="w-3 h-3 rounded heat-3"></div>
+                        <div class="w-3 h-3 rounded heat-4"></div>
+                    </div>
+                    <span>More</span>
+                </div>
+            </div>
+            <div class="overflow-x-auto">
+                <div class="flex gap-1">
+                    <!-- Weeks -->
+                    <div class="grid grid-rows-7 gap-1">
+                        <div class="w-3 h-3 rounded heat-2 cursor-pointer hover:ring-1 hover:ring-white"></div>
+                        <div class="w-3 h-3 rounded heat-0 cursor-pointer hover:ring-1 hover:ring-white"></div>
+                        <div class="w-3 h-3 rounded heat-3 cursor-pointer hover:ring-1 hover:ring-white"></div>
+                        <div class="w-3 h-3 rounded heat-1 cursor-pointer hover:ring-1 hover:ring-white"></div>
+                        <div class="w-3 h-3 rounded heat-4 cursor-pointer hover:ring-1 hover:ring-white"></div>
+                        <div class="w-3 h-3 rounded heat-2 cursor-pointer hover:ring-1 hover:ring-white"></div>
+                        <div class="w-3 h-3 rounded heat-0 cursor-pointer hover:ring-1 hover:ring-white"></div>
+                    </div>
+                    <div class="grid grid-rows-7 gap-1">
+                        <div class="w-3 h-3 rounded heat-1 cursor-pointer hover:ring-1 hover:ring-white"></div>
+                        <div class="w-3 h-3 rounded heat-3 cursor-pointer hover:ring-1 hover:ring-white"></div>
+                        <div class="w-3 h-3 rounded heat-5 cursor-pointer hover:ring-1 hover:ring-white"></div>
+                        <div class="w-3 h-3 rounded heat-4 cursor-pointer hover:ring-1 hover:ring-white"></div>
+                        <div class="w-3 h-3 rounded heat-2 cursor-pointer hover:ring-1 hover:ring-white"></div>
+                        <div class="w-3 h-3 rounded heat-1 cursor-pointer hover:ring-1 hover:ring-white"></div>
+                        <div class="w-3 h-3 rounded heat-0 cursor-pointer hover:ring-1 hover:ring-white"></div>
+                    </div>
+                    <div class="grid grid-rows-7 gap-1">
+                        <div class="w-3 h-3 rounded heat-3 cursor-pointer hover:ring-1 hover:ring-white"></div>
+                        <div class="w-3 h-3 rounded heat-2 cursor-pointer hover:ring-1 hover:ring-white"></div>
+                        <div class="w-3 h-3 rounded heat-4 cursor-pointer hover:ring-1 hover:ring-white"></div>
+                        <div class="w-3 h-3 rounded heat-3 cursor-pointer hover:ring-1 hover:ring-white"></div>
+                        <div class="w-3 h-3 rounded heat-5 cursor-pointer hover:ring-1 hover:ring-white"></div>
+                        <div class="w-3 h-3 rounded heat-2 cursor-pointer hover:ring-1 hover:ring-white"></div>
+                        <div class="w-3 h-3 rounded heat-1 cursor-pointer hover:ring-1 hover:ring-white"></div>
+                    </div>
+                    <div class="grid grid-rows-7 gap-1">
+                        <div class="w-3 h-3 rounded heat-0 cursor-pointer hover:ring-1 hover:ring-white"></div>
+                        <div class="w-3 h-3 rounded heat-4 cursor-pointer hover:ring-1 hover:ring-white"></div>
+                        <div class="w-3 h-3 rounded heat-3 cursor-pointer hover:ring-1 hover:ring-white"></div>
+                        <div class="w-3 h-3 rounded heat-5 cursor-pointer hover:ring-1 hover:ring-white"></div>
+                        <div class="w-3 h-3 rounded heat-4 cursor-pointer hover:ring-1 hover:ring-white"></div>
+                        <div class="w-3 h-3 rounded heat-3 cursor-pointer hover:ring-1 hover:ring-white"></div>
+                        <div class="w-3 h-3 rounded heat-0 cursor-pointer hover:ring-1 hover:ring-white"></div>
+                    </div>
+                    <div class="grid grid-rows-7 gap-1">
+                        <div class="w-3 h-3 rounded heat-2 cursor-pointer hover:ring-1 hover:ring-white"></div>
+                        <div class="w-3 h-3 rounded heat-1 cursor-pointer hover:ring-1 hover:ring-white"></div>
+                        <div class="w-3 h-3 rounded heat-2 cursor-pointer hover:ring-1 hover:ring-white"></div>
+                        <div class="w-3 h-3 rounded heat-4 cursor-pointer hover:ring-1 hover:ring-white"></div>
+                        <div class="w-3 h-3 rounded heat-3 cursor-pointer hover:ring-1 hover:ring-white"></div>
+                        <div class="w-3 h-3 rounded heat-5 cursor-pointer hover:ring-1 hover:ring-white"></div>
+                        <div class="w-3 h-3 rounded heat-2 cursor-pointer hover:ring-1 hover:ring-white"></div>
+                    </div>
+                    <div class="grid grid-rows-7 gap-1">
+                        <div class="w-3 h-3 rounded heat-4 cursor-pointer hover:ring-1 hover:ring-white"></div>
+                        <div class="w-3 h-3 rounded heat-5 cursor-pointer hover:ring-1 hover:ring-white"></div>
+                        <div class="w-3 h-3 rounded heat-3 cursor-pointer hover:ring-1 hover:ring-white"></div>
+                        <div class="w-3 h-3 rounded heat-2 cursor-pointer hover:ring-1 hover:ring-white"></div>
+                        <div class="w-3 h-3 rounded heat-4 cursor-pointer hover:ring-1 hover:ring-white"></div>
+                        <div class="w-3 h-3 rounded heat-3 cursor-pointer hover:ring-1 hover:ring-white"></div>
+                        <div class="w-3 h-3 rounded heat-1 cursor-pointer hover:ring-1 hover:ring-white"></div>
+                    </div>
+                    <div class="grid grid-rows-7 gap-1">
+                        <div class="w-3 h-3 rounded heat-1 cursor-pointer hover:ring-1 hover:ring-white"></div>
+                        <div class="w-3 h-3 rounded heat-2 cursor-pointer hover:ring-1 hover:ring-white"></div>
+                        <div class="w-3 h-3 rounded heat-4 cursor-pointer hover:ring-1 hover:ring-white"></div>
+                        <div class="w-3 h-3 rounded heat-5 cursor-pointer hover:ring-1 hover:ring-white"></div>
+                        <div class="w-3 h-3 rounded heat-3 cursor-pointer hover:ring-1 hover:ring-white"></div>
+                        <div class="w-3 h-3 rounded heat-2 cursor-pointer hover:ring-1 hover:ring-white"></div>
+                        <div class="w-3 h-3 rounded heat-0 cursor-pointer hover:ring-1 hover:ring-white"></div>
+                    </div>
+                    <div class="grid grid-rows-7 gap-1">
+                        <div class="w-3 h-3 rounded heat-3 cursor-pointer hover:ring-1 hover:ring-white"></div>
+                        <div class="w-3 h-3 rounded heat-4 cursor-pointer hover:ring-1 hover:ring-white"></div>
+                        <div class="w-3 h-3 rounded heat-2 cursor-pointer hover:ring-1 hover:ring-white"></div>
+                        <div class="w-3 h-3 rounded heat-1 cursor-pointer hover:ring-1 hover:ring-white"></div>
+                        <div class="w-3 h-3 rounded heat-5 cursor-pointer hover:ring-1 hover:ring-white"></div>
+                        <div class="w-3 h-3 rounded heat-4 cursor-pointer hover:ring-1 hover:ring-white"></div>
+                        <div class="w-3 h-3 rounded heat-2 cursor-pointer hover:ring-1 hover:ring-white"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Grid Heatmaps -->
+        <div class="grid grid-cols-2 gap-6 mb-6">
+            <!-- Hour x Day Heatmap -->
+            <div class="bg-slate-900 rounded-xl p-6 border border-slate-800">
+                <h2 class="font-semibold mb-4">Peak Hours by Day</h2>
+                <div class="space-y-2">
+                    <div class="flex items-center gap-2">
+                        <span class="w-8 text-xs text-slate-400">Mon</span>
+                        <div class="flex gap-1 flex-1">
+                            <div class="flex-1 h-6 rounded heat-0"></div>
+                            <div class="flex-1 h-6 rounded heat-1"></div>
+                            <div class="flex-1 h-6 rounded heat-2"></div>
+                            <div class="flex-1 h-6 rounded heat-4"></div>
+                            <div class="flex-1 h-6 rounded heat-5"></div>
+                            <div class="flex-1 h-6 rounded heat-3"></div>
+                            <div class="flex-1 h-6 rounded heat-1"></div>
+                            <div class="flex-1 h-6 rounded heat-0"></div>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <span class="w-8 text-xs text-slate-400">Tue</span>
+                        <div class="flex gap-1 flex-1">
+                            <div class="flex-1 h-6 rounded heat-0"></div>
+                            <div class="flex-1 h-6 rounded heat-2"></div>
+                            <div class="flex-1 h-6 rounded heat-3"></div>
+                            <div class="flex-1 h-6 rounded heat-5"></div>
+                            <div class="flex-1 h-6 rounded heat-4"></div>
+                            <div class="flex-1 h-6 rounded heat-2"></div>
+                            <div class="flex-1 h-6 rounded heat-1"></div>
+                            <div class="flex-1 h-6 rounded heat-0"></div>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <span class="w-8 text-xs text-slate-400">Wed</span>
+                        <div class="flex gap-1 flex-1">
+                            <div class="flex-1 h-6 rounded heat-1"></div>
+                            <div class="flex-1 h-6 rounded heat-3"></div>
+                            <div class="flex-1 h-6 rounded heat-4"></div>
+                            <div class="flex-1 h-6 rounded heat-5"></div>
+                            <div class="flex-1 h-6 rounded heat-4"></div>
+                            <div class="flex-1 h-6 rounded heat-3"></div>
+                            <div class="flex-1 h-6 rounded heat-2"></div>
+                            <div class="flex-1 h-6 rounded heat-1"></div>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <span class="w-8 text-xs text-slate-400">Thu</span>
+                        <div class="flex gap-1 flex-1">
+                            <div class="flex-1 h-6 rounded heat-0"></div>
+                            <div class="flex-1 h-6 rounded heat-2"></div>
+                            <div class="flex-1 h-6 rounded heat-4"></div>
+                            <div class="flex-1 h-6 rounded heat-5"></div>
+                            <div class="flex-1 h-6 rounded heat-5"></div>
+                            <div class="flex-1 h-6 rounded heat-3"></div>
+                            <div class="flex-1 h-6 rounded heat-1"></div>
+                            <div class="flex-1 h-6 rounded heat-0"></div>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <span class="w-8 text-xs text-slate-400">Fri</span>
+                        <div class="flex gap-1 flex-1">
+                            <div class="flex-1 h-6 rounded heat-1"></div>
+                            <div class="flex-1 h-6 rounded heat-2"></div>
+                            <div class="flex-1 h-6 rounded heat-3"></div>
+                            <div class="flex-1 h-6 rounded heat-4"></div>
+                            <div class="flex-1 h-6 rounded heat-3"></div>
+                            <div class="flex-1 h-6 rounded heat-2"></div>
+                            <div class="flex-1 h-6 rounded heat-1"></div>
+                            <div class="flex-1 h-6 rounded heat-0"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex justify-between text-xs text-slate-500 mt-2">
+                    <span>6AM</span><span>9AM</span><span>12PM</span><span>3PM</span><span>6PM</span><span>9PM</span><span>12AM</span><span>3AM</span>
+                </div>
+            </div>
+
+            <!-- Density Map -->
+            <div class="bg-slate-900 rounded-xl p-6 border border-slate-800">
+                <h2 class="font-semibold mb-4">Geographic Density</h2>
+                <div class="grid grid-cols-6 gap-1 h-48">
+                    <div class="rounded heat-1"></div>
+                    <div class="rounded heat-0"></div>
+                    <div class="rounded heat-2"></div>
+                    <div class="rounded heat-3"></div>
+                    <div class="rounded heat-1"></div>
+                    <div class="rounded heat-0"></div>
+                    <div class="rounded heat-2"></div>
+                    <div class="rounded heat-3"></div>
+                    <div class="rounded heat-4"></div>
+                    <div class="rounded heat-5"></div>
+                    <div class="rounded heat-3"></div>
+                    <div class="rounded heat-1"></div>
+                    <div class="rounded heat-1"></div>
+                    <div class="rounded heat-4"></div>
+                    <div class="rounded heat-5"></div>
+                    <div class="rounded heat-5"></div>
+                    <div class="rounded heat-4"></div>
+                    <div class="rounded heat-2"></div>
+                    <div class="rounded heat-0"></div>
+                    <div class="rounded heat-3"></div>
+                    <div class="rounded heat-4"></div>
+                    <div class="rounded heat-3"></div>
+                    <div class="rounded heat-2"></div>
+                    <div class="rounded heat-1"></div>
+                    <div class="rounded heat-1"></div>
+                    <div class="rounded heat-2"></div>
+                    <div class="rounded heat-2"></div>
+                    <div class="rounded heat-1"></div>
+                    <div class="rounded heat-1"></div>
+                    <div class="rounded heat-0"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Style Info -->
+        <div class="bg-slate-900 rounded-xl p-6 border border-slate-800">
+            <div class="grid grid-cols-2 gap-8">
+                <div>
+                    <h3 class="text-slate-400 text-sm uppercase tracking-widest mb-4">Best For</h3>
+                    <ul class="space-y-2 text-slate-300 text-sm">
+                        <li>User behavior analytics</li>
+                        <li>Time-series patterns</li>
+                        <li>Geographic distribution</li>
+                        <li>Activity tracking</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-slate-400 text-sm uppercase tracking-widest mb-4">Key Elements</h3>
+                    <ul class="space-y-2 text-slate-300 text-sm">
+                        <li>Color gradients for intensity</li>
+                        <li>Grid-based layouts</li>
+                        <li>Hover tooltips</li>
+                        <li>Clear legends</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 border-t border-slate-800 px-6 py-4 flex justify-between items-center">
+        <a href="28-data-dense-dashboard.html" class="text-slate-400 hover:text-white text-sm">&larr; Data-Dense Dashboard</a>
+        <a href="30-executive-summary.html" class="text-slate-400 hover:text-white text-sm">Executive Summary &rarr;</a>
+    </footer>
+</body>
+</html>

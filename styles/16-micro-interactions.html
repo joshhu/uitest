@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Micro-interactions - UI Style #16</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { font-family: 'Inter', sans-serif; }
+        .btn-ripple { position: relative; overflow: hidden; }
+        .btn-ripple::after {
+            content: '';
+            position: absolute;
+            top: 50%; left: 50%;
+            width: 0; height: 0;
+            background: rgba(255,255,255,0.3);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            transition: width 0.4s, height 0.4s;
+        }
+        .btn-ripple:active::after { width: 300px; height: 300px; }
+        .checkbox-custom:checked + label .checkmark {
+            background: #3B82F6;
+            border-color: #3B82F6;
+        }
+        .checkbox-custom:checked + label .checkmark::after {
+            transform: scale(1);
+        }
+        .toggle-switch { transition: background 0.2s; }
+        .toggle-switch.active { background: #22C55E; }
+        .toggle-knob { transition: transform 0.2s; }
+        .toggle-switch.active .toggle-knob { transform: translateX(24px); }
+        .like-btn.liked svg { fill: #EF4444; color: #EF4444; transform: scale(1.2); }
+        .like-btn svg { transition: all 0.2s; }
+        .input-focus { transition: border-color 0.2s, box-shadow 0.2s; }
+        .input-focus:focus { border-color: #3B82F6; box-shadow: 0 0 0 3px rgba(59,130,246,0.2); }
+    </style>
+</head>
+<body class="bg-slate-100 min-h-screen">
+    <!-- Navigation -->
+    <nav class="fixed top-4 left-4 right-4 bg-white rounded-xl shadow-lg z-50">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="../index.html" class="text-slate-500 hover:text-slate-900 transition-colors">&larr; Back</a>
+            <span class="font-semibold text-slate-900">#16 Micro-interactions</span>
+            <span class="text-slate-400">General</span>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="pt-32 pb-16 px-6">
+        <div class="max-w-4xl mx-auto text-center">
+            <h1 class="text-5xl font-bold text-slate-900 mb-4">Small Details, Big Impact</h1>
+            <p class="text-xl text-slate-600">Tactile feedback, gesture responses, and contextual animations that delight users</p>
+        </div>
+    </section>
+
+    <!-- Buttons Section -->
+    <section class="py-12 px-6">
+        <div class="max-w-4xl mx-auto">
+            <h3 class="text-slate-400 text-sm uppercase tracking-widest mb-8">Button Interactions</h3>
+            <div class="bg-white rounded-2xl p-8 shadow-sm">
+                <div class="flex flex-wrap gap-4 justify-center">
+                    <button class="btn-ripple px-6 py-3 bg-blue-500 text-white rounded-lg font-medium hover:bg-blue-600 active:scale-95 transition-transform cursor-pointer">
+                        Ripple Effect
+                    </button>
+                    <button class="px-6 py-3 bg-green-500 text-white rounded-lg font-medium hover:scale-105 active:scale-95 transition-transform cursor-pointer">
+                        Scale Feedback
+                    </button>
+                    <button class="px-6 py-3 bg-purple-500 text-white rounded-lg font-medium hover:shadow-lg hover:shadow-purple-500/30 transition-all cursor-pointer">
+                        Shadow Glow
+                    </button>
+                    <button class="px-6 py-3 bg-slate-200 text-slate-700 rounded-lg font-medium hover:bg-slate-300 active:bg-slate-400 transition-colors cursor-pointer">
+                        Color Shift
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Toggle & Checkbox -->
+    <section class="py-12 px-6">
+        <div class="max-w-4xl mx-auto">
+            <h3 class="text-slate-400 text-sm uppercase tracking-widest mb-8">Toggle & Checkbox</h3>
+            <div class="bg-white rounded-2xl p-8 shadow-sm">
+                <div class="flex flex-wrap items-center gap-12 justify-center">
+                    <!-- Toggle -->
+                    <div class="flex items-center gap-3">
+                        <span class="text-slate-600">Dark Mode</span>
+                        <div class="toggle-switch w-14 h-8 bg-slate-300 rounded-full p-1 cursor-pointer" onclick="this.classList.toggle('active')">
+                            <div class="toggle-knob w-6 h-6 bg-white rounded-full shadow"></div>
+                        </div>
+                    </div>
+
+                    <!-- Custom Checkbox -->
+                    <div class="flex items-center gap-6">
+                        <div class="relative">
+                            <input type="checkbox" id="check1" class="checkbox-custom absolute opacity-0 cursor-pointer" checked>
+                            <label for="check1" class="flex items-center gap-2 cursor-pointer">
+                                <span class="checkmark w-6 h-6 border-2 border-slate-300 rounded flex items-center justify-center transition-all">
+                                    <svg class="w-4 h-4 text-white transform scale-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/>
+                                    </svg>
+                                </span>
+                                <span class="text-slate-600">Checked</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Like Button -->
+                    <button class="like-btn flex items-center gap-2 px-4 py-2 rounded-lg hover:bg-slate-100 transition-colors cursor-pointer" onclick="this.classList.toggle('liked')">
+                        <svg class="w-6 h-6 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+                        </svg>
+                        <span class="text-slate-600">Like</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Input Interactions -->
+    <section class="py-12 px-6">
+        <div class="max-w-md mx-auto">
+            <h3 class="text-slate-400 text-sm uppercase tracking-widest mb-8 text-center">Input Feedback</h3>
+            <div class="bg-white rounded-2xl p-8 shadow-sm">
+                <div class="space-y-4">
+                    <div>
+                        <label class="block text-sm font-medium text-slate-700 mb-2">Email</label>
+                        <input type="email" class="input-focus w-full px-4 py-3 border-2 border-slate-200 rounded-lg outline-none" placeholder="your@email.com">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-slate-700 mb-2">Password</label>
+                        <input type="password" class="input-focus w-full px-4 py-3 border-2 border-slate-200 rounded-lg outline-none" placeholder="Enter password">
+                    </div>
+                    <button class="w-full py-3 bg-blue-500 text-white rounded-lg font-medium hover:bg-blue-600 active:scale-[0.98] transition-all cursor-pointer">
+                        Sign In
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Loading States -->
+    <section class="py-12 px-6">
+        <div class="max-w-4xl mx-auto">
+            <h3 class="text-slate-400 text-sm uppercase tracking-widest mb-8">Loading Feedback</h3>
+            <div class="bg-white rounded-2xl p-8 shadow-sm">
+                <div class="flex flex-wrap items-center justify-center gap-12">
+                    <!-- Dots -->
+                    <div class="text-center">
+                        <div class="flex gap-1 mb-2 justify-center">
+                            <div class="w-2 h-2 bg-blue-500 rounded-full animate-bounce"></div>
+                            <div class="w-2 h-2 bg-blue-500 rounded-full animate-bounce" style="animation-delay:0.1s"></div>
+                            <div class="w-2 h-2 bg-blue-500 rounded-full animate-bounce" style="animation-delay:0.2s"></div>
+                        </div>
+                        <span class="text-xs text-slate-500">Typing</span>
+                    </div>
+
+                    <!-- Spinner -->
+                    <div class="text-center">
+                        <div class="w-8 h-8 border-3 border-blue-500/30 border-t-blue-500 rounded-full animate-spin mb-2 mx-auto"></div>
+                        <span class="text-xs text-slate-500">Loading</span>
+                    </div>
+
+                    <!-- Success -->
+                    <div class="text-center">
+                        <div class="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center mb-2 mx-auto">
+                            <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/>
+                            </svg>
+                        </div>
+                        <span class="text-xs text-slate-500">Success</span>
+                    </div>
+
+                    <!-- Error -->
+                    <div class="text-center">
+                        <div class="w-8 h-8 bg-red-500 rounded-full flex items-center justify-center mb-2 mx-auto">
+                            <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M6 18L18 6M6 6l12 12"/>
+                            </svg>
+                        </div>
+                        <span class="text-xs text-slate-500">Error</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Colors -->
+    <section class="py-12 px-6">
+        <div class="max-w-4xl mx-auto">
+            <h3 class="text-slate-400 text-sm uppercase tracking-widest mb-8">Feedback Colors</h3>
+            <div class="grid grid-cols-3 gap-4">
+                <div class="bg-green-500 text-white rounded-xl p-4 text-center">
+                    <p class="font-bold">Success</p>
+                    <p class="text-sm opacity-80">#22C55E</p>
+                </div>
+                <div class="bg-red-500 text-white rounded-xl p-4 text-center">
+                    <p class="font-bold">Error</p>
+                    <p class="text-sm opacity-80">#EF4444</p>
+                </div>
+                <div class="bg-amber-500 text-white rounded-xl p-4 text-center">
+                    <p class="font-bold">Warning</p>
+                    <p class="text-sm opacity-80">#F59E0B</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Info -->
+    <section class="py-12 px-6">
+        <div class="max-w-4xl mx-auto">
+            <div class="bg-white rounded-2xl p-8 shadow-sm">
+                <div class="grid grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-slate-400 text-sm uppercase tracking-widest mb-4">Best For</h3>
+                        <ul class="space-y-2 text-slate-600 text-sm">
+                            <li>Mobile apps</li>
+                            <li>Touchscreen UIs</li>
+                            <li>Productivity tools</li>
+                            <li>Consumer apps</li>
+                            <li>Interactive components</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-slate-400 text-sm uppercase tracking-widest mb-4">Characteristics</h3>
+                        <ul class="space-y-2 text-slate-600 text-sm">
+                            <li>Performance: Excellent</li>
+                            <li>Accessibility: Good</li>
+                            <li>Mobile: High</li>
+                            <li>Timing: 50-100ms</li>
+                            <li>Framework: React Spring, Framer</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 px-6">
+        <div class="max-w-4xl mx-auto bg-white rounded-xl shadow-sm px-6 py-4 flex justify-between items-center">
+            <a href="15-motion-driven.html" class="text-slate-500 hover:text-slate-900 transition-colors">&larr; Motion-Driven</a>
+            <a href="17-inclusive-design.html" class="text-slate-500 hover:text-slate-900 transition-colors">Inclusive Design &rarr;</a>
+        </div>
+    </footer>
+</body>
+</html>

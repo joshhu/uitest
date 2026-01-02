@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kinetic Typography - UI Style #48</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .font-display { font-family: 'Bebas Neue', sans-serif; }
+        .font-sans { font-family: 'Inter', sans-serif; }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+        @keyframes slide {
+            from { transform: translateX(-100%); }
+            to { transform: translateX(100%); }
+        }
+        .animate-float { animation: float 3s ease-in-out infinite; }
+        .animate-slide { animation: slide 20s linear infinite; }
+        .letter { display: inline-block; transition: transform 0.3s ease; }
+        .letter:hover { transform: scale(1.2) rotate(5deg); }
+    </style>
+</head>
+<body class="bg-black min-h-screen text-white font-sans overflow-x-hidden">
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 px-6 py-4 bg-black/80 backdrop-blur">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <a href="../index.html" class="text-gray-400 hover:text-white text-sm">&larr; Back</a>
+            <span class="font-display text-2xl tracking-wider">#48 KINETIC TYPOGRAPHY</span>
+            <span class="text-gray-400 text-sm">Modern</span>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="min-h-screen flex items-center justify-center pt-20">
+        <div class="text-center">
+            <div class="font-display text-[15rem] leading-none tracking-tight">
+                <span class="letter text-white">M</span>
+                <span class="letter text-red-500 animate-float" style="animation-delay: 0.1s">O</span>
+                <span class="letter text-white">V</span>
+                <span class="letter text-blue-500 animate-float" style="animation-delay: 0.3s">E</span>
+            </div>
+            <p class="text-xl text-gray-400 mt-8 max-w-lg mx-auto">
+                Typography that breathes, moves, and demands attention
+            </p>
+        </div>
+    </section>
+
+    <!-- Marquee Section -->
+    <section class="py-8 bg-white text-black overflow-hidden">
+        <div class="animate-slide whitespace-nowrap">
+            <span class="font-display text-6xl tracking-widest">
+                MOTION • TYPOGRAPHY • DESIGN • ANIMATION • KINETIC • DYNAMIC •
+            </span>
+        </div>
+    </section>
+
+    <!-- Feature Section -->
+    <section class="py-32 px-6">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="font-display text-8xl leading-none mb-8">
+                        <span class="text-white">WORDS</span><br/>
+                        <span class="text-red-500">IN</span><br/>
+                        <span class="text-white">MOTION</span>
+                    </h2>
+                </div>
+                <div>
+                    <p class="text-xl text-gray-400 leading-relaxed mb-8">
+                        Kinetic typography transforms static text into dynamic visual experiences. Movement guides attention, creates rhythm, and evokes emotion.
+                    </p>
+                    <button class="font-display text-2xl px-8 py-4 border-2 border-white hover:bg-white hover:text-black cursor-pointer transition-colors tracking-wider">
+                        WATCH DEMO
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Split Text Effect -->
+    <section class="py-32 px-6 bg-red-600">
+        <div class="max-w-6xl mx-auto text-center">
+            <div class="font-display text-[10rem] leading-none tracking-tighter">
+                <div class="transform -skew-x-12">BOLD</div>
+                <div class="transform skew-x-12 text-black">MOVES</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Techniques Grid -->
+    <section class="py-32 px-6">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="font-display text-6xl text-center mb-16">TECHNIQUES</h2>
+            <div class="grid grid-cols-3 gap-8">
+                <div class="border border-gray-800 p-8 group hover:border-white cursor-pointer transition-colors">
+                    <div class="font-display text-5xl mb-4 group-hover:animate-pulse">PULSE</div>
+                    <p class="text-gray-400">Scale and opacity changes create breathing effects</p>
+                </div>
+                <div class="border border-gray-800 p-8 group hover:border-white cursor-pointer transition-colors">
+                    <div class="font-display text-5xl mb-4 group-hover:translate-x-4 transition-transform">SLIDE</div>
+                    <p class="text-gray-400">Horizontal and vertical movements guide the eye</p>
+                </div>
+                <div class="border border-gray-800 p-8 group hover:border-white cursor-pointer transition-colors">
+                    <div class="font-display text-5xl mb-4 group-hover:rotate-12 transition-transform origin-bottom-left">ROTATE</div>
+                    <p class="text-gray-400">Rotational motion adds energy and dynamics</p>
+                </div>
+                <div class="border border-gray-800 p-8 group hover:border-white cursor-pointer transition-colors">
+                    <div class="font-display text-5xl mb-4 group-hover:tracking-widest transition-all">EXPAND</div>
+                    <p class="text-gray-400">Letter spacing creates explosive reveals</p>
+                </div>
+                <div class="border border-gray-800 p-8 group hover:border-white cursor-pointer transition-colors">
+                    <div class="font-display text-5xl mb-4 group-hover:scale-110 transition-transform">SCALE</div>
+                    <p class="text-gray-400">Size changes create emphasis and hierarchy</p>
+                </div>
+                <div class="border border-gray-800 p-8 group hover:border-white cursor-pointer transition-colors">
+                    <div class="font-display text-5xl mb-4 group-hover:opacity-50 transition-opacity">FADE</div>
+                    <p class="text-gray-400">Opacity transitions for elegant reveals</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Style Info -->
+    <section class="py-16 px-6 border-t border-gray-800">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid grid-cols-2 gap-8">
+                <div>
+                    <h3 class="text-gray-500 text-sm uppercase tracking-widest mb-4">Best For</h3>
+                    <ul class="space-y-2 text-gray-300">
+                        <li>Video production</li>
+                        <li>Music websites</li>
+                        <li>Creative portfolios</li>
+                        <li>Event promotions</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-gray-500 text-sm uppercase tracking-widest mb-4">Key Elements</h3>
+                    <ul class="space-y-2 text-gray-300">
+                        <li>CSS/JS animations</li>
+                        <li>Large display fonts</li>
+                        <li>Scroll-triggered effects</li>
+                        <li>Interactive hovers</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="px-6 py-4 border-t border-gray-800">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <a href="47-exaggerated-minimalism.html" class="text-gray-400 hover:text-white text-sm">&larr; Exaggerated Minimalism</a>
+            <a href="49-parallax-storytelling.html" class="text-gray-400 hover:text-white text-sm">Parallax Storytelling &rarr;</a>
+        </div>
+    </footer>
+</body>
+</html>

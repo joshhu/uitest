@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Y2K Revival - UI Style #40</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        .font-y2k { font-family: 'Orbitron', sans-serif; }
+        .font-sans { font-family: 'Inter', sans-serif; }
+        .gradient-y2k { background: linear-gradient(135deg, #FF00FF, #00FFFF, #FF00FF); }
+        .text-gradient-y2k {
+            background: linear-gradient(90deg, #FF00FF, #00FFFF, #FFFF00);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .glow { text-shadow: 0 0 10px #FF00FF, 0 0 20px #FF00FF, 0 0 30px #FF00FF; }
+        .bubble-btn {
+            background: linear-gradient(180deg, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0.1) 100%);
+            border: 2px solid rgba(255,255,255,0.3);
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-purple-900 via-pink-600 to-cyan-400 min-h-screen font-sans text-white">
+    <!-- Navigation -->
+    <nav class="backdrop-blur-lg bg-white/10 border-b border-white/20 px-6 py-4">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <a href="../index.html" class="text-white/80 hover:text-white text-sm">&larr; Back</a>
+            <span class="font-y2k font-bold">#40 Y2K REVIVAL</span>
+            <span class="text-white/60 text-sm">Modern</span>
+        </div>
+    </nav>
+
+    <div class="max-w-6xl mx-auto p-8">
+        <!-- Hero -->
+        <section class="text-center py-16">
+            <div class="inline-block px-6 py-2 bg-white/20 backdrop-blur rounded-full text-sm mb-6">
+                Welcome to the future (of 2000)
+            </div>
+            <h1 class="font-y2k text-7xl font-black mb-6 glow">FUTURE<br/>NOSTALGIA</h1>
+            <p class="text-xl text-white/80 max-w-2xl mx-auto mb-8">
+                Experience the optimistic futurism of the millennium era. Shiny, bubbly, and unapologetically extra.
+            </p>
+            <div class="flex justify-center gap-4">
+                <button class="bubble-btn px-8 py-4 rounded-full font-y2k font-semibold backdrop-blur-lg hover:bg-white/30 cursor-pointer transition-all">
+                    ENTER SITE ✦
+                </button>
+                <button class="px-8 py-4 bg-fuchsia-500 rounded-full font-y2k font-semibold hover:bg-fuchsia-400 cursor-pointer transition-all shadow-lg shadow-fuchsia-500/50">
+                    EXPLORE ★
+                </button>
+            </div>
+        </section>
+
+        <!-- Feature Blobs -->
+        <section class="grid grid-cols-3 gap-6 mb-16">
+            <div class="backdrop-blur-lg bg-white/10 rounded-3xl p-8 border border-white/20 hover:bg-white/20 cursor-pointer transition-all">
+                <div class="text-5xl mb-4">✦</div>
+                <h3 class="font-y2k text-xl font-bold mb-2">CHROME EFFECTS</h3>
+                <p class="text-white/70">Shiny metallic gradients that catch the light</p>
+            </div>
+            <div class="backdrop-blur-lg bg-white/10 rounded-3xl p-8 border border-white/20 hover:bg-white/20 cursor-pointer transition-all">
+                <div class="text-5xl mb-4">★</div>
+                <h3 class="font-y2k text-xl font-bold mb-2">BUBBLE SHAPES</h3>
+                <p class="text-white/70">Soft, rounded forms with glossy finishes</p>
+            </div>
+            <div class="backdrop-blur-lg bg-white/10 rounded-3xl p-8 border border-white/20 hover:bg-white/20 cursor-pointer transition-all">
+                <div class="text-5xl mb-4">◆</div>
+                <h3 class="font-y2k text-xl font-bold mb-2">BRIGHT COLORS</h3>
+                <p class="text-white/70">Electric pinks, cyans, and silvers</p>
+            </div>
+        </section>
+
+        <!-- Showcase Card -->
+        <section class="backdrop-blur-xl bg-gradient-to-r from-fuchsia-500/30 to-cyan-500/30 rounded-3xl p-12 border border-white/30 mb-16">
+            <div class="grid grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="font-y2k text-4xl font-bold mb-4 text-gradient-y2k">THE MILLENNIUM BUG</h2>
+                    <p class="text-white/80 text-lg mb-6">
+                        Y2K aesthetic captures the techno-optimism of the late 90s and early 2000s. Think silver Mac G3s, inflatable furniture, and the belief that technology would make everything better.
+                    </p>
+                    <div class="flex gap-3">
+                        <span class="px-4 py-2 bg-fuchsia-500/50 rounded-full text-sm">Futuristic</span>
+                        <span class="px-4 py-2 bg-cyan-500/50 rounded-full text-sm">Shiny</span>
+                        <span class="px-4 py-2 bg-yellow-500/50 rounded-full text-sm">Playful</span>
+                    </div>
+                </div>
+                <div class="bg-gradient-to-br from-white/30 to-white/10 rounded-2xl p-8 backdrop-blur border border-white/30">
+                    <div class="text-6xl text-center mb-4">💿</div>
+                    <div class="text-center font-y2k">
+                        <div class="text-3xl font-bold">2000</div>
+                        <div class="text-white/60">THE FUTURE IS NOW</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Color Palette -->
+        <section class="backdrop-blur-lg bg-white/10 rounded-3xl p-8 border border-white/20 mb-16">
+            <h2 class="font-y2k text-2xl font-bold mb-6">Y2K PALETTE</h2>
+            <div class="flex gap-4">
+                <div class="flex-1 h-24 bg-fuchsia-500 rounded-2xl flex items-center justify-center font-y2k text-sm">FUCHSIA</div>
+                <div class="flex-1 h-24 bg-cyan-400 rounded-2xl flex items-center justify-center font-y2k text-sm text-gray-900">CYBER CYAN</div>
+                <div class="flex-1 h-24 bg-gradient-to-r from-gray-300 to-gray-100 rounded-2xl flex items-center justify-center font-y2k text-sm text-gray-900">CHROME</div>
+                <div class="flex-1 h-24 bg-purple-600 rounded-2xl flex items-center justify-center font-y2k text-sm">DIGITAL PURPLE</div>
+                <div class="flex-1 h-24 bg-lime-400 rounded-2xl flex items-center justify-center font-y2k text-sm text-gray-900">MATRIX GREEN</div>
+            </div>
+        </section>
+
+        <!-- Style Info -->
+        <section class="backdrop-blur-lg bg-white/10 rounded-3xl p-8 border border-white/20">
+            <div class="grid grid-cols-2 gap-8">
+                <div>
+                    <h3 class="text-white/50 text-sm uppercase tracking-widest mb-4">Best For</h3>
+                    <ul class="space-y-2 text-white/80">
+                        <li>Fashion brands</li>
+                        <li>Music industry</li>
+                        <li>Entertainment</li>
+                        <li>Gen Z targeting</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-white/50 text-sm uppercase tracking-widest mb-4">Key Elements</h3>
+                    <ul class="space-y-2 text-white/80">
+                        <li>Chrome/metallic effects</li>
+                        <li>Bubble/blob shapes</li>
+                        <li>Bright gradients</li>
+                        <li>Futuristic typography</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="backdrop-blur-lg bg-white/10 border-t border-white/20 px-6 py-4 mt-8">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <a href="39-bento-box.html" class="text-white/60 hover:text-white text-sm">&larr; Bento Box Grid</a>
+            <a href="41-cyberpunk.html" class="text-white/60 hover:text-white text-sm">Cyberpunk &rarr;</a>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UI/UX Pro Max - 57 種 UI 風格展示</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        * { font-family: 'Inter', sans-serif; }
+        .card-hover { transition: all 0.3s ease; }
+        .card-hover:hover { transform: translateY(-8px); box-shadow: 0 20px 40px rgba(0,0,0,0.15); }
+        .gradient-text { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    </style>
+</head>
+<body class="bg-slate-50 min-h-screen">
+    <!-- Header -->
+    <header class="bg-white/80 backdrop-blur-md border-b border-slate-200 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <h1 class="text-2xl font-bold gradient-text">UI/UX Pro Max</h1>
+                <span class="bg-gradient-to-r from-indigo-500 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-medium">57 Styles</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="py-16 px-6">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-5xl font-bold text-slate-900 mb-6">探索 57 種 UI 設計風格</h2>
+            <p class="text-xl text-slate-600 mb-8">從經典的 Minimalism 到前衛的 Gen Z Chaos，完整收錄現代 UI 設計的所有流派</p>
+            <div class="flex flex-wrap justify-center gap-3">
+                <span class="px-4 py-2 bg-blue-100 text-blue-700 rounded-full text-sm">General Styles</span>
+                <span class="px-4 py-2 bg-green-100 text-green-700 rounded-full text-sm">Landing Pages</span>
+                <span class="px-4 py-2 bg-purple-100 text-purple-700 rounded-full text-sm">BI/Analytics</span>
+                <span class="px-4 py-2 bg-orange-100 text-orange-700 rounded-full text-sm">Modern Trends</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- General Styles (1-19) -->
+    <section class="py-12 px-6">
+        <div class="max-w-7xl mx-auto">
+            <h3 class="text-3xl font-bold text-slate-900 mb-2">General Styles</h3>
+            <p class="text-slate-600 mb-8">通用設計風格，適用於各種類型的網站和應用程式</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                <!-- 1. Minimalism -->
+                <a href="styles/01-minimalism.html" class="card-hover bg-white rounded-2xl overflow-hidden border border-slate-200 cursor-pointer">
+                    <div class="h-40 bg-gradient-to-br from-white to-slate-100 flex items-center justify-center">
+                        <div class="w-16 h-16 bg-black rounded-lg"></div>
+                    </div>
+                    <div class="p-5">
+                        <span class="text-xs font-medium text-slate-400">#01</span>
+                        <h4 class="text-lg font-semibold text-slate-900">Minimalism & Swiss</h4>
+                        <p class="text-sm text-slate-500 mt-1">簡潔、功能性、高對比度</p>
+                    </div>
+                </a>
+                <!-- 2. Neumorphism -->
+                <a href="styles/02-neumorphism.html" class="card-hover bg-white rounded-2xl overflow-hidden border border-slate-200 cursor-pointer">
+                    <div class="h-40 bg-[#e8e8e8] flex items-center justify-center">
+                        <div class="w-20 h-20 bg-[#e8e8e8] rounded-2xl" style="box-shadow: -5px -5px 15px #fff, 5px 5px 15px #d1d1d1;"></div>
+                    </div>
+                    <div class="p-5">
+                        <span class="text-xs font-medium text-slate-400">#02</span>
+                        <h4 class="text-lg font-semibold text-slate-900">Neumorphism</h4>
+                        <p class="text-sm text-slate-500 mt-1">柔和陰影、浮雕效果</p>
+                    </div>
+                </a>
+                <!-- 3. Glassmorphism -->
+                <a href="styles/03-glassmorphism.html" class="card-hover bg-white rounded-2xl overflow-hidden border border-slate-200 cursor-pointer">
+                    <div class="h-40 bg-gradient-to-br from-purple-500 via-pink-500 to-blue-500 flex items-center justify-center p-4">
+                        <div class="w-full h-full bg-white/20 backdrop-blur-md rounded-xl border border-white/30"></div>
+                    </div>
+                    <div class="p-5">
+                        <span class="text-xs font-medium text-slate-400">#03</span>
+                        <h4 class="text-lg font-semibold text-slate-900">Glassmorphism</h4>
+                        <p class="text-sm text-slate-500 mt-1">毛玻璃、透明層次</p>
+                    </div>
+                </a>
+                <!-- 4. Brutalism -->
+                <a href="styles/04-brutalism.html" class="card-hover bg-white rounded-2xl overflow-hidden border border-slate-200 cursor-pointer">
+                    <div class="h-40 bg-yellow-400 flex items-center justify-center">
+                        <div class="w-20 h-16 bg-blue-600 border-4 border-black"></div>
+                    </div>
+                    <div class="p-5">
+                        <span class="text-xs font-medium text-slate-400">#04</span>
+                        <h4 class="text-lg font-semibold text-slate-900">Brutalism</h4>
+                        <p class="text-sm text-slate-500 mt-1">原始、高對比度、反設計</p>
+                    </div>
+                </a>
+                <!-- 5. 3D Hyperrealism -->
+                <a href="styles/05-3d-hyperrealism.html" class="card-hover bg-white rounded-2xl overflow-hidden border border-slate-200 cursor-pointer">
+                    <div class="h-40 bg-gradient-to-br from-slate-800 to-slate-900 flex items-center justify-center">
+                        <div class="w-16 h-16 bg-gradient-to-br from-amber-400 to-amber-600 rounded-full" style="box-shadow: 0 10px 40px rgba(251,191,36,0.4);"></div>
+                    </div>
+                    <div class="p-5">
+                        <span class="text-xs font-medium text-slate-400">#05</span>
+                        <h4 class="text-lg font-semibold text-slate-900">3D & Hyperrealism</h4>
+                        <p class="text-sm text-slate-500 mt-1">深度、真實紋理、沉浸式</p>
+                    </div>
+                </a>
+                <!-- 6. Vibrant Block -->
+                <a href="styles/06-vibrant-block.html" class="card-hover bg-white rounded-2xl overflow-hidden border border-slate-200 cursor-pointer">
+                    <div class="h-40 bg-gradient-to-br from-green-400 via-purple-500 to-pink-500 flex items-center justify-center gap-2">
+                        <div class="w-12 h-12 bg-cyan-400"></div>
+                        <div class="w-12 h-12 bg-yellow-400"></div>
+                    </div>
+                    <div class="p-5">
+                        <span class="text-xs font-medium text-slate-400">#06</span>
+                        <h4 class="text-lg font-semibold text-slate-900">Vibrant & Block</h4>
+                        <p class="text-sm text-slate-500 mt-1">大膽、充滿活力、區塊式</p>
+                    </div>
+                </a>
+                <!-- 7. Dark Mode OLED -->
+                <a href="styles/07-dark-mode-oled.html" class="card-hover bg-white rounded-2xl overflow-hidden border border-slate-200 cursor-pointer">
+                    <div class="h-40 bg-black flex items-center justify-center">
+                        <span class="text-green-400 text-2xl font-bold" style="text-shadow: 0 0 20px rgba(74,222,128,0.5);">OLED</span>
+                    </div>
+                    <div class="p-5">
+                        <span class="text-xs font-medium text-slate-400">#07</span>
+                        <h4 class="text-lg font-semibold text-slate-900">Dark Mode (OLED)</h4>
+                        <p class="text-sm text-slate-500 mt-1">純黑、省電、護眼</p>
+                    </div>
+                </a>
+                <!-- 8. Accessible -->
+                <a href="styles/08-accessible.html" class="card-hover bg-white rounded-2xl overflow-hidden border border-slate-200 cursor-pointer">
+                    <div class="h-40 bg-white flex items-center justify-center border-b-4 border-blue-600">
+                        <div class="text-center">
+                            <div class="text-4xl mb-2">♿</div>
+                            <div class="text-black font-bold">WCAG AAA</div>
+                        </div>
+                    </div>
+                    <div class="p-5">
+                        <span class="text-xs font-medium text-slate-400">#08</span>
+                        <h4 class="text-lg font-semibold text-slate-900">Accessible & Ethical</h4>
+                        <p class="text-sm text-slate-500 mt-1">無障礙、高對比度、包容性</p>
+                    </div>
+                </a>
+                <!-- 9. Claymorphism -->
+                <a href="styles/09-claymorphism.html" class="card-hover bg-white rounded-2xl overflow-hidden border border-slate-200 cursor-pointer">
+                    <div class="h-40 bg-gradient-to-br from-pink-100 to-blue-100 flex items-center justify-center">
+                        <div class="w-20 h-20 bg-gradient-to-br from-pink-300 to-pink-400 rounded-3xl border-4 border-pink-200" style="box-shadow: 0 8px 0 #f9a8d4, inset 0 -4px 0 rgba(0,0,0,0.1);"></div>
+                    </div>
+                    <div class="p-5">
+                        <span class="text-xs font-medium text-slate-400">#09</span>
+                        <h4 class="text-lg font-semibold text-slate-900">Claymorphism</h4>
+                        <p class="text-sm text-slate-500 mt-1">3D黏土、圓潤、玩具感</p>
+                    </div>
+                </a>
+                <!-- 10. Aurora UI -->
+                <a href="styles/10-aurora-ui.html" class="card-hover bg-white rounded-2xl overflow-hidden border border-slate-200 cursor-pointer">
+                    <div class="h-40 bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 flex items-center justify-center" style="background-size: 200% 200%; animation: aurora 3s ease infinite;">
+                        <div class="text-white font-bold text-xl">Aurora</div>
+                    </div>
+                    <div class="p-5">
+                        <span class="text-xs font-medium text-slate-400">#10</span>
+                        <h4 class="text-lg font-semibold text-slate-900">Aurora UI</h4>
+                        <p class="text-sm text-slate-500 mt-1">極光漸變、流動色彩</p>
+                    </div>
+                </a>
+                <!-- 11. Retro-Futurism -->
+                <a href="styles/11-retro-futurism.html" class="card-hover bg-white rounded-2xl overflow-hidden border border-slate-200 cursor-pointer">
+                    <div class="h-40 bg-slate-900 flex items-center justify-center">
+                        <span class="text-cyan-400 font-bold text-xl" style="text-shadow: 0 0 10px #0ff, 0 0 20px #0ff;">RETRO</span>
+                    </div>
+                    <div class="p-5">
+                        <span class="text-xs font-medium text-slate-400">#11</span>
+                        <h4 class="text-lg font-semibold text-slate-900">Retro-Futurism</h4>
+                        <p class="text-sm text-slate-500 mt-1">80年代、霓虹、賽博龐克</p>
+                    </div>
+                </a>
+                <!-- 12. Flat Design -->
+                <a href="styles/12-flat-design.html" class="card-hover bg-white rounded-2xl overflow-hidden border border-slate-200 cursor-pointer">
+                    <div class="h-40 bg-blue-500 flex items-center justify-center gap-3">
+                        <div class="w-10 h-10 bg-red-500 rounded"></div>
+                        <div class="w-10 h-10 bg-yellow-400 rounded"></div>
+                        <div class="w-10 h-10 bg-green-500 rounded"></div>
+                    </div>
+                    <div class="p-5">
+                        <span class="text-xs font-medium text-slate-400">#12</span>
+                        <h4 class="text-lg font-semibold text-slate-900">Flat Design</h4>
+                        <p class="text-sm text-slate-500 mt-1">2D、簡潔色塊、無陰影</p>
+                    </div>
+                </a>
+                <!-- 13. Skeuomorphism -->
+                <a href="styles/13-skeuomorphism.html" class="card-hover bg-white rounded-2xl overflow-hidden border border-slate-200 cursor-pointer">
+                    <div class="h-40 bg-gradient-to-b from-slate-300 to-slate-400 flex items-center justify-center">
+                        <div class="w-20 h-20 bg-gradient-to-b from-slate-100 to-slate-300 rounded-2xl border-2 border-slate-400" style="box-shadow: inset 0 2px 4px rgba(255,255,255,0.5), 0 4px 8px rgba(0,0,0,0.3);"></div>
+                    </div>
+                    <div class="p-5">
+                        <span class="text-xs font-medium text-slate-400">#13</span>
+                        <h4 class="text-lg font-semibold text-slate-900">Skeuomorphism</h4>
+                        <p class="text-sm text-slate-500 mt-1">擬物化、真實紋理</p>
+                    </div>
+                </a>
+                <!-- 14. Liquid Glass -->
+                <a href="styles/14-liquid-glass.html" class="card-hover bg-white rounded-2xl overflow-hidden border border-slate-200 cursor-pointer">
+                    <div class="h-40 bg-gradient-to-br from-indigo-400 via-purple-400 to-pink-400 flex items-center justify-center">
+                        <div class="w-24 h-16 bg-white/30 backdrop-blur-lg rounded-full border border-white/40"></div>
+                    </div>
+                    <div class="p-5">
+                        <span class="text-xs font-medium text-slate-400">#14</span>
+                        <h4 class="text-lg font-semibold text-slate-900">Liquid Glass</h4>
+                        <p class="text-sm text-slate-500 mt-1">流動玻璃、變形、虹彩</p>
+                    </div>
+                </a>
+                <!-- 15. Motion-Driven -->
+                <a href="styles/15-motion-driven.html" class="card-hover bg-white rounded-2xl overflow-hidden border border-slate-200 cursor-pointer">
+                    <div class="h-40 bg-slate-900 flex items-center justify-center overflow-hidden">
+                        <div class="flex gap-2">
+                            <div class="w-4 h-4 bg-blue-500 rounded-full animate-bounce"></div>
+                            <div class="w-4 h-4 bg-purple-500 rounded-full animate-bounce" style="animation-delay: 0.1s;"></div>
+                            <div class="w-4 h-4 bg-pink-500 rounded-full animate-bounce" style="animation-delay: 0.2s;"></div>
+                        </div>
+                    </div>
+                    <div class="p-5">
+                        <span class="text-xs font-medium text-slate-400">#15</span>
+                        <h4 class="text-lg font-semibold text-slate-900">Motion-Driven</h4>
+                        <p class="text-sm text-slate-500 mt-1">動畫驅動、滾動效果</p>
+                    </div>
+                </a>
+                <!-- 16. Micro-interactions -->
+                <a href="styles/16-micro-interactions.html" class="card-hover bg-white rounded-2xl overflow-hidden border border-slate-200 cursor-pointer">
+                    <div class="h-40 bg-slate-100 flex items-center justify-center">
+                        <button class="px-6 py-3 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 transition-all hover:scale-105">Click Me</button>
+                    </div>
+                    <div class="p-5">
+                        <span class="text-xs font-medium text-slate-400">#16</span>
+                        <h4 class="text-lg font-semibold text-slate-900">Micro-interactions</h4>
+                        <p class="text-sm text-slate-500 mt-1">微互動、觸覺反饋</p>
+                    </div>
+                </a>
+                <!-- 17. Inclusive Design -->
+                <a href="styles/17-inclusive-design.html" class="card-hover bg-white rounded-2xl overflow-hidden border border-slate-200 cursor-pointer">
+                    <div class="h-40 bg-white flex items-center justify-center border-4 border-black">
+                        <div class="text-black text-center">
+                            <div class="text-2xl font-black">Aa</div>
+                            <div class="text-sm font-bold mt-1">7:1 Contrast</div>
+                        </div>
+                    </div>
+                    <div class="p-5">
+                        <span class="text-xs font-medium text-slate-400">#17</span>
+                        <h4 class="text-lg font-semibold text-slate-900">Inclusive Design</h4>
+                        <p class="text-sm text-slate-500 mt-1">通用設計、語音、觸覺</p>
+                    </div>
+                </a>
+                <!-- 18. Zero Interface -->
+                <a href="styles/18-zero-interface.html" class="card-hover bg-white rounded-2xl overflow-hidden border border-slate-200 cursor-pointer">
+                    <div class="h-40 bg-slate-50 flex items-center justify-center">
+                        <div class="w-16 h-16 rounded-full bg-gradient-to-br from-blue-400 to-purple-500 flex items-center justify-center">
+                            <div class="w-3 h-3 bg-white rounded-full animate-pulse"></div>
+                        </div>
+                    </div>
+                    <div class="p-5">
+                        <span class="text-xs font-medium text-slate-400">#18</span>
+                        <h4 class="text-lg font-semibold text-slate-900">Zero Interface</h4>
+                        <p class="text-sm text-slate-500 mt-1">AI驅動、語音優先</p>
+                    </div>
+                </a>
+                <!-- 19. Soft UI Evolution -->
+                <a href="styles/19-soft-ui-evolution.html" class="card-hover bg-white rounded-2xl overflow-hidden border border-slate-200 cursor-pointer">
+                    <div class="h-40 bg-gradient-to-br from-sky-100 to-blue-100 flex items-center justify-center">
+                        <div class="w-24 h-14 bg-white rounded-xl shadow-lg border border-blue-100"></div>
+                    </div>
+                    <div class="p-5">
+                        <span class="text-xs font-medium text-slate-400">#19</span>
+                        <h4 class="text-lg font-semibold text-slate-900">Soft UI Evolution</h4>
+                        <p class="text-sm text-slate-500 mt-1">進化版柔和UI、更佳對比</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Landing Page Styles (20-27) -->
+    <section class="py-12 px-6 bg-gradient-to-br from-green-50 to-emerald-50">
+        <div class="max-w-7xl mx-auto">
+            <h3 class="text-3xl font-bold text-slate-900 mb-2">Landing Page Styles</h3>
+            <p class="text-slate-600 mb-8">專為著陸頁優化的設計風格，聚焦轉換率</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- 20. Hero-Centric -->
+                <a href="styles/20-hero-centric.html" class="card-hover bg-white rounded-2xl overflow-hidden border border-slate-200 cursor-pointer">
+                    <div class="h-40 bg-gradient-to-br from-indigo-600 to-purple-600 flex items-center justify-center">
+                        <div class="text-center text-white">
+                            <div class="text-xl font-bold">BIG HERO</div>
+                            <button class="mt-2 px-4 py-1 bg-white text-indigo-600 rounded text-sm font-medium">CTA</button>
+                        </div>
+                    </div>
+                    <div class="p-5">
+                        <span class="text-xs font-medium text-slate-400">#20</span>
+                        <h4 class="text-lg font-semibold text-slate-900">Hero-Centric</h4>
+                        <p class="text-sm text-slate-500 mt-1">大型主視覺、價值主張</p>
+                    </div>
+                </a>
+                <!-- 21. Conversion-Optimized -->
+                <a href="styles/21-conversion-optimized.html" class="card-hover bg-white rounded-2xl overflow-hidden border border-slate-200 cursor-pointer">
+                    <div class="h-40 bg-white flex items-center justify-center border-b-4 border-green-500">
+                        <button class="px-8 py-4 bg-green-500 text-white rounded-lg font-bold text-lg shadow-lg hover:bg-green-600">Start Free Trial</button>
+                    </div>
+                    <div class="p-5">
+                        <span class="text-xs font-medium text-slate-400">#21</span>
+                        <h4 class="text-lg font-semibold text-slate-900">Conversion-Optimized</h4>
+                        <p class="text-sm text-slate-500 mt-1">表單聚焦、單一CTA</p>
+                    </div>
+                </a>
+                <!-- 22. Feature-Rich -->
+                <a href="styles/22-feature-rich.html" class="card-hover bg-white rounded-2xl overflow-hidden border border-slate-200 cursor-pointer">
+                    <div class="h-40 bg-slate-100 flex items-center justify-center p-4">
+                        <div class="grid grid-cols-2 gap-2 w-full">
+                            <div class="bg-blue-100 rounded p-2 text-xs text-blue-700 text-center">Feature 1</div>
+                            <div class="bg-green-100 rounded p-2 text-xs text-green-700 text-center">Feature 2</div>
+                            <div class="bg-purple-100 rounded p-2 text-xs text-purple-700 text-center">Feature 3</div>
+                            <div class="bg-orange-100 rounded p-2 text-xs text-orange-700 text-center">Feature 4</div>
+                        </div>
+                    </div>
+                    <div class="p-5">
+                        <span class="text-xs font-medium text-slate-400">#22</span>
+                        <h4 class="text-lg font-semibold text-slate-900">Feature-Rich Showcase</h4>
+                        <p class="text-sm text-slate-500 mt-1">多功能展示、網格佈局</p>
+                    </div>
+                </a>
+                <!-- 23. Minimal Direct -->
+                <a href="styles/23-minimal-direct.html" class="card-hover bg-white rounded-2xl overflow-hidden border border-slate-200 cursor-pointer">
+                    <div class="h-40 bg-white flex items-center justify-center">
+                        <div class="text-center">
+                            <div class="text-2xl font-light text-slate-900">Simple.</div>
+                        </div>
+                    </div>
+                    <div class="p-5">
+                        <span class="text-xs font-medium text-slate-400">#23</span>
+                        <h4 class="text-lg font-semibold text-slate-900">Minimal & Direct</h4>
+                        <p class="text-sm text-slate-500 mt-1">極簡、大量留白</p>
+                    </div>
+                </a>
+                <!-- 24. Social Proof -->
+                <a href="styles/24-social-proof.html" class="card-hover bg-white rounded-2xl overflow-hidden border border-slate-200 cursor-pointer">
+                    <div class="h-40 bg-slate-50 flex items-center justify-center p-4">
+                        <div class="flex -space-x-3">
+                            <div class="w-10 h-10 bg-blue-400 rounded-full border-2 border-white"></div>
+                            <div class="w-10 h-10 bg-green-400 rounded-full border-2 border-white"></div>
+                            <div class="w-10 h-10 bg-purple-400 rounded-full border-2 border-white"></div>
+                            <div class="w-10 h-10 bg-slate-200 rounded-full border-2 border-white flex items-center justify-center text-xs font-bold">+99</div>
+                        </div>
+                    </div>
+                    <div class="p-5">
+                        <span class="text-xs font-medium text-slate-400">#24</span>
+                        <h4 class="text-lg font-semibold text-slate-900">Social Proof-Focused</h4>
+                        <p class="text-sm text-slate-500 mt-1">客戶評價、案例研究</p>
+                    </div>
+                </a>
+                <!-- 25. Interactive Demo -->
+                <a href="styles/25-interactive-demo.html" class="card-hover bg-white rounded-2xl overflow-hidden border border-slate-200 cursor-pointer">
+                    <div class="h-40 bg-slate-900 flex items-center justify-center">
+                        <div class="w-32 h-20 bg-slate-800 rounded-lg border border-slate-700 flex items-center justify-center">
+                            <div class="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center">
+                                <div class="w-0 h-0 border-l-8 border-l-white border-y-4 border-y-transparent ml-1"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-5">
+                        <span class="text-xs font-medium text-slate-400">#25</span>
+                        <h4 class="text-lg font-semibold text-slate-900">Interactive Product Demo</h4>
+                        <p class="text-sm text-slate-500 mt-1">嵌入式演示、互動導覽</p>
+                    </div>
+                </a>
+                <!-- 26. Trust Authority -->
+                <a href="styles/26-trust-authority.html" class="card-hover bg-white rounded-2xl overflow-hidden border border-slate-200 cursor-pointer">
+                    <div class="h-40 bg-slate-800 flex items-center justify-center gap-4">
+                        <div class="w-12 h-12 bg-amber-400 rounded-full flex items-center justify-center text-2xl">🏆</div>
+                        <div class="w-12 h-12 bg-blue-400 rounded-full flex items-center justify-center text-2xl">✓</div>
+                    </div>
+                    <div class="p-5">
+                        <span class="text-xs font-medium text-slate-400">#26</span>
+                        <h4 class="text-lg font-semibold text-slate-900">Trust & Authority</h4>
+                        <p class="text-sm text-slate-500 mt-1">認證徽章、專家背書</p>
+                    </div>
+                </a>
+                <!-- 27. Storytelling -->
+                <a href="styles/27-storytelling.html" class="card-hover bg-white rounded-2xl overflow-hidden border border-slate-200 cursor-pointer">
+                    <div class="h-40 bg-gradient-to-b from-amber-100 to-orange-100 flex items-center justify-center">
+                        <div class="text-center">
+                            <div class="text-orange-800 text-sm">Once upon a time...</div>
+                            <div class="text-orange-900 font-bold mt-1">Your Story</div>
+                        </div>
+                    </div>
+                    <div class="p-5">
+                        <span class="text-xs font-medium text-slate-400">#27</span>
+                        <h4 class="text-lg font-semibold text-slate-900">Storytelling-Driven</h4>
+                        <p class="text-sm text-slate-500 mt-1">敘事流程、情感連結</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- BI/Analytics Styles (28-37) -->
+    <section class="py-12 px-6 bg-gradient-to-br from-purple-50 to-indigo-50">
+        <div class="max-w-7xl mx-auto">
+            <h3 class="text-3xl font-bold text-slate-900 mb-2">BI / Analytics Styles</h3>
+            <p class="text-slate-600 mb-8">商業智慧與數據分析儀表板專用風格</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
+                <!-- 28. Data-Dense -->
+                <a href="styles/28-data-dense.html" class="card-hover bg-white rounded-2xl overflow-hidden border border-slate-200 cursor-pointer">
+                    <div class="h-40 bg-slate-100 flex items-center justify-center p-3">
+                        <div class="grid grid-cols-3 gap-1 w-full">
+                            <div class="bg-white rounded p-1 text-center text-xs">KPI</div>
+                            <div class="bg-white rounded p-1 text-center text-xs">KPI</div>
+                            <div class="bg-white rounded p-1 text-center text-xs">KPI</div>
+                            <div class="bg-white rounded p-1 text-center col-span-2 text-xs">Chart</div>
+                            <div class="bg-white rounded p-1 text-center text-xs">Tbl</div>
+                        </div>
+                    </div>
+                    <div class="p-5">
+                        <span class="text-xs font-medium text-slate-400">#28</span>
+                        <h4 class="text-lg font-semibold text-slate-900">Data-Dense Dashboard</h4>
+                    </div>
+                </a>
+                <!-- 29. Heatmap -->
+                <a href="styles/29-heatmap.html" class="card-hover bg-white rounded-2xl overflow-hidden border border-slate-200 cursor-pointer">
+                    <div class="h-40 flex items-center justify-center p-3">
+                        <div class="grid grid-cols-5 gap-1">
+                            <div class="w-6 h-6 bg-blue-200 rounded"></div>
+                            <div class="w-6 h-6 bg-blue-300 rounded"></div>
+                            <div class="w-6 h-6 bg-yellow-300 rounded"></div>
+                            <div class="w-6 h-6 bg-orange-400 rounded"></div>
+                            <div class="w-6 h-6 bg-red-500 rounded"></div>
+                            <div class="w-6 h-6 bg-blue-300 rounded"></div>
+                            <div class="w-6 h-6 bg-yellow-200 rounded"></div>
+                            <div class="w-6 h-6 bg-orange-300 rounded"></div>
+                            <div class="w-6 h-6 bg-red-400 rounded"></div>
+                            <div class="w-6 h-6 bg-red-600 rounded"></div>
+                        </div>
+                    </div>
+                    <div class="p-5">
+                        <span class="text-xs font-medium text-slate-400">#29</span>
+                        <h4 class="text-lg font-semibold text-slate-900">Heat Map Style</h4>
+                    </div>
+                </a>
+                <!-- 30. Executive -->
+                <a href="styles/30-executive.html" class="card-hover bg-white rounded-2xl overflow-hidden border border-slate-200 cursor-pointer">
+                    <div class="h-40 bg-slate-800 flex items-center justify-center">
+                        <div class="text-center text-white">
+                            <div class="text-3xl font-bold">$2.4M</div>
+                            <div class="text-green-400 text-sm">↑ 12.5%</div>
+                        </div>
+                    </div>
+                    <div class="p-5">
+                        <span class="text-xs font-medium text-slate-400">#30</span>
+                        <h4 class="text-lg font-semibold text-slate-900">Executive Dashboard</h4>
+                    </div>
+                </a>
+                <!-- 31. Real-Time -->
+                <a href="styles/31-realtime.html" class="card-hover bg-white rounded-2xl overflow-hidden border border-slate-200 cursor-pointer">
+                    <div class="h-40 bg-slate-900 flex items-center justify-center">
+                        <div class="flex items-center gap-2">
+                            <div class="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
+                            <span class="text-green-400 font-mono text-sm">LIVE</span>
+                        </div>
+                    </div>
+                    <div class="p-5">
+                        <span class="text-xs font-medium text-slate-400">#31</span>
+                        <h4 class="text-lg font-semibold text-slate-900">Real-Time Monitoring</h4>
+                    </div>
+                </a>
+                <!-- 32. Drill-Down -->
+                <a href="styles/32-drilldown.html" class="card-hover bg-white rounded-2xl overflow-hidden border border-slate-200 cursor-pointer">
+                    <div class="h-40 bg-slate-100 flex items-center justify-center">
+                        <div class="text-center">
+                            <div class="text-sm text-slate-500">Region → Country → City</div>
+                            <div class="text-xl mt-2">🔍</div>
+                        </div>
+                    </div>
+                    <div class="p-5">
+                        <span class="text-xs font-medium text-slate-400">#32</span>
+                        <h4 class="text-lg font-semibold text-slate-900">Drill-Down Analytics</h4>
+                    </div>
+                </a>
+                <!-- 33. Comparative -->
+                <a href="styles/33-comparative.html" class="card-hover bg-white rounded-2xl overflow-hidden border border-slate-200 cursor-pointer">
+                    <div class="h-40 bg-slate-100 flex items-center justify-center gap-4">
+                        <div class="text-center">
+                            <div class="text-blue-600 font-bold">A</div>
+                            <div class="w-8 h-16 bg-blue-500 rounded"></div>
+                        </div>
+                        <div class="text-2xl text-slate-400">vs</div>
+                        <div class="text-center">
+                            <div class="text-orange-600 font-bold">B</div>
+                            <div class="w-8 h-20 bg-orange-500 rounded"></div>
+                        </div>
+                    </div>
+                    <div class="p-5">
+                        <span class="text-xs font-medium text-slate-400">#33</span>
+                        <h4 class="text-lg font-semibold text-slate-900">Comparative Analysis</h4>
+                    </div>
+                </a>
+                <!-- 34. Predictive -->
+                <a href="styles/34-predictive.html" class="card-hover bg-white rounded-2xl overflow-hidden border border-slate-200 cursor-pointer">
+                    <div class="h-40 bg-slate-900 flex items-center justify-center">
+                        <div class="text-center">
+                            <div class="text-purple-400 text-sm">Forecast</div>
+                            <div class="text-2xl mt-1">📈</div>
+                            <div class="text-slate-400 text-xs mt-1">AI Powered</div>
+                        </div>
+                    </div>
+                    <div class="p-5">
+                        <span class="text-xs font-medium text-slate-400">#34</span>
+                        <h4 class="text-lg font-semibold text-slate-900">Predictive Analytics</h4>
+                    </div>
+                </a>
+                <!-- 35. User Behavior -->
+                <a href="styles/35-user-behavior.html" class="card-hover bg-white rounded-2xl overflow-hidden border border-slate-200 cursor-pointer">
+                    <div class="h-40 bg-slate-100 flex items-center justify-center">
+                        <div class="flex flex-col items-center gap-1">
+                            <div class="w-20 h-4 bg-blue-500 rounded-full"></div>
+                            <div class="w-16 h-4 bg-blue-400 rounded-full"></div>
+                            <div class="w-12 h-4 bg-blue-300 rounded-full"></div>
+                            <div class="w-8 h-4 bg-green-500 rounded-full"></div>
+                        </div>
+                    </div>
+                    <div class="p-5">
+                        <span class="text-xs font-medium text-slate-400">#35</span>
+                        <h4 class="text-lg font-semibold text-slate-900">User Behavior Analytics</h4>
+                    </div>
+                </a>
+                <!-- 36. Financial -->
+                <a href="styles/36-financial.html" class="card-hover bg-white rounded-2xl overflow-hidden border border-slate-200 cursor-pointer">
+                    <div class="h-40 bg-slate-800 flex items-center justify-center">
+                        <div class="font-mono text-green-400 text-lg">$$$</div>
+                    </div>
+                    <div class="p-5">
+                        <span class="text-xs font-medium text-slate-400">#36</span>
+                        <h4 class="text-lg font-semibold text-slate-900">Financial Dashboard</h4>
+                    </div>
+                </a>
+                <!-- 37. Sales Intelligence -->
+                <a href="styles/37-sales-intelligence.html" class="card-hover bg-white rounded-2xl overflow-hidden border border-slate-200 cursor-pointer">
+                    <div class="h-40 bg-gradient-to-br from-blue-600 to-indigo-700 flex items-center justify-center">
+                        <div class="text-white text-center">
+                            <div class="text-2xl">🎯</div>
+                            <div class="text-sm mt-1">Pipeline</div>
+                        </div>
+                    </div>
+                    <div class="p-5">
+                        <span class="text-xs font-medium text-slate-400">#37</span>
+                        <h4 class="text-lg font-semibold text-slate-900">Sales Intelligence</h4>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modern Trend Styles (38-57) -->
+    <section class="py-12 px-6 bg-gradient-to-br from-orange-50 to-rose-50">
+        <div class="max-w-7xl mx-auto">
+            <h3 class="text-3xl font-bold text-slate-900 mb-2">Modern Trends</h3>
+            <p class="text-slate-600 mb-8">2020年代最新設計趨勢與前衛風格</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 gap-6">
+                <!-- 38. Neubrutalism -->
+                <a href="styles/38-neubrutalism.html" class="card-hover bg-white rounded-2xl overflow-hidden border border-slate-200 cursor-pointer">
+                    <div class="h-40 bg-yellow-300 flex items-center justify-center">
+                        <div class="w-20 h-12 bg-blue-500 border-4 border-black" style="box-shadow: 4px 4px 0 #000;"></div>
+                    </div>
+                    <div class="p-5">
+                        <span class="text-xs font-medium text-slate-400">#38</span>
+                        <h4 class="text-lg font-semibold text-slate-900">Neubrutalism</h4>
+                    </div>
+                </a>
+                <!-- 39. Bento Box -->
+                <a href="styles/39-bento-box.html" class="card-hover bg-white rounded-2xl overflow-hidden border border-slate-200 cursor-pointer">
+                    <div class="h-40 bg-slate-100 flex items-center justify-center p-3">
+                        <div class="grid grid-cols-3 grid-rows-2 gap-2 w-full h-full">
+                            <div class="bg-white rounded-xl row-span-2 shadow-sm"></div>
+                            <div class="bg-white rounded-xl col-span-2 shadow-sm"></div>
+                            <div class="bg-white rounded-xl shadow-sm"></div>
+                            <div class="bg-white rounded-xl shadow-sm"></div>
+                        </div>
+                    </div>
+                    <div class="p-5">
+                        <span class="text-xs font-medium text-slate-400">#39</span>
+                        <h4 class="text-lg font-semibold text-slate-900">Bento Box Grid</h4>
+                    </div>
+                </a>
+                <!-- 40. Y2K -->
+                <a href="styles/40-y2k.html" class="card-hover bg-white rounded-2xl overflow-hidden border border-slate-200 cursor-pointer">
+                    <div class="h-40 bg-gradient-to-br from-pink-400 via-purple-400 to-cyan-400 flex items-center justify-center">
+                        <div class="text-white font-bold text-2xl" style="text-shadow: 2px 2px 0 #ff00ff;">Y2K</div>
+                    </div>
+                    <div class="p-5">
+                        <span class="text-xs font-medium text-slate-400">#40</span>
+                        <h4 class="text-lg font-semibold text-slate-900">Y2K Aesthetic</h4>
+                    </div>
+                </a>
+                <!-- 41. Cyberpunk -->
+                <a href="styles/41-cyberpunk.html" class="card-hover bg-white rounded-2xl overflow-hidden border border-slate-200 cursor-pointer">
+                    <div class="h-40 bg-black flex items-center justify-center">
+                        <span class="text-green-400 font-mono" style="text-shadow: 0 0 10px #0f0;">CYBER//PUNK</span>
+                    </div>
+                    <div class="p-5">
+                        <span class="text-xs font-medium text-slate-400">#41</span>
+                        <h4 class="text-lg font-semibold text-slate-900">Cyberpunk UI</h4>
+                    </div>
+                </a>
+                <!-- 42. Organic Biophilic -->
+                <a href="styles/42-organic-biophilic.html" class="card-hover bg-white rounded-2xl overflow-hidden border border-slate-200 cursor-pointer">
+                    <div class="h-40 bg-gradient-to-br from-green-100 to-emerald-200 flex items-center justify-center">
+                        <div class="text-4xl">🌿</div>
+                    </div>
+                    <div class="p-5">
+                        <span class="text-xs font-medium text-slate-400">#42</span>
+                        <h4 class="text-lg font-semibold text-slate-900">Organic Biophilic</h4>
+                    </div>
+                </a>
+                <!-- 43. AI-Native -->
+                <a href="styles/43-ai-native.html" class="card-hover bg-white rounded-2xl overflow-hidden border border-slate-200 cursor-pointer">
+                    <div class="h-40 bg-slate-100 flex items-center justify-center">
+                        <div class="bg-white rounded-2xl p-4 shadow-lg">
+                            <div class="flex gap-1">
+                                <div class="w-2 h-2 bg-indigo-500 rounded-full animate-bounce"></div>
+                                <div class="w-2 h-2 bg-indigo-500 rounded-full animate-bounce" style="animation-delay:0.1s"></div>
+                                <div class="w-2 h-2 bg-indigo-500 rounded-full animate-bounce" style="animation-delay:0.2s"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-5">
+                        <span class="text-xs font-medium text-slate-400">#43</span>
+                        <h4 class="text-lg font-semibold text-slate-900">AI-Native UI</h4>
+                    </div>
+                </a>
+                <!-- 44. Memphis -->
+                <a href="styles/44-memphis.html" class="card-hover bg-white rounded-2xl overflow-hidden border border-slate-200 cursor-pointer">
+                    <div class="h-40 bg-pink-300 flex items-center justify-center gap-3">
+                        <div class="w-8 h-8 bg-yellow-400 rounded-full"></div>
+                        <div class="w-8 h-8 bg-teal-400" style="transform: rotate(45deg);"></div>
+                        <div class="w-0 h-0 border-l-8 border-r-8 border-b-16 border-l-transparent border-r-transparent border-b-blue-500"></div>
+                    </div>
+                    <div class="p-5">
+                        <span class="text-xs font-medium text-slate-400">#44</span>
+                        <h4 class="text-lg font-semibold text-slate-900">Memphis Design</h4>
+                    </div>
+                </a>
+                <!-- 45. Vaporwave -->
+                <a href="styles/45-vaporwave.html" class="card-hover bg-white rounded-2xl overflow-hidden border border-slate-200 cursor-pointer">
+                    <div class="h-40 bg-gradient-to-b from-pink-400 via-purple-500 to-blue-600 flex items-center justify-center">
+                        <div class="text-white font-bold" style="font-family: serif; text-shadow: 2px 2px #ff00ff;">美学</div>
+                    </div>
+                    <div class="p-5">
+                        <span class="text-xs font-medium text-slate-400">#45</span>
+                        <h4 class="text-lg font-semibold text-slate-900">Vaporwave</h4>
+                    </div>
+                </a>
+                <!-- 46. Dimensional Layering -->
+                <a href="styles/46-dimensional-layering.html" class="card-hover bg-white rounded-2xl overflow-hidden border border-slate-200 cursor-pointer">
+                    <div class="h-40 bg-slate-100 flex items-center justify-center">
+                        <div class="relative">
+                            <div class="w-16 h-16 bg-blue-200 rounded-xl absolute top-0 left-0"></div>
+                            <div class="w-16 h-16 bg-blue-300 rounded-xl absolute top-2 left-2"></div>
+                            <div class="w-16 h-16 bg-blue-500 rounded-xl absolute top-4 left-4 shadow-xl"></div>
+                        </div>
+                    </div>
+                    <div class="p-5">
+                        <span class="text-xs font-medium text-slate-400">#46</span>
+                        <h4 class="text-lg font-semibold text-slate-900">Dimensional Layering</h4>
+                    </div>
+                </a>
+                <!-- 47. Exaggerated Minimalism -->
+                <a href="styles/47-exaggerated-minimalism.html" class="card-hover bg-white rounded-2xl overflow-hidden border border-slate-200 cursor-pointer">
+                    <div class="h-40 bg-white flex items-center justify-center">
+                        <div class="text-6xl font-black text-black">Aa</div>
+                    </div>
+                    <div class="p-5">
+                        <span class="text-xs font-medium text-slate-400">#47</span>
+                        <h4 class="text-lg font-semibold text-slate-900">Exaggerated Minimalism</h4>
+                    </div>
+                </a>
+                <!-- 48. Kinetic Typography -->
+                <a href="styles/48-kinetic-typography.html" class="card-hover bg-white rounded-2xl overflow-hidden border border-slate-200 cursor-pointer">
+                    <div class="h-40 bg-black flex items-center justify-center overflow-hidden">
+                        <div class="text-white font-bold text-xl animate-pulse">MOTION</div>
+                    </div>
+                    <div class="p-5">
+                        <span class="text-xs font-medium text-slate-400">#48</span>
+                        <h4 class="text-lg font-semibold text-slate-900">Kinetic Typography</h4>
+                    </div>
+                </a>
+                <!-- 49. Parallax Storytelling -->
+                <a href="styles/49-parallax-storytelling.html" class="card-hover bg-white rounded-2xl overflow-hidden border border-slate-200 cursor-pointer">
+                    <div class="h-40 bg-gradient-to-b from-sky-400 to-blue-600 flex items-center justify-center">
+                        <div class="text-white text-center">
+                            <div class="text-sm opacity-70">Scroll</div>
+                            <div class="text-2xl">↓</div>
+                        </div>
+                    </div>
+                    <div class="p-5">
+                        <span class="text-xs font-medium text-slate-400">#49</span>
+                        <h4 class="text-lg font-semibold text-slate-900">Parallax Storytelling</h4>
+                    </div>
+                </a>
+                <!-- 50. Swiss Modernism 2.0 -->
+                <a href="styles/50-swiss-modernism.html" class="card-hover bg-white rounded-2xl overflow-hidden border border-slate-200 cursor-pointer">
+                    <div class="h-40 bg-white flex items-center justify-center">
+                        <div class="grid grid-cols-4 gap-1">
+                            <div class="w-4 h-4 bg-black"></div>
+                            <div class="w-4 h-4 bg-red-500"></div>
+                            <div class="w-4 h-4 bg-black"></div>
+                            <div class="w-4 h-4 bg-black"></div>
+                        </div>
+                    </div>
+                    <div class="p-5">
+                        <span class="text-xs font-medium text-slate-400">#50</span>
+                        <h4 class="text-lg font-semibold text-slate-900">Swiss Modernism 2.0</h4>
+                    </div>
+                </a>
+                <!-- 51. HUD Sci-Fi -->
+                <a href="styles/51-hud-scifi.html" class="card-hover bg-white rounded-2xl overflow-hidden border border-slate-200 cursor-pointer">
+                    <div class="h-40 bg-black flex items-center justify-center">
+                        <div class="border-2 border-cyan-400 rounded-full w-20 h-20 flex items-center justify-center" style="box-shadow: 0 0 20px rgba(0,255,255,0.5);">
+                            <div class="text-cyan-400 text-xs">HUD</div>
+                        </div>
+                    </div>
+                    <div class="p-5">
+                        <span class="text-xs font-medium text-slate-400">#51</span>
+                        <h4 class="text-lg font-semibold text-slate-900">HUD / Sci-Fi FUI</h4>
+                    </div>
+                </a>
+                <!-- 52. Pixel Art -->
+                <a href="styles/52-pixel-art.html" class="card-hover bg-white rounded-2xl overflow-hidden border border-slate-200 cursor-pointer">
+                    <div class="h-40 bg-slate-900 flex items-center justify-center">
+                        <div class="grid grid-cols-5 gap-px">
+                            <div class="w-3 h-3 bg-red-500"></div>
+                            <div class="w-3 h-3 bg-red-500"></div>
+                            <div class="w-3 h-3"></div>
+                            <div class="w-3 h-3 bg-red-500"></div>
+                            <div class="w-3 h-3 bg-red-500"></div>
+                            <div class="w-3 h-3 bg-red-500"></div>
+                            <div class="w-3 h-3 bg-red-500"></div>
+                            <div class="w-3 h-3 bg-red-500"></div>
+                            <div class="w-3 h-3 bg-red-500"></div>
+                            <div class="w-3 h-3 bg-red-500"></div>
+                        </div>
+                    </div>
+                    <div class="p-5">
+                        <span class="text-xs font-medium text-slate-400">#52</span>
+                        <h4 class="text-lg font-semibold text-slate-900">Pixel Art</h4>
+                    </div>
+                </a>
+                <!-- 53. Bento Grids -->
+                <a href="styles/53-bento-grids.html" class="card-hover bg-white rounded-2xl overflow-hidden border border-slate-200 cursor-pointer">
+                    <div class="h-40 bg-slate-50 flex items-center justify-center p-3">
+                        <div class="grid grid-cols-2 gap-2 w-full h-full">
+                            <div class="bg-white rounded-2xl shadow-sm"></div>
+                            <div class="bg-white rounded-2xl shadow-sm"></div>
+                            <div class="bg-white rounded-2xl shadow-sm col-span-2"></div>
+                        </div>
+                    </div>
+                    <div class="p-5">
+                        <span class="text-xs font-medium text-slate-400">#53</span>
+                        <h4 class="text-lg font-semibold text-slate-900">Bento Grids</h4>
+                    </div>
+                </a>
+                <!-- 54. Neubrutalism v2 -->
+                <a href="styles/54-neubrutalism-v2.html" class="card-hover bg-white rounded-2xl overflow-hidden border border-slate-200 cursor-pointer">
+                    <div class="h-40 bg-red-400 flex items-center justify-center">
+                        <div class="bg-yellow-300 px-4 py-2 border-4 border-black font-bold" style="box-shadow: 4px 4px 0 #000;">NEU 2.0</div>
+                    </div>
+                    <div class="p-5">
+                        <span class="text-xs font-medium text-slate-400">#54</span>
+                        <h4 class="text-lg font-semibold text-slate-900">Neubrutalism v2</h4>
+                    </div>
+                </a>
+                <!-- 55. Spatial UI -->
+                <a href="styles/55-spatial-ui.html" class="card-hover bg-white rounded-2xl overflow-hidden border border-slate-200 cursor-pointer">
+                    <div class="h-40 bg-gradient-to-br from-slate-200 to-slate-300 flex items-center justify-center">
+                        <div class="w-24 h-16 bg-white/60 backdrop-blur-xl rounded-2xl border border-white/40 shadow-xl"></div>
+                    </div>
+                    <div class="p-5">
+                        <span class="text-xs font-medium text-slate-400">#55</span>
+                        <h4 class="text-lg font-semibold text-slate-900">Spatial UI (VisionOS)</h4>
+                    </div>
+                </a>
+                <!-- 56. E-Ink Paper -->
+                <a href="styles/56-eink-paper.html" class="card-hover bg-white rounded-2xl overflow-hidden border border-slate-200 cursor-pointer">
+                    <div class="h-40 bg-stone-100 flex items-center justify-center" style="background-image: url('data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"4\" height=\"4\"><rect width=\"4\" height=\"4\" fill=\"%23f5f5f0\"/><rect width=\"1\" height=\"1\" fill=\"%23e8e8e3\"/></svg>'); background-size: 4px 4px;">
+                        <div class="text-slate-800 font-serif text-lg">E-Ink</div>
+                    </div>
+                    <div class="p-5">
+                        <span class="text-xs font-medium text-slate-400">#56</span>
+                        <h4 class="text-lg font-semibold text-slate-900">E-Ink / Paper</h4>
+                    </div>
+                </a>
+                <!-- 57. Gen Z Chaos -->
+                <a href="styles/57-genz-chaos.html" class="card-hover bg-white rounded-2xl overflow-hidden border border-slate-200 cursor-pointer">
+                    <div class="h-40 bg-gradient-to-br from-pink-500 via-yellow-400 to-green-400 flex items-center justify-center overflow-hidden">
+                        <div class="text-white font-bold text-xl transform rotate-12">CHAOS!!!</div>
+                    </div>
+                    <div class="p-5">
+                        <span class="text-xs font-medium text-slate-400">#57</span>
+                        <h4 class="text-lg font-semibold text-slate-900">Gen Z Chaos</h4>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-white py-12 px-6">
+        <div class="max-w-7xl mx-auto text-center">
+            <h3 class="text-2xl font-bold mb-4">UI/UX Pro Max</h3>
+            <p class="text-slate-400 mb-6">57 種 UI 設計風格完整展示</p>
+            <div class="flex justify-center gap-4 flex-wrap">
+                <span class="px-3 py-1 bg-slate-800 rounded-full text-sm">Tailwind CSS</span>
+                <span class="px-3 py-1 bg-slate-800 rounded-full text-sm">Responsive</span>
+                <span class="px-3 py-1 bg-slate-800 rounded-full text-sm">Modern Design</span>
+            </div>
+            <p class="text-slate-500 text-sm mt-8">Built with Claude Code + UI/UX Pro Max Skill</p>
+        </div>
+    </footer>
+
+    <style>
+        @keyframes aurora {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+    </style>
+</body>
+</html>

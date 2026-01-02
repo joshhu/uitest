@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dimensional Layering - UI Style #46</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * { font-family: 'Inter', sans-serif; }
+        .layer-1 { transform: translateZ(0); }
+        .layer-2 { transform: translateZ(20px); }
+        .layer-3 { transform: translateZ(40px); }
+    </style>
+</head>
+<body class="bg-slate-100 min-h-screen">
+    <!-- Navigation -->
+    <nav class="bg-white/80 backdrop-blur-lg sticky top-0 z-50 border-b border-slate-200/50 px-6 py-4">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <a href="../index.html" class="text-slate-500 hover:text-slate-900 text-sm">&larr; Back</a>
+            <span class="font-semibold text-slate-900">#46 Dimensional Layering</span>
+            <span class="text-slate-400 text-sm">Modern</span>
+        </div>
+    </nav>
+
+    <div class="max-w-6xl mx-auto p-8">
+        <!-- Hero with Layered Cards -->
+        <section class="py-16 relative">
+            <div class="text-center mb-16">
+                <h1 class="text-6xl font-extrabold text-slate-900 mb-6">Design in Depth</h1>
+                <p class="text-xl text-slate-600 max-w-2xl mx-auto">
+                    Create visual hierarchy through layered elements, shadows, and depth. Each layer tells part of the story.
+                </p>
+            </div>
+
+            <!-- Layered Card Stack -->
+            <div class="relative h-96 max-w-2xl mx-auto perspective-1000">
+                <!-- Background Layer -->
+                <div class="absolute inset-0 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-3xl transform rotate-6 translate-x-8 translate-y-8 opacity-20"></div>
+                <!-- Middle Layer -->
+                <div class="absolute inset-0 bg-gradient-to-br from-violet-500 to-indigo-600 rounded-3xl transform rotate-3 translate-x-4 translate-y-4 opacity-40 shadow-xl"></div>
+                <!-- Front Layer -->
+                <div class="absolute inset-0 bg-gradient-to-br from-blue-500 to-violet-600 rounded-3xl shadow-2xl p-12 text-white flex flex-col justify-center">
+                    <h2 class="text-4xl font-bold mb-4">Stacked Perspectives</h2>
+                    <p class="text-white/80 text-lg">Multiple layers create depth perception and visual interest</p>
+                    <button class="mt-6 self-start px-6 py-3 bg-white text-indigo-600 rounded-xl font-semibold hover:bg-indigo-50 cursor-pointer transition-colors">
+                        Explore Depth
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Feature Cards with Shadows -->
+        <section class="grid grid-cols-3 gap-8 mb-16">
+            <div class="relative group cursor-pointer">
+                <div class="absolute inset-0 bg-gradient-to-r from-pink-500 to-rose-500 rounded-2xl transform translate-x-2 translate-y-2 group-hover:translate-x-3 group-hover:translate-y-3 transition-transform"></div>
+                <div class="relative bg-white rounded-2xl p-8 border border-slate-200">
+                    <div class="w-14 h-14 bg-pink-100 rounded-xl flex items-center justify-center mb-6">
+                        <svg class="w-7 h-7 text-pink-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">Layer 1</h3>
+                    <p class="text-slate-600">Background elements create foundation and context</p>
+                </div>
+            </div>
+            <div class="relative group cursor-pointer">
+                <div class="absolute inset-0 bg-gradient-to-r from-amber-500 to-orange-500 rounded-2xl transform translate-x-2 translate-y-2 group-hover:translate-x-3 group-hover:translate-y-3 transition-transform"></div>
+                <div class="relative bg-white rounded-2xl p-8 border border-slate-200">
+                    <div class="w-14 h-14 bg-amber-100 rounded-xl flex items-center justify-center mb-6">
+                        <svg class="w-7 h-7 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">Layer 2</h3>
+                    <p class="text-slate-600">Middle layers add structure and organization</p>
+                </div>
+            </div>
+            <div class="relative group cursor-pointer">
+                <div class="absolute inset-0 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-2xl transform translate-x-2 translate-y-2 group-hover:translate-x-3 group-hover:translate-y-3 transition-transform"></div>
+                <div class="relative bg-white rounded-2xl p-8 border border-slate-200">
+                    <div class="w-14 h-14 bg-emerald-100 rounded-xl flex items-center justify-center mb-6">
+                        <svg class="w-7 h-7 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">Layer 3</h3>
+                    <p class="text-slate-600">Foreground elements demand attention and action</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Floating UI Elements -->
+        <section class="bg-gradient-to-br from-slate-900 to-slate-800 rounded-3xl p-12 mb-16 relative overflow-hidden">
+            <div class="absolute top-10 right-10 w-64 h-64 bg-blue-500/20 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-10 left-10 w-48 h-48 bg-purple-500/20 rounded-full blur-3xl"></div>
+
+            <div class="relative grid grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-4xl font-bold text-white mb-6">Floating Elements</h2>
+                    <p class="text-slate-300 text-lg mb-6">
+                        Use shadows, blurs, and overlapping elements to create a sense of three-dimensional space. Each layer serves a purpose in the visual hierarchy.
+                    </p>
+                    <div class="flex gap-4">
+                        <button class="px-6 py-3 bg-white text-slate-900 rounded-xl font-semibold hover:bg-slate-100 cursor-pointer shadow-lg shadow-white/20">
+                            Get Started
+                        </button>
+                        <button class="px-6 py-3 bg-slate-700 text-white rounded-xl font-semibold hover:bg-slate-600 cursor-pointer">
+                            Learn More
+                        </button>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="bg-white/10 backdrop-blur-lg rounded-2xl p-6 transform -rotate-3 shadow-2xl">
+                        <div class="flex gap-2 mb-4">
+                            <div class="w-3 h-3 bg-red-400 rounded-full"></div>
+                            <div class="w-3 h-3 bg-yellow-400 rounded-full"></div>
+                            <div class="w-3 h-3 bg-green-400 rounded-full"></div>
+                        </div>
+                        <div class="space-y-2">
+                            <div class="h-4 bg-white/20 rounded w-3/4"></div>
+                            <div class="h-4 bg-white/20 rounded w-1/2"></div>
+                            <div class="h-4 bg-blue-400/50 rounded w-5/6"></div>
+                        </div>
+                    </div>
+                    <div class="absolute -bottom-4 -right-4 bg-gradient-to-r from-blue-500 to-violet-500 rounded-2xl p-4 transform rotate-3 shadow-xl">
+                        <div class="text-white font-bold">+24%</div>
+                        <div class="text-white/70 text-sm">Growth</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Style Info -->
+        <section class="bg-white rounded-2xl p-8 shadow-xl shadow-slate-200/50">
+            <div class="grid grid-cols-2 gap-8">
+                <div>
+                    <h3 class="text-slate-400 text-sm uppercase tracking-widest mb-4">Best For</h3>
+                    <ul class="space-y-2 text-slate-600">
+                        <li>Dashboard interfaces</li>
+                        <li>SaaS applications</li>
+                        <li>Marketing sites</li>
+                        <li>Product showcases</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-slate-400 text-sm uppercase tracking-widest mb-4">Key Elements</h3>
+                    <ul class="space-y-2 text-slate-600">
+                        <li>Multi-layer shadows</li>
+                        <li>Offset positioning</li>
+                        <li>Blur effects</li>
+                        <li>Z-index stacking</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-slate-200 px-6 py-4 mt-8">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <a href="45-vaporwave.html" class="text-slate-500 hover:text-slate-900 text-sm">&larr; Vaporwave</a>
+            <a href="47-exaggerated-minimalism.html" class="text-slate-500 hover:text-slate-900 text-sm">Exaggerated Minimalism &rarr;</a>
+        </div>
+    </footer>
+</body>
+</html>

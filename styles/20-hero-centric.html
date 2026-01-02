@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hero-Centric Design - UI Style #20</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>* { font-family: 'Inter', sans-serif; }</style>
+</head>
+<body class="bg-white min-h-screen">
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 bg-white/90 backdrop-blur-md z-50 border-b border-gray-100">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="../index.html" class="text-gray-500 hover:text-gray-900">&larr; Back</a>
+            <span class="font-semibold">#20 Hero-Centric</span>
+            <span class="text-gray-400">Landing Page</span>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION - The Main Focus -->
+    <section class="min-h-screen flex items-center bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-500 relative overflow-hidden">
+        <!-- Background Pattern -->
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute top-20 left-20 w-96 h-96 bg-white rounded-full blur-3xl"></div>
+            <div class="absolute bottom-20 right-20 w-96 h-96 bg-white rounded-full blur-3xl"></div>
+        </div>
+
+        <div class="max-w-6xl mx-auto px-6 py-32 relative z-10">
+            <div class="grid grid-cols-2 gap-12 items-center">
+                <div>
+                    <span class="inline-block px-4 py-2 bg-white/20 text-white rounded-full text-sm font-medium mb-6">New Release 2.0</span>
+                    <h1 class="text-6xl font-extrabold text-white leading-tight mb-6">
+                        Build Something<br/>
+                        <span class="text-yellow-300">Amazing</span> Today
+                    </h1>
+                    <p class="text-xl text-white/80 mb-8 leading-relaxed">
+                        The most powerful platform for modern teams. Ship faster, collaborate better, and scale infinitely.
+                    </p>
+                    <div class="flex gap-4">
+                        <button class="px-8 py-4 bg-white text-indigo-600 rounded-lg font-bold text-lg hover:bg-gray-100 transition-colors cursor-pointer shadow-xl">
+                            Start Free Trial
+                        </button>
+                        <button class="px-8 py-4 bg-transparent border-2 border-white text-white rounded-lg font-bold text-lg hover:bg-white/10 transition-colors cursor-pointer">
+                            Watch Demo
+                        </button>
+                    </div>
+                    <p class="text-white/60 text-sm mt-4">No credit card required • Free 14-day trial</p>
+                </div>
+                <div class="relative">
+                    <div class="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
+                        <div class="bg-slate-900 rounded-xl p-4">
+                            <div class="flex gap-2 mb-4">
+                                <div class="w-3 h-3 bg-red-500 rounded-full"></div>
+                                <div class="w-3 h-3 bg-yellow-500 rounded-full"></div>
+                                <div class="w-3 h-3 bg-green-500 rounded-full"></div>
+                            </div>
+                            <div class="space-y-2">
+                                <div class="h-4 bg-slate-700 rounded w-3/4"></div>
+                                <div class="h-4 bg-indigo-500 rounded w-1/2"></div>
+                                <div class="h-4 bg-slate-700 rounded w-5/6"></div>
+                                <div class="h-4 bg-purple-500 rounded w-2/3"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white/60 animate-bounce">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Social Proof -->
+    <section class="py-16 px-6 bg-gray-50">
+        <div class="max-w-6xl mx-auto">
+            <p class="text-center text-gray-500 mb-8">Trusted by 10,000+ companies worldwide</p>
+            <div class="flex justify-center items-center gap-12 opacity-50">
+                <span class="text-2xl font-bold text-gray-400">Company</span>
+                <span class="text-2xl font-bold text-gray-400">Brand</span>
+                <span class="text-2xl font-bold text-gray-400">Startup</span>
+                <span class="text-2xl font-bold text-gray-400">Agency</span>
+                <span class="text-2xl font-bold text-gray-400">Enterprise</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="py-20 px-6">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Why Teams Choose Us</h2>
+                <p class="text-xl text-gray-600">Everything you need to build better products</p>
+            </div>
+            <div class="grid grid-cols-3 gap-8">
+                <div class="text-center">
+                    <div class="w-16 h-16 mx-auto mb-4 bg-indigo-100 rounded-xl flex items-center justify-center">
+                        <svg class="w-8 h-8 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Lightning Fast</h3>
+                    <p class="text-gray-600">Built for speed with optimized performance</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-16 h-16 mx-auto mb-4 bg-purple-100 rounded-xl flex items-center justify-center">
+                        <svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Secure by Default</h3>
+                    <p class="text-gray-600">Enterprise-grade security built-in</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-16 h-16 mx-auto mb-4 bg-pink-100 rounded-xl flex items-center justify-center">
+                        <svg class="w-8 h-8 text-pink-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Team Collaboration</h3>
+                    <p class="text-gray-600">Work together seamlessly</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-20 px-6 bg-gradient-to-r from-indigo-600 to-purple-600">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-4xl font-bold text-white mb-4">Ready to get started?</h2>
+            <p class="text-xl text-white/80 mb-8">Join thousands of teams already using our platform</p>
+            <button class="px-8 py-4 bg-white text-indigo-600 rounded-lg font-bold text-lg hover:bg-gray-100 transition-colors cursor-pointer shadow-xl">
+                Start Your Free Trial
+            </button>
+        </div>
+    </section>
+
+    <!-- Style Info -->
+    <section class="py-16 px-6 bg-gray-900 text-white">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid grid-cols-2 gap-8">
+                <div>
+                    <h3 class="text-gray-400 text-sm uppercase tracking-widest mb-4">Best For</h3>
+                    <ul class="space-y-2 text-gray-300">
+                        <li>SaaS landing pages</li>
+                        <li>Product launches</li>
+                        <li>Service landing pages</li>
+                        <li>B2B platforms</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-gray-400 text-sm uppercase tracking-widest mb-4">Key Elements</h3>
+                    <ul class="space-y-2 text-gray-300">
+                        <li>Large hero section</li>
+                        <li>Compelling headline</li>
+                        <li>High-contrast CTA</li>
+                        <li>Product showcase</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-6 px-6 bg-gray-50">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <a href="19-soft-ui-evolution.html" class="text-gray-500 hover:text-gray-900">&larr; Soft UI Evolution</a>
+            <a href="21-conversion-optimized.html" class="text-gray-500 hover:text-gray-900">Conversion-Optimized &rarr;</a>
+        </div>
+    </footer>
+</body>
+</html>

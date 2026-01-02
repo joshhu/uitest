@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predictive Analytics - UI Style #34</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>* { font-family: 'Inter', sans-serif; }</style>
+</head>
+<body class="bg-slate-900 min-h-screen text-white">
+    <!-- Navigation -->
+    <nav class="bg-slate-800 border-b border-slate-700 px-6 py-4">
+        <div class="flex justify-between items-center">
+            <div class="flex items-center gap-4">
+                <a href="../index.html" class="text-slate-400 hover:text-white text-sm">&larr; Back</a>
+                <span class="font-semibold">#34 Predictive Analytics</span>
+            </div>
+            <div class="flex items-center gap-2">
+                <span class="px-2 py-1 bg-purple-600 text-xs rounded">AI-Powered</span>
+                <span class="text-slate-400 text-sm">BI/Analytics</span>
+            </div>
+        </div>
+    </nav>
+
+    <div class="p-6">
+        <div class="max-w-7xl mx-auto">
+            <!-- Header -->
+            <div class="mb-8">
+                <h1 class="text-3xl font-bold mb-2">Revenue Forecast</h1>
+                <p class="text-slate-400">AI-powered predictions based on historical data and market trends</p>
+            </div>
+
+            <!-- Prediction Summary -->
+            <div class="grid grid-cols-4 gap-4 mb-6">
+                <div class="bg-slate-800 rounded-xl p-5 border border-slate-700">
+                    <div class="flex items-center gap-2 mb-2">
+                        <span class="w-2 h-2 bg-green-500 rounded-full"></span>
+                        <span class="text-sm text-slate-400">Predicted Q1 2025</span>
+                    </div>
+                    <p class="text-3xl font-bold text-green-400">$5.2M</p>
+                    <p class="text-sm text-slate-500 mt-1">95% confidence: $4.8M - $5.6M</p>
+                </div>
+                <div class="bg-slate-800 rounded-xl p-5 border border-slate-700">
+                    <div class="flex items-center gap-2 mb-2">
+                        <span class="text-sm text-slate-400">Model Accuracy</span>
+                    </div>
+                    <p class="text-3xl font-bold text-blue-400">94.2%</p>
+                    <p class="text-sm text-slate-500 mt-1">Based on last 12 months</p>
+                </div>
+                <div class="bg-slate-800 rounded-xl p-5 border border-slate-700">
+                    <div class="flex items-center gap-2 mb-2">
+                        <span class="text-sm text-slate-400">Churn Risk</span>
+                    </div>
+                    <p class="text-3xl font-bold text-yellow-400">Medium</p>
+                    <p class="text-sm text-slate-500 mt-1">12 accounts flagged</p>
+                </div>
+                <div class="bg-slate-800 rounded-xl p-5 border border-slate-700">
+                    <div class="flex items-center gap-2 mb-2">
+                        <span class="text-sm text-slate-400">Growth Probability</span>
+                    </div>
+                    <p class="text-3xl font-bold text-purple-400">78%</p>
+                    <p class="text-sm text-slate-500 mt-1">Target: $6M by Q2</p>
+                </div>
+            </div>
+
+            <!-- Forecast Chart -->
+            <div class="bg-slate-800 rounded-xl p-6 border border-slate-700 mb-6">
+                <div class="flex justify-between items-center mb-6">
+                    <h2 class="font-semibold">Revenue Trend & Forecast</h2>
+                    <div class="flex gap-4 text-sm">
+                        <span class="flex items-center gap-2">
+                            <span class="w-3 h-3 bg-blue-500 rounded-full"></span>
+                            Actual
+                        </span>
+                        <span class="flex items-center gap-2">
+                            <span class="w-3 h-3 bg-purple-500 rounded-full"></span>
+                            Predicted
+                        </span>
+                        <span class="flex items-center gap-2">
+                            <span class="w-8 h-3 bg-purple-500/30 rounded"></span>
+                            Confidence Band
+                        </span>
+                    </div>
+                </div>
+                <div class="h-64 relative">
+                    <!-- Historical Data (Blue Line) -->
+                    <div class="absolute bottom-0 left-0 w-2/3 h-full flex items-end">
+                        <svg class="w-full h-full" viewBox="0 0 400 200" preserveAspectRatio="none">
+                            <polyline fill="none" stroke="#3B82F6" stroke-width="3" points="0,180 50,160 100,140 150,145 200,120 250,100 300,90 350,75 400,60"/>
+                        </svg>
+                    </div>
+                    <!-- Prediction (Purple dashed) -->
+                    <div class="absolute bottom-0 right-0 w-1/3 h-full flex items-end">
+                        <svg class="w-full h-full" viewBox="0 0 200 200" preserveAspectRatio="none">
+                            <!-- Confidence band -->
+                            <polygon fill="rgba(168, 85, 247, 0.2)" points="0,60 50,50 100,35 150,25 200,15 200,85 150,70 100,65 50,70 0,70"/>
+                            <!-- Prediction line -->
+                            <polyline fill="none" stroke="#A855F7" stroke-width="3" stroke-dasharray="8,4" points="0,60 50,50 100,45 150,35 200,20"/>
+                        </svg>
+                    </div>
+                    <!-- Y-axis labels -->
+                    <div class="absolute left-0 top-0 h-full flex flex-col justify-between text-xs text-slate-500 -ml-10">
+                        <span>$6M</span>
+                        <span>$4.5M</span>
+                        <span>$3M</span>
+                    </div>
+                </div>
+                <div class="flex justify-between text-xs text-slate-500 mt-4">
+                    <span>Jan</span>
+                    <span>Mar</span>
+                    <span>May</span>
+                    <span>Jul</span>
+                    <span>Sep</span>
+                    <span>Nov</span>
+                    <span class="text-purple-400 font-medium">Jan (F)</span>
+                    <span class="text-purple-400 font-medium">Mar (F)</span>
+                </div>
+            </div>
+
+            <!-- Risk Analysis -->
+            <div class="grid grid-cols-2 gap-6 mb-6">
+                <!-- Churn Risk -->
+                <div class="bg-slate-800 rounded-xl p-6 border border-slate-700">
+                    <h2 class="font-semibold mb-4">Churn Risk Analysis</h2>
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between p-3 bg-red-500/10 rounded-lg border border-red-500/30">
+                            <div class="flex items-center gap-3">
+                                <span class="w-8 h-8 bg-red-500/20 rounded-full flex items-center justify-center text-red-400 font-bold text-sm">!</span>
+                                <div>
+                                    <p class="font-medium">Acme Corp</p>
+                                    <p class="text-xs text-slate-400">Enterprise · $24K MRR</p>
+                                </div>
+                            </div>
+                            <div class="text-right">
+                                <p class="text-red-400 font-bold">87%</p>
+                                <p class="text-xs text-slate-400">churn risk</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between p-3 bg-yellow-500/10 rounded-lg border border-yellow-500/30">
+                            <div class="flex items-center gap-3">
+                                <span class="w-8 h-8 bg-yellow-500/20 rounded-full flex items-center justify-center text-yellow-400 font-bold text-sm">!</span>
+                                <div>
+                                    <p class="font-medium">TechStart Inc</p>
+                                    <p class="text-xs text-slate-400">Mid-Market · $8K MRR</p>
+                                </div>
+                            </div>
+                            <div class="text-right">
+                                <p class="text-yellow-400 font-bold">62%</p>
+                                <p class="text-xs text-slate-400">churn risk</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between p-3 bg-yellow-500/10 rounded-lg border border-yellow-500/30">
+                            <div class="flex items-center gap-3">
+                                <span class="w-8 h-8 bg-yellow-500/20 rounded-full flex items-center justify-center text-yellow-400 font-bold text-sm">!</span>
+                                <div>
+                                    <p class="font-medium">GlobalData Ltd</p>
+                                    <p class="text-xs text-slate-400">Enterprise · $18K MRR</p>
+                                </div>
+                            </div>
+                            <div class="text-right">
+                                <p class="text-yellow-400 font-bold">54%</p>
+                                <p class="text-xs text-slate-400">churn risk</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Expansion Opportunities -->
+                <div class="bg-slate-800 rounded-xl p-6 border border-slate-700">
+                    <h2 class="font-semibold mb-4">Expansion Opportunities</h2>
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between p-3 bg-green-500/10 rounded-lg border border-green-500/30">
+                            <div class="flex items-center gap-3">
+                                <span class="w-8 h-8 bg-green-500/20 rounded-full flex items-center justify-center text-green-400 font-bold text-sm">↑</span>
+                                <div>
+                                    <p class="font-medium">DataFlow Systems</p>
+                                    <p class="text-xs text-slate-400">Ready for Enterprise tier</p>
+                                </div>
+                            </div>
+                            <div class="text-right">
+                                <p class="text-green-400 font-bold">+$12K</p>
+                                <p class="text-xs text-slate-400">potential MRR</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between p-3 bg-green-500/10 rounded-lg border border-green-500/30">
+                            <div class="flex items-center gap-3">
+                                <span class="w-8 h-8 bg-green-500/20 rounded-full flex items-center justify-center text-green-400 font-bold text-sm">↑</span>
+                                <div>
+                                    <p class="font-medium">CloudNine Inc</p>
+                                    <p class="text-xs text-slate-400">Additional seats likely</p>
+                                </div>
+                            </div>
+                            <div class="text-right">
+                                <p class="text-green-400 font-bold">+$4K</p>
+                                <p class="text-xs text-slate-400">potential MRR</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between p-3 bg-blue-500/10 rounded-lg border border-blue-500/30">
+                            <div class="flex items-center gap-3">
+                                <span class="w-8 h-8 bg-blue-500/20 rounded-full flex items-center justify-center text-blue-400 font-bold text-sm">↑</span>
+                                <div>
+                                    <p class="font-medium">Innovate Labs</p>
+                                    <p class="text-xs text-slate-400">Feature upgrade candidate</p>
+                                </div>
+                            </div>
+                            <div class="text-right">
+                                <p class="text-blue-400 font-bold">+$2.5K</p>
+                                <p class="text-xs text-slate-400">potential MRR</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Style Info -->
+            <div class="bg-slate-800 rounded-xl p-6 border border-slate-700">
+                <div class="grid grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-slate-400 text-sm uppercase tracking-widest mb-4">Best For</h3>
+                        <ul class="space-y-2 text-slate-300 text-sm">
+                            <li>Revenue forecasting</li>
+                            <li>Churn prediction</li>
+                            <li>Lead scoring</li>
+                            <li>Demand planning</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-slate-400 text-sm uppercase tracking-widest mb-4">Key Elements</h3>
+                        <ul class="space-y-2 text-slate-300 text-sm">
+                            <li>Confidence intervals</li>
+                            <li>Prediction indicators</li>
+                            <li>Risk scoring</li>
+                            <li>Model accuracy metrics</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-slate-800 border-t border-slate-700 px-6 py-4 flex justify-between items-center">
+        <a href="33-comparative-analytics.html" class="text-slate-400 hover:text-white text-sm">&larr; Comparative Analytics</a>
+        <a href="35-user-behavior-analytics.html" class="text-slate-400 hover:text-white text-sm">User Behavior Analytics &rarr;</a>
+    </footer>
+</body>
+</html>

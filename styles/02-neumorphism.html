@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neumorphism - UI Style #02</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { font-family: 'Inter', sans-serif; }
+        body { background: #e8e8e8; }
+        .neu-flat {
+            background: #e8e8e8;
+            box-shadow: -5px -5px 15px #ffffff, 5px 5px 15px #d1d1d1;
+        }
+        .neu-pressed {
+            background: #e8e8e8;
+            box-shadow: inset -3px -3px 7px #ffffff, inset 3px 3px 7px #d1d1d1;
+        }
+        .neu-convex {
+            background: linear-gradient(145deg, #fafafa, #d4d4d4);
+            box-shadow: -5px -5px 15px #ffffff, 5px 5px 15px #d1d1d1;
+        }
+        .neu-btn:active {
+            box-shadow: inset -3px -3px 7px #ffffff, inset 3px 3px 7px #d1d1d1;
+        }
+    </style>
+</head>
+<body class="min-h-screen text-gray-700">
+    <!-- Navigation -->
+    <nav class="fixed top-4 left-4 right-4 neu-flat rounded-2xl z-50">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="../index.html" class="text-sm text-gray-500 hover:text-gray-800 transition-colors">&larr; Back</a>
+            <span class="font-medium text-gray-700">#02 Neumorphism</span>
+            <span class="text-sm text-gray-400">General</span>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 px-6">
+        <div class="max-w-5xl mx-auto text-center">
+            <div class="inline-block neu-flat rounded-3xl p-12 mb-8">
+                <h1 class="text-5xl font-bold text-gray-800 mb-4">Soft UI</h1>
+                <p class="text-gray-500">Tactile, embossed, and gentle on the eyes</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Components Grid -->
+    <section class="py-12 px-6">
+        <div class="max-w-5xl mx-auto">
+            <h3 class="text-sm text-gray-400 uppercase tracking-widest mb-8 text-center">Interactive Components</h3>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="neu-flat rounded-3xl p-8">
+                    <div class="w-16 h-16 neu-convex rounded-2xl flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                        </svg>
+                    </div>
+                    <h4 class="text-xl font-semibold text-gray-800 mb-2">Fast Performance</h4>
+                    <p class="text-gray-500 text-sm">Optimized for speed with minimal overhead</p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="neu-flat rounded-3xl p-8">
+                    <div class="w-16 h-16 neu-convex rounded-2xl flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-pink-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+                        </svg>
+                    </div>
+                    <h4 class="text-xl font-semibold text-gray-800 mb-2">User Friendly</h4>
+                    <p class="text-gray-500 text-sm">Intuitive interfaces that users love</p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="neu-flat rounded-3xl p-8">
+                    <div class="w-16 h-16 neu-convex rounded-2xl flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                    </div>
+                    <h4 class="text-xl font-semibold text-gray-800 mb-2">Reliable</h4>
+                    <p class="text-gray-500 text-sm">Consistent experience across all devices</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Buttons Section -->
+    <section class="py-12 px-6">
+        <div class="max-w-5xl mx-auto">
+            <h3 class="text-sm text-gray-400 uppercase tracking-widest mb-8 text-center">Buttons</h3>
+            <div class="neu-flat rounded-3xl p-8">
+                <div class="flex flex-wrap justify-center gap-6">
+                    <button class="neu-convex neu-btn px-8 py-4 rounded-xl font-medium text-gray-700 transition-all duration-150 cursor-pointer hover:text-blue-500">
+                        Primary
+                    </button>
+                    <button class="neu-flat neu-btn px-8 py-4 rounded-xl font-medium text-gray-700 transition-all duration-150 cursor-pointer hover:text-pink-500">
+                        Secondary
+                    </button>
+                    <button class="neu-pressed px-8 py-4 rounded-xl font-medium text-gray-500 cursor-pointer">
+                        Pressed
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Toggle & Slider -->
+    <section class="py-12 px-6">
+        <div class="max-w-5xl mx-auto">
+            <h3 class="text-sm text-gray-400 uppercase tracking-widest mb-8 text-center">Controls</h3>
+            <div class="neu-flat rounded-3xl p-8">
+                <div class="flex flex-wrap justify-center items-center gap-12">
+                    <!-- Toggle -->
+                    <div class="flex items-center gap-4">
+                        <span class="text-gray-600">Off</span>
+                        <div class="neu-pressed w-16 h-8 rounded-full relative cursor-pointer">
+                            <div class="neu-convex w-7 h-7 rounded-full absolute top-0.5 left-0.5 transition-transform"></div>
+                        </div>
+                        <span class="text-gray-600">On</span>
+                    </div>
+
+                    <!-- Circular Control -->
+                    <div class="neu-flat w-32 h-32 rounded-full flex items-center justify-center">
+                        <div class="neu-pressed w-20 h-20 rounded-full flex items-center justify-center">
+                            <span class="text-2xl font-bold text-gray-700">75</span>
+                        </div>
+                    </div>
+
+                    <!-- Progress -->
+                    <div class="w-48">
+                        <div class="neu-pressed h-3 rounded-full overflow-hidden">
+                            <div class="h-full w-3/4 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Color Palette -->
+    <section class="py-12 px-6">
+        <div class="max-w-5xl mx-auto">
+            <h3 class="text-sm text-gray-400 uppercase tracking-widest mb-8 text-center">Color Palette</h3>
+            <div class="neu-flat rounded-3xl p-8">
+                <div class="flex justify-center gap-6">
+                    <div class="text-center">
+                        <div class="neu-convex w-20 h-20 rounded-2xl mb-3" style="background: #C8E0F4;"></div>
+                        <p class="text-xs text-gray-500">Soft Blue</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="neu-convex w-20 h-20 rounded-2xl mb-3" style="background: #F5E0E8;"></div>
+                        <p class="text-xs text-gray-500">Soft Pink</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="neu-convex w-20 h-20 rounded-2xl mb-3" style="background: #E8E8E8;"></div>
+                        <p class="text-xs text-gray-500">Soft Grey</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="neu-convex w-20 h-20 rounded-2xl mb-3" style="background: #D4F5E9;"></div>
+                        <p class="text-xs text-gray-500">Soft Mint</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Form Section -->
+    <section class="py-12 px-6">
+        <div class="max-w-lg mx-auto">
+            <h3 class="text-sm text-gray-400 uppercase tracking-widest mb-8 text-center">Form</h3>
+            <div class="neu-flat rounded-3xl p-8">
+                <div class="mb-6">
+                    <label class="block text-sm text-gray-600 mb-2">Username</label>
+                    <input type="text" class="w-full neu-pressed rounded-xl px-4 py-3 bg-transparent focus:outline-none text-gray-700" placeholder="Enter username">
+                </div>
+                <div class="mb-6">
+                    <label class="block text-sm text-gray-600 mb-2">Password</label>
+                    <input type="password" class="w-full neu-pressed rounded-xl px-4 py-3 bg-transparent focus:outline-none text-gray-700" placeholder="Enter password">
+                </div>
+                <button class="w-full neu-convex neu-btn px-8 py-4 rounded-xl font-medium text-gray-700 transition-all duration-150 cursor-pointer hover:text-blue-500">
+                    Sign In
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Info Section -->
+    <section class="py-12 px-6">
+        <div class="max-w-5xl mx-auto">
+            <div class="neu-flat rounded-3xl p-8">
+                <div class="grid grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-sm text-gray-400 uppercase tracking-widest mb-4">Best For</h3>
+                        <ul class="space-y-2 text-gray-600 text-sm">
+                            <li>Health & wellness apps</li>
+                            <li>Meditation platforms</li>
+                            <li>Fitness trackers</li>
+                            <li>Minimal interaction UIs</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-sm text-gray-400 uppercase tracking-widest mb-4">Characteristics</h3>
+                        <ul class="space-y-2 text-gray-600 text-sm">
+                            <li>Light Mode: Full</li>
+                            <li>Dark Mode: Partial</li>
+                            <li>Accessibility: Low contrast</li>
+                            <li>Complexity: Medium</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 px-6">
+        <div class="max-w-5xl mx-auto neu-flat rounded-2xl px-6 py-4 flex justify-between items-center">
+            <a href="01-minimalism.html" class="text-sm text-gray-500 hover:text-gray-800">&larr; Minimalism</a>
+            <a href="03-glassmorphism.html" class="text-sm text-gray-500 hover:text-gray-800">Glassmorphism &rarr;</a>
+        </div>
+    </footer>
+</body>
+</html>

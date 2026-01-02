@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soft UI Evolution - UI Style #19</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { font-family: 'Inter', sans-serif; }
+        body { background: linear-gradient(135deg, #e0f2fe 0%, #f0f9ff 50%, #ecfeff 100%); }
+        .soft-card {
+            background: rgba(255,255,255,0.9);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05), 0 1px 3px rgba(0,0,0,0.08);
+            border: 1px solid rgba(255,255,255,0.8);
+        }
+        .soft-btn {
+            background: linear-gradient(145deg, #ffffff, #f0f0f0);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08), 0 1px 3px rgba(0,0,0,0.06);
+            border: 1px solid rgba(255,255,255,0.9);
+        }
+        .soft-btn:hover {
+            box-shadow: 0 6px 20px rgba(0,0,0,0.1), 0 2px 4px rgba(0,0,0,0.08);
+            transform: translateY(-2px);
+        }
+        .soft-btn:active {
+            box-shadow: inset 0 2px 4px rgba(0,0,0,0.06);
+            transform: translateY(0);
+        }
+        .soft-input {
+            background: rgba(255,255,255,0.7);
+            box-shadow: inset 0 2px 4px rgba(0,0,0,0.04);
+            border: 1px solid rgba(0,0,0,0.08);
+        }
+        .soft-input:focus {
+            background: rgba(255,255,255,0.95);
+            border-color: #60a5fa;
+            box-shadow: 0 0 0 3px rgba(96,165,250,0.2);
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <!-- Navigation -->
+    <nav class="fixed top-4 left-4 right-4 soft-card rounded-2xl z-50">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="../index.html" class="text-slate-500 hover:text-slate-700 transition-colors">&larr; Back</a>
+            <span class="font-semibold text-slate-700">#19 Soft UI Evolution</span>
+            <span class="text-slate-400">General</span>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="pt-32 pb-16 px-6">
+        <div class="max-w-4xl mx-auto text-center">
+            <div class="soft-card rounded-3xl p-12 inline-block">
+                <h1 class="text-5xl font-bold text-slate-800 mb-4">Modern Softness</h1>
+                <p class="text-xl text-slate-600">Evolved Soft UI with better contrast, improved accessibility, and modern aesthetics</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="py-12 px-6">
+        <div class="max-w-5xl mx-auto">
+            <div class="grid grid-cols-3 gap-6">
+                <div class="soft-card rounded-2xl p-6 hover:shadow-lg transition-all cursor-pointer">
+                    <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-sky-400 to-blue-500 flex items-center justify-center mb-4">
+                        <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-semibold text-slate-800 mb-2">Better Contrast</h3>
+                    <p class="text-slate-600 text-sm">Improved visibility meeting WCAG AA+ standards</p>
+                </div>
+
+                <div class="soft-card rounded-2xl p-6 hover:shadow-lg transition-all cursor-pointer">
+                    <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-pink-400 to-rose-500 flex items-center justify-center mb-4">
+                        <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-semibold text-slate-800 mb-2">Gentle Aesthetics</h3>
+                    <p class="text-slate-600 text-sm">Soft shadows without losing depth perception</p>
+                </div>
+
+                <div class="soft-card rounded-2xl p-6 hover:shadow-lg transition-all cursor-pointer">
+                    <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-emerald-400 to-teal-500 flex items-center justify-center mb-4">
+                        <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-semibold text-slate-800 mb-2">Modern Performance</h3>
+                    <p class="text-slate-600 text-sm">Optimized shadows for smooth rendering</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Buttons -->
+    <section class="py-12 px-6">
+        <div class="max-w-5xl mx-auto">
+            <h3 class="text-slate-400 text-sm uppercase tracking-widest mb-8">Buttons</h3>
+            <div class="soft-card rounded-2xl p-8">
+                <div class="flex flex-wrap justify-center gap-4">
+                    <button class="soft-btn px-6 py-3 rounded-xl font-medium text-slate-700 transition-all cursor-pointer">Default</button>
+                    <button class="px-6 py-3 rounded-xl font-medium text-white bg-gradient-to-r from-sky-400 to-blue-500 shadow-lg shadow-blue-500/30 hover:shadow-xl hover:shadow-blue-500/40 transition-all cursor-pointer">Primary</button>
+                    <button class="px-6 py-3 rounded-xl font-medium text-white bg-gradient-to-r from-pink-400 to-rose-500 shadow-lg shadow-rose-500/30 hover:shadow-xl hover:shadow-rose-500/40 transition-all cursor-pointer">Secondary</button>
+                    <button class="px-6 py-3 rounded-xl font-medium text-white bg-gradient-to-r from-emerald-400 to-teal-500 shadow-lg shadow-teal-500/30 hover:shadow-xl hover:shadow-teal-500/40 transition-all cursor-pointer">Success</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Colors -->
+    <section class="py-12 px-6">
+        <div class="max-w-5xl mx-auto">
+            <h3 class="text-slate-400 text-sm uppercase tracking-widest mb-8">Improved Color Palette</h3>
+            <div class="soft-card rounded-2xl p-8">
+                <div class="grid grid-cols-4 gap-6">
+                    <div class="text-center">
+                        <div class="h-20 rounded-xl mb-3" style="background: #87CEEB;"></div>
+                        <p class="text-sm font-medium text-slate-700">Soft Blue</p>
+                        <p class="text-xs text-slate-500">#87CEEB</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="h-20 rounded-xl mb-3" style="background: #FFB6C1;"></div>
+                        <p class="text-sm font-medium text-slate-700">Soft Pink</p>
+                        <p class="text-xs text-slate-500">#FFB6C1</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="h-20 rounded-xl mb-3" style="background: #90EE90;"></div>
+                        <p class="text-sm font-medium text-slate-700">Soft Green</p>
+                        <p class="text-xs text-slate-500">#90EE90</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="h-20 rounded-xl mb-3" style="background: #E6E6FA;"></div>
+                        <p class="text-sm font-medium text-slate-700">Soft Lilac</p>
+                        <p class="text-xs text-slate-500">#E6E6FA</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Form -->
+    <section class="py-12 px-6">
+        <div class="max-w-md mx-auto">
+            <div class="soft-card rounded-2xl p-8">
+                <h3 class="text-xl font-semibold text-slate-800 mb-6 text-center">Sign Up</h3>
+                <div class="space-y-4">
+                    <div>
+                        <label class="block text-sm font-medium text-slate-600 mb-2">Name</label>
+                        <input type="text" class="soft-input w-full rounded-xl px-4 py-3 text-slate-700 focus:outline-none transition-all" placeholder="Your name">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-slate-600 mb-2">Email</label>
+                        <input type="email" class="soft-input w-full rounded-xl px-4 py-3 text-slate-700 focus:outline-none transition-all" placeholder="your@email.com">
+                    </div>
+                    <button class="w-full py-3 rounded-xl font-medium text-white bg-gradient-to-r from-sky-400 to-blue-500 shadow-lg shadow-blue-500/30 hover:shadow-xl transition-all cursor-pointer">
+                        Create Account
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cards -->
+    <section class="py-12 px-6">
+        <div class="max-w-5xl mx-auto">
+            <h3 class="text-slate-400 text-sm uppercase tracking-widest mb-8">Dashboard Cards</h3>
+            <div class="grid grid-cols-4 gap-4">
+                <div class="soft-card rounded-xl p-5">
+                    <p class="text-sm text-slate-500 mb-1">Revenue</p>
+                    <p class="text-2xl font-bold text-slate-800">$24,500</p>
+                    <p class="text-xs text-emerald-500 mt-1">+12.5%</p>
+                </div>
+                <div class="soft-card rounded-xl p-5">
+                    <p class="text-sm text-slate-500 mb-1">Users</p>
+                    <p class="text-2xl font-bold text-slate-800">1,420</p>
+                    <p class="text-xs text-emerald-500 mt-1">+8.2%</p>
+                </div>
+                <div class="soft-card rounded-xl p-5">
+                    <p class="text-sm text-slate-500 mb-1">Orders</p>
+                    <p class="text-2xl font-bold text-slate-800">856</p>
+                    <p class="text-xs text-rose-500 mt-1">-2.4%</p>
+                </div>
+                <div class="soft-card rounded-xl p-5">
+                    <p class="text-sm text-slate-500 mb-1">Growth</p>
+                    <p class="text-2xl font-bold text-slate-800">23%</p>
+                    <p class="text-xs text-emerald-500 mt-1">+5.1%</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Info -->
+    <section class="py-12 px-6">
+        <div class="max-w-5xl mx-auto">
+            <div class="soft-card rounded-2xl p-8">
+                <div class="grid grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-slate-400 text-sm uppercase tracking-widest mb-4">Best For</h3>
+                        <ul class="space-y-2 text-slate-600">
+                            <li>Modern enterprise apps</li>
+                            <li>SaaS platforms</li>
+                            <li>Health & wellness</li>
+                            <li>Modern business tools</li>
+                            <li>Professional dashboards</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-slate-400 text-sm uppercase tracking-widest mb-4">Characteristics</h3>
+                        <ul class="space-y-2 text-slate-600">
+                            <li>Performance: Excellent</li>
+                            <li>Accessibility: WCAG AA+</li>
+                            <li>Mobile: High</li>
+                            <li>Complexity: Medium</li>
+                            <li>Era: 2020s Modern</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 px-6">
+        <div class="max-w-5xl mx-auto soft-card rounded-2xl px-6 py-4 flex justify-between items-center">
+            <a href="18-zero-interface.html" class="text-slate-500 hover:text-slate-700 transition-colors">&larr; Zero Interface</a>
+            <a href="20-hero-centric.html" class="text-slate-500 hover:text-slate-700 transition-colors">Hero-Centric &rarr;</a>
+        </div>
+    </footer>
+</body>
+</html>

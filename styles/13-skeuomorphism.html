@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skeuomorphism - UI Style #13</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Georgia&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(180deg, #c8c8c8 0%, #a0a0a0 100%);
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+        }
+        .metal-button {
+            background: linear-gradient(180deg, #f5f5f5 0%, #d8d8d8 50%, #b8b8b8 100%);
+            border: 1px solid #888;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.8);
+        }
+        .metal-button:active {
+            background: linear-gradient(180deg, #b8b8b8 0%, #d8d8d8 50%, #e8e8e8 100%);
+            box-shadow: inset 0 2px 4px rgba(0,0,0,0.2);
+        }
+        .leather-bg {
+            background: linear-gradient(135deg, #8B4513 0%, #5D3A1A 100%);
+            border: 4px solid #3D2A15;
+        }
+        .wood-bg {
+            background: linear-gradient(90deg, #DEB887 0%, #CD853F 50%, #DEB887 100%);
+        }
+        .glass-surface {
+            background: linear-gradient(180deg, rgba(255,255,255,0.9) 0%, rgba(240,240,240,0.8) 100%);
+            border: 1px solid rgba(0,0,0,0.2);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2), inset 0 1px 0 rgba(255,255,255,1);
+        }
+        .inset-field {
+            background: #fff;
+            border: 1px solid #999;
+            box-shadow: inset 0 2px 4px rgba(0,0,0,0.2), inset 0 0 0 1px rgba(0,0,0,0.05);
+        }
+    </style>
+</head>
+<body class="min-h-screen py-8">
+    <!-- Navigation -->
+    <nav class="max-w-4xl mx-auto mb-8 px-4">
+        <div class="glass-surface rounded-lg px-6 py-4 flex justify-between items-center">
+            <a href="../index.html" class="text-gray-700 hover:text-gray-900">&larr; Back</a>
+            <span class="font-bold text-gray-800">#13 Skeuomorphism</span>
+            <span class="text-gray-500">General</span>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="max-w-4xl mx-auto mb-8 px-4">
+        <div class="leather-bg rounded-xl p-8 text-center">
+            <h1 class="text-4xl font-bold text-[#DEB887] mb-4" style="text-shadow: 0 2px 4px rgba(0,0,0,0.5);">Real World Materials</h1>
+            <p class="text-[#D2B48C]">Textures, shadows, and realistic details that mimic physical objects</p>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="max-w-4xl mx-auto mb-8 px-4">
+        <div class="glass-surface rounded-xl p-8">
+            <h3 class="text-gray-500 text-sm uppercase tracking-widest mb-6">Key Characteristics</h3>
+            <div class="grid grid-cols-3 gap-6">
+                <div class="text-center">
+                    <div class="w-20 h-20 mx-auto mb-4 rounded-full" style="background: linear-gradient(145deg, #e8e8e8, #c0c0c0); box-shadow: 0 4px 8px rgba(0,0,0,0.3), inset 0 2px 0 rgba(255,255,255,0.8), inset 0 -2px 0 rgba(0,0,0,0.1);">
+                        <div class="w-full h-full flex items-center justify-center text-2xl">🎨</div>
+                    </div>
+                    <h4 class="font-bold text-gray-800 mb-1">Rich Textures</h4>
+                    <p class="text-sm text-gray-600">Wood, leather, metal, glass</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-20 h-20 mx-auto mb-4 rounded-full" style="background: linear-gradient(145deg, #e8e8e8, #c0c0c0); box-shadow: 0 4px 8px rgba(0,0,0,0.3), inset 0 2px 0 rgba(255,255,255,0.8), inset 0 -2px 0 rgba(0,0,0,0.1);">
+                        <div class="w-full h-full flex items-center justify-center text-2xl">💡</div>
+                    </div>
+                    <h4 class="font-bold text-gray-800 mb-1">Light & Shadow</h4>
+                    <p class="text-sm text-gray-600">Realistic depth and dimension</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-20 h-20 mx-auto mb-4 rounded-full" style="background: linear-gradient(145deg, #e8e8e8, #c0c0c0); box-shadow: 0 4px 8px rgba(0,0,0,0.3), inset 0 2px 0 rgba(255,255,255,0.8), inset 0 -2px 0 rgba(0,0,0,0.1);">
+                        <div class="w-full h-full flex items-center justify-center text-2xl">🔧</div>
+                    </div>
+                    <h4 class="font-bold text-gray-800 mb-1">Real Metaphors</h4>
+                    <p class="text-sm text-gray-600">Physical object representations</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Buttons -->
+    <section class="max-w-4xl mx-auto mb-8 px-4">
+        <div class="glass-surface rounded-xl p-8">
+            <h3 class="text-gray-500 text-sm uppercase tracking-widest mb-6">Buttons</h3>
+            <div class="flex flex-wrap gap-4">
+                <button class="metal-button px-6 py-3 rounded-lg font-bold text-gray-700 cursor-pointer">Metal Button</button>
+                <button class="px-6 py-3 rounded-lg font-bold text-white cursor-pointer" style="background: linear-gradient(180deg, #5cb85c 0%, #449d44 50%, #398439 100%); border: 1px solid #255625; box-shadow: 0 2px 4px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.3);">Green Button</button>
+                <button class="px-6 py-3 rounded-lg font-bold text-white cursor-pointer" style="background: linear-gradient(180deg, #337ab7 0%, #286090 50%, #204d74 100%); border: 1px solid #122b40; box-shadow: 0 2px 4px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.3);">Blue Button</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Toggle Switch -->
+    <section class="max-w-4xl mx-auto mb-8 px-4">
+        <div class="glass-surface rounded-xl p-8">
+            <h3 class="text-gray-500 text-sm uppercase tracking-widest mb-6">Toggle Switch</h3>
+            <div class="flex items-center gap-8">
+                <div class="relative w-20 h-10 rounded-full cursor-pointer" style="background: linear-gradient(180deg, #2ecc71, #27ae60); box-shadow: inset 0 2px 4px rgba(0,0,0,0.3);">
+                    <div class="absolute right-1 top-1 w-8 h-8 rounded-full" style="background: linear-gradient(180deg, #fff 0%, #e0e0e0 100%); box-shadow: 0 2px 4px rgba(0,0,0,0.3);"></div>
+                </div>
+                <div class="relative w-20 h-10 rounded-full cursor-pointer" style="background: linear-gradient(180deg, #ccc, #aaa); box-shadow: inset 0 2px 4px rgba(0,0,0,0.3);">
+                    <div class="absolute left-1 top-1 w-8 h-8 rounded-full" style="background: linear-gradient(180deg, #fff 0%, #e0e0e0 100%); box-shadow: 0 2px 4px rgba(0,0,0,0.3);"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Form -->
+    <section class="max-w-md mx-auto mb-8 px-4">
+        <div class="leather-bg rounded-xl p-8">
+            <h3 class="text-[#DEB887] text-sm uppercase tracking-widest mb-6">Notepad Form</h3>
+            <div class="bg-[#FFFEF0] rounded p-6" style="box-shadow: inset 0 2px 4px rgba(0,0,0,0.1); background-image: repeating-linear-gradient(transparent, transparent 27px, #e8e8e8 28px);">
+                <div class="mb-4">
+                    <label class="block text-sm text-gray-600 mb-2">Name</label>
+                    <input type="text" class="w-full inset-field rounded px-3 py-2" placeholder="Your name">
+                </div>
+                <div class="mb-4">
+                    <label class="block text-sm text-gray-600 mb-2">Message</label>
+                    <textarea class="w-full inset-field rounded px-3 py-2 h-24" placeholder="Write here..."></textarea>
+                </div>
+                <button class="metal-button w-full py-3 rounded-lg font-bold text-gray-700 cursor-pointer">Submit</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Info -->
+    <section class="max-w-4xl mx-auto mb-8 px-4">
+        <div class="glass-surface rounded-xl p-8">
+            <div class="grid grid-cols-2 gap-8">
+                <div>
+                    <h3 class="text-gray-500 text-sm uppercase tracking-widest mb-4">Best For</h3>
+                    <ul class="space-y-2 text-gray-700 text-sm">
+                        <li>Legacy apps</li>
+                        <li>Gaming interfaces</li>
+                        <li>Immersive storytelling</li>
+                        <li>Premium products</li>
+                        <li>Educational simulations</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-gray-500 text-sm uppercase tracking-widest mb-4">Characteristics</h3>
+                    <ul class="space-y-2 text-gray-700 text-sm">
+                        <li>Performance: Poor (heavy)</li>
+                        <li>Accessibility: Limited</li>
+                        <li>Mobile: Low support</li>
+                        <li>Complexity: High</li>
+                        <li>Era: 2007-2012 iOS</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="max-w-4xl mx-auto px-4">
+        <div class="glass-surface rounded-lg px-6 py-4 flex justify-between items-center">
+            <a href="12-flat-design.html" class="text-gray-700 hover:text-gray-900">&larr; Flat Design</a>
+            <a href="14-liquid-glass.html" class="text-gray-700 hover:text-gray-900">Liquid Glass &rarr;</a>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parallax Storytelling - UI Style #49</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        .font-serif { font-family: 'Playfair Display', serif; }
+        .font-sans { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-slate-900 min-h-screen font-sans text-white">
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 px-6 py-4 bg-slate-900/80 backdrop-blur">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <a href="../index.html" class="text-slate-400 hover:text-white text-sm">&larr; Back</a>
+            <span class="font-serif">#49 Parallax Storytelling</span>
+            <span class="text-slate-400 text-sm">Modern</span>
+        </div>
+    </nav>
+
+    <!-- Chapter 1 -->
+    <section class="min-h-screen flex items-center justify-center relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-b from-indigo-900/50 to-slate-900"></div>
+        <div class="absolute top-20 left-20 w-64 h-64 bg-indigo-500/20 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-20 right-20 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl"></div>
+
+        <div class="relative text-center z-10 px-6">
+            <span class="text-indigo-400 text-sm tracking-widest uppercase mb-4 block">Chapter One</span>
+            <h1 class="font-serif text-7xl mb-6">The Journey Begins</h1>
+            <p class="text-xl text-slate-300 max-w-2xl mx-auto">
+                Scroll to reveal the story. Each section moves at its own pace, creating depth and immersion.
+            </p>
+            <div class="mt-12 animate-bounce">
+                <svg class="w-8 h-8 mx-auto text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+                </svg>
+            </div>
+        </div>
+    </section>
+
+    <!-- Chapter 2 -->
+    <section class="min-h-screen flex items-center relative">
+        <div class="max-w-6xl mx-auto px-6 grid grid-cols-2 gap-16 items-center">
+            <div class="relative">
+                <div class="absolute -inset-4 bg-gradient-to-r from-blue-500 to-purple-500 rounded-2xl opacity-20 blur-xl"></div>
+                <div class="relative bg-slate-800 rounded-2xl p-8 border border-slate-700">
+                    <div class="h-64 bg-gradient-to-br from-blue-600 to-purple-600 rounded-xl flex items-center justify-center">
+                        <span class="font-serif text-6xl">01</span>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <span class="text-purple-400 text-sm tracking-widest uppercase mb-4 block">Chapter Two</span>
+                <h2 class="font-serif text-5xl mb-6">Layers of Meaning</h2>
+                <p class="text-lg text-slate-300 leading-relaxed">
+                    Parallax creates the illusion of depth by moving foreground and background elements at different speeds. This technique draws viewers deeper into the narrative.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Chapter 3 -->
+    <section class="min-h-screen flex items-center relative bg-gradient-to-b from-slate-900 to-indigo-900">
+        <div class="max-w-6xl mx-auto px-6 grid grid-cols-2 gap-16 items-center">
+            <div>
+                <span class="text-cyan-400 text-sm tracking-widest uppercase mb-4 block">Chapter Three</span>
+                <h2 class="font-serif text-5xl mb-6">The Reveal</h2>
+                <p class="text-lg text-slate-300 leading-relaxed mb-8">
+                    Each scroll brings new discoveries. Content appears progressively, maintaining suspense and engagement throughout the experience.
+                </p>
+                <div class="space-y-4">
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-cyan-500/20 rounded-full flex items-center justify-center">
+                            <span class="text-cyan-400">1</span>
+                        </div>
+                        <span class="text-slate-300">Scroll-triggered animations</span>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-cyan-500/20 rounded-full flex items-center justify-center">
+                            <span class="text-cyan-400">2</span>
+                        </div>
+                        <span class="text-slate-300">Multi-layer depth perception</span>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-cyan-500/20 rounded-full flex items-center justify-center">
+                            <span class="text-cyan-400">3</span>
+                        </div>
+                        <span class="text-slate-300">Progressive content revelation</span>
+                    </div>
+                </div>
+            </div>
+            <div class="relative">
+                <div class="absolute top-0 left-0 w-48 h-48 bg-cyan-500/30 rounded-2xl transform -rotate-12"></div>
+                <div class="absolute top-10 left-10 w-48 h-48 bg-blue-500/30 rounded-2xl transform rotate-6"></div>
+                <div class="relative w-48 h-48 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-2xl transform translate-x-16 translate-y-16 flex items-center justify-center">
+                    <span class="font-serif text-4xl">02</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Chapter 4 -->
+    <section class="min-h-screen flex items-center relative">
+        <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMjAiIGN5PSIyMCIgcj0iMSIgZmlsbD0iIzMzNDQ1NSIvPjwvc3ZnPg==')] opacity-50"></div>
+
+        <div class="max-w-4xl mx-auto px-6 text-center relative z-10">
+            <span class="text-rose-400 text-sm tracking-widest uppercase mb-4 block">Chapter Four</span>
+            <h2 class="font-serif text-6xl mb-8">The Climax</h2>
+            <p class="text-xl text-slate-300 leading-relaxed mb-12">
+                Full-screen moments create impact. The story reaches its peak with bold visuals and immersive design.
+            </p>
+            <div class="grid grid-cols-3 gap-8">
+                <div class="bg-slate-800/50 backdrop-blur rounded-xl p-6 border border-slate-700">
+                    <div class="font-serif text-4xl text-rose-400 mb-2">250%</div>
+                    <p class="text-slate-400 text-sm">More engagement</p>
+                </div>
+                <div class="bg-slate-800/50 backdrop-blur rounded-xl p-6 border border-slate-700">
+                    <div class="font-serif text-4xl text-rose-400 mb-2">4.5x</div>
+                    <p class="text-slate-400 text-sm">Time on page</p>
+                </div>
+                <div class="bg-slate-800/50 backdrop-blur rounded-xl p-6 border border-slate-700">
+                    <div class="font-serif text-4xl text-rose-400 mb-2">89%</div>
+                    <p class="text-slate-400 text-sm">Story completion</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Conclusion -->
+    <section class="min-h-screen flex items-center justify-center relative bg-gradient-to-b from-slate-900 to-black">
+        <div class="text-center px-6">
+            <span class="text-amber-400 text-sm tracking-widest uppercase mb-4 block">Epilogue</span>
+            <h2 class="font-serif text-7xl mb-8">The End</h2>
+            <p class="text-xl text-slate-300 max-w-2xl mx-auto mb-12">
+                Every great story deserves an immersive telling. Parallax storytelling makes your narrative unforgettable.
+            </p>
+            <button class="px-8 py-4 bg-white text-slate-900 rounded-full font-semibold hover:bg-slate-200 cursor-pointer transition-colors">
+                Start Your Story
+            </button>
+        </div>
+    </section>
+
+    <!-- Style Info -->
+    <section class="py-16 px-6 bg-black">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid grid-cols-2 gap-8">
+                <div>
+                    <h3 class="text-slate-500 text-sm uppercase tracking-widest mb-4">Best For</h3>
+                    <ul class="space-y-2 text-slate-300">
+                        <li>Brand storytelling</li>
+                        <li>Product launches</li>
+                        <li>Annual reports</li>
+                        <li>Interactive experiences</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-slate-500 text-sm uppercase tracking-widest mb-4">Key Elements</h3>
+                    <ul class="space-y-2 text-slate-300">
+                        <li>Scroll-triggered animations</li>
+                        <li>Multi-layer parallax</li>
+                        <li>Full-screen sections</li>
+                        <li>Progressive reveals</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="px-6 py-4 bg-black border-t border-slate-800">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <a href="48-kinetic-typography.html" class="text-slate-400 hover:text-white text-sm">&larr; Kinetic Typography</a>
+            <a href="50-swiss-modernism.html" class="text-slate-400 hover:text-white text-sm">Swiss Modernism 2.0 &rarr;</a>
+        </div>
+    </footer>
+</body>
+</html>
